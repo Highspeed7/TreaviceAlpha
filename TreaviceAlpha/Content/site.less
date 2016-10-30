@@ -1,0 +1,43 @@
+﻿@import "variables.less";
+ 
+.common {
+    body {
+        padding: 0px;
+    }
+    nav {
+        &.navbar {
+            border: none;
+        }
+        &.navbar-default {
+            background-color:inherit;
+        }
+        
+    }
+    ul {
+        &.nav {
+            &>li {
+                &.active {
+                    background-color: @none;
+                    font-weight: bold;
+                }
+                &>a {
+                    &:hover {
+                        background-color: @none;
+                        font-weight: bold;
+                    }
+                    &:focus {
+                        background-color: @none;
+                    }
+                }
+            }
+        }
+    }
+ }   
+
+@media (min-width: 768px) {
+    .common;
+}
+
+@media (min-width: 992px) {
+    .common;
+}

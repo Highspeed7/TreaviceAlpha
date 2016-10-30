@@ -1,24 +1,64 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+.common body {
+  padding: 0px;
 }
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.common nav.navbar {
+  border: none;
 }
-
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.common nav.navbar-default {
+  background-color: inherit;
 }
-
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.common ul.nav > li.active {
+  background-color: white;
+  font-weight: bold;
+}
+.common ul.nav > li > a:hover {
+  background-color: white;
+  font-weight: bold;
+}
+.common ul.nav > li > a:focus {
+  background-color: white;
+}
+@media (min-width: 768px) {
+  body {
+    padding: 0px;
+  }
+  nav.navbar {
+    border: none;
+  }
+  nav.navbar-default {
+    background-color: inherit;
+  }
+  ul.nav > li.active {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:hover {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:focus {
+    background-color: white;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    padding: 0px;
+  }
+  nav.navbar {
+    border: none;
+  }
+  nav.navbar-default {
+    background-color: inherit;
+  }
+  ul.nav > li.active {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:hover {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:focus {
+    background-color: white;
+  }
 }
