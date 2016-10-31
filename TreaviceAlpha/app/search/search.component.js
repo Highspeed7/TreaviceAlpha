@@ -9,19 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var NavbarComponent = (function () {
-    function NavbarComponent(router) {
-        this.router = router;
+var SearchComponent = (function () {
+    function SearchComponent() {
     }
-    NavbarComponent = __decorate([
+    SearchComponent = __decorate([
         core_1.Component({
-            selector: "nav[navbar]",
-            templateUrl: "./app/nav/navbar.component.html"
+            template: "<h1>Search</h1>"
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], NavbarComponent);
-    return NavbarComponent;
+        __metadata('design:paramtypes', [])
+    ], SearchComponent);
+    return SearchComponent;
 }());
-exports.NavbarComponent = NavbarComponent;
-//# sourceMappingURL=navbar.component.js.map
+exports.SearchComponent = SearchComponent;
+//# sourceMappingURL=search.component.js.map

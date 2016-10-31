@@ -1,5 +1,26 @@
+.common html {
+  height: 100%;
+}
+.common html body {
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+}
+.common html body div.container-fluid {
+  height: inherit;
+}
+.common html body div.container-fluid div.content {
+  height: inherit;
+}
 .common body {
   padding: 0px;
+}
+.common nav#side-nav {
+  border-right: 1px solid #e5e5e5;
+  margin-right: 15px;
+  height: inherit;
+  margin-top: -20px;
+  padding-top: 20px;
 }
 .common nav.navbar {
   border: none;
@@ -19,8 +40,29 @@
   background-color: white;
 }
 @media (min-width: 768px) {
+  html {
+    height: 100%;
+  }
+  html body {
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+  }
+  html body div.container-fluid {
+    height: inherit;
+  }
+  html body div.container-fluid div.content {
+    height: inherit;
+  }
   body {
     padding: 0px;
+  }
+  nav#side-nav {
+    border-right: 1px solid #e5e5e5;
+    margin-right: 15px;
+    height: inherit;
+    margin-top: -20px;
+    padding-top: 20px;
   }
   nav.navbar {
     border: none;
@@ -41,8 +83,29 @@
   }
 }
 @media (min-width: 992px) {
+  html {
+    height: 100%;
+  }
+  html body {
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+  }
+  html body div.container-fluid {
+    height: inherit;
+  }
+  html body div.container-fluid div.content {
+    height: inherit;
+  }
   body {
     padding: 0px;
+  }
+  nav#side-nav {
+    border-right: 1px solid #e5e5e5;
+    margin-right: 15px;
+    height: inherit;
+    margin-top: -20px;
+    padding-top: 20px;
   }
   nav.navbar {
     border: none;

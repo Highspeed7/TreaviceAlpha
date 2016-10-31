@@ -1,20 +1,19 @@
-﻿<nav class="navbar navbar-default col-md-2">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav nav-stacked">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
-                <li role="presentation"><a href="#">Profile</a></li>
-                <li role="presentation"><a href="#">Messages</a></li>
-            </ul>
-        </div>
+﻿<div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
     </div>
-</nav>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav nav-stacked">
+            <li role="presentation" routerLinkActive="active"><a routerLink="/">Home</a></li>
+            <li role="presentation" routerLinkActive="active"><a routerLink="search">Search Listings</a></li>
+            <li *ngIf="loggedIn" role="presentation"><a href="#">My Account</a></li>
+            <li *ngIf="loggedIn" role="presentation"><a href="#">New Listing</a></li>
+        </ul>
+    </div>
+</div>
