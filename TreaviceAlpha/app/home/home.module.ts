@@ -2,7 +2,7 @@
 
 import { HomeComponent } from "./home.component";
 
-import { ListSearchModule } from "../search/listings-search.module";
+import { SideNavModule } from "../nav/sidenav.module";
 import {HomeRoutingModule} from "./home-routing.module";
 
 @NgModule ({
@@ -10,7 +10,7 @@ import {HomeRoutingModule} from "./home-routing.module";
         HomeComponent
     ],
     imports: [
-        ListSearchModule,
+        SideNavModule,
         HomeRoutingModule
     ],
     exports: [HomeComponent]
