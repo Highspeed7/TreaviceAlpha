@@ -1,7 +1,10 @@
-﻿import {Component} from "@angular/core";
+﻿import { Component } from "@angular/core";
+import {Router} from "@angular/router";
 
 @Component({
-    template: "<h1>This is the home page</h1>"
+    templateUrl: "app/home/home.component.html"
 })
 
-export class HomeComponent {}
+export class HomeComponent {
+    constructor(private router: Router ) {}
+}

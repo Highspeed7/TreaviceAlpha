@@ -1,0 +1,1 @@
+{"version":3,"file":"sidenav.module.js","sourceRoot":"","sources":["sidenav.module.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAAyB,eAAe,CAAC,CAAA;AAEzC,kCAAiC,qBAAqB,CAAC,CAAA;AAOvD;IAAA;IAA4B,CAAC;IAL7B;QAAC,eAAQ,CAAC;YACN,YAAY,EAAE,CAAC,oCAAgB,CAAC;YAChC,OAAO,EAAE,CAAC,oCAAgB,CAAC;SAC9B,CAAC;;qBAAA;IAE0B,oBAAC;AAAD,CAAC,AAA7B,IAA6B;AAAhB,qBAAa,gBAAG,CAAA"}

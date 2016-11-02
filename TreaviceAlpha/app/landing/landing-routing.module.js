@@ -10,18 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var NavbarComponent = (function () {
-    function NavbarComponent(router) {
-        this.router = router;
+var landing_component_1 = require("./landing.component");
+var LandingRoutingModule = (function () {
+    function LandingRoutingModule() {
     }
-    NavbarComponent = __decorate([
-        core_1.Component({
-            selector: "nav[navbar]",
-            templateUrl: "./app/nav/navbar.component.html"
+    LandingRoutingModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                router_1.RouterModule.forRoot([
+                    { path: "", component: landing_component_1.LandingComponent }
+                ])
+            ],
+            exports: [
+                router_1.RouterModule
+            ]
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], NavbarComponent);
-    return NavbarComponent;
+        __metadata('design:paramtypes', [])
+    ], LandingRoutingModule);
+    return LandingRoutingModule;
 }());
-exports.NavbarComponent = NavbarComponent;
-//# sourceMappingURL=navbar.component.js.map
+exports.LandingRoutingModule = LandingRoutingModule;
+//# sourceMappingURL=landing-routing.module.js.map

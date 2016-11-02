@@ -14,8 +14,8 @@ var AppComponent = (function () {
     }
     AppComponent = __decorate([
         core_1.Component({
-            selector: "trvc-app",
-            template: "\n    <nav navbar class=\"navbar navbar-default col-md-2\" id=\"side-nav\"></nav>\n    <router-outlet></router-outlet>",
+            selector: "trvcapp",
+            template: "\n    <router-outlet></router-outlet>",
             styles: ["\n        :host {\n            height: inherit;\n        }\n    "]
         }), 
         __metadata('design:paramtypes', [])
