@@ -6,11 +6,6 @@
     "build:watch": "webpack --watch -d --color --config ./webpack.config.js",
     "lint": "tslint ./app/**/*.ts -t msbuild"
   },
-  "-vs-binding": {
-    "BeforeBuild": [
-      "build"
-    ]
-  },
   "licenses": [
     {
       "type": "MIT",

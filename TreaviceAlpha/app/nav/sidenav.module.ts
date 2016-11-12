@@ -1,13 +1,13 @@
 ﻿import { NgModule } from "@angular/core";
 
-import {ListSearchModule} from "../search/listings-search.module";
-
 import { SideNavComponent } from "./sidenav.component";
+
+import { ListSearchRoutingModule} from "../search/listings-search-routing.module";
 
 @NgModule({
     declarations: [SideNavComponent],
     imports: [
-        ListSearchModule
+        ListSearchRoutingModule
     ],
     exports: [SideNavComponent]
 })

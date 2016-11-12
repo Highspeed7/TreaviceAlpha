@@ -6,7 +6,7 @@ import {ListSearchComponent} from "./listings-search.component";
 @NgModule({
     imports: [
         RouterModule.forChild([
-            {path: "search-listings", component: ListSearchComponent}
+            { path: "search-listings", component: ListSearchComponent }
         ])
     ],
     exports: [RouterModule]

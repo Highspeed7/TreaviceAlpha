@@ -10,8 +10,8 @@ import {HomeRoutingModule} from "./home-routing.module";
         HomeComponent
     ],
     imports: [
-        SideNavModule,
-        HomeRoutingModule
+        HomeRoutingModule,
+        SideNavModule
     ],
     exports: [HomeComponent]
 })

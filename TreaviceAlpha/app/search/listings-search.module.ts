@@ -2,6 +2,8 @@
 
 import { ListSearchComponent } from "./listings-search.component";
 
+import { SideNavModule } from "../nav/sidenav.module";
+
 import { ListSearchRoutingModule } from "./listings-search-routing.module";
 
 @NgModule({
@@ -9,7 +11,8 @@ import { ListSearchRoutingModule } from "./listings-search-routing.module";
         ListSearchComponent
     ],
     imports: [
-        ListSearchRoutingModule
+        ListSearchRoutingModule,
+        SideNavModule
     ],
     exports: [
         ListSearchComponent,
