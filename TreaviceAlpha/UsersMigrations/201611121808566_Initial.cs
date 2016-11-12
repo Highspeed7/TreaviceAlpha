@@ -1,19 +1,11 @@
-namespace TreaviceAlpha.Migrations
+namespace TreaviceAlpha.UsersMigrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialModels : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
-        {
-            DropForeignKey("dbo.Skills", "User_Id", "dbo.Users");
-            DropIndex("dbo.Skills", new[] { "User_Id" });
-            DropTable("dbo.Users");
-            DropTable("dbo.Skills");
-        }
-        
-        public override void Down()
         {
             CreateTable(
                 "dbo.Skills",
@@ -23,7 +15,6 @@ namespace TreaviceAlpha.Migrations
                         Name = c.String(),
                         CategoryId = c.Byte(nullable: false),
                         PointValue = c.Int(nullable: false),
-                        User_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -42,8 +33,30 @@ namespace TreaviceAlpha.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-            CreateIndex("dbo.Skills", "User_Id");
-            AddForeignKey("dbo.Skills", "User_Id", "dbo.Users", "Id");
+            CreateTable(
+                "dbo.UserSkills",
+                c => new
+                    {
+                        User_Id = c.Int(nullable: false),
+                        Skill_Id = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => new { t.User_Id, t.Skill_Id })
+                .ForeignKey("dbo.Users", t => t.User_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Skills", t => t.Skill_Id, cascadeDelete: true)
+                .Index(t => t.User_Id)
+                .Index(t => t.Skill_Id);
+            
+        }
+        
+        public override void Down()
+        {
+            DropForeignKey("dbo.UserSkills", "Skill_Id", "dbo.Skills");
+            DropForeignKey("dbo.UserSkills", "User_Id", "dbo.Users");
+            DropIndex("dbo.UserSkills", new[] { "Skill_Id" });
+            DropIndex("dbo.UserSkills", new[] { "User_Id" });
+            DropTable("dbo.UserSkills");
+            DropTable("dbo.Users");
+            DropTable("dbo.Skills");
         }
     }
 }

@@ -13,7 +13,7 @@ namespace TreaviceAlpha.Models
         public DbSet<User> Users { get; set; }
 
         public UserDbContext()
-            : base("DefaultConnection")
+            : base("name=DefaultConnection")
         {
         }
     }
