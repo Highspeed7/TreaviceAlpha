@@ -4,9 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Configuration;
-using System.Web.Http;
 using TreaviceAlpha.Models;
 using System.Data.Entity;
+using System.Web.Http;
+using TreaviceAlpha.Services;
 
 namespace TreaviceAlpha.Controllers.Api
 {
@@ -21,12 +22,17 @@ namespace TreaviceAlpha.Controllers.Api
 
         // POST /api/customers
         [HttpPost]
-        public User CreateUser(User user)
+        public Boolean CreateUser(User user)
         {
             if(!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
 
+            user.Password = HashService.HashPass(user.Password);
+
             _context.Users.Add(user);
+            _context.SaveChanges();
+
+            return true;
         }
     }
 }
