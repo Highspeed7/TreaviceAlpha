@@ -1,4 +1,5 @@
-﻿module.exports = {
+﻿require('es6-promise').polyfill();
+module.exports = {
     // define entry point
     entry: {
         "polyfills": "./app/polyfills.ts",
