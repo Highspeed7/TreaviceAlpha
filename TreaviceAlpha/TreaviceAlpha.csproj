@@ -222,11 +222,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IdentityMigrations\201611121807456_Initial.cs" />
-    <Compile Include="IdentityMigrations\201611121807456_Initial.Designer.cs">
-      <DependentUpon>201611121807456_Initial.cs</DependentUpon>
+    <Compile Include="IdentityMigrations\201611122350265_Initial.cs" />
+    <Compile Include="IdentityMigrations\201611122350265_Initial.Designer.cs">
+      <DependentUpon>201611122350265_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="IdentityMigrations\ApplicationDbConfig.cs" />
+    <Compile Include="IdentityMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -236,11 +236,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\HashService.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="UsersMigrations\201611121808566_Initial.cs" />
-    <Compile Include="UsersMigrations\201611121808566_Initial.Designer.cs">
-      <DependentUpon>201611121808566_Initial.cs</DependentUpon>
+    <Compile Include="UsersMigrations\201611122350399_Initial.cs" />
+    <Compile Include="UsersMigrations\201611122350399_Initial.Designer.cs">
+      <DependentUpon>201611122350399_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsersMigrations\UsersDbConfig.cs" />
+    <Compile Include="UsersMigrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\home\home.component.html" />
@@ -347,11 +347,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="IdentityMigrations\201611121807456_Initial.resx">
-      <DependentUpon>201611121807456_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="IdentityMigrations\201611122350265_Initial.resx">
+      <DependentUpon>201611122350265_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersMigrations\201611121808566_Initial.resx">
-      <DependentUpon>201611121808566_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="UsersMigrations\201611122350399_Initial.resx">
+      <DependentUpon>201611122350399_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

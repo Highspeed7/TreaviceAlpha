@@ -13,7 +13,7 @@ namespace TreaviceAlpha.UsersMigrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201611121808566_Initial"; }
+            get { return "201611122350399_Initial"; }
         }
         
         string IMigrationMetadata.Source
