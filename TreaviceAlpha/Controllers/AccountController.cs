@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using TreaviceAlpha.Models;
+using TreaviceAlpha.Services;
 
 namespace TreaviceAlpha.Controllers
 {
@@ -52,14 +53,14 @@ namespace TreaviceAlpha.Controllers
             }
         }
 
-        //
+        // Don't need due to asynchronous
         // GET: /Account/Login
-        [AllowAnonymous]
-        public ActionResult Login(string returnUrl)
-        {
-            ViewBag.ReturnUrl = returnUrl;
-            return View();
-        }
+        //[AllowAnonymous]
+        //public ActionResult Login(string returnUrl)
+        //{
+        //    ViewBag.ReturnUrl = returnUrl;
+        //    return View();
+        //}
 
         //
         // POST: /Account/Login
@@ -142,11 +143,19 @@ namespace TreaviceAlpha.Controllers
             return View();
         }
 
+        // GET: /Account/GetVerifyToken
+        public string GetVerifyToken()
+        {
+            string cookieToken, formToken;
+            System.Web.Helpers.AntiForgery.GetTokens(null, out cookieToken, out formToken);
+            return cookieToken + ":" + formToken;
+        }
+
         //
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
+        [AntiForgeryValidate]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)

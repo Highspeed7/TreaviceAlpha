@@ -19,12 +19,8 @@ namespace TreaviceAlpha.Controllers.Api
         {
             _context = new UserDbContext();
         }
-        // GET /api/users
-        public IEnumerable<User> GetUsers()
-        {
-           return _context.Users.ToList();
-        }
 
+        // POST /api/users/login
         // POST /api/users
         [HttpPost]
         public Boolean CreateUser(User user)

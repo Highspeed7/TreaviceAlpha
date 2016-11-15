@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using TreaviceAlpha.Services
+<!DOCTYPE html>
 <html>
 <head>
     <base href="/" />
@@ -13,7 +14,7 @@
 </head>
 <body>
     <div class="container-fluid body-content">
-        <div class="content">
+        <div class="content" @Html.RequestVerificationToken()>
             @RenderBody()
             <hr />
             <footer>

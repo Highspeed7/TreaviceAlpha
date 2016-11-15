@@ -234,6 +234,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AntiForgeryService.cs" />
     <Compile Include="Services\HashService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="UsersMigrations\201611122350399_Initial.cs" />
