@@ -9,28 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var home_component_1 = require("./home.component");
-var sidenav_module_1 = require("../nav/sidenav.module");
-var home_routing_module_1 = require("./home-routing.module");
-var register_routing_module_1 = require("../register/register-routing.module");
-var HomeModule = (function () {
-    function HomeModule() {
+var RegisterComponent = (function () {
+    function RegisterComponent() {
     }
-    HomeModule = __decorate([
-        core_1.NgModule({
-            declarations: [
-                home_component_1.HomeComponent
-            ],
-            imports: [
-                register_routing_module_1.RegisterRoutingModule,
-                home_routing_module_1.HomeRoutingModule,
-                sidenav_module_1.SideNavModule
-            ],
-            exports: [home_component_1.HomeComponent]
+    RegisterComponent = __decorate([
+        core_1.Component({
+            templateUrl: "app/register/register.component.html"
         }), 
         __metadata('design:paramtypes', [])
-    ], HomeModule);
-    return HomeModule;
+    ], RegisterComponent);
+    return RegisterComponent;
 }());
-exports.HomeModule = HomeModule;
-//# sourceMappingURL=home.module.js.map
+exports.RegisterComponent = RegisterComponent;
+//# sourceMappingURL=register.component.js.map

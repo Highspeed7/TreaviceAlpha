@@ -1,13 +1,19 @@
 ﻿import { NgModule } from "@angular/core";
 
 import { SideNavComponent } from "./sidenav.component";
+import {RegisterComponent} from "../register/register.component";
 
 import { ListSearchRoutingModule} from "../search/listings-search-routing.module";
+import { RegisterRoutingModule} from "../register/register-routing.module";
 
 @NgModule({
-    declarations: [SideNavComponent],
+    declarations: [
+        RegisterComponent,
+        SideNavComponent
+    ],
     imports: [
-        ListSearchRoutingModule
+        ListSearchRoutingModule,
+        RegisterRoutingModule
     ],
     exports: [SideNavComponent]
 })

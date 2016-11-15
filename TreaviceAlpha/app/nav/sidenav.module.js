@@ -10,15 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var sidenav_component_1 = require("./sidenav.component");
+var register_component_1 = require("../register/register.component");
 var listings_search_routing_module_1 = require("../search/listings-search-routing.module");
+var register_routing_module_1 = require("../register/register-routing.module");
 var SideNavModule = (function () {
     function SideNavModule() {
     }
     SideNavModule = __decorate([
         core_1.NgModule({
-            declarations: [sidenav_component_1.SideNavComponent],
+            declarations: [
+                register_component_1.RegisterComponent,
+                sidenav_component_1.SideNavComponent
+            ],
             imports: [
-                listings_search_routing_module_1.ListSearchRoutingModule
+                listings_search_routing_module_1.ListSearchRoutingModule,
+                register_routing_module_1.RegisterRoutingModule
             ],
             exports: [sidenav_component_1.SideNavComponent]
         }), 

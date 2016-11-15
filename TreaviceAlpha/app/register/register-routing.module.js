@@ -9,30 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-// import { ListSearchModule } from "./search/listings-search.module";
-var landing_module_1 = require("./landing/landing.module");
-var app_routing_module_1 = require("./app-routing.module");
-var AppModule = (function () {
-    function AppModule() {
+var router_1 = require("@angular/router");
+var register_component_1 = require("./register.component");
+var RegisterRoutingModule = (function () {
+    function RegisterRoutingModule() {
     }
-    AppModule = __decorate([
+    RegisterRoutingModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule,
-                // ListSearchModule,
-                landing_module_1.LandingModule,
-                app_routing_module_1.AppRoutingModule
+                router_1.RouterModule.forChild([
+                    { path: "sign-up", component: register_component_1.RegisterComponent }
+                ])
             ],
-            declarations: [
-                app_component_1.AppComponent
-            ],
-            bootstrap: [app_component_1.AppComponent]
+            exports: [router_1.RouterModule]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], RegisterRoutingModule);
+    return RegisterRoutingModule;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.RegisterRoutingModule = RegisterRoutingModule;
+//# sourceMappingURL=register-routing.module.js.map
