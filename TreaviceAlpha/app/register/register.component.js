@@ -12,6 +12,10 @@ var core_1 = require("@angular/core");
 var RegisterComponent = (function () {
     function RegisterComponent() {
     }
+    RegisterComponent.prototype.registerUser = function (e) {
+        e.preventDefault();
+        alert("form submitted");
+    };
     RegisterComponent = __decorate([
         core_1.Component({
             templateUrl: "app/register/register.component.html"
