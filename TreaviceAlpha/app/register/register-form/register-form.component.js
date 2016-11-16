@@ -9,24 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var sidenav_component_1 = require("./sidenav.component");
-var listings_search_routing_module_1 = require("../search/listings-search-routing.module");
-var SideNavModule = (function () {
-    function SideNavModule() {
+// import { RegisterFormModel } from "../../models/index";
+var RegisterFormComponent = (function () {
+    function RegisterFormComponent() {
     }
-    SideNavModule = __decorate([
-        core_1.NgModule({
-            declarations: [
-                sidenav_component_1.SideNavComponent
-            ],
-            imports: [
-                listings_search_routing_module_1.ListSearchRoutingModule
-            ],
-            exports: [sidenav_component_1.SideNavComponent]
+    RegisterFormComponent = __decorate([
+        core_1.Component({
+            selector: "register-form",
+            templateUrl: "app/register/register-form/register-form.component.html"
         }), 
         __metadata('design:paramtypes', [])
-    ], SideNavModule);
-    return SideNavModule;
+    ], RegisterFormComponent);
+    return RegisterFormComponent;
 }());
-exports.SideNavModule = SideNavModule;
-//# sourceMappingURL=sidenav.module.js.map
+exports.RegisterFormComponent = RegisterFormComponent;
+//# sourceMappingURL=register-form.component.js.map

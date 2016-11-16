@@ -247,6 +247,7 @@
     <Content Include="app\home\home.component.html" />
     <Content Include="app\landing\landing.component.html" />
     <Content Include="app\nav\sidenav.component.html" />
+    <Content Include="app\register\register-form\register-form.component.html" />
     <Content Include="app\register\register.component.html" />
     <Content Include="app\search\listings-search.component.html" />
     <Content Include="Content\bootstrap.css" />
@@ -337,10 +338,13 @@
     <TypeScriptCompile Include="app\landing\landing.component.ts" />
     <TypeScriptCompile Include="app\landing\landing.module.ts" />
     <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\models\index.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.component.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.module.ts" />
+    <TypeScriptCompile Include="app\register\register-form\register-form.component.ts" />
     <TypeScriptCompile Include="app\register\register-routing.module.ts" />
     <TypeScriptCompile Include="app\register\register.component.ts" />
+    <TypeScriptCompile Include="app\register\register.module.ts" />
     <TypeScriptCompile Include="app\search\listings-search-routing.module.ts" />
     <TypeScriptCompile Include="app\search\listings-search.module.ts" />
     <TypeScriptCompile Include="app\search\listings-search.component.ts" />
