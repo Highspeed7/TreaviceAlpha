@@ -342,6 +342,7 @@
     <TypeScriptCompile Include="app\nav\sidenav.component.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.module.ts" />
     <TypeScriptCompile Include="app\register\register-form\register-form.component.ts" />
+    <TypeScriptCompile Include="app\register\register-form\validators\register-form-validators.ts" />
     <TypeScriptCompile Include="app\register\register-routing.module.ts" />
     <TypeScriptCompile Include="app\register\register.component.ts" />
     <TypeScriptCompile Include="app\register\register.module.ts" />

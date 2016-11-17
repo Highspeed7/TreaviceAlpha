@@ -1,10 +1,43 @@
-﻿<form>
+﻿<form [formGroup]="signupForm">
     <div class="form-group">
-        <label for="email">Username:</label>
-        <input ngModel name="email" #email="ngModel" type="text" id="email" class="form-control">
+        <label for="email">Email: </label>
+        <input 
+            type="email" 
+            id="email" 
+            formControlName="email" 
+            class="form-control" 
+            required>
+        <div *ngIf="email.errors && email.touched">
+            <div class="alert alert-danger" *ngIf="email.errors.required">This field is required.</div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="password"></label>
-        <input type="text" class="form-control" ngModel name="password" id="password" #password="ngModel">
+    <div formGroupName="passwords">
+        <div class="form-group">
+            <label for="password">Password: </label>
+            <input 
+                formControlName="password"
+                class="form-control"
+                type="password"
+                id="password"
+                required
+                pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$">
+            <div *ngIf="passwords.controls.password.errors && passwords.controls.password.touched">
+                <div class="alert alert-danger" *ngIf="passwords.controls.password.errors.pattern">Passwords should be at least 8 characters long, with 1 special character (!@#, etc...), and at least 1 number</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password: </label>
+            <input 
+                formControlName="confirmPassword"
+                class="form-control"
+                id="confirmPassword"
+                type="password"
+                required>
+            <div *ngIf="passwords.controls.confirmPassword.errors && passwords.controls.confirmPassword.touched">
+                <div class="alert alert-danger" *ngIf="passwords.controls.confirmPassword.errors.cannotContainSpace">Field cannot contain space.</div>
+            </div>
+        </div>
     </div>
 </form>
+
+<!--pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$"-->
