@@ -41898,6 +41898,7 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var forms_1 = __webpack_require__(/*! @angular/forms */ 72);
+	var common_1 = __webpack_require__(/*! @angular/common */ 27);
 	var register_component_1 = __webpack_require__(/*! ./register.component */ 74);
 	var register_form_component_1 = __webpack_require__(/*! ./register-form/register-form.component */ 75);
 	var register_routing_module_1 = __webpack_require__(/*! ./register-routing.module */ 77);
@@ -41912,8 +41913,10 @@
 	                register_form_component_1.RegisterFormComponent
 	            ],
 	            imports: [
+	                common_1.CommonModule,
 	                register_routing_module_1.RegisterRoutingModule,
 	                forms_1.FormsModule,
+	                forms_1.ReactiveFormsModule,
 	                sidenav_module_1.SideNavModule
 	            ],
 	            exports: [
@@ -46471,24 +46474,69 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var forms_1 = __webpack_require__(/*! @angular/forms */ 72);
+	var register_form_validators_1 = __webpack_require__(/*! ./validators/register-form-validators */ 76);
 	// import { RegisterFormModel } from "../../models/index";
 	var RegisterFormComponent = (function () {
-	    function RegisterFormComponent() {
+	    function RegisterFormComponent(fb) {
+	        this.signupForm = fb.group({
+	            email: ["", forms_1.Validators.required],
+	            passwords: fb.group({
+	                password: ["", forms_1.Validators.required, forms_1.Validators.pattern],
+	                confirmPassword: ["", forms_1.Validators.compose([
+	                        forms_1.Validators.required,
+	                        register_form_validators_1.RegisterFormValidators.cannotContainSpace
+	                    ])]
+	            })
+	        });
+	        // TODO: find better way to avoid tslint error
+	        this.email = this.signupForm.controls["email"]; // tslint:disable-line 
+	        // TODO: find better way to avoid tslint error
+	        this.passwords = this.signupForm.controls["passwords"]; // tslint:disable-line 
 	    }
+	    RegisterFormComponent.prototype.onSubmit = function (form) {
+	        console.log(form); // tslint:disable-line
+	    };
 	    RegisterFormComponent = __decorate([
 	        core_1.Component({
 	            selector: "register-form",
 	            templateUrl: "app/register/register-form/register-form.component.html"
 	        }), 
-	        __metadata('design:paramtypes', [])
+	        __metadata('design:paramtypes', [(typeof (_a = typeof forms_1.FormBuilder !== 'undefined' && forms_1.FormBuilder) === 'function' && _a) || Object])
 	    ], RegisterFormComponent);
 	    return RegisterFormComponent;
+	    var _a;
 	}());
 	exports.RegisterFormComponent = RegisterFormComponent;
 
 
 /***/ },
-/* 76 */,
+/* 76 */
+/*!***************************************************************************!*\
+  !*** ./app/register/register-form/validators/register-form-validators.ts ***!
+  \***************************************************************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	var RegisterFormValidators = (function () {
+	    function RegisterFormValidators() {
+	    }
+	    RegisterFormValidators.cannotContainSpace = function (control) {
+	        if (control.value.indexOf(" ") >= 0) {
+	            return {
+	                cannotContainSpace: true
+	            };
+	        }
+	        else {
+	            return null;
+	        }
+	    };
+	    return RegisterFormValidators;
+	}());
+	exports.RegisterFormValidators = RegisterFormValidators;
+
+
+/***/ },
 /* 77 */
 /*!*************************************************!*\
   !*** ./app/register/register-routing.module.ts ***!
