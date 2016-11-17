@@ -1,13 +1,7 @@
-﻿import { FormControl } from "@angular/forms";
+﻿import {FormGroup} from "@angular/forms";
 
 export class RegisterFormValidators {
-    public static cannotContainSpace(control: FormControl) {
-        if (control.value.indexOf(" ") >= 0) {
-            return {
-                cannotContainSpace: true
-            };
-        } else {
-            return null;
-        }
+    public static passwordMatch(form: FormGroup) {
+        return form.get("password").value === form.get("confirmPassword").value ? null : { "mismatch": true };
     }
 }

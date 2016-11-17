@@ -35,11 +35,13 @@
                 required>
             <div *ngIf="signupForm.controls.passwords.controls.confirmPassword.errors && signupForm.controls.passwords.controls.confirmPassword.touched">
                 <div class="alert alert-danger" *ngIf="signupForm.controls.passwords.controls.confirmPassword.errors.required">This field required.</div>
-                <div class="alert alert-danger" *ngIf="signupForm.controls.passwords.controls.confirmPassword.errors">Passwords must match.</div>
+            </div>
+            <div *ngIf="signupForm.controls.passwords.errors && signupForm.controls.passwords.controls.confirmPassword.touched">
+                <div class="alert alert-danger" *ngIf="signupForm.controls.passwords.errors.mismatch">Passwords must match.</div>
             </div>
         </div>
     </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid">Submit</button>
 </form>
 
 <!--pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$"-->

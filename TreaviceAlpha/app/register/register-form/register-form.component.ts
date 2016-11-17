@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators, AbstractControl } from "@angular/forms";
 
-// import { RegisterFormValidators } from "./validators/register-form-validators";
+import { RegisterFormValidators } from "./validators/register-form-validators";
 // import { RegisterFormModel } from "../../models/index";
 
 @Component({
@@ -24,7 +24,7 @@ export class RegisterFormComponent implements OnInit {
     }
 
     public initPasswordFieldsGroup() {
-        const group = this.fb.group(this.initPasswordModel(), { validator: this.passwordFieldsGroupValidator});
+        const group = this.fb.group(this.initPasswordModel(), { validator: RegisterFormValidators.passwordMatch });
 
         return group;
     }
