@@ -35109,7 +35109,7 @@
 	var app_component_1 = __webpack_require__(/*! ./app.component */ 29);
 	// import { ListSearchModule } from "./search/listings-search.module";
 	var landing_module_1 = __webpack_require__(/*! ./landing/landing.module */ 30);
-	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 80);
+	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 79);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -35186,9 +35186,9 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var home_module_1 = __webpack_require__(/*! ../home/home.module */ 31);
-	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 78);
+	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 77);
 	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 67);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 79);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 78);
 	var LandingModule = (function () {
 	    function LandingModule() {
 	    }
@@ -41901,7 +41901,7 @@
 	var common_1 = __webpack_require__(/*! @angular/common */ 27);
 	var register_component_1 = __webpack_require__(/*! ./register.component */ 74);
 	var register_form_component_1 = __webpack_require__(/*! ./register-form/register-form.component */ 75);
-	var register_routing_module_1 = __webpack_require__(/*! ./register-routing.module */ 77);
+	var register_routing_module_1 = __webpack_require__(/*! ./register-routing.module */ 76);
 	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 65);
 	var RegisterModule = (function () {
 	    function RegisterModule() {
@@ -46475,27 +46475,39 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var forms_1 = __webpack_require__(/*! @angular/forms */ 72);
-	var register_form_validators_1 = __webpack_require__(/*! ./validators/register-form-validators */ 76);
+	// import { RegisterFormValidators } from "./validators/register-form-validators";
 	// import { RegisterFormModel } from "../../models/index";
 	var RegisterFormComponent = (function () {
 	    function RegisterFormComponent(fb) {
-	        this.signupForm = fb.group({
-	            email: ["", forms_1.Validators.required],
-	            passwords: fb.group({
-	                password: ["", forms_1.Validators.required, forms_1.Validators.pattern],
-	                confirmPassword: ["", forms_1.Validators.compose([
-	                        forms_1.Validators.required,
-	                        register_form_validators_1.RegisterFormValidators.cannotContainSpace
-	                    ])]
-	            })
-	        });
-	        // TODO: find better way to avoid tslint error
-	        this.email = this.signupForm.controls["email"]; // tslint:disable-line 
-	        // TODO: find better way to avoid tslint error
-	        this.passwords = this.signupForm.controls["passwords"]; // tslint:disable-line 
+	        this.fb = fb;
 	    }
-	    RegisterFormComponent.prototype.onSubmit = function (form) {
-	        console.log(form); // tslint:disable-line
+	    RegisterFormComponent.prototype.ngOnInit = function () {
+	        // we will initialize our form model here
+	        this.signupForm = this.fb.group({
+	            email: ["", forms_1.Validators.required],
+	            passwords: this.initPasswordFieldsGroup()
+	        });
+	    };
+	    RegisterFormComponent.prototype.initPasswordFieldsGroup = function () {
+	        var group = this.fb.group(this.initPasswordModel(), { validator: this.passwordFieldsGroupValidator });
+	        return group;
+	    };
+	    RegisterFormComponent.prototype.initEmailModel = function () {
+	        return ["", [forms_1.Validators.required]];
+	    };
+	    RegisterFormComponent.prototype.initPasswordModel = function () {
+	        var passRegex = "^(?=.*[A-Za-z])(?=.*[$@$!%*#?&])(?=.*[0-9])[A-Za-z0-9$@$!%*#?&]{8,}$";
+	        var model = {
+	            password: ["", [forms_1.Validators.required, forms_1.Validators.pattern(passRegex)]],
+	            confirmPassword: ["", [forms_1.Validators.required]]
+	        };
+	        return model;
+	    };
+	    RegisterFormComponent.prototype.passwordFieldsGroupValidator = function (form) {
+	        return form.get("password").value === form.get("confirmPassword").value;
+	    };
+	    RegisterFormComponent.prototype.save = function (formData, isValid) {
+	        alert("saved!");
 	    };
 	    RegisterFormComponent = __decorate([
 	        core_1.Component({
@@ -46512,32 +46524,6 @@
 
 /***/ },
 /* 76 */
-/*!***************************************************************************!*\
-  !*** ./app/register/register-form/validators/register-form-validators.ts ***!
-  \***************************************************************************/
-/***/ function(module, exports) {
-
-	"use strict";
-	var RegisterFormValidators = (function () {
-	    function RegisterFormValidators() {
-	    }
-	    RegisterFormValidators.cannotContainSpace = function (control) {
-	        if (control.value.indexOf(" ") >= 0) {
-	            return {
-	                cannotContainSpace: true
-	            };
-	        }
-	        else {
-	            return null;
-	        }
-	    };
-	    return RegisterFormValidators;
-	}());
-	exports.RegisterFormValidators = RegisterFormValidators;
-
-
-/***/ },
-/* 77 */
 /*!*************************************************!*\
   !*** ./app/register/register-routing.module.ts ***!
   \*************************************************/
@@ -46576,7 +46562,7 @@
 
 
 /***/ },
-/* 78 */
+/* 77 */
 /*!***********************************************!*\
   !*** ./app/landing/landing-routing.module.ts ***!
   \***********************************************/
@@ -46594,7 +46580,7 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var router_1 = __webpack_require__(/*! @angular/router */ 33);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 79);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 78);
 	var LandingRoutingModule = (function () {
 	    function LandingRoutingModule() {
 	    }
@@ -46617,7 +46603,7 @@
 
 
 /***/ },
-/* 79 */
+/* 78 */
 /*!******************************************!*\
   !*** ./app/landing/landing.component.ts ***!
   \******************************************/
@@ -46649,7 +46635,7 @@
 
 
 /***/ },
-/* 80 */
+/* 79 */
 /*!***********************************!*\
   !*** ./app/app-routing.module.ts ***!
   \***********************************/
