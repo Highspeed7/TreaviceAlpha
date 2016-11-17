@@ -48,6 +48,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
+	///<reference path="./../node_modules/@types/core-js/index.d.ts"/>
 	__webpack_require__(/*! ../Content/site.less */ 2);
 	var platform_browser_dynamic_1 = __webpack_require__(/*! @angular/platform-browser-dynamic */ 6);
 	var app_module_1 = __webpack_require__(/*! ./app.module */ 28);
@@ -35108,7 +35109,7 @@
 	var app_component_1 = __webpack_require__(/*! ./app.component */ 29);
 	// import { ListSearchModule } from "./search/listings-search.module";
 	var landing_module_1 = __webpack_require__(/*! ./landing/landing.module */ 30);
-	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 79);
+	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 80);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -35185,9 +35186,9 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var home_module_1 = __webpack_require__(/*! ../home/home.module */ 31);
-	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 77);
+	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 78);
 	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 67);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 78);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 79);
 	var LandingModule = (function () {
 	    function LandingModule() {
 	    }
@@ -35227,8 +35228,8 @@
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var home_component_1 = __webpack_require__(/*! ./home.component */ 32);
 	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 65);
-	var home_routing_module_1 = __webpack_require__(/*! ./home-routing.module */ 75);
-	var register_module_1 = __webpack_require__(/*! ../register/register.module */ 69);
+	var home_routing_module_1 = __webpack_require__(/*! ./home-routing.module */ 69);
+	var register_module_1 = __webpack_require__(/*! ../register/register.module */ 71);
 	var HomeModule = (function () {
 	    function HomeModule() {
 	    }
@@ -41793,6 +41794,94 @@
 /***/ },
 /* 69 */
 /*!*****************************************!*\
+  !*** ./app/home/home-routing.module.ts ***!
+  \*****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var router_1 = __webpack_require__(/*! @angular/router */ 33);
+	var listings_search_module_1 = __webpack_require__(/*! ../search/listings-search.module */ 70);
+	var home_component_1 = __webpack_require__(/*! ./home.component */ 32);
+	var HomeRoutingModule = (function () {
+	    function HomeRoutingModule() {
+	    }
+	    HomeRoutingModule = __decorate([
+	        core_1.NgModule({
+	            imports: [
+	                listings_search_module_1.ListSearchModule,
+	                router_1.RouterModule.forChild([
+	                    { path: "home", component: home_component_1.HomeComponent }
+	                ])
+	            ],
+	            exports: [
+	                router_1.RouterModule
+	            ]
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], HomeRoutingModule);
+	    return HomeRoutingModule;
+	}());
+	exports.HomeRoutingModule = HomeRoutingModule;
+
+
+/***/ },
+/* 70 */
+/*!**********************************************!*\
+  !*** ./app/search/listings-search.module.ts ***!
+  \**********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var listings_search_component_1 = __webpack_require__(/*! ./listings-search.component */ 68);
+	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 65);
+	var listings_search_routing_module_1 = __webpack_require__(/*! ./listings-search-routing.module */ 67);
+	var ListSearchModule = (function () {
+	    function ListSearchModule() {
+	    }
+	    ListSearchModule = __decorate([
+	        core_1.NgModule({
+	            declarations: [
+	                listings_search_component_1.ListSearchComponent
+	            ],
+	            imports: [
+	                listings_search_routing_module_1.ListSearchRoutingModule,
+	                sidenav_module_1.SideNavModule
+	            ],
+	            exports: [
+	                listings_search_component_1.ListSearchComponent,
+	                listings_search_routing_module_1.ListSearchRoutingModule
+	            ]
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], ListSearchModule);
+	    return ListSearchModule;
+	}());
+	exports.ListSearchModule = ListSearchModule;
+
+
+/***/ },
+/* 71 */
+/*!*****************************************!*\
   !*** ./app/register/register.module.ts ***!
   \*****************************************/
 /***/ function(module, exports, __webpack_require__) {
@@ -41808,10 +41897,10 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var forms_1 = __webpack_require__(/*! @angular/forms */ 70);
-	var register_component_1 = __webpack_require__(/*! ./register.component */ 72);
-	var register_form_component_1 = __webpack_require__(/*! ./register-form/register-form.component */ 73);
-	var register_routing_module_1 = __webpack_require__(/*! ./register-routing.module */ 74);
+	var forms_1 = __webpack_require__(/*! @angular/forms */ 72);
+	var register_component_1 = __webpack_require__(/*! ./register.component */ 74);
+	var register_form_component_1 = __webpack_require__(/*! ./register-form/register-form.component */ 75);
+	var register_routing_module_1 = __webpack_require__(/*! ./register-routing.module */ 77);
 	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 65);
 	var RegisterModule = (function () {
 	    function RegisterModule() {
@@ -41839,7 +41928,7 @@
 
 
 /***/ },
-/* 70 */
+/* 72 */
 /*!***********************************************!*\
   !*** ./~/@angular/forms/bundles/forms.umd.js ***!
   \***********************************************/
@@ -41851,7 +41940,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(/*! @angular/core */ 8), __webpack_require__(/*! rxjs/operator/toPromise */ 71), __webpack_require__(/*! rxjs/Subject */ 9), __webpack_require__(/*! rxjs/Observable */ 10), __webpack_require__(/*! rxjs/observable/fromPromise */ 61)) :
+	     true ? factory(exports, __webpack_require__(/*! @angular/core */ 8), __webpack_require__(/*! rxjs/operator/toPromise */ 73), __webpack_require__(/*! rxjs/Subject */ 9), __webpack_require__(/*! rxjs/Observable */ 10), __webpack_require__(/*! rxjs/observable/fromPromise */ 61)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/core', 'rxjs/operator/toPromise', 'rxjs/Subject', 'rxjs/Observable', 'rxjs/observable/fromPromise'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.forms = global.ng.forms || {}),global.ng.core,global.Rx.Observable.prototype,global.Rx,global.Rx,global.Rx.Observable));
 	}(this, function (exports,_angular_core,rxjs_operator_toPromise,rxjs_Subject,rxjs_Observable,rxjs_observable_fromPromise) { 'use strict';
@@ -46285,7 +46374,7 @@
 
 
 /***/ },
-/* 71 */
+/* 73 */
 /*!**************************************!*\
   !*** ./~/rxjs/operator/toPromise.js ***!
   \**************************************/
@@ -46321,7 +46410,7 @@
 	//# sourceMappingURL=toPromise.js.map
 
 /***/ },
-/* 72 */
+/* 74 */
 /*!********************************************!*\
   !*** ./app/register/register.component.ts ***!
   \********************************************/
@@ -46339,21 +46428,33 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var RegisterComponent = (function () {
-	    function RegisterComponent() {
+	    function RegisterComponent(myElement) {
+	        this.myElement = myElement;
 	    }
+	    RegisterComponent.prototype.registerUser = function (e) {
+	        e.preventDefault();
+	        var el = this.myElement.nativeElement;
+	        // Obtain the token
+	        while (!el.hasAttribute("ncg-request-verification-token")) {
+	            el = el.parentElement;
+	        }
+	        var token = el.getAttribute("ncg-request-verification-token");
+	        console.log(el + " " + token); // tslint:disable-line
+	    };
 	    RegisterComponent = __decorate([
 	        core_1.Component({
 	            templateUrl: "app/register/register.component.html"
 	        }), 
-	        __metadata('design:paramtypes', [])
+	        __metadata('design:paramtypes', [(typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object])
 	    ], RegisterComponent);
 	    return RegisterComponent;
+	    var _a;
 	}());
 	exports.RegisterComponent = RegisterComponent;
 
 
 /***/ },
-/* 73 */
+/* 75 */
 /*!***************************************************************!*\
   !*** ./app/register/register-form/register-form.component.ts ***!
   \***************************************************************/
@@ -46387,7 +46488,8 @@
 
 
 /***/ },
-/* 74 */
+/* 76 */,
+/* 77 */
 /*!*************************************************!*\
   !*** ./app/register/register-routing.module.ts ***!
   \*************************************************/
@@ -46405,7 +46507,7 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var router_1 = __webpack_require__(/*! @angular/router */ 33);
-	var register_component_1 = __webpack_require__(/*! ./register.component */ 72);
+	var register_component_1 = __webpack_require__(/*! ./register.component */ 74);
 	var RegisterRoutingModule = (function () {
 	    function RegisterRoutingModule() {
 	    }
@@ -46426,95 +46528,7 @@
 
 
 /***/ },
-/* 75 */
-/*!*****************************************!*\
-  !*** ./app/home/home-routing.module.ts ***!
-  \*****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 33);
-	var listings_search_module_1 = __webpack_require__(/*! ../search/listings-search.module */ 76);
-	var home_component_1 = __webpack_require__(/*! ./home.component */ 32);
-	var HomeRoutingModule = (function () {
-	    function HomeRoutingModule() {
-	    }
-	    HomeRoutingModule = __decorate([
-	        core_1.NgModule({
-	            imports: [
-	                listings_search_module_1.ListSearchModule,
-	                router_1.RouterModule.forChild([
-	                    { path: "home", component: home_component_1.HomeComponent }
-	                ])
-	            ],
-	            exports: [
-	                router_1.RouterModule
-	            ]
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], HomeRoutingModule);
-	    return HomeRoutingModule;
-	}());
-	exports.HomeRoutingModule = HomeRoutingModule;
-
-
-/***/ },
-/* 76 */
-/*!**********************************************!*\
-  !*** ./app/search/listings-search.module.ts ***!
-  \**********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var listings_search_component_1 = __webpack_require__(/*! ./listings-search.component */ 68);
-	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 65);
-	var listings_search_routing_module_1 = __webpack_require__(/*! ./listings-search-routing.module */ 67);
-	var ListSearchModule = (function () {
-	    function ListSearchModule() {
-	    }
-	    ListSearchModule = __decorate([
-	        core_1.NgModule({
-	            declarations: [
-	                listings_search_component_1.ListSearchComponent
-	            ],
-	            imports: [
-	                listings_search_routing_module_1.ListSearchRoutingModule,
-	                sidenav_module_1.SideNavModule
-	            ],
-	            exports: [
-	                listings_search_component_1.ListSearchComponent,
-	                listings_search_routing_module_1.ListSearchRoutingModule
-	            ]
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], ListSearchModule);
-	    return ListSearchModule;
-	}());
-	exports.ListSearchModule = ListSearchModule;
-
-
-/***/ },
-/* 77 */
+/* 78 */
 /*!***********************************************!*\
   !*** ./app/landing/landing-routing.module.ts ***!
   \***********************************************/
@@ -46532,7 +46546,7 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var router_1 = __webpack_require__(/*! @angular/router */ 33);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 78);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 79);
 	var LandingRoutingModule = (function () {
 	    function LandingRoutingModule() {
 	    }
@@ -46555,7 +46569,7 @@
 
 
 /***/ },
-/* 78 */
+/* 79 */
 /*!******************************************!*\
   !*** ./app/landing/landing.component.ts ***!
   \******************************************/
@@ -46587,7 +46601,7 @@
 
 
 /***/ },
-/* 79 */
+/* 80 */
 /*!***********************************!*\
   !*** ./app/app-routing.module.ts ***!
   \***********************************/
