@@ -46558,7 +46558,7 @@
 	    RegisterFormComponent.prototype.ngOnInit = function () {
 	        // we will initialize our form model here
 	        this.signupForm = this.fb.group({
-	            email: ["", forms_1.Validators.required],
+	            email: this.initEmailModel(),
 	            passwords: this.initPasswordFieldsGroup()
 	        });
 	    };
@@ -46576,9 +46576,6 @@
 	            confirmPassword: ["", [forms_1.Validators.required]]
 	        };
 	        return model;
-	    };
-	    RegisterFormComponent.prototype.passwordFieldsGroupValidator = function (form) {
-	        return form.get("password").value === form.get("confirmPassword").value;
 	    };
 	    RegisterFormComponent.prototype.save = function (formData, isValid) {
 	        alert("saved!");

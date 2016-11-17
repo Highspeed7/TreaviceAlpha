@@ -1,5 +1,5 @@
 ﻿import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormBuilder, Validators, AbstractControl } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import { RegisterFormValidators } from "./validators/register-form-validators";
 // import { RegisterFormModel } from "../../models/index";
@@ -18,7 +18,7 @@ export class RegisterFormComponent implements OnInit {
     public ngOnInit() {
         // we will initialize our form model here
         this.signupForm = this.fb.group({
-            email: ["", Validators.required],
+            email: this.initEmailModel(),
             passwords: this.initPasswordFieldsGroup()
         });
     }
@@ -42,10 +42,6 @@ export class RegisterFormComponent implements OnInit {
         };
 
         return model;
-    }
-
-    public passwordFieldsGroupValidator(form: AbstractControl) {
-        return form.get("password").value === form.get("confirmPassword").value;
     }
 
     public save(formData: any, isValid: boolean) {
