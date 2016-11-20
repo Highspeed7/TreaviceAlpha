@@ -1,4 +1,4 @@
-﻿import { Component, OnInit } from "@angular/core";
+﻿import { Component, OnInit, ElementRef } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import { RegisterFormValidators } from "./validators/register-form-validators";
@@ -13,7 +13,7 @@ export class RegisterFormComponent implements OnInit {
 
     private signupForm: FormGroup;
 
-    constructor(private fb: FormBuilder) {}
+    constructor(private fb: FormBuilder, private el: ElementRef) {}
 
     public ngOnInit() {
         // we will initialize our form model here
@@ -45,6 +45,13 @@ export class RegisterFormComponent implements OnInit {
     }
 
     public save(formData: any, isValid: boolean) {
+        // Obtain validation token
+        this.getVerifyToken();
+
         alert("saved!");
+    }
+
+    public getVerifyToken() {
+        console.log(this.el.nativeElement); // tslint:disable-line
     }
 }
