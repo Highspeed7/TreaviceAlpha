@@ -1,7 +1,11 @@
-﻿import { Component, OnInit, ElementRef } from "@angular/core";
+﻿import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import { RegisterFormValidators } from "./validators/register-form-validators";
+
+import { AccountService } from "../../services/account.service";
+
+import { UserDto } from "../../dtos/userDto";
 // import { RegisterFormModel } from "../../models/index";
 
 @Component({
@@ -13,7 +17,7 @@ export class RegisterFormComponent implements OnInit {
 
     private signupForm: FormGroup;
 
-    constructor(private fb: FormBuilder, private el: ElementRef) {}
+    constructor(private fb: FormBuilder, private accountService: AccountService) {}
 
     public ngOnInit() {
         // we will initialize our form model here
@@ -44,14 +48,32 @@ export class RegisterFormComponent implements OnInit {
         return model;
     }
 
-    public save(formData: any, isValid: boolean) {
+    public save(e: Event, formData: any, isValid: boolean) {
+        e.preventDefault();
         // Obtain validation token
-        this.getVerifyToken();
+        const token = this.getVerifyToken();
 
-        alert("saved!");
+        let data = new UserDto();
+
+        data.email = formData.email;
+        data.password = formData.passwords.password;
+
+        this.accountService.registerUser(data, token)
+            .then(() => {
+                alert("Save successful");
+            })
+            .catch(() => {
+                alert("Save failed");
+            });
+        return false;
     }
 
-    public getVerifyToken() {
-        console.log(this.el.nativeElement); // tslint:disable-line
+    public getVerifyToken(): string {
+
+        // Get the verify token
+        const tokenElem = <HTMLElement> document.querySelectorAll("div[ncg-request-verification-token]")[0];
+        const tokenVal = tokenElem.getAttribute("ncg-request-verification-token");
+
+        return tokenVal;
     }
 }

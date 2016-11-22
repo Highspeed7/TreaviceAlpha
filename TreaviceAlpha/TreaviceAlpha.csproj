@@ -241,6 +241,14 @@
     <Compile Include="UsersMigrations\201611122350399_Initial.Designer.cs">
       <DependentUpon>201611122350399_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersMigrations\201611220052026_UsersModelChange.cs" />
+    <Compile Include="UsersMigrations\201611220052026_UsersModelChange.Designer.cs">
+      <DependentUpon>201611220052026_UsersModelChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs" />
+    <Compile Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.Designer.cs">
+      <DependentUpon>201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsersMigrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -331,6 +339,7 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app-routing.module.ts" />
+    <TypeScriptCompile Include="app\dtos\userDto.ts" />
     <TypeScriptCompile Include="app\home\home.component.ts" />
     <TypeScriptCompile Include="app\home\home.module.ts" />
     <TypeScriptCompile Include="app\home\home-routing.module.ts" />
@@ -362,6 +371,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsersMigrations\201611122350399_Initial.resx">
       <DependentUpon>201611122350399_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersMigrations\201611220052026_UsersModelChange.resx">
+      <DependentUpon>201611220052026_UsersModelChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.resx">
+      <DependentUpon>201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

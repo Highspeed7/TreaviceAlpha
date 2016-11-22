@@ -37,7 +37,7 @@ namespace TreaviceAlpha.Controllers.Api
                 {
                     await _context.SaveChangesAsync();
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     var responseMessage = new HttpResponseMessage(HttpStatusCode.Conflict);
                     throw new HttpResponseException(responseMessage);

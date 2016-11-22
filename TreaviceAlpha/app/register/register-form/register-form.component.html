@@ -1,4 +1,4 @@
-﻿<form [formGroup]="signupForm" (ngSubmit)="save(signupForm.value, signupForm.valid)">
+﻿<form [formGroup]="signupForm" (ngSubmit)="save($event, signupForm.value, signupForm.valid)">
     <div class="form-group">
         <label for="email">Email: </label>
         <input 
