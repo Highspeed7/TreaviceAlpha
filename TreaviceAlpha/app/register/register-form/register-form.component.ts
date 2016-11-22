@@ -1,7 +1,11 @@
-﻿import { Component } from "@angular/core";
-import { FormGroup, FormBuilder, Validators, AbstractControl } from "@angular/forms";
+﻿import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import { RegisterFormValidators } from "./validators/register-form-validators";
+
+import { AccountService } from "../../services/account.service";
+
+import { UserDto } from "../../dtos/userDto";
 // import { RegisterFormModel } from "../../models/index";
 
 @Component({
@@ -9,31 +13,67 @@ import { RegisterFormValidators } from "./validators/register-form-validators";
     templateUrl: "app/register/register-form/register-form.component.html"
 })
 
-export class RegisterFormComponent {
+export class RegisterFormComponent implements OnInit {
 
     private signupForm: FormGroup;
-    private email: AbstractControl;
-    private passwords: AbstractControl;
 
-    constructor(fb: FormBuilder) {
-        this.signupForm = fb.group({
-            email: ["", Validators.required],
-            passwords: fb.group({
-                password: ["", Validators.required, Validators.pattern],
-                confirmPassword: ["", Validators.compose([
-                    Validators.required,
-                    RegisterFormValidators.cannotContainSpace
-                ])]
-            })
+    constructor(private fb: FormBuilder, private accountService: AccountService) {}
+
+    public ngOnInit() {
+        // we will initialize our form model here
+        this.signupForm = this.fb.group({
+            email: this.initEmailModel(),
+            passwords: this.initPasswordFieldsGroup()
         });
-
-        // TODO: find better way to avoid tslint error
-        this.email = this.signupForm.controls["email"]; // tslint:disable-line 
-        // TODO: find better way to avoid tslint error
-        this.passwords = this.signupForm.controls["passwords"]; // tslint:disable-line 
     }
 
-    public onSubmit(form) {
-        console.log(form); // tslint:disable-line
+    public initPasswordFieldsGroup() {
+        const group = this.fb.group(this.initPasswordModel(), { validator: RegisterFormValidators.passwordMatch });
+
+        return group;
+    }
+
+    public initEmailModel() {
+        return ["", [Validators.required]];
+    }
+
+    public initPasswordModel() {
+        const passRegex = `^(?=.*[A-Za-z])(?=.*[$@$!%*#?&])(?=.*[0-9])[A-Za-z0-9$@$!%*#?&]{8,}$`;
+
+        const model = {
+            password: ["", [Validators.required, Validators.pattern(passRegex)]],
+            confirmPassword: ["", [Validators.required]]
+        };
+
+        return model;
+    }
+
+    public save(e: Event, formData: any, isValid: boolean) {
+        e.preventDefault();
+        // Obtain validation token
+        const token = this.getVerifyToken();
+
+        let data = new UserDto();
+
+        data.email = formData.email;
+        data.password = formData.passwords.password;
+
+        this.accountService.registerUser(data, token)
+            .then(() => {
+                alert("Save successful");
+            })
+            .catch(() => {
+                alert("Save failed");
+            });
+        return false;
+    }
+
+    public getVerifyToken(): string {
+
+        // Get the verify token
+        const tokenElem = <HTMLElement> document.querySelectorAll("div[ncg-request-verification-token]")[0];
+        const tokenVal = tokenElem.getAttribute("ncg-request-verification-token");
+
+        return tokenVal;
     }
 }
