@@ -249,6 +249,10 @@
     <Compile Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.Designer.cs">
       <DependentUpon>201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersMigrations\201611232150360_MadeModelChanges.cs" />
+    <Compile Include="UsersMigrations\201611232150360_MadeModelChanges.Designer.cs">
+      <DependentUpon>201611232150360_MadeModelChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsersMigrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -377,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.resx">
       <DependentUpon>201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersMigrations\201611232150360_MadeModelChanges.resx">
+      <DependentUpon>201611232150360_MadeModelChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
