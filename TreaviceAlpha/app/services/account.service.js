@@ -15,7 +15,7 @@ require("rxjs/add/operator/toPromise");
 var AccountService = (function () {
     function AccountService(httpService) {
         this.httpService = httpService;
-        this.url = "/api/account/";
+        this.url = "/api/users/";
     }
     AccountService.prototype.registerUser = function (data, token) {
         var headers = new http_1.Headers({ "Content-Type": "application/json", "__RequestVerificationToken": token });

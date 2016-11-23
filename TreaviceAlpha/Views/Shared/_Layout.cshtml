@@ -8,22 +8,28 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script src="../../dist/js/polyfills.js"></script>
-    <script src="../../dist/js/vendor.js"></script>
-    <script src="../../dist/js/app.js"></script>
 </head>
 <body>
-    <div class="container-fluid body-content">
-        <div class="content" @Html.RequestVerificationToken()>
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-            </footer>
-        </div>
+<div class="container-fluid body-content">
+    <div class="content row" @Html.RequestVerificationToken()>
+        @RenderBody()
+        <hr />
     </div>
+</div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
+<script src="../../dist/js/polyfills.js"></script>
+<script src="../../dist/js/vendor.js"></script>
+<script src="../../dist/js/app.js"></script>
 </html>

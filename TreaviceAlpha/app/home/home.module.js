@@ -12,7 +12,7 @@ var core_1 = require("@angular/core");
 var home_component_1 = require("./home.component");
 var sidenav_module_1 = require("../nav/sidenav.module");
 var home_routing_module_1 = require("./home-routing.module");
-var register_routing_module_1 = require("../register/register-routing.module");
+var register_module_1 = require("../register/register.module");
 var HomeModule = (function () {
     function HomeModule() {
     }
@@ -22,7 +22,7 @@ var HomeModule = (function () {
                 home_component_1.HomeComponent
             ],
             imports: [
-                register_routing_module_1.RegisterRoutingModule,
+                register_module_1.RegisterModule,
                 home_routing_module_1.HomeRoutingModule,
                 sidenav_module_1.SideNavModule
             ],

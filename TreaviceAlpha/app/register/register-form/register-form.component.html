@@ -1,0 +1,45 @@
+﻿<form [formGroup]="signupForm" (ngSubmit)="save($event, signupForm.value, signupForm.valid)">
+    <div class="form-group">
+        <label for="email">Email: </label>
+        <input 
+            type="email" 
+            id="email" 
+            formControlName="email" 
+            class="form-control" 
+            required>
+        <div *ngIf="signupForm.controls.email.errors && signupForm.controls.email.touched">
+            <div class="alert alert-danger" *ngIf="signupForm.controls.email.errors.required">This field is required.</div>
+        </div>
+    </div>
+    <div formGroupName="passwords">
+        <div class="form-group">
+            <label for="password">Password: </label>
+            <input 
+                formControlName="password"
+                class="form-control"
+                type="password"
+                id="password"
+                required>
+            <div *ngIf="signupForm.controls.passwords.controls.password.errors && signupForm.controls.passwords.controls.password.touched">
+                <div class="alert alert-danger" *ngIf="signupForm.controls.passwords.controls.password.errors.pattern">Passwords should be at least 8 characters long, with 1 special character (!@#, etc...), and at least 1 number</div>
+                <div class="alert alert-danger" *ngIf="signupForm.controls.passwords.controls.password.errors.required">This field required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password: </label>
+            <input 
+                formControlName="confirmPassword"
+                class="form-control"
+                id="confirmPassword"
+                type="password"
+                required>
+            <div *ngIf="signupForm.controls.passwords.controls.confirmPassword.errors && signupForm.controls.passwords.controls.confirmPassword.touched">
+                <div class="alert alert-danger" *ngIf="signupForm.controls.passwords.controls.confirmPassword.errors.required">This field required.</div>
+            </div>
+            <div *ngIf="signupForm.controls.passwords.errors && signupForm.controls.passwords.controls.confirmPassword.touched">
+                <div class="alert alert-danger" *ngIf="signupForm.controls.passwords.errors.mismatch">Passwords must match.</div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid">Submit</button>
+</form>

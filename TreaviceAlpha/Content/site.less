@@ -1,27 +1,17 @@
 ﻿@import "variables.less";
  
 .common {
-    ng-component {
-        height: inherit
-    }
     h1 {
         color: @blue;
     }
     html {
         height: 100%;
         body {
-            height: 100%;
-            margin: 0px;
-            overflow: hidden;
-
+            height: inherit;
             div {
                 &.container-fluid {
                     height: inherit;
-                    div {
-                        &.content {
-                            height: inherit;
-                        }
-                    }
+                    margin-bottom: -30px;
                 }
             }
         }
@@ -30,12 +20,7 @@
         padding: 0px;
     }
     nav {
-        &#side-nav {
-            border-right: 1px solid #e5e5e5;
-            height: inherit;
-            margin-top: -20px;
             padding-top: 20px;
-        }
         &.navbar {
             border: none;
         }

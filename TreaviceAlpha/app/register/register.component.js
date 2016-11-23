@@ -10,17 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var RegisterComponent = (function () {
-    function RegisterComponent() {
+    function RegisterComponent(myElement) {
+        this.myElement = myElement;
     }
     RegisterComponent.prototype.registerUser = function (e) {
         e.preventDefault();
-        alert("form submitted");
+        var el = this.myElement.nativeElement;
+        // Obtain the token
+        while (!el.hasAttribute("ncg-request-verification-token")) {
+            el = el.parentElement;
+        }
+        var token = el.getAttribute("ncg-request-verification-token");
+        console.log(el + " " + token); // tslint:disable-line
     };
     RegisterComponent = __decorate([
         core_1.Component({
             templateUrl: "app/register/register.component.html"
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [core_1.ElementRef])
     ], RegisterComponent);
     return RegisterComponent;
 }());

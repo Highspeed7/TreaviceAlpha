@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Configuration;
 using TreaviceAlpha.Models;
 using System.Data.Entity;
+using System.Threading.Tasks;
 using System.Web.Http;
 using TreaviceAlpha.Services;
 
@@ -21,19 +22,31 @@ namespace TreaviceAlpha.Controllers.Api
         }
 
         // POST /api/users/login
+
         // POST /api/users
         [HttpPost]
-        public Boolean CreateUser(User user)
+        [AntiForgeryValidate]
+        public async Task<HttpResponseMessage> CreateUser(User user)
         {
-            if(!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            if (ModelState.IsValid)
+            {
+                user.Password = HashService.HashPass(user.Password);
 
-            user.Password = HashService.HashPass(user.Password);
+                _context.Users.Add(user);
+                try
+                {
+                    await _context.SaveChangesAsync();
+                }
+                catch (Exception)
+                {
+                    var responseMessage = new HttpResponseMessage(HttpStatusCode.Conflict);
+                    throw new HttpResponseException(responseMessage);
+                }
 
-            _context.Users.Add(user);
-            _context.SaveChanges();
+                return new HttpResponseMessage(HttpStatusCode.OK);
+            }
 
-            return true;
+            throw new HttpResponseException(HttpStatusCode.BadRequest);
         }
     }
 }

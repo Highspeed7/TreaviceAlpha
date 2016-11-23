@@ -241,12 +241,21 @@
     <Compile Include="UsersMigrations\201611122350399_Initial.Designer.cs">
       <DependentUpon>201611122350399_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersMigrations\201611220052026_UsersModelChange.cs" />
+    <Compile Include="UsersMigrations\201611220052026_UsersModelChange.Designer.cs">
+      <DependentUpon>201611220052026_UsersModelChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs" />
+    <Compile Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.Designer.cs">
+      <DependentUpon>201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsersMigrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\home\home.component.html" />
     <Content Include="app\landing\landing.component.html" />
     <Content Include="app\nav\sidenav.component.html" />
+    <Content Include="app\register\register-form\register-form.component.html" />
     <Content Include="app\register\register.component.html" />
     <Content Include="app\search\listings-search.component.html" />
     <Content Include="Content\bootstrap.css" />
@@ -330,6 +339,7 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app-routing.module.ts" />
+    <TypeScriptCompile Include="app\dtos\userDto.ts" />
     <TypeScriptCompile Include="app\home\home.component.ts" />
     <TypeScriptCompile Include="app\home\home.module.ts" />
     <TypeScriptCompile Include="app\home\home-routing.module.ts" />
@@ -337,10 +347,14 @@
     <TypeScriptCompile Include="app\landing\landing.component.ts" />
     <TypeScriptCompile Include="app\landing\landing.module.ts" />
     <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\models\index.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.component.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.module.ts" />
+    <TypeScriptCompile Include="app\register\register-form\register-form.component.ts" />
+    <TypeScriptCompile Include="app\register\register-form\validators\register-form-validators.ts" />
     <TypeScriptCompile Include="app\register\register-routing.module.ts" />
     <TypeScriptCompile Include="app\register\register.component.ts" />
+    <TypeScriptCompile Include="app\register\register.module.ts" />
     <TypeScriptCompile Include="app\search\listings-search-routing.module.ts" />
     <TypeScriptCompile Include="app\search\listings-search.module.ts" />
     <TypeScriptCompile Include="app\search\listings-search.component.ts" />
@@ -357,6 +371,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsersMigrations\201611122350399_Initial.resx">
       <DependentUpon>201611122350399_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersMigrations\201611220052026_UsersModelChange.resx">
+      <DependentUpon>201611220052026_UsersModelChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.resx">
+      <DependentUpon>201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
