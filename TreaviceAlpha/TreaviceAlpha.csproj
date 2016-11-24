@@ -366,6 +366,7 @@
     <TypeScriptCompile Include="app\search\listings-search.component.ts" />
     <TypeScriptCompile Include="app\polyfills.ts" />
     <TypeScriptCompile Include="app\services\account.service.ts" />
+    <TypeScriptCompile Include="app\services\auth.service.ts" />
     <TypeScriptCompile Include="app\vendor.ts" />
   </ItemGroup>
   <ItemGroup>
