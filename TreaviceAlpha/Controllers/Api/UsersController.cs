@@ -11,8 +11,11 @@ using System.Security.Claims;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using System.Web;
+using TreaviceAlpha.dtos;
+
 namespace TreaviceAlpha.Controllers.Api
 {
+    [RoutePrefix("api/user")]
     public class UsersController : ApiController
     {
         private UserDbContext _context;
@@ -23,11 +26,11 @@ namespace TreaviceAlpha.Controllers.Api
         }
 
         //
-        // POST /api/users
-        [ActionName("users")]
+        // POST /api/user/register
+        [Route("register")]
         [HttpPost]
         [AntiForgeryValidate]
-        public async Task<HttpResponseMessage> CreateUser(User user)
+        public async Task<IHttpActionResult> CreateUser(User user)
         {
             if (ModelState.IsValid)
             {
@@ -44,35 +47,57 @@ namespace TreaviceAlpha.Controllers.Api
                     throw new HttpResponseException(responseMessage);
                 }
 
-                return new HttpResponseMessage(HttpStatusCode.OK);
+                return Ok();
             }
 
             throw new HttpResponseException(HttpStatusCode.BadRequest);
         }
 
         //
-        // POST /api/login
-        [ActionName("login")]
+        // POST /api/user/register
+        [Route("login")]
         [HttpPost]
         [AntiForgeryValidate]
-        public HttpResponseMessage Login(string email, string password)
+        public IHttpActionResult Login(User user)
         {
-            if(IsValid(email, password))
+            if (ModelState.IsValid)
             {
-                var ident = new ClaimsIdentity(
-                    new[] { new Claim(ClaimTypes.Name, email) },
-                    DefaultAuthenticationTypes.ApplicationCookie
-                );
-                HttpContext.Current.GetOwinContext().Authentication.SignIn(
-                    new AuthenticationProperties { IsPersistent = false }, 
-                    ident 
-                );
-                return new HttpResponseMessage(HttpStatusCode.OK);
+                if (IsValid(user.Email, user.Password))
+                {
+                    var ident = new ClaimsIdentity(
+                        new[] {
+                            new Claim(ClaimTypes.NameIdentifier, user.Email),
+                            new Claim("http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider", user.Email),
+                            new Claim(ClaimTypes.Name, user.Email) },
+                        DefaultAuthenticationTypes.ApplicationCookie
+                    );
+                    HttpContext.Current.GetOwinContext().Authentication.SignIn(
+                        new AuthenticationProperties { IsPersistent = false },
+                        ident
+                    );
+                    
+                    return Content(HttpStatusCode.OK, new LoginDto() { email = user.Email});
+                }
             }
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            return BadRequest();
         }
 
-        public bool IsValid(string email, string password)
+        [Route("logout")]
+        [HttpPost]
+        public void Logout()
+        {
+            HttpContext.Current.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie,
+                                                                    DefaultAuthenticationTypes.ExternalCookie);
+        }
+
+        [Route("isLoggedIn")]
+        [HttpGet]
+        public bool IsLoggedIn()
+        {
+            return HttpContext.Current.Request.IsAuthenticated;
+        }
+
+        private bool IsValid(string email, string password)
         {
             using(_context)
             {
