@@ -13,8 +13,9 @@
             <li role="presentation" routerLinkActive="active"><a routerLink="/home">Home</a></li>
             <li role="presentation" routerLinkActive="active"><a routerLink="/search-listings">Search Listings</a></li>
             <li role="presentation" routerLinkActive="active"><a routerLink="/sign-up">Sign Up</a></li>
-            <!--<li *ngIf="loggedIn" role="presentation"><a href="#">My Account</a></li>
-            <li *ngIf="loggedIn" role="presentation"><a href="#">New Listing</a></li>-->
+            <li *ngIf="loggedIn"><a href="#">Logout</a></li>
+            <li *ngIf="loggedIn" role="presentation"><a href="#">My Account</a></li>
+            <li *ngIf="!loggedIn" role="presentation"><a href="/login">Login</a></li>
         </ul>
     </div>
 </div>

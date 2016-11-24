@@ -43683,6 +43683,7 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var common_1 = __webpack_require__(/*! @angular/common */ 27);
 	var sidenav_component_1 = __webpack_require__(/*! ./sidenav.component */ 72);
 	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 73);
 	var SideNavModule = (function () {
@@ -43694,6 +43695,7 @@
 	                sidenav_component_1.SideNavComponent
 	            ],
 	            imports: [
+	                common_1.CommonModule,
 	                listings_search_routing_module_1.ListSearchRoutingModule
 	            ],
 	            exports: [sidenav_component_1.SideNavComponent]
@@ -43724,19 +43726,27 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var router_1 = __webpack_require__(/*! @angular/router */ 31);
+	var account_service_1 = __webpack_require__(/*! ../services/account.service */ 63);
 	var SideNavComponent = (function () {
-	    function SideNavComponent(router) {
+	    function SideNavComponent(router, accountService) {
 	        this.router = router;
+	        this.accountService = accountService;
+	        this.loggedIn = false;
 	    }
+	    SideNavComponent.prototype.ngOnInit = function () {
+	        var _this = this;
+	        this.accountService.isLoggedIn()
+	            .then(function (answer) { _this.loggedIn = answer; });
+	    };
 	    SideNavComponent = __decorate([
 	        core_1.Component({
 	            selector: "nav[side-nav]",
 	            templateUrl: "app/nav/sidenav.component.html"
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
+	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object])
 	    ], SideNavComponent);
 	    return SideNavComponent;
-	    var _a;
+	    var _a, _b;
 	}());
 	exports.SideNavComponent = SideNavComponent;
 

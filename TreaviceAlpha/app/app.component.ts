@@ -1,4 +1,4 @@
-﻿import { Component, OnInit } from "@angular/core";
+﻿import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { AccountService } from "./services/account.service";
@@ -14,7 +14,5 @@ import { AccountService } from "./services/account.service";
     `]
 })
 
-export class AppComponent implements OnInit {
-
-    
+export class AppComponent {
 }
