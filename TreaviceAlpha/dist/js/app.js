@@ -43441,6 +43441,9 @@
 	    AccountService.prototype.isLoggedIn = function () {
 	        var source = this.httpService.get(this.url + "isLoggedIn");
 	        return source
+	            .map(function (r) {
+	            r = r.json();
+	        })
 	            .toPromise();
 	    };
 	    AccountService = __decorate([
@@ -48665,16 +48668,31 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var router_1 = __webpack_require__(/*! @angular/router */ 31);
+	var account_service_1 = __webpack_require__(/*! ../services/account.service */ 63);
 	var LandingComponent = (function () {
-	    function LandingComponent() {
+	    function LandingComponent(accountService, router) {
+	        this.accountService = accountService;
+	        this.router = router;
+	        accountService.init();
 	    }
+	    LandingComponent.prototype.ngOnInit = function () {
+	        var _this = this;
+	        this.accountService.isLoggedIn()
+	            .then(function (answer) {
+	            if (answer) {
+	                _this.router.navigate(["home"]);
+	            }
+	        });
+	    };
 	    LandingComponent = __decorate([
 	        core_1.Component({
 	            templateUrl: "app/landing/landing.component.html"
 	        }), 
-	        __metadata('design:paramtypes', [])
+	        __metadata('design:paramtypes', [(typeof (_a = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _a) || Object, (typeof (_b = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _b) || Object])
 	    ], LandingComponent);
 	    return LandingComponent;
+	    var _a, _b;
 	}());
 	exports.LandingComponent = LandingComponent;
 

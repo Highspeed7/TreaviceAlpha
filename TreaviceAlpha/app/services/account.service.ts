@@ -42,6 +42,9 @@ export class AccountService {
     public isLoggedIn():Promise<any> {
         const source: Observable<Response> = this.httpService.get(this.url + "isLoggedIn");
         return source
+            .map(r => {
+                r = r.json();
+            })
             .toPromise();
     }
 }
