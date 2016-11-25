@@ -8,15 +8,16 @@ import { AccountService } from "../services/account.service";
 })
 
 export class LandingComponent implements OnInit {
-    constructor(private accountService: AccountService, private router: Router) {
-        accountService.init();
-    }
+    constructor(private accountService: AccountService, private router: Router) {}
+
     public ngOnInit() {
-        this.accountService.isLoggedIn()
-            .then((answer) => {
+         this.accountService.isLoggedIn()
+            .subscribe((answer) => {
                 if (answer) {
+                    this.accountService.loggedIn = answer;
                     this.router.navigate(["home"]);
                 }
+                this.accountService.loggedIn = answer;
             });
     }
 }

@@ -260,6 +260,8 @@
   <ItemGroup>
     <Content Include="app\home\home.component.html" />
     <Content Include="app\landing\landing.component.html" />
+    <Content Include="app\login\login-form\login-form.component.html" />
+    <Content Include="app\login\login.component.html" />
     <Content Include="app\nav\sidenav.component.html" />
     <Content Include="app\register\register-form\register-form.component.html" />
     <Content Include="app\register\register.component.html" />
@@ -352,6 +354,10 @@
     <TypeScriptCompile Include="app\landing\landing-routing.module.ts" />
     <TypeScriptCompile Include="app\landing\landing.component.ts" />
     <TypeScriptCompile Include="app\landing\landing.module.ts" />
+    <TypeScriptCompile Include="app\login\login-form\login-form.component.ts" />
+    <TypeScriptCompile Include="app\login\login-routing.module.ts" />
+    <TypeScriptCompile Include="app\login\login.component.ts" />
+    <TypeScriptCompile Include="app\login\login.module.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\models\index.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.component.ts" />

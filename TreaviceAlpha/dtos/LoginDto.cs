@@ -2,6 +2,6 @@
 {
     public class LoginDto
     {
-        public string email;
+        public string Email { get; set; }
     }
 }

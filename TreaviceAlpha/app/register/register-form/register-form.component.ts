@@ -59,7 +59,7 @@ export class RegisterFormComponent implements OnInit {
         data.password = formData.passwords.password;
 
         this.accountService.registerUser(data, token)
-            .then(() => {
+            .then((res) => {
                 alert("Save successful");
             })
             .catch(() => {

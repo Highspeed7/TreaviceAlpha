@@ -76,14 +76,14 @@ namespace TreaviceAlpha.Controllers.Api
                         ident
                     );
                     
-                    return Content(HttpStatusCode.OK, new LoginDto() { email = user.Email});
+                    return Content(HttpStatusCode.OK, new LoginDto() { Email = user.Email});
                 }
             }
             return BadRequest();
         }
 
         [Route("logout")]
-        [HttpPost]
+        [HttpGet]
         public void Logout()
         {
             HttpContext.Current.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie,

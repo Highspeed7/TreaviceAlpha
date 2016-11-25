@@ -8,10 +8,11 @@ export class CanActivateViaAuthGuard implements CanActivate {
     constructor(private accountService: AccountService) { }
 
     canActivate() {
-        return this.accountService.isLoggedIn()
-            .then((data) => {
-                return data;
-            })
-            .catch((err) => { return false; })
+        return true;
+        //return this.accountService.isLoggedIn()
+        //    .then((data) => {
+        //        return data;
+        //    })
+        //    .catch((err) => { return false; })
     }
 }

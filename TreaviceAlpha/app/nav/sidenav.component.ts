@@ -8,12 +8,23 @@ import { AccountService } from "../services/account.service";
 })
 
 export class SideNavComponent implements OnInit {
-    public loggedIn = false;
+    public loggedIn: boolean;
 
-    constructor(private router: Router, private accountService: AccountService) { }
+    constructor(private router: Router, private accountService: AccountService) {}
 
     public ngOnInit() {
         this.accountService.isLoggedIn()
-            .then((answer) => { this.loggedIn = answer });
+            .subscribe((result) => {
+                this.loggedIn = result;
+            });
+    }
+
+    // TODO: Componentialize logout
+    public logout(event: Event) {
+        event.preventDefault();
+        this.accountService.logout()
+            .subscribe(r => {
+                location = location.origin;
+            });
     }
 }

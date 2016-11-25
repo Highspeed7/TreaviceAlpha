@@ -8,6 +8,6 @@ export class ApplicationData {
     public userData: UserData;
 }
 
-class UserData {
-    public UserEmail: string;
+export class UserData {
+    public email: string;
 }
