@@ -1,4 +1,5 @@
-﻿import { Component, OnInit } from "@angular/core";
+﻿import { Component, OnInit, Inject } from "@angular/core";
+import { DOCUMENT } from "@angular/platform-browser";
 import { Router } from "@angular/router";
 import { AccountService } from "../services/account.service";
 
@@ -10,7 +11,7 @@ import { AccountService } from "../services/account.service";
 export class SideNavComponent implements OnInit {
     public loggedIn: boolean;
 
-    constructor(private router: Router, private accountService: AccountService) {}
+    constructor(private router: Router, private accountService: AccountService, @Inject(DOCUMENT) private document: any) { }
 
     public ngOnInit() {
         this.accountService.isLoggedIn()
@@ -24,7 +25,7 @@ export class SideNavComponent implements OnInit {
         event.preventDefault();
         this.accountService.logout()
             .subscribe(r => {
-                location = location.origin;
+                this.document.location = this.document.location.origin;
             });
     }
 }

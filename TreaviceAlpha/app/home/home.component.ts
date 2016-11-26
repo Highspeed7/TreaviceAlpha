@@ -12,9 +12,11 @@ export class HomeComponent {
     public userInfo: UserData;
 
     constructor(private router: Router, private accountService: AccountService) {
+        this.userInfo = new UserData();
         if (accountService.getLastLoggedInUser() !== null) {
             this.userInfo = accountService.getLastLoggedInUser();
-            console.log(this.userInfo);
+        } else {
+            this.userInfo.email = "Guest";
         }
     }
 }
