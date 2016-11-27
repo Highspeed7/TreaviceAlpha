@@ -21,7 +21,13 @@ export class AccountService {
         let options = new RequestOptions({ headers: headers });
         const source: Observable<Response> = this.httpService.post(this.url + "register", data, options);
         return source
-            .map(r => r.json())
+            .map(r => {
+                if (r.status === 200) {
+                    return r;
+                } else {
+                    throw new Error("Error: User not created");
+                }
+            })
             .toPromise();
     }
 

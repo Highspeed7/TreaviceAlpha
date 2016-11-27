@@ -37075,7 +37075,14 @@
 	        var options = new http_1.RequestOptions({ headers: headers });
 	        var source = this.httpService.post(this.url + "register", data, options);
 	        return source
-	            .map(function (r) { return r.json(); })
+	            .map(function (r) {
+	            if (r.status === 200) {
+	                return r;
+	            }
+	            else {
+	                throw new Error("Error: User not created");
+	            }
+	        })
 	            .toPromise();
 	    };
 	    AccountService.prototype.login = function (data, token) {
@@ -43995,7 +44002,7 @@
 	                            },
 	                            {
 	                                path: "test",
-	                                component: home_component_1.HomeComponent,
+	                                component: home_component_1.HomeComponent
 	                            }
 	                        ]
 	                    },
@@ -48749,9 +48756,11 @@
 	        data.password = formData.passwords.password;
 	        this.accountService.registerUser(data, token)
 	            .then(function (res) {
-	            alert("Save successful");
+	            if (res.status === 200) {
+	                alert("Save successful");
+	            }
 	        })
-	            .catch(function () {
+	            .catch(function (err) {
 	            alert("Save failed");
 	        });
 	        return false;

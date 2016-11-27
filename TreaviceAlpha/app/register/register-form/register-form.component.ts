@@ -60,9 +60,11 @@ export class RegisterFormComponent implements OnInit {
 
         this.accountService.registerUser(data, token)
             .then((res) => {
-                alert("Save successful");
+                if (res.status === 200) {
+                    alert("Save successful");
+                }
             })
-            .catch(() => {
+            .catch((err) => {
                 alert("Save failed");
             });
         return false;

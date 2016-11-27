@@ -16,7 +16,7 @@ import { HomeComponent } from "../home/home.component";
                     },
                     {
                         path: "test",
-                        component: HomeComponent,
+                        component: HomeComponent
                     }
                 ]
             },
