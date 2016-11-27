@@ -3,7 +3,8 @@
 @Component({
     selector: "trvcapp",
     template: `
-    <router-outlet></router-outlet>`,
+    <router-outlet></router-outlet>
+    `,
     styles: [`
         :host {
             height: inherit;
