@@ -10,6 +10,6 @@ export class ProfileComponent {
     constructor(private router: Router) { }
 
     public clicking() {
-        this.router.navigateByUrl("/profile(testing:testing)");
+        this.router.navigateByUrl("/profile/(test//testing:testing");
     }
 }

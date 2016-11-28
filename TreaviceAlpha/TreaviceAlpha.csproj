@@ -263,6 +263,7 @@
     <Content Include="app\login\login-form\login-form.component.html" />
     <Content Include="app\login\login.component.html" />
     <Content Include="app\nav\sidenav.component.html" />
+    <Content Include="app\profile\contact-card\contact-card.component.html" />
     <Content Include="app\profile\profile.component.html" />
     <Content Include="app\register\register-form\register-form.component.html" />
     <Content Include="app\register\register.component.html" />
@@ -363,6 +364,7 @@
     <TypeScriptCompile Include="app\models\index.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.component.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.module.ts" />
+    <TypeScriptCompile Include="app\profile\contact-card\contact-card.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-routing.module.ts" />
     <TypeScriptCompile Include="app\profile\profile.component.ts" />
     <TypeScriptCompile Include="app\profile\profile.module.ts" />

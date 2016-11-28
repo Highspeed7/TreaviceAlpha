@@ -2,28 +2,25 @@
 import { RouterModule } from "@angular/router";
 
 import { ProfileComponent } from "./profile.component";
-import { HomeComponent } from "../home/home.component";
+import { ContactCardComponent } from "./contact-card/contact-card.component";
 
 @NgModule({
     imports: [
         RouterModule.forChild([
             {
                 path: "profile",
+                component: ProfileComponent,
                 children: [
                     {
                         path: "",
-                        component: ProfileComponent
+                        component: ContactCardComponent
                     },
                     {
-                        path: "test",
-                        component: HomeComponent
+                        path: "testing",
+                        component: ContactCardComponent,
+                        outlet: "testing"
                     }
                 ]
-            },
-            {
-                path: "testing",
-                component: HomeComponent,
-                outlet: "testing"
             }
         ])
     ],
