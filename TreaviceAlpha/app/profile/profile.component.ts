@@ -9,7 +9,9 @@ import { Router } from "@angular/router";
 export class ProfileComponent {
     constructor(private router: Router) { }
 
-    public clicking() {
-        this.router.navigateByUrl("/profile/(test//testing:testing");
+    public setProfilePage(e: Event) {
+        e.preventDefault();
+        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
+        alert("clicked");
     }
 }

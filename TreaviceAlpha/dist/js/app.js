@@ -37387,6 +37387,7 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var home_component_1 = __webpack_require__(/*! ./home.component */ 38);
+	var home_main_component_1 = __webpack_require__(/*! ./home-main/home-main.component */ 647);
 	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 71);
 	var home_routing_module_1 = __webpack_require__(/*! ./home-routing.module */ 79);
 	var register_module_1 = __webpack_require__(/*! ../register/register.module */ 81);
@@ -37398,7 +37399,8 @@
 	    HomeModule = __decorate([
 	        core_1.NgModule({
 	            declarations: [
-	                home_component_1.HomeComponent
+	                home_component_1.HomeComponent,
+	                home_main_component_1.HomeMainComponent
 	            ],
 	            imports: [
 	                register_module_1.RegisterModule,
@@ -37435,29 +37437,16 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var account_service_1 = __webpack_require__(/*! ../services/account.service */ 31);
-	var index_1 = __webpack_require__(/*! ../models/index */ 70);
 	var HomeComponent = (function () {
-	    function HomeComponent(router, accountService) {
-	        this.router = router;
-	        this.accountService = accountService;
-	        this.userInfo = new index_1.UserData();
-	        if (accountService.getLastLoggedInUser() !== null) {
-	            this.userInfo = accountService.getLastLoggedInUser();
-	        }
-	        else {
-	            this.userInfo.email = "Guest";
-	        }
+	    function HomeComponent() {
 	    }
 	    HomeComponent = __decorate([
 	        core_1.Component({
 	            templateUrl: "app/home/home.component.html"
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object])
+	        __metadata('design:paramtypes', [])
 	    ], HomeComponent);
 	    return HomeComponent;
-	    var _a, _b;
 	}());
 	exports.HomeComponent = HomeComponent;
 
@@ -43804,7 +43793,6 @@
 	var sidenav_component_1 = __webpack_require__(/*! ./sidenav.component */ 72);
 	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 73);
 	var login_routing_module_1 = __webpack_require__(/*! ../login/login-routing.module */ 75);
-	var profile_routing_module_1 = __webpack_require__(/*! ../profile/profile-routing.module */ 77);
 	var SideNavModule = (function () {
 	    function SideNavModule() {
 	    }
@@ -43816,8 +43804,7 @@
 	            imports: [
 	                common_1.CommonModule,
 	                listings_search_routing_module_1.ListSearchRoutingModule,
-	                login_routing_module_1.LoginRoutingModule,
-	                profile_routing_module_1.ProfileRoutingModule
+	                login_routing_module_1.LoginRoutingModule
 	            ],
 	            exports: [sidenav_component_1.SideNavComponent]
 	        }), 
@@ -44121,8 +44108,10 @@
 	    function ProfileComponent(router) {
 	        this.router = router;
 	    }
-	    ProfileComponent.prototype.clicking = function () {
-	        this.router.navigateByUrl("/profile/(test//testing:testing");
+	    ProfileComponent.prototype.setProfilePage = function (e) {
+	        e.preventDefault();
+	        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
+	        alert("clicked");
 	    };
 	    ProfileComponent = __decorate([
 	        core_1.Component({
@@ -44158,6 +44147,15 @@
 	var router_1 = __webpack_require__(/*! @angular/router */ 39);
 	var listings_search_module_1 = __webpack_require__(/*! ../search/listings-search.module */ 80);
 	var home_component_1 = __webpack_require__(/*! ./home.component */ 38);
+	var home_main_component_1 = __webpack_require__(/*! ./home-main/home-main.component */ 647);
+	var profile_component_1 = __webpack_require__(/*! ../profile/profile.component */ 78);
+	var listings_search_component_1 = __webpack_require__(/*! ../search/listings-search.component */ 74);
+	var register_component_1 = __webpack_require__(/*! ../register/register.component */ 83);
+	var login_component_1 = __webpack_require__(/*! ../login/login.component */ 76);
+	var contact_card_component_1 = __webpack_require__(/*! ../profile/contact-card/contact-card.component */ 646);
+	var wants_component_1 = __webpack_require__(/*! ../profile/profile-pages/wants.component */ 648);
+	var can_do_component_1 = __webpack_require__(/*! ../profile/profile-pages/can-do.component */ 649);
+	var selling_component_1 = __webpack_require__(/*! ../profile/profile-pages/selling.component */ 650);
 	var HomeRoutingModule = (function () {
 	    function HomeRoutingModule() {
 	    }
@@ -44166,7 +44164,37 @@
 	            imports: [
 	                listings_search_module_1.ListSearchModule,
 	                router_1.RouterModule.forChild([
-	                    { path: "home", component: home_component_1.HomeComponent }
+	                    {
+	                        path: "home", component: home_component_1.HomeComponent, children: [
+	                            { path: "main", component: home_main_component_1.HomeMainComponent },
+	                            {
+	                                path: "profile", component: profile_component_1.ProfileComponent,
+	                                children: [
+	                                    {
+	                                        path: "",
+	                                        component: contact_card_component_1.ContactCardComponent
+	                                    },
+	                                    {
+	                                        path: "wants",
+	                                        component: wants_component_1.WantsComponent,
+	                                        outlet: "profile-pages"
+	                                    },
+	                                    {
+	                                        path: "can-do",
+	                                        component: can_do_component_1.CanDoComponent,
+	                                        outlet: "profile-pages"
+	                                    },
+	                                    {
+	                                        path: "selling",
+	                                        component: selling_component_1.SellingComponent,
+	                                        outlet: "profile-pages"
+	                                    }
+	                                ] },
+	                            { path: "search-listings", component: listings_search_component_1.ListSearchComponent },
+	                            { path: "sign-up", component: register_component_1.RegisterComponent },
+	                            { path: "login", component: login_component_1.LoginComponent }
+	                        ]
+	                    }
 	                ])
 	            ],
 	            exports: [
@@ -49043,7 +49071,7 @@
 	            .then(function (result) {
 	            // TODO: Set email to previouslyLoggedIn Object on localstorage
 	            _this.accountService.setLastLoggedInUser(result);
-	            _this.router.navigate(["/home"]);
+	            _this.router.navigate([""]);
 	        })
 	            .catch(function () {
 	            alert("Login failed");
@@ -49090,6 +49118,9 @@
 	var router_1 = __webpack_require__(/*! @angular/router */ 39);
 	var profile_component_1 = __webpack_require__(/*! ./profile.component */ 78);
 	var contact_card_component_1 = __webpack_require__(/*! ./contact-card/contact-card.component */ 646);
+	var wants_component_1 = __webpack_require__(/*! ./profile-pages/wants.component */ 648);
+	var selling_component_1 = __webpack_require__(/*! ./profile-pages/selling.component */ 650);
+	var can_do_component_1 = __webpack_require__(/*! ./profile-pages/can-do.component */ 649);
 	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 71);
 	var ProfileModule = (function () {
 	    function ProfileModule() {
@@ -49098,7 +49129,10 @@
 	        core_1.NgModule({
 	            declarations: [
 	                profile_component_1.ProfileComponent,
-	                contact_card_component_1.ContactCardComponent
+	                contact_card_component_1.ContactCardComponent,
+	                wants_component_1.WantsComponent,
+	                selling_component_1.SellingComponent,
+	                can_do_component_1.CanDoComponent
 	            ],
 	            imports: [
 	                sidenav_module_1.SideNavModule,
@@ -49186,7 +49220,7 @@
 	            .subscribe(function (answer) {
 	            if (answer) {
 	                _this.accountService.loggedIn = answer;
-	                _this.router.navigate(["home"]);
+	                _this.router.navigate(["home/main"]);
 	            }
 	            _this.accountService.loggedIn = answer;
 	        });
@@ -49267,7 +49301,7 @@
 	        this.router = router;
 	    }
 	    ContactCardComponent.prototype.ngOnInit = function () {
-	        this.router.navigateByUrl("/profile/(testing:testing)");
+	        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
 	    };
 	    ContactCardComponent = __decorate([
 	        core_1.Component({
@@ -49279,6 +49313,151 @@
 	    var _a;
 	}());
 	exports.ContactCardComponent = ContactCardComponent;
+
+
+/***/ },
+
+/***/ 647:
+/*!***************************************************!*\
+  !*** ./app/home/home-main/home-main.component.ts ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var router_1 = __webpack_require__(/*! @angular/router */ 39);
+	var index_1 = __webpack_require__(/*! ../../models/index */ 70);
+	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
+	var HomeMainComponent = (function () {
+	    function HomeMainComponent(router, accountService) {
+	        this.router = router;
+	        this.accountService = accountService;
+	        this.userInfo = new index_1.UserData();
+	        if (accountService.getLastLoggedInUser() !== null) {
+	            this.userInfo = accountService.getLastLoggedInUser();
+	        }
+	        else {
+	            this.userInfo.email = "Guest";
+	        }
+	    }
+	    HomeMainComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/home/home-main/home-main.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object])
+	    ], HomeMainComponent);
+	    return HomeMainComponent;
+	    var _a, _b;
+	}());
+	exports.HomeMainComponent = HomeMainComponent;
+
+
+/***/ },
+
+/***/ 648:
+/*!******************************************************!*\
+  !*** ./app/profile/profile-pages/wants.component.ts ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var WantsComponent = (function () {
+	    function WantsComponent() {
+	    }
+	    WantsComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/profile/profile-pages/wants.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], WantsComponent);
+	    return WantsComponent;
+	}());
+	exports.WantsComponent = WantsComponent;
+
+
+/***/ },
+
+/***/ 649:
+/*!*******************************************************!*\
+  !*** ./app/profile/profile-pages/can-do.component.ts ***!
+  \*******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var CanDoComponent = (function () {
+	    function CanDoComponent() {
+	    }
+	    CanDoComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/profile/profile-pages/can-do.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], CanDoComponent);
+	    return CanDoComponent;
+	}());
+	exports.CanDoComponent = CanDoComponent;
+
+
+/***/ },
+
+/***/ 650:
+/*!********************************************************!*\
+  !*** ./app/profile/profile-pages/selling.component.ts ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var SellingComponent = (function () {
+	    function SellingComponent() {
+	    }
+	    SellingComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/profile/profile-pages/selling.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], SellingComponent);
+	    return SellingComponent;
+	}());
+	exports.SellingComponent = SellingComponent;
 
 
 /***/ }

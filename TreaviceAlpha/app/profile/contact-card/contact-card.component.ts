@@ -11,6 +11,6 @@ export class ContactCardComponent implements OnInit {
     constructor(private router: Router) { }
 
     public ngOnInit() {
-        this.router.navigateByUrl("/profile/(testing:testing)");
+        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
     }
 }

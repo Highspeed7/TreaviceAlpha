@@ -49,7 +49,7 @@ export class LoginFormComponent implements OnInit {
             .then(result => {
                 // TODO: Set email to previouslyLoggedIn Object on localstorage
                 this.accountService.setLastLoggedInUser(result);
-                this.router.navigate(["/home"]);
+                this.router.navigate([""]);
             })
             .catch(() => {
                 alert("Login failed");

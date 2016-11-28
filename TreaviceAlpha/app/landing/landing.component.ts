@@ -15,7 +15,7 @@ export class LandingComponent implements OnInit {
             .subscribe((answer) => {
                 if (answer) {
                     this.accountService.loggedIn = answer;
-                    this.router.navigate(["home"]);
+                    this.router.navigate(["home/main"]);
                 }
                 this.accountService.loggedIn = answer;
             });

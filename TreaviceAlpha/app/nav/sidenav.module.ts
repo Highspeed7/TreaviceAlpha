@@ -5,7 +5,6 @@ import { SideNavComponent } from "./sidenav.component";
 
 import { ListSearchRoutingModule } from "../search/listings-search-routing.module";
 import { LoginRoutingModule } from "../login/login-routing.module";
-import { ProfileRoutingModule } from "../profile/profile-routing.module";
 
 @NgModule({
     declarations: [
@@ -14,8 +13,7 @@ import { ProfileRoutingModule } from "../profile/profile-routing.module";
     imports: [
         CommonModule,
         ListSearchRoutingModule,
-        LoginRoutingModule,
-        ProfileRoutingModule
+        LoginRoutingModule
     ],
     exports: [SideNavComponent]
 })
