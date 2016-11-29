@@ -7,12 +7,11 @@ using System.Web;
 
 namespace TreaviceAlpha.Models
 {
-    public class UserDbContext : DbContext
+    public class ProfileDbContext : DbContext
     {
-        public DbSet<Skill> Skills { get; set; }
+        public DbSet<Profile> Profiles { get; set; }
         public DbSet<User> Users { get; set; }
-
-        public UserDbContext()
+        public ProfileDbContext()
             : base("name=DefaultConnection")
         {
         }

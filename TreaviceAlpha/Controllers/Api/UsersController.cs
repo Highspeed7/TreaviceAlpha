@@ -18,11 +18,11 @@ namespace TreaviceAlpha.Controllers.Api
     [RoutePrefix("api/user")]
     public class UsersController : ApiController
     {
-        private UserDbContext _context;
+        private ProfileDbContext _context;
 
         public UsersController()
         {
-            _context = new UserDbContext();
+            _context = new ProfileDbContext();
         }
 
         //

@@ -6,14 +6,9 @@ using System.Web;
 
 namespace TreaviceAlpha.Models
 {
-    public class User
+    public class Item
     {
         [Required]
         public int Id { get; set; }
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
     }
 }

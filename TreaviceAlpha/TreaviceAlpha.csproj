@@ -224,39 +224,28 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IdentityMigrations\201611122350265_Initial.cs" />
-    <Compile Include="IdentityMigrations\201611122350265_Initial.Designer.cs">
-      <DependentUpon>201611122350265_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\UserProfileContext\201611290757279_Initial.cs" />
+    <Compile Include="Migrations\UserProfileContext\201611290757279_Initial.Designer.cs">
+      <DependentUpon>201611290757279_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="IdentityMigrations\Configuration.cs" />
+    <Compile Include="Migrations\UserProfileContext\201611290801332_UserIdRequiredInProfileTable.cs" />
+    <Compile Include="Migrations\UserProfileContext\201611290801332_UserIdRequiredInProfileTable.Designer.cs">
+      <DependentUpon>201611290801332_UserIdRequiredInProfileTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserProfileContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Profile.cs" />
+    <Compile Include="Models\ProfileDbContext.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserDbContext.cs" />
+    <Compile Include="Models\Want.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AntiForgeryService.cs" />
     <Compile Include="Services\HashService.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="UsersMigrations\201611122350399_Initial.cs" />
-    <Compile Include="UsersMigrations\201611122350399_Initial.Designer.cs">
-      <DependentUpon>201611122350399_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UsersMigrations\201611220052026_UsersModelChange.cs" />
-    <Compile Include="UsersMigrations\201611220052026_UsersModelChange.Designer.cs">
-      <DependentUpon>201611220052026_UsersModelChange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs" />
-    <Compile Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.Designer.cs">
-      <DependentUpon>201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UsersMigrations\201611232150360_MadeModelChanges.cs" />
-    <Compile Include="UsersMigrations\201611232150360_MadeModelChanges.Designer.cs">
-      <DependentUpon>201611232150360_MadeModelChanges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UsersMigrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\home\home-main\home-main.component.html" />
@@ -394,20 +383,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="IdentityMigrations\201611122350265_Initial.resx">
-      <DependentUpon>201611122350265_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201611290757279_Initial.resx">
+      <DependentUpon>201611290757279_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersMigrations\201611122350399_Initial.resx">
-      <DependentUpon>201611122350399_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsersMigrations\201611220052026_UsersModelChange.resx">
-      <DependentUpon>201611220052026_UsersModelChange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsersMigrations\201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.resx">
-      <DependentUpon>201611220101366_AddingSkillsAndChangingUNameFieldToUserModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsersMigrations\201611232150360_MadeModelChanges.resx">
-      <DependentUpon>201611232150360_MadeModelChanges.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201611290801332_UserIdRequiredInProfileTable.resx">
+      <DependentUpon>201611290801332_UserIdRequiredInProfileTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
