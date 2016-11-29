@@ -274,6 +274,7 @@
     <Content Include="app\search\listings-search.component.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\business-man-avatar-vector-1236211.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -386,7 +387,6 @@
     <TypeScriptCompile Include="app\search\listings-search.component.ts" />
     <TypeScriptCompile Include="app\polyfills.ts" />
     <TypeScriptCompile Include="app\services\account.service.ts" />
-    <TypeScriptCompile Include="app\services\auth.service.ts" />
     <TypeScriptCompile Include="app\vendor.ts" />
   </ItemGroup>
   <ItemGroup>

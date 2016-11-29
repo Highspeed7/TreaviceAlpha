@@ -40,9 +40,8 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /*!*********************!*\
   !*** ./app/main.ts ***!
   \*********************/
@@ -59,8 +58,8 @@
 
 
 /***/ },
-
-/***/ 2:
+/* 1 */,
+/* 2 */
 /*!***************************!*\
   !*** ./Content/site.less ***!
   \***************************/
@@ -89,8 +88,7 @@
 	}
 
 /***/ },
-
-/***/ 3:
+/* 3 */
 /*!**********************************************************!*\
   !*** ./~/css-loader!./~/less-loader!./Content/site.less ***!
   \**********************************************************/
@@ -101,14 +99,13 @@
 	
 	
 	// module
-	exports.push([module.id, ".common h1 {\n  color: blue;\n}\n.common html {\n  height: 100%;\n}\n.common html body {\n  height: inherit;\n}\n.common html body div.container-fluid {\n  height: inherit;\n  margin-bottom: -30px;\n}\n.common body {\n  padding: 0px;\n}\n.common nav {\n  padding-top: 20px;\n}\n.common nav.navbar {\n  border: none;\n}\n.common nav.navbar-default {\n  background-color: inherit;\n}\n.common ul.nav > li.active {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:hover {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:focus {\n  background-color: white;\n}\n@media (min-width: 768px) {\n  h1 {\n    color: blue;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  html body div.container-fluid {\n    height: inherit;\n    margin-bottom: -30px;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n}\n@media (min-width: 992px) {\n  h1 {\n    color: blue;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  html body div.container-fluid {\n    height: inherit;\n    margin-bottom: -30px;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n}\n", ""]);
+	exports.push([module.id, ".profile div#contact-card {\n  margin-bottom: 15px;\n}\n.profile div#contact-card #contact-card-left img {\n  width: 100%;\n}\n.common html {\n  height: 100%;\n}\n.common html body {\n  height: inherit;\n}\n.common body {\n  padding: 0px;\n}\n.common nav {\n  padding-top: 20px;\n}\n.common nav.navbar {\n  border: none;\n}\n.common nav.navbar-default {\n  background-color: inherit;\n}\n.common ul.nav > li.active {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:hover {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:focus {\n  background-color: white;\n}\n@media (min-width: 320px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n  }\n}\n@media (min-width: 540px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n  }\n}\n@media (min-width: 768px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n  }\n}\n@media (min-width: 1084px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n  }\n}\n@media (min-width: 1400) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n  }\n}\n", ""]);
 	
 	// exports
 
 
 /***/ },
-
-/***/ 4:
+/* 4 */
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -167,8 +164,7 @@
 
 
 /***/ },
-
-/***/ 5:
+/* 5 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -423,8 +419,7 @@
 
 
 /***/ },
-
-/***/ 6:
+/* 6 */
 /*!*************************************************************************************!*\
   !*** ./~/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js ***!
   \*************************************************************************************/
@@ -596,8 +591,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 7:
+/* 7 */
 /*!*****************************************************!*\
   !*** ./~/@angular/compiler/bundles/compiler.umd.js ***!
   \*****************************************************/
@@ -18652,8 +18646,7 @@
 
 
 /***/ },
-
-/***/ 8:
+/* 8 */
 /*!*********************************************!*\
   !*** ./~/@angular/core/bundles/core.umd.js ***!
   \*********************************************/
@@ -28310,8 +28303,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 9:
+/* 9 */
 /*!***************************!*\
   !*** ./~/rxjs/Subject.js ***!
   \***************************/
@@ -28479,8 +28471,7 @@
 	//# sourceMappingURL=Subject.js.map
 
 /***/ },
-
-/***/ 10:
+/* 10 */
 /*!******************************!*\
   !*** ./~/rxjs/Observable.js ***!
   \******************************/
@@ -28628,8 +28619,7 @@
 	//# sourceMappingURL=Observable.js.map
 
 /***/ },
-
-/***/ 11:
+/* 11 */
 /*!*****************************!*\
   !*** ./~/rxjs/util/root.js ***!
   \*****************************/
@@ -28653,8 +28643,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 12:
+/* 12 */
 /*!*************************************!*\
   !*** ./~/rxjs/util/toSubscriber.js ***!
   \*************************************/
@@ -28681,8 +28670,7 @@
 	//# sourceMappingURL=toSubscriber.js.map
 
 /***/ },
-
-/***/ 13:
+/* 13 */
 /*!******************************!*\
   !*** ./~/rxjs/Subscriber.js ***!
   \******************************/
@@ -28939,8 +28927,7 @@
 	//# sourceMappingURL=Subscriber.js.map
 
 /***/ },
-
-/***/ 14:
+/* 14 */
 /*!***********************************!*\
   !*** ./~/rxjs/util/isFunction.js ***!
   \***********************************/
@@ -28954,8 +28941,7 @@
 	//# sourceMappingURL=isFunction.js.map
 
 /***/ },
-
-/***/ 15:
+/* 15 */
 /*!********************************!*\
   !*** ./~/rxjs/Subscription.js ***!
   \********************************/
@@ -29116,8 +29102,7 @@
 	//# sourceMappingURL=Subscription.js.map
 
 /***/ },
-
-/***/ 16:
+/* 16 */
 /*!********************************!*\
   !*** ./~/rxjs/util/isArray.js ***!
   \********************************/
@@ -29128,8 +29113,7 @@
 	//# sourceMappingURL=isArray.js.map
 
 /***/ },
-
-/***/ 17:
+/* 17 */
 /*!*********************************!*\
   !*** ./~/rxjs/util/isObject.js ***!
   \*********************************/
@@ -29143,8 +29127,7 @@
 	//# sourceMappingURL=isObject.js.map
 
 /***/ },
-
-/***/ 18:
+/* 18 */
 /*!*********************************!*\
   !*** ./~/rxjs/util/tryCatch.js ***!
   \*********************************/
@@ -29171,8 +29154,7 @@
 	//# sourceMappingURL=tryCatch.js.map
 
 /***/ },
-
-/***/ 19:
+/* 19 */
 /*!************************************!*\
   !*** ./~/rxjs/util/errorObject.js ***!
   \************************************/
@@ -29184,8 +29166,7 @@
 	//# sourceMappingURL=errorObject.js.map
 
 /***/ },
-
-/***/ 20:
+/* 20 */
 /*!********************************************!*\
   !*** ./~/rxjs/util/UnsubscriptionError.js ***!
   \********************************************/
@@ -29218,8 +29199,7 @@
 	//# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ },
-
-/***/ 21:
+/* 21 */
 /*!****************************!*\
   !*** ./~/rxjs/Observer.js ***!
   \****************************/
@@ -29235,8 +29215,7 @@
 	//# sourceMappingURL=Observer.js.map
 
 /***/ },
-
-/***/ 22:
+/* 22 */
 /*!***************************************!*\
   !*** ./~/rxjs/symbol/rxSubscriber.js ***!
   \***************************************/
@@ -29250,8 +29229,7 @@
 	//# sourceMappingURL=rxSubscriber.js.map
 
 /***/ },
-
-/***/ 23:
+/* 23 */
 /*!*************************************!*\
   !*** ./~/rxjs/symbol/observable.js ***!
   \*************************************/
@@ -29281,8 +29259,7 @@
 	//# sourceMappingURL=observable.js.map
 
 /***/ },
-
-/***/ 24:
+/* 24 */
 /*!************************************************!*\
   !*** ./~/rxjs/util/ObjectUnsubscribedError.js ***!
   \************************************************/
@@ -29317,8 +29294,7 @@
 	//# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ },
-
-/***/ 25:
+/* 25 */
 /*!***************************************!*\
   !*** ./~/rxjs/SubjectSubscription.js ***!
   \***************************************/
@@ -29366,8 +29342,7 @@
 	//# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-
-/***/ 26:
+/* 26 */
 /*!*********************************************************************!*\
   !*** ./~/@angular/platform-browser/bundles/platform-browser.umd.js ***!
   \*********************************************************************/
@@ -32082,8 +32057,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 27:
+/* 27 */
 /*!*************************************************!*\
   !*** ./~/@angular/common/bundles/common.umd.js ***!
   \*************************************************/
@@ -35115,8 +35089,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 28:
+/* 28 */
 /*!*********************************************!*\
   !*** ./~/@angular/http/bundles/http.umd.js ***!
   \*********************************************/
@@ -36980,8 +36953,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 29:
+/* 29 */
 /*!***************************!*\
   !*** ./app/app.module.ts ***!
   \***************************/
@@ -37003,8 +36975,8 @@
 	var account_service_1 = __webpack_require__(/*! ./services/account.service */ 31);
 	// import { ListSearchModule } from "./search/listings-search.module";
 	var landing_module_1 = __webpack_require__(/*! ./landing/landing.module */ 36);
-	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 93);
-	var profile_routing_module_1 = __webpack_require__(/*! ./profile/profile-routing.module */ 77);
+	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 97);
+	var profile_routing_module_1 = __webpack_require__(/*! ./profile/profile-routing.module */ 98);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -37032,8 +37004,7 @@
 
 
 /***/ },
-
-/***/ 30:
+/* 30 */
 /*!******************************!*\
   !*** ./app/app.component.ts ***!
   \******************************/
@@ -37067,8 +37038,7 @@
 
 
 /***/ },
-
-/***/ 31:
+/* 31 */
 /*!*****************************************!*\
   !*** ./app/services/account.service.ts ***!
   \*****************************************/
@@ -37165,8 +37135,7 @@
 
 
 /***/ },
-
-/***/ 32:
+/* 32 */
 /*!************************************!*\
   !*** ./~/rxjs/add/operator/map.js ***!
   \************************************/
@@ -37179,8 +37148,7 @@
 	//# sourceMappingURL=map.js.map
 
 /***/ },
-
-/***/ 33:
+/* 33 */
 /*!********************************!*\
   !*** ./~/rxjs/operator/map.js ***!
   \********************************/
@@ -37275,8 +37243,7 @@
 	//# sourceMappingURL=map.js.map
 
 /***/ },
-
-/***/ 34:
+/* 34 */
 /*!******************************************!*\
   !*** ./~/rxjs/add/operator/toPromise.js ***!
   \******************************************/
@@ -37289,8 +37256,7 @@
 	//# sourceMappingURL=toPromise.js.map
 
 /***/ },
-
-/***/ 35:
+/* 35 */
 /*!**************************************!*\
   !*** ./~/rxjs/operator/toPromise.js ***!
   \**************************************/
@@ -37326,8 +37292,7 @@
 	//# sourceMappingURL=toPromise.js.map
 
 /***/ },
-
-/***/ 36:
+/* 36 */
 /*!***************************************!*\
   !*** ./app/landing/landing.module.ts ***!
   \***************************************/
@@ -37345,9 +37310,9 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var home_module_1 = __webpack_require__(/*! ../home/home.module */ 37);
-	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 91);
-	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 73);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 92);
+	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 95);
+	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 74);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 96);
 	var LandingModule = (function () {
 	    function LandingModule() {
 	    }
@@ -37368,8 +37333,7 @@
 
 
 /***/ },
-
-/***/ 37:
+/* 37 */
 /*!*********************************!*\
   !*** ./app/home/home.module.ts ***!
   \*********************************/
@@ -37387,12 +37351,12 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var home_component_1 = __webpack_require__(/*! ./home.component */ 38);
-	var home_main_component_1 = __webpack_require__(/*! ./home-main/home-main.component */ 647);
-	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 71);
-	var home_routing_module_1 = __webpack_require__(/*! ./home-routing.module */ 79);
-	var register_module_1 = __webpack_require__(/*! ../register/register.module */ 81);
-	var login_module_1 = __webpack_require__(/*! ../login/login.module */ 88);
-	var profile_module_1 = __webpack_require__(/*! ../profile/profile.module */ 90);
+	var home_main_component_1 = __webpack_require__(/*! ./home-main/home-main.component */ 39);
+	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 72);
+	var home_routing_module_1 = __webpack_require__(/*! ./home-routing.module */ 78);
+	var register_module_1 = __webpack_require__(/*! ../register/register.module */ 86);
+	var login_module_1 = __webpack_require__(/*! ../login/login.module */ 92);
+	var profile_module_1 = __webpack_require__(/*! ../profile/profile.module */ 94);
 	var HomeModule = (function () {
 	    function HomeModule() {
 	    }
@@ -37419,8 +37383,7 @@
 
 
 /***/ },
-
-/***/ 38:
+/* 38 */
 /*!************************************!*\
   !*** ./app/home/home.component.ts ***!
   \************************************/
@@ -37452,8 +37415,52 @@
 
 
 /***/ },
+/* 39 */
+/*!***************************************************!*\
+  !*** ./app/home/home-main/home-main.component.ts ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
 
-/***/ 39:
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var index_1 = __webpack_require__(/*! ../../models/index */ 71);
+	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
+	var HomeMainComponent = (function () {
+	    function HomeMainComponent(router, accountService) {
+	        this.router = router;
+	        this.accountService = accountService;
+	        this.userInfo = new index_1.UserData();
+	        if (accountService.getLastLoggedInUser() !== null) {
+	            this.userInfo = accountService.getLastLoggedInUser();
+	        }
+	        else {
+	            this.userInfo.email = "Guest";
+	        }
+	    }
+	    HomeMainComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/home/home-main/home-main.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object])
+	    ], HomeMainComponent);
+	    return HomeMainComponent;
+	    var _a, _b;
+	}());
+	exports.HomeMainComponent = HomeMainComponent;
+
+
+/***/ },
+/* 40 */
 /*!*************************************************!*\
   !*** ./~/@angular/router/bundles/router.umd.js ***!
   \*************************************************/
@@ -37465,7 +37472,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(/*! @angular/common */ 27), __webpack_require__(/*! @angular/core */ 8), __webpack_require__(/*! rxjs/Subject */ 9), __webpack_require__(/*! rxjs/observable/from */ 40), __webpack_require__(/*! rxjs/observable/of */ 53), __webpack_require__(/*! rxjs/operator/concatMap */ 54), __webpack_require__(/*! rxjs/operator/every */ 59), __webpack_require__(/*! rxjs/operator/map */ 33), __webpack_require__(/*! rxjs/operator/mergeAll */ 60), __webpack_require__(/*! rxjs/operator/mergeMap */ 55), __webpack_require__(/*! rxjs/operator/reduce */ 61), __webpack_require__(/*! rxjs/Observable */ 10), __webpack_require__(/*! rxjs/operator/catch */ 62), __webpack_require__(/*! rxjs/operator/concatAll */ 63), __webpack_require__(/*! rxjs/operator/first */ 64), __webpack_require__(/*! rxjs/util/EmptyError */ 65), __webpack_require__(/*! rxjs/observable/fromPromise */ 66), __webpack_require__(/*! rxjs/operator/last */ 67), __webpack_require__(/*! rxjs/BehaviorSubject */ 68), __webpack_require__(/*! rxjs/operator/filter */ 69)) :
+	     true ? factory(exports, __webpack_require__(/*! @angular/common */ 27), __webpack_require__(/*! @angular/core */ 8), __webpack_require__(/*! rxjs/Subject */ 9), __webpack_require__(/*! rxjs/observable/from */ 41), __webpack_require__(/*! rxjs/observable/of */ 54), __webpack_require__(/*! rxjs/operator/concatMap */ 55), __webpack_require__(/*! rxjs/operator/every */ 60), __webpack_require__(/*! rxjs/operator/map */ 33), __webpack_require__(/*! rxjs/operator/mergeAll */ 61), __webpack_require__(/*! rxjs/operator/mergeMap */ 56), __webpack_require__(/*! rxjs/operator/reduce */ 62), __webpack_require__(/*! rxjs/Observable */ 10), __webpack_require__(/*! rxjs/operator/catch */ 63), __webpack_require__(/*! rxjs/operator/concatAll */ 64), __webpack_require__(/*! rxjs/operator/first */ 65), __webpack_require__(/*! rxjs/util/EmptyError */ 66), __webpack_require__(/*! rxjs/observable/fromPromise */ 67), __webpack_require__(/*! rxjs/operator/last */ 68), __webpack_require__(/*! rxjs/BehaviorSubject */ 69), __webpack_require__(/*! rxjs/operator/filter */ 70)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/common', '@angular/core', 'rxjs/Subject', 'rxjs/observable/from', 'rxjs/observable/of', 'rxjs/operator/concatMap', 'rxjs/operator/every', 'rxjs/operator/map', 'rxjs/operator/mergeAll', 'rxjs/operator/mergeMap', 'rxjs/operator/reduce', 'rxjs/Observable', 'rxjs/operator/catch', 'rxjs/operator/concatAll', 'rxjs/operator/first', 'rxjs/util/EmptyError', 'rxjs/observable/fromPromise', 'rxjs/operator/last', 'rxjs/BehaviorSubject', 'rxjs/operator/filter'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.router = global.ng.router || {}),global.ng.common,global.ng.core,global.Rx,global.Rx.Observable,global.Rx.Observable,global.rxjs_operator_concatMap,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable.prototype));
 	}(this, function (exports,_angular_common,_angular_core,rxjs_Subject,rxjs_observable_from,rxjs_observable_of,rxjs_operator_concatMap,rxjs_operator_every,rxjs_operator_map,rxjs_operator_mergeAll,rxjs_operator_mergeMap,rxjs_operator_reduce,rxjs_Observable,rxjs_operator_catch,rxjs_operator_concatAll,rxjs_operator_first,rxjs_util_EmptyError,rxjs_observable_fromPromise,l,rxjs_BehaviorSubject,rxjs_operator_filter) { 'use strict';
@@ -41290,21 +41297,19 @@
 
 
 /***/ },
-
-/***/ 40:
+/* 41 */
 /*!***********************************!*\
   !*** ./~/rxjs/observable/from.js ***!
   \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var FromObservable_1 = __webpack_require__(/*! ./FromObservable */ 41);
+	var FromObservable_1 = __webpack_require__(/*! ./FromObservable */ 42);
 	exports.from = FromObservable_1.FromObservable.create;
 	//# sourceMappingURL=from.js.map
 
 /***/ },
-
-/***/ 41:
+/* 42 */
 /*!*********************************************!*\
   !*** ./~/rxjs/observable/FromObservable.js ***!
   \*********************************************/
@@ -41317,14 +41322,14 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var isArray_1 = __webpack_require__(/*! ../util/isArray */ 16);
-	var isPromise_1 = __webpack_require__(/*! ../util/isPromise */ 42);
-	var PromiseObservable_1 = __webpack_require__(/*! ./PromiseObservable */ 43);
-	var IteratorObservable_1 = __webpack_require__(/*! ./IteratorObservable */ 44);
-	var ArrayObservable_1 = __webpack_require__(/*! ./ArrayObservable */ 46);
-	var ArrayLikeObservable_1 = __webpack_require__(/*! ./ArrayLikeObservable */ 50);
-	var iterator_1 = __webpack_require__(/*! ../symbol/iterator */ 45);
+	var isPromise_1 = __webpack_require__(/*! ../util/isPromise */ 43);
+	var PromiseObservable_1 = __webpack_require__(/*! ./PromiseObservable */ 44);
+	var IteratorObservable_1 = __webpack_require__(/*! ./IteratorObservable */ 45);
+	var ArrayObservable_1 = __webpack_require__(/*! ./ArrayObservable */ 47);
+	var ArrayLikeObservable_1 = __webpack_require__(/*! ./ArrayLikeObservable */ 51);
+	var iterator_1 = __webpack_require__(/*! ../symbol/iterator */ 46);
 	var Observable_1 = __webpack_require__(/*! ../Observable */ 10);
-	var observeOn_1 = __webpack_require__(/*! ../operator/observeOn */ 51);
+	var observeOn_1 = __webpack_require__(/*! ../operator/observeOn */ 52);
 	var observable_1 = __webpack_require__(/*! ../symbol/observable */ 23);
 	var isArrayLike = (function (x) { return x && typeof x.length === 'number'; });
 	/**
@@ -41428,8 +41433,7 @@
 	//# sourceMappingURL=FromObservable.js.map
 
 /***/ },
-
-/***/ 42:
+/* 43 */
 /*!**********************************!*\
   !*** ./~/rxjs/util/isPromise.js ***!
   \**********************************/
@@ -41443,8 +41447,7 @@
 	//# sourceMappingURL=isPromise.js.map
 
 /***/ },
-
-/***/ 43:
+/* 44 */
 /*!************************************************!*\
   !*** ./~/rxjs/observable/PromiseObservable.js ***!
   \************************************************/
@@ -41573,8 +41576,7 @@
 	//# sourceMappingURL=PromiseObservable.js.map
 
 /***/ },
-
-/***/ 44:
+/* 45 */
 /*!*************************************************!*\
   !*** ./~/rxjs/observable/IteratorObservable.js ***!
   \*************************************************/
@@ -41588,7 +41590,7 @@
 	};
 	var root_1 = __webpack_require__(/*! ../util/root */ 11);
 	var Observable_1 = __webpack_require__(/*! ../Observable */ 10);
-	var iterator_1 = __webpack_require__(/*! ../symbol/iterator */ 45);
+	var iterator_1 = __webpack_require__(/*! ../symbol/iterator */ 46);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @extends {Ignored}
@@ -41739,8 +41741,7 @@
 	//# sourceMappingURL=IteratorObservable.js.map
 
 /***/ },
-
-/***/ 45:
+/* 46 */
 /*!***********************************!*\
   !*** ./~/rxjs/symbol/iterator.js ***!
   \***********************************/
@@ -41780,8 +41781,7 @@
 	//# sourceMappingURL=iterator.js.map
 
 /***/ },
-
-/***/ 46:
+/* 47 */
 /*!**********************************************!*\
   !*** ./~/rxjs/observable/ArrayObservable.js ***!
   \**********************************************/
@@ -41794,9 +41794,9 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var Observable_1 = __webpack_require__(/*! ../Observable */ 10);
-	var ScalarObservable_1 = __webpack_require__(/*! ./ScalarObservable */ 47);
-	var EmptyObservable_1 = __webpack_require__(/*! ./EmptyObservable */ 48);
-	var isScheduler_1 = __webpack_require__(/*! ../util/isScheduler */ 49);
+	var ScalarObservable_1 = __webpack_require__(/*! ./ScalarObservable */ 48);
+	var EmptyObservable_1 = __webpack_require__(/*! ./EmptyObservable */ 49);
+	var isScheduler_1 = __webpack_require__(/*! ../util/isScheduler */ 50);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @extends {Ignored}
@@ -41911,8 +41911,7 @@
 	//# sourceMappingURL=ArrayObservable.js.map
 
 /***/ },
-
-/***/ 47:
+/* 48 */
 /*!***********************************************!*\
   !*** ./~/rxjs/observable/ScalarObservable.js ***!
   \***********************************************/
@@ -41978,8 +41977,7 @@
 	//# sourceMappingURL=ScalarObservable.js.map
 
 /***/ },
-
-/***/ 48:
+/* 49 */
 /*!**********************************************!*\
   !*** ./~/rxjs/observable/EmptyObservable.js ***!
   \**********************************************/
@@ -42062,8 +42060,7 @@
 	//# sourceMappingURL=EmptyObservable.js.map
 
 /***/ },
-
-/***/ 49:
+/* 50 */
 /*!************************************!*\
   !*** ./~/rxjs/util/isScheduler.js ***!
   \************************************/
@@ -42077,8 +42074,7 @@
 	//# sourceMappingURL=isScheduler.js.map
 
 /***/ },
-
-/***/ 50:
+/* 51 */
 /*!**************************************************!*\
   !*** ./~/rxjs/observable/ArrayLikeObservable.js ***!
   \**************************************************/
@@ -42091,8 +42087,8 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var Observable_1 = __webpack_require__(/*! ../Observable */ 10);
-	var ScalarObservable_1 = __webpack_require__(/*! ./ScalarObservable */ 47);
-	var EmptyObservable_1 = __webpack_require__(/*! ./EmptyObservable */ 48);
+	var ScalarObservable_1 = __webpack_require__(/*! ./ScalarObservable */ 48);
+	var EmptyObservable_1 = __webpack_require__(/*! ./EmptyObservable */ 49);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @extends {Ignored}
@@ -42156,8 +42152,7 @@
 	//# sourceMappingURL=ArrayLikeObservable.js.map
 
 /***/ },
-
-/***/ 51:
+/* 52 */
 /*!**************************************!*\
   !*** ./~/rxjs/operator/observeOn.js ***!
   \**************************************/
@@ -42170,7 +42165,7 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var Subscriber_1 = __webpack_require__(/*! ../Subscriber */ 13);
-	var Notification_1 = __webpack_require__(/*! ../Notification */ 52);
+	var Notification_1 = __webpack_require__(/*! ../Notification */ 53);
 	/**
 	 * @see {@link Notification}
 	 *
@@ -42240,8 +42235,7 @@
 	//# sourceMappingURL=observeOn.js.map
 
 /***/ },
-
-/***/ 52:
+/* 53 */
 /*!********************************!*\
   !*** ./~/rxjs/Notification.js ***!
   \********************************/
@@ -42376,28 +42370,26 @@
 	//# sourceMappingURL=Notification.js.map
 
 /***/ },
-
-/***/ 53:
+/* 54 */
 /*!*********************************!*\
   !*** ./~/rxjs/observable/of.js ***!
   \*********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var ArrayObservable_1 = __webpack_require__(/*! ./ArrayObservable */ 46);
+	var ArrayObservable_1 = __webpack_require__(/*! ./ArrayObservable */ 47);
 	exports.of = ArrayObservable_1.ArrayObservable.of;
 	//# sourceMappingURL=of.js.map
 
 /***/ },
-
-/***/ 54:
+/* 55 */
 /*!**************************************!*\
   !*** ./~/rxjs/operator/concatMap.js ***!
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var mergeMap_1 = __webpack_require__(/*! ./mergeMap */ 55);
+	var mergeMap_1 = __webpack_require__(/*! ./mergeMap */ 56);
 	/**
 	 * Projects each source value to an Observable which is merged in the output
 	 * Observable, in a serialized fashion waiting for each one to complete before
@@ -42461,8 +42453,7 @@
 	//# sourceMappingURL=concatMap.js.map
 
 /***/ },
-
-/***/ 55:
+/* 56 */
 /*!*************************************!*\
   !*** ./~/rxjs/operator/mergeMap.js ***!
   \*************************************/
@@ -42474,8 +42465,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var subscribeToResult_1 = __webpack_require__(/*! ../util/subscribeToResult */ 56);
-	var OuterSubscriber_1 = __webpack_require__(/*! ../OuterSubscriber */ 58);
+	var subscribeToResult_1 = __webpack_require__(/*! ../util/subscribeToResult */ 57);
+	var OuterSubscriber_1 = __webpack_require__(/*! ../OuterSubscriber */ 59);
 	/**
 	 * Projects each source value to an Observable which is merged in the output
 	 * Observable.
@@ -42631,8 +42622,7 @@
 	//# sourceMappingURL=mergeMap.js.map
 
 /***/ },
-
-/***/ 56:
+/* 57 */
 /*!******************************************!*\
   !*** ./~/rxjs/util/subscribeToResult.js ***!
   \******************************************/
@@ -42641,10 +42631,10 @@
 	"use strict";
 	var root_1 = __webpack_require__(/*! ./root */ 11);
 	var isArray_1 = __webpack_require__(/*! ./isArray */ 16);
-	var isPromise_1 = __webpack_require__(/*! ./isPromise */ 42);
+	var isPromise_1 = __webpack_require__(/*! ./isPromise */ 43);
 	var Observable_1 = __webpack_require__(/*! ../Observable */ 10);
-	var iterator_1 = __webpack_require__(/*! ../symbol/iterator */ 45);
-	var InnerSubscriber_1 = __webpack_require__(/*! ../InnerSubscriber */ 57);
+	var iterator_1 = __webpack_require__(/*! ../symbol/iterator */ 46);
+	var InnerSubscriber_1 = __webpack_require__(/*! ../InnerSubscriber */ 58);
 	var observable_1 = __webpack_require__(/*! ../symbol/observable */ 23);
 	function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
 	    var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
@@ -42714,8 +42704,7 @@
 	//# sourceMappingURL=subscribeToResult.js.map
 
 /***/ },
-
-/***/ 57:
+/* 58 */
 /*!***********************************!*\
   !*** ./~/rxjs/InnerSubscriber.js ***!
   \***********************************/
@@ -42759,8 +42748,7 @@
 	//# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ },
-
-/***/ 58:
+/* 59 */
 /*!***********************************!*\
   !*** ./~/rxjs/OuterSubscriber.js ***!
   \***********************************/
@@ -42798,8 +42786,7 @@
 	//# sourceMappingURL=OuterSubscriber.js.map
 
 /***/ },
-
-/***/ 59:
+/* 60 */
 /*!**********************************!*\
   !*** ./~/rxjs/operator/every.js ***!
   \**********************************/
@@ -42875,8 +42862,7 @@
 	//# sourceMappingURL=every.js.map
 
 /***/ },
-
-/***/ 60:
+/* 61 */
 /*!*************************************!*\
   !*** ./~/rxjs/operator/mergeAll.js ***!
   \*************************************/
@@ -42888,8 +42874,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var OuterSubscriber_1 = __webpack_require__(/*! ../OuterSubscriber */ 58);
-	var subscribeToResult_1 = __webpack_require__(/*! ../util/subscribeToResult */ 56);
+	var OuterSubscriber_1 = __webpack_require__(/*! ../OuterSubscriber */ 59);
+	var subscribeToResult_1 = __webpack_require__(/*! ../util/subscribeToResult */ 57);
 	/**
 	 * Converts a higher-order Observable into a first-order Observable which
 	 * concurrently delivers all values that are emitted on the inner Observables.
@@ -42995,8 +42981,7 @@
 	//# sourceMappingURL=mergeAll.js.map
 
 /***/ },
-
-/***/ 61:
+/* 62 */
 /*!***********************************!*\
   !*** ./~/rxjs/operator/reduce.js ***!
   \***********************************/
@@ -43116,8 +43101,7 @@
 	//# sourceMappingURL=reduce.js.map
 
 /***/ },
-
-/***/ 62:
+/* 63 */
 /*!**********************************!*\
   !*** ./~/rxjs/operator/catch.js ***!
   \**********************************/
@@ -43129,8 +43113,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var OuterSubscriber_1 = __webpack_require__(/*! ../OuterSubscriber */ 58);
-	var subscribeToResult_1 = __webpack_require__(/*! ../util/subscribeToResult */ 56);
+	var OuterSubscriber_1 = __webpack_require__(/*! ../OuterSubscriber */ 59);
+	var subscribeToResult_1 = __webpack_require__(/*! ../util/subscribeToResult */ 57);
 	/**
 	 * Catches errors on the observable to be handled by returning a new observable or throwing an error.
 	 * @param {function} selector a function that takes as arguments `err`, which is the error, and `caught`, which
@@ -43190,15 +43174,14 @@
 	//# sourceMappingURL=catch.js.map
 
 /***/ },
-
-/***/ 63:
+/* 64 */
 /*!**************************************!*\
   !*** ./~/rxjs/operator/concatAll.js ***!
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var mergeAll_1 = __webpack_require__(/*! ./mergeAll */ 60);
+	var mergeAll_1 = __webpack_require__(/*! ./mergeAll */ 61);
 	/**
 	 * Converts a higher-order Observable into a first-order Observable by
 	 * concatenating the inner Observables in order.
@@ -43248,8 +43231,7 @@
 	//# sourceMappingURL=concatAll.js.map
 
 /***/ },
-
-/***/ 64:
+/* 65 */
 /*!**********************************!*\
   !*** ./~/rxjs/operator/first.js ***!
   \**********************************/
@@ -43262,7 +43244,7 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var Subscriber_1 = __webpack_require__(/*! ../Subscriber */ 13);
-	var EmptyError_1 = __webpack_require__(/*! ../util/EmptyError */ 65);
+	var EmptyError_1 = __webpack_require__(/*! ../util/EmptyError */ 66);
 	/**
 	 * Emits only the first value (or the first value that meets some condition)
 	 * emitted by the source Observable.
@@ -43405,8 +43387,7 @@
 	//# sourceMappingURL=first.js.map
 
 /***/ },
-
-/***/ 65:
+/* 66 */
 /*!***********************************!*\
   !*** ./~/rxjs/util/EmptyError.js ***!
   \***********************************/
@@ -43442,21 +43423,19 @@
 	//# sourceMappingURL=EmptyError.js.map
 
 /***/ },
-
-/***/ 66:
+/* 67 */
 /*!******************************************!*\
   !*** ./~/rxjs/observable/fromPromise.js ***!
   \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var PromiseObservable_1 = __webpack_require__(/*! ./PromiseObservable */ 43);
+	var PromiseObservable_1 = __webpack_require__(/*! ./PromiseObservable */ 44);
 	exports.fromPromise = PromiseObservable_1.PromiseObservable.create;
 	//# sourceMappingURL=fromPromise.js.map
 
 /***/ },
-
-/***/ 67:
+/* 68 */
 /*!*********************************!*\
   !*** ./~/rxjs/operator/last.js ***!
   \*********************************/
@@ -43469,7 +43448,7 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var Subscriber_1 = __webpack_require__(/*! ../Subscriber */ 13);
-	var EmptyError_1 = __webpack_require__(/*! ../util/EmptyError */ 65);
+	var EmptyError_1 = __webpack_require__(/*! ../util/EmptyError */ 66);
 	/**
 	 * Returns an Observable that emits only the last item emitted by the source Observable.
 	 * It optionally takes a predicate function as a parameter, in which case, rather than emitting
@@ -43582,8 +43561,7 @@
 	//# sourceMappingURL=last.js.map
 
 /***/ },
-
-/***/ 68:
+/* 69 */
 /*!***********************************!*\
   !*** ./~/rxjs/BehaviorSubject.js ***!
   \***********************************/
@@ -43640,8 +43618,7 @@
 	//# sourceMappingURL=BehaviorSubject.js.map
 
 /***/ },
-
-/***/ 69:
+/* 70 */
 /*!***********************************!*\
   !*** ./~/rxjs/operator/filter.js ***!
   \***********************************/
@@ -43742,8 +43719,7 @@
 	//# sourceMappingURL=filter.js.map
 
 /***/ },
-
-/***/ 70:
+/* 71 */
 /*!*****************************!*\
   !*** ./app/models/index.ts ***!
   \*****************************/
@@ -43771,8 +43747,7 @@
 
 
 /***/ },
-
-/***/ 71:
+/* 72 */
 /*!***********************************!*\
   !*** ./app/nav/sidenav.module.ts ***!
   \***********************************/
@@ -43790,9 +43765,9 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var common_1 = __webpack_require__(/*! @angular/common */ 27);
-	var sidenav_component_1 = __webpack_require__(/*! ./sidenav.component */ 72);
-	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 73);
-	var login_routing_module_1 = __webpack_require__(/*! ../login/login-routing.module */ 75);
+	var sidenav_component_1 = __webpack_require__(/*! ./sidenav.component */ 73);
+	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 74);
+	var login_routing_module_1 = __webpack_require__(/*! ../login/login-routing.module */ 76);
 	var SideNavModule = (function () {
 	    function SideNavModule() {
 	    }
@@ -43816,8 +43791,7 @@
 
 
 /***/ },
-
-/***/ 72:
+/* 73 */
 /*!**************************************!*\
   !*** ./app/nav/sidenav.component.ts ***!
   \**************************************/
@@ -43838,7 +43812,7 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ 26);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
 	var account_service_1 = __webpack_require__(/*! ../services/account.service */ 31);
 	var SideNavComponent = (function () {
 	    function SideNavComponent(router, accountService, document) {
@@ -43877,8 +43851,7 @@
 
 
 /***/ },
-
-/***/ 73:
+/* 74 */
 /*!******************************************************!*\
   !*** ./app/search/listings-search-routing.module.ts ***!
   \******************************************************/
@@ -43895,8 +43868,8 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var listings_search_component_1 = __webpack_require__(/*! ./listings-search.component */ 74);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var listings_search_component_1 = __webpack_require__(/*! ./listings-search.component */ 75);
 	var ListSearchRoutingModule = (function () {
 	    function ListSearchRoutingModule() {
 	    }
@@ -43917,8 +43890,7 @@
 
 
 /***/ },
-
-/***/ 74:
+/* 75 */
 /*!*************************************************!*\
   !*** ./app/search/listings-search.component.ts ***!
   \*************************************************/
@@ -43935,7 +43907,7 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
 	var ListSearchComponent = (function () {
 	    function ListSearchComponent(routes) {
 	        this.routes = routes;
@@ -43953,8 +43925,7 @@
 
 
 /***/ },
-
-/***/ 75:
+/* 76 */
 /*!*******************************************!*\
   !*** ./app/login/login-routing.module.ts ***!
   \*******************************************/
@@ -43971,8 +43942,8 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var login_component_1 = __webpack_require__(/*! ./login.component */ 76);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var login_component_1 = __webpack_require__(/*! ./login.component */ 77);
 	var LoginRoutingModule = (function () {
 	    function LoginRoutingModule() {
 	    }
@@ -43995,8 +43966,7 @@
 
 
 /***/ },
-
-/***/ 76:
+/* 77 */
 /*!**************************************!*\
   !*** ./app/login/login.component.ts ***!
   \**************************************/
@@ -44028,106 +43998,7 @@
 
 
 /***/ },
-
-/***/ 77:
-/*!***********************************************!*\
-  !*** ./app/profile/profile-routing.module.ts ***!
-  \***********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var profile_component_1 = __webpack_require__(/*! ./profile.component */ 78);
-	var contact_card_component_1 = __webpack_require__(/*! ./contact-card/contact-card.component */ 646);
-	var ProfileRoutingModule = (function () {
-	    function ProfileRoutingModule() {
-	    }
-	    ProfileRoutingModule = __decorate([
-	        core_1.NgModule({
-	            imports: [
-	                router_1.RouterModule.forChild([
-	                    {
-	                        path: "profile",
-	                        component: profile_component_1.ProfileComponent,
-	                        children: [
-	                            {
-	                                path: "",
-	                                component: contact_card_component_1.ContactCardComponent
-	                            },
-	                            {
-	                                path: "testing",
-	                                component: contact_card_component_1.ContactCardComponent,
-	                                outlet: "testing"
-	                            }
-	                        ]
-	                    }
-	                ])
-	            ],
-	            exports: [
-	                router_1.RouterModule
-	            ]
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], ProfileRoutingModule);
-	    return ProfileRoutingModule;
-	}());
-	exports.ProfileRoutingModule = ProfileRoutingModule;
-
-
-/***/ },
-
-/***/ 78:
-/*!******************************************!*\
-  !*** ./app/profile/profile.component.ts ***!
-  \******************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var ProfileComponent = (function () {
-	    function ProfileComponent(router) {
-	        this.router = router;
-	    }
-	    ProfileComponent.prototype.setProfilePage = function (e) {
-	        e.preventDefault();
-	        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
-	        alert("clicked");
-	    };
-	    ProfileComponent = __decorate([
-	        core_1.Component({
-	            templateUrl: "app/profile/profile.component.html"
-	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
-	    ], ProfileComponent);
-	    return ProfileComponent;
-	    var _a;
-	}());
-	exports.ProfileComponent = ProfileComponent;
-
-
-/***/ },
-
-/***/ 79:
+/* 78 */
 /*!*****************************************!*\
   !*** ./app/home/home-routing.module.ts ***!
   \*****************************************/
@@ -44144,18 +44015,18 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var listings_search_module_1 = __webpack_require__(/*! ../search/listings-search.module */ 80);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var listings_search_module_1 = __webpack_require__(/*! ../search/listings-search.module */ 79);
 	var home_component_1 = __webpack_require__(/*! ./home.component */ 38);
-	var home_main_component_1 = __webpack_require__(/*! ./home-main/home-main.component */ 647);
-	var profile_component_1 = __webpack_require__(/*! ../profile/profile.component */ 78);
-	var listings_search_component_1 = __webpack_require__(/*! ../search/listings-search.component */ 74);
-	var register_component_1 = __webpack_require__(/*! ../register/register.component */ 83);
-	var login_component_1 = __webpack_require__(/*! ../login/login.component */ 76);
-	var contact_card_component_1 = __webpack_require__(/*! ../profile/contact-card/contact-card.component */ 646);
-	var wants_component_1 = __webpack_require__(/*! ../profile/profile-pages/wants.component */ 648);
-	var can_do_component_1 = __webpack_require__(/*! ../profile/profile-pages/can-do.component */ 649);
-	var selling_component_1 = __webpack_require__(/*! ../profile/profile-pages/selling.component */ 650);
+	var home_main_component_1 = __webpack_require__(/*! ./home-main/home-main.component */ 39);
+	var profile_component_1 = __webpack_require__(/*! ../profile/profile.component */ 80);
+	var listings_search_component_1 = __webpack_require__(/*! ../search/listings-search.component */ 75);
+	var register_component_1 = __webpack_require__(/*! ../register/register.component */ 81);
+	var login_component_1 = __webpack_require__(/*! ../login/login.component */ 77);
+	var contact_card_component_1 = __webpack_require__(/*! ../profile/contact-card/contact-card.component */ 82);
+	var wants_component_1 = __webpack_require__(/*! ../profile/profile-pages/wants.component */ 83);
+	var can_do_component_1 = __webpack_require__(/*! ../profile/profile-pages/can-do.component */ 84);
+	var selling_component_1 = __webpack_require__(/*! ../profile/profile-pages/selling.component */ 85);
 	var HomeRoutingModule = (function () {
 	    function HomeRoutingModule() {
 	    }
@@ -44209,8 +44080,7 @@
 
 
 /***/ },
-
-/***/ 80:
+/* 79 */
 /*!**********************************************!*\
   !*** ./app/search/listings-search.module.ts ***!
   \**********************************************/
@@ -44227,9 +44097,9 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var listings_search_component_1 = __webpack_require__(/*! ./listings-search.component */ 74);
-	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 71);
-	var listings_search_routing_module_1 = __webpack_require__(/*! ./listings-search-routing.module */ 73);
+	var listings_search_component_1 = __webpack_require__(/*! ./listings-search.component */ 75);
+	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 72);
+	var listings_search_routing_module_1 = __webpack_require__(/*! ./listings-search-routing.module */ 74);
 	var ListSearchModule = (function () {
 	    function ListSearchModule() {
 	    }
@@ -44255,8 +44125,228 @@
 
 
 /***/ },
+/* 80 */
+/*!******************************************!*\
+  !*** ./app/profile/profile.component.ts ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
 
-/***/ 81:
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var ProfileComponent = (function () {
+	    function ProfileComponent(router) {
+	        this.router = router;
+	    }
+	    ProfileComponent.prototype.setProfilePage = function (e) {
+	        e.preventDefault();
+	        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
+	        alert("clicked");
+	    };
+	    ProfileComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/profile/profile.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
+	    ], ProfileComponent);
+	    return ProfileComponent;
+	    var _a;
+	}());
+	exports.ProfileComponent = ProfileComponent;
+
+
+/***/ },
+/* 81 */
+/*!********************************************!*\
+  !*** ./app/register/register.component.ts ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var RegisterComponent = (function () {
+	    function RegisterComponent(myElement) {
+	        this.myElement = myElement;
+	    }
+	    RegisterComponent.prototype.registerUser = function (e) {
+	        e.preventDefault();
+	        var el = this.myElement.nativeElement;
+	        // Obtain the token
+	        while (!el.hasAttribute("ncg-request-verification-token")) {
+	            el = el.parentElement;
+	        }
+	        var token = el.getAttribute("ncg-request-verification-token");
+	        console.log(el + " " + token); // tslint:disable-line
+	    };
+	    RegisterComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/register/register.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object])
+	    ], RegisterComponent);
+	    return RegisterComponent;
+	    var _a;
+	}());
+	exports.RegisterComponent = RegisterComponent;
+
+
+/***/ },
+/* 82 */
+/*!************************************************************!*\
+  !*** ./app/profile/contact-card/contact-card.component.ts ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
+	var ContactCardComponent = (function () {
+	    function ContactCardComponent(router, accountService) {
+	        this.router = router;
+	        this.accountService = accountService;
+	    }
+	    ContactCardComponent.prototype.ngOnInit = function () {
+	        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
+	        this.user = this.accountService.getLastLoggedInUser();
+	    };
+	    ContactCardComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/profile/contact-card/contact-card.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object])
+	    ], ContactCardComponent);
+	    return ContactCardComponent;
+	    var _a, _b;
+	}());
+	exports.ContactCardComponent = ContactCardComponent;
+
+
+/***/ },
+/* 83 */
+/*!******************************************************!*\
+  !*** ./app/profile/profile-pages/wants.component.ts ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var WantsComponent = (function () {
+	    function WantsComponent() {
+	    }
+	    WantsComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/profile/profile-pages/wants.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], WantsComponent);
+	    return WantsComponent;
+	}());
+	exports.WantsComponent = WantsComponent;
+
+
+/***/ },
+/* 84 */
+/*!*******************************************************!*\
+  !*** ./app/profile/profile-pages/can-do.component.ts ***!
+  \*******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var CanDoComponent = (function () {
+	    function CanDoComponent() {
+	    }
+	    CanDoComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/profile/profile-pages/can-do.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], CanDoComponent);
+	    return CanDoComponent;
+	}());
+	exports.CanDoComponent = CanDoComponent;
+
+
+/***/ },
+/* 85 */
+/*!********************************************************!*\
+  !*** ./app/profile/profile-pages/selling.component.ts ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var SellingComponent = (function () {
+	    function SellingComponent() {
+	    }
+	    SellingComponent = __decorate([
+	        core_1.Component({
+	            templateUrl: "app/profile/profile-pages/selling.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], SellingComponent);
+	    return SellingComponent;
+	}());
+	exports.SellingComponent = SellingComponent;
+
+
+/***/ },
+/* 86 */
 /*!*****************************************!*\
   !*** ./app/register/register.module.ts ***!
   \*****************************************/
@@ -44273,13 +44363,13 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var forms_1 = __webpack_require__(/*! @angular/forms */ 82);
+	var forms_1 = __webpack_require__(/*! @angular/forms */ 87);
 	var common_1 = __webpack_require__(/*! @angular/common */ 27);
 	var http_1 = __webpack_require__(/*! @angular/http */ 28);
-	var register_component_1 = __webpack_require__(/*! ./register.component */ 83);
-	var register_form_component_1 = __webpack_require__(/*! ./register-form/register-form.component */ 84);
-	var register_routing_module_1 = __webpack_require__(/*! ./register-routing.module */ 87);
-	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 71);
+	var register_component_1 = __webpack_require__(/*! ./register.component */ 81);
+	var register_form_component_1 = __webpack_require__(/*! ./register-form/register-form.component */ 88);
+	var register_routing_module_1 = __webpack_require__(/*! ./register-routing.module */ 91);
+	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 72);
 	var account_service_1 = __webpack_require__(/*! ../services/account.service */ 31);
 	var RegisterModule = (function () {
 	    function RegisterModule() {
@@ -44313,8 +44403,7 @@
 
 
 /***/ },
-
-/***/ 82:
+/* 87 */
 /*!***********************************************!*\
   !*** ./~/@angular/forms/bundles/forms.umd.js ***!
   \***********************************************/
@@ -44326,7 +44415,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(/*! @angular/core */ 8), __webpack_require__(/*! rxjs/operator/toPromise */ 35), __webpack_require__(/*! rxjs/Subject */ 9), __webpack_require__(/*! rxjs/Observable */ 10), __webpack_require__(/*! rxjs/observable/fromPromise */ 66)) :
+	     true ? factory(exports, __webpack_require__(/*! @angular/core */ 8), __webpack_require__(/*! rxjs/operator/toPromise */ 35), __webpack_require__(/*! rxjs/Subject */ 9), __webpack_require__(/*! rxjs/Observable */ 10), __webpack_require__(/*! rxjs/observable/fromPromise */ 67)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/core', 'rxjs/operator/toPromise', 'rxjs/Subject', 'rxjs/Observable', 'rxjs/observable/fromPromise'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.forms = global.ng.forms || {}),global.ng.core,global.Rx.Observable.prototype,global.Rx,global.Rx,global.Rx.Observable));
 	}(this, function (exports,_angular_core,rxjs_operator_toPromise,rxjs_Subject,rxjs_Observable,rxjs_observable_fromPromise) { 'use strict';
@@ -48760,53 +48849,7 @@
 
 
 /***/ },
-
-/***/ 83:
-/*!********************************************!*\
-  !*** ./app/register/register.component.ts ***!
-  \********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var RegisterComponent = (function () {
-	    function RegisterComponent(myElement) {
-	        this.myElement = myElement;
-	    }
-	    RegisterComponent.prototype.registerUser = function (e) {
-	        e.preventDefault();
-	        var el = this.myElement.nativeElement;
-	        // Obtain the token
-	        while (!el.hasAttribute("ncg-request-verification-token")) {
-	            el = el.parentElement;
-	        }
-	        var token = el.getAttribute("ncg-request-verification-token");
-	        console.log(el + " " + token); // tslint:disable-line
-	    };
-	    RegisterComponent = __decorate([
-	        core_1.Component({
-	            templateUrl: "app/register/register.component.html"
-	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object])
-	    ], RegisterComponent);
-	    return RegisterComponent;
-	    var _a;
-	}());
-	exports.RegisterComponent = RegisterComponent;
-
-
-/***/ },
-
-/***/ 84:
+/* 88 */
 /*!***************************************************************!*\
   !*** ./app/register/register-form/register-form.component.ts ***!
   \***************************************************************/
@@ -48823,10 +48866,10 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var forms_1 = __webpack_require__(/*! @angular/forms */ 82);
-	var register_form_validators_1 = __webpack_require__(/*! ./validators/register-form-validators */ 85);
+	var forms_1 = __webpack_require__(/*! @angular/forms */ 87);
+	var register_form_validators_1 = __webpack_require__(/*! ./validators/register-form-validators */ 89);
 	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
-	var userDto_1 = __webpack_require__(/*! ../../dtos/userDto */ 86);
+	var userDto_1 = __webpack_require__(/*! ../../dtos/userDto */ 90);
 	// import { RegisterFormModel } from "../../models/index";
 	var RegisterFormComponent = (function () {
 	    function RegisterFormComponent(fb, accountService) {
@@ -48893,8 +48936,7 @@
 
 
 /***/ },
-
-/***/ 85:
+/* 89 */
 /*!***************************************************************************!*\
   !*** ./app/register/register-form/validators/register-form-validators.ts ***!
   \***************************************************************************/
@@ -48913,8 +48955,7 @@
 
 
 /***/ },
-
-/***/ 86:
+/* 90 */
 /*!*****************************!*\
   !*** ./app/dtos/userDto.ts ***!
   \*****************************/
@@ -48930,8 +48971,7 @@
 
 
 /***/ },
-
-/***/ 87:
+/* 91 */
 /*!*************************************************!*\
   !*** ./app/register/register-routing.module.ts ***!
   \*************************************************/
@@ -48948,8 +48988,8 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var register_component_1 = __webpack_require__(/*! ./register.component */ 83);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var register_component_1 = __webpack_require__(/*! ./register.component */ 81);
 	var RegisterRoutingModule = (function () {
 	    function RegisterRoutingModule() {
 	    }
@@ -48970,8 +49010,7 @@
 
 
 /***/ },
-
-/***/ 88:
+/* 92 */
 /*!***********************************!*\
   !*** ./app/login/login.module.ts ***!
   \***********************************/
@@ -48988,11 +49027,11 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var forms_1 = __webpack_require__(/*! @angular/forms */ 82);
+	var forms_1 = __webpack_require__(/*! @angular/forms */ 87);
 	var common_1 = __webpack_require__(/*! @angular/common */ 27);
-	var login_component_1 = __webpack_require__(/*! ./login.component */ 76);
-	var login_form_component_1 = __webpack_require__(/*! ./login-form/login-form.component */ 89);
-	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 71);
+	var login_component_1 = __webpack_require__(/*! ./login.component */ 77);
+	var login_form_component_1 = __webpack_require__(/*! ./login-form/login-form.component */ 93);
+	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 72);
 	var LoginModule = (function () {
 	    function LoginModule() {
 	    }
@@ -49017,8 +49056,7 @@
 
 
 /***/ },
-
-/***/ 89:
+/* 93 */
 /*!******************************************************!*\
   !*** ./app/login/login-form/login-form.component.ts ***!
   \******************************************************/
@@ -49035,10 +49073,10 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var forms_1 = __webpack_require__(/*! @angular/forms */ 82);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var forms_1 = __webpack_require__(/*! @angular/forms */ 87);
 	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
-	var userDto_1 = __webpack_require__(/*! ../../dtos/userDto */ 86);
+	var userDto_1 = __webpack_require__(/*! ../../dtos/userDto */ 90);
 	var LoginFormComponent = (function () {
 	    function LoginFormComponent(fb, accountService, router) {
 	        this.fb = fb;
@@ -49097,8 +49135,7 @@
 
 
 /***/ },
-
-/***/ 90:
+/* 94 */
 /*!***************************************!*\
   !*** ./app/profile/profile.module.ts ***!
   \***************************************/
@@ -49115,13 +49152,13 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var profile_component_1 = __webpack_require__(/*! ./profile.component */ 78);
-	var contact_card_component_1 = __webpack_require__(/*! ./contact-card/contact-card.component */ 646);
-	var wants_component_1 = __webpack_require__(/*! ./profile-pages/wants.component */ 648);
-	var selling_component_1 = __webpack_require__(/*! ./profile-pages/selling.component */ 650);
-	var can_do_component_1 = __webpack_require__(/*! ./profile-pages/can-do.component */ 649);
-	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 71);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var profile_component_1 = __webpack_require__(/*! ./profile.component */ 80);
+	var contact_card_component_1 = __webpack_require__(/*! ./contact-card/contact-card.component */ 82);
+	var wants_component_1 = __webpack_require__(/*! ./profile-pages/wants.component */ 83);
+	var selling_component_1 = __webpack_require__(/*! ./profile-pages/selling.component */ 85);
+	var can_do_component_1 = __webpack_require__(/*! ./profile-pages/can-do.component */ 84);
+	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 72);
 	var ProfileModule = (function () {
 	    function ProfileModule() {
 	    }
@@ -49147,8 +49184,7 @@
 
 
 /***/ },
-
-/***/ 91:
+/* 95 */
 /*!***********************************************!*\
   !*** ./app/landing/landing-routing.module.ts ***!
   \***********************************************/
@@ -49165,8 +49201,8 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 92);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 96);
 	var LandingRoutingModule = (function () {
 	    function LandingRoutingModule() {
 	    }
@@ -49189,8 +49225,7 @@
 
 
 /***/ },
-
-/***/ 92:
+/* 96 */
 /*!******************************************!*\
   !*** ./app/landing/landing.component.ts ***!
   \******************************************/
@@ -49207,7 +49242,7 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
 	var account_service_1 = __webpack_require__(/*! ../services/account.service */ 31);
 	var LandingComponent = (function () {
 	    function LandingComponent(accountService, router) {
@@ -49238,8 +49273,7 @@
 
 
 /***/ },
-
-/***/ 93:
+/* 97 */
 /*!***********************************!*\
   !*** ./app/app-routing.module.ts ***!
   \***********************************/
@@ -49256,7 +49290,7 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
 	var AppRoutingModule = (function () {
 	    function AppRoutingModule() {
 	    }
@@ -49277,11 +49311,10 @@
 
 
 /***/ },
-
-/***/ 646:
-/*!************************************************************!*\
-  !*** ./app/profile/contact-card/contact-card.component.ts ***!
-  \************************************************************/
+/* 98 */
+/*!***********************************************!*\
+  !*** ./app/profile/profile-routing.module.ts ***!
+  \***********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -49295,172 +49328,44 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var ContactCardComponent = (function () {
-	    function ContactCardComponent(router) {
-	        this.router = router;
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var profile_component_1 = __webpack_require__(/*! ./profile.component */ 80);
+	var contact_card_component_1 = __webpack_require__(/*! ./contact-card/contact-card.component */ 82);
+	var ProfileRoutingModule = (function () {
+	    function ProfileRoutingModule() {
 	    }
-	    ContactCardComponent.prototype.ngOnInit = function () {
-	        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
-	    };
-	    ContactCardComponent = __decorate([
-	        core_1.Component({
-	            templateUrl: "app/profile/contact-card/contact-card.component.html"
-	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
-	    ], ContactCardComponent);
-	    return ContactCardComponent;
-	    var _a;
-	}());
-	exports.ContactCardComponent = ContactCardComponent;
-
-
-/***/ },
-
-/***/ 647:
-/*!***************************************************!*\
-  !*** ./app/home/home-main/home-main.component.ts ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 39);
-	var index_1 = __webpack_require__(/*! ../../models/index */ 70);
-	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
-	var HomeMainComponent = (function () {
-	    function HomeMainComponent(router, accountService) {
-	        this.router = router;
-	        this.accountService = accountService;
-	        this.userInfo = new index_1.UserData();
-	        if (accountService.getLastLoggedInUser() !== null) {
-	            this.userInfo = accountService.getLastLoggedInUser();
-	        }
-	        else {
-	            this.userInfo.email = "Guest";
-	        }
-	    }
-	    HomeMainComponent = __decorate([
-	        core_1.Component({
-	            templateUrl: "app/home/home-main/home-main.component.html"
-	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object])
-	    ], HomeMainComponent);
-	    return HomeMainComponent;
-	    var _a, _b;
-	}());
-	exports.HomeMainComponent = HomeMainComponent;
-
-
-/***/ },
-
-/***/ 648:
-/*!******************************************************!*\
-  !*** ./app/profile/profile-pages/wants.component.ts ***!
-  \******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var WantsComponent = (function () {
-	    function WantsComponent() {
-	    }
-	    WantsComponent = __decorate([
-	        core_1.Component({
-	            templateUrl: "app/profile/profile-pages/wants.component.html"
+	    ProfileRoutingModule = __decorate([
+	        core_1.NgModule({
+	            imports: [
+	                router_1.RouterModule.forChild([
+	                    {
+	                        path: "profile",
+	                        component: profile_component_1.ProfileComponent,
+	                        children: [
+	                            {
+	                                path: "",
+	                                component: contact_card_component_1.ContactCardComponent
+	                            },
+	                            {
+	                                path: "testing",
+	                                component: contact_card_component_1.ContactCardComponent,
+	                                outlet: "testing"
+	                            }
+	                        ]
+	                    }
+	                ])
+	            ],
+	            exports: [
+	                router_1.RouterModule
+	            ]
 	        }), 
 	        __metadata('design:paramtypes', [])
-	    ], WantsComponent);
-	    return WantsComponent;
+	    ], ProfileRoutingModule);
+	    return ProfileRoutingModule;
 	}());
-	exports.WantsComponent = WantsComponent;
-
-
-/***/ },
-
-/***/ 649:
-/*!*******************************************************!*\
-  !*** ./app/profile/profile-pages/can-do.component.ts ***!
-  \*******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var CanDoComponent = (function () {
-	    function CanDoComponent() {
-	    }
-	    CanDoComponent = __decorate([
-	        core_1.Component({
-	            templateUrl: "app/profile/profile-pages/can-do.component.html"
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], CanDoComponent);
-	    return CanDoComponent;
-	}());
-	exports.CanDoComponent = CanDoComponent;
-
-
-/***/ },
-
-/***/ 650:
-/*!********************************************************!*\
-  !*** ./app/profile/profile-pages/selling.component.ts ***!
-  \********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var SellingComponent = (function () {
-	    function SellingComponent() {
-	    }
-	    SellingComponent = __decorate([
-	        core_1.Component({
-	            templateUrl: "app/profile/profile-pages/selling.component.html"
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], SellingComponent);
-	    return SellingComponent;
-	}());
-	exports.SellingComponent = SellingComponent;
+	exports.ProfileRoutingModule = ProfileRoutingModule;
 
 
 /***/ }
-
-/******/ });
+/******/ ]);
 //# sourceMappingURL=app.js.map

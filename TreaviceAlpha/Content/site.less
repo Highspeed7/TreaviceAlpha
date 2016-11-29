@@ -1,19 +1,21 @@
 ﻿@import "variables.less";
- 
+ .profile {
+     div{
+         &#contact-card {
+             margin-bottom: 15px;
+            #contact-card-left {
+                 img {
+                     width: 100%;
+                 }
+             }
+        }
+     }
+ }
 .common {
-    h1 {
-        color: @blue;
-    }
     html {
         height: 100%;
         body {
             height: inherit;
-            div {
-                &.container-fluid {
-                    height: inherit;
-                    margin-bottom: -30px;
-                }
-            }
         }
     }
     body {
@@ -50,10 +52,28 @@
     }
  }   
 
+// Xtra-Small
+@media(min-width: 320px) {
+    .common;
+    .profile;
+}
+//Small
+@media (min-width: 540px) {
+    .common;
+    .profile;
+}
+// Medium
 @media (min-width: 768px) {
     .common;
+    .profile
 }
-
-@media (min-width: 992px) {
+// Large
+@media (min-width: 1084px) {
     .common;
+    .profile;
+}
+// Xtra-Large
+@media(min-width: 1400) {
+    .common;
+    .profile;
 }

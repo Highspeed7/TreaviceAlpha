@@ -4,4 +4,4 @@
     templateUrl: "app/profile/profile-pages/wants.component.html"
 })
 
-export class WantsComponent {}
+export class WantsComponent { }

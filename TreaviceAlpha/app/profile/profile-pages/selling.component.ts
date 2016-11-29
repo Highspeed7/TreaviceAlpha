@@ -4,4 +4,4 @@
     templateUrl: "app/profile/profile-pages/selling.component.html"
 })
 
-export class SellingComponent {}
+export class SellingComponent { }
