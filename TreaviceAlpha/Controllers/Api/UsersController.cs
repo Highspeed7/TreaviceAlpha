@@ -12,19 +12,13 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using System.Web;
 using TreaviceAlpha.dtos;
+using System.Data.Entity.Migrations;
 
 namespace TreaviceAlpha.Controllers.Api
 {
     [RoutePrefix("api/user")]
     public class UsersController : ApiController
     {
-        private ProfileDbContext _context;
-
-        public UsersController()
-        {
-            _context = new ProfileDbContext();
-        }
-
         //
         // POST /api/user/register
         [Route("register")]
@@ -32,22 +26,46 @@ namespace TreaviceAlpha.Controllers.Api
         [AntiForgeryValidate]
         public async Task<IHttpActionResult> CreateUser(User user)
         {
+            Profile profile = new Profile();
+
             if (ModelState.IsValid)
             {
                 user.Password = HashService.HashPass(user.Password);
-
-                _context.Users.Add(user);
-                try
+                using (var context = new ProfileDbContext())
                 {
-                    await _context.SaveChangesAsync();
-                }
-                catch (Exception)
-                {
-                    var responseMessage = new HttpResponseMessage(HttpStatusCode.Conflict);
-                    throw new HttpResponseException(responseMessage);
-                }
+                    using (var dbContextTransaction = context.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            context.Users.Add(user);
+                            await context.SaveChangesAsync();
+                            profile.UserId = user.Id;
+                            context.Profiles.Add(profile);
+                            await context.SaveChangesAsync();
+                            dbContextTransaction.Commit();
 
-                return Ok();
+                            return Ok();
+                            
+                        }catch (Exception)
+                        {
+                            dbContextTransaction.Rollback();
+                            var responseMessage = new HttpResponseMessage(HttpStatusCode.Conflict);
+                            throw new HttpResponseException(responseMessage);
+                        }
+                    }
+                }
+                //    _context.Users.Add(user);
+                //try
+                //{
+                //    await _context.SaveChangesAsync();
+                //}
+                //catch (Exception)
+                //{
+                //    var responseMessage = new HttpResponseMessage(HttpStatusCode.Conflict);
+                //    throw new HttpResponseException(responseMessage);
+                //}
+
+                //return Ok();
             }
 
             throw new HttpResponseException(HttpStatusCode.BadRequest);
@@ -76,10 +94,28 @@ namespace TreaviceAlpha.Controllers.Api
                         ident
                     );
                     
-                    return Content(HttpStatusCode.OK, new LoginDto() { Email = user.Email});
+                    return Content(HttpStatusCode.OK, new ProfileDto() { Email = user.Email});
                 }
             }
             return BadRequest();
+        }
+
+        [Route("profile-data")]
+        [HttpPost]
+        public IEnumerable<Profile> getUserProfileData(ProfileDto user)
+        {
+            using (var _context = new ProfileDbContext())
+            {
+                var userQuery = from u in _context.Users
+                                where u.Email == user.Email
+                                select u;
+
+                var result = from p in _context.Profiles
+                                   join u in userQuery
+                                   on p.UserId equals u.Id
+                                   select new Profile();
+                return result;
+            }
         }
 
         [Route("logout")]
@@ -99,7 +135,7 @@ namespace TreaviceAlpha.Controllers.Api
 
         private bool IsValid(string email, string password)
         {
-            using(_context)
+            using (var _context = new ProfileDbContext())
             {
                 IEnumerable<User> userInfo = _context.Users.Where(c => c.Email == email);
                 

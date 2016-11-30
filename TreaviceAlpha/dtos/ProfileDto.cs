@@ -1,6 +1,6 @@
 ﻿namespace TreaviceAlpha.dtos
 {
-    public class LoginDto
+    public class ProfileDto
     {
         public string Email { get; set; }
     }
