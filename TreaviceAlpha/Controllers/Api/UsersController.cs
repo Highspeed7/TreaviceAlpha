@@ -13,6 +13,7 @@ using Microsoft.Owin.Security;
 using System.Web;
 using TreaviceAlpha.dtos;
 using System.Data.Entity.Migrations;
+using TreaviceAlpha.Auth;
 
 namespace TreaviceAlpha.Controllers.Api
 {
@@ -23,6 +24,7 @@ namespace TreaviceAlpha.Controllers.Api
         // POST /api/user/register
         [Route("register")]
         [HttpPost]
+        [RequireHttps]
         [AntiForgeryValidate]
         public async Task<IHttpActionResult> CreateUser(User user)
         {
@@ -63,6 +65,7 @@ namespace TreaviceAlpha.Controllers.Api
         // POST /api/user/register
         [Route("login")]
         [HttpPost]
+        [RequireHttps]
         [AntiForgeryValidate]
         public IHttpActionResult Login(User user)
         {
