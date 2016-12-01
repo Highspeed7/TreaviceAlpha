@@ -54,18 +54,6 @@ namespace TreaviceAlpha.Controllers.Api
                         }
                     }
                 }
-                //    _context.Users.Add(user);
-                //try
-                //{
-                //    await _context.SaveChangesAsync();
-                //}
-                //catch (Exception)
-                //{
-                //    var responseMessage = new HttpResponseMessage(HttpStatusCode.Conflict);
-                //    throw new HttpResponseException(responseMessage);
-                //}
-
-                //return Ok();
             }
 
             throw new HttpResponseException(HttpStatusCode.BadRequest);
@@ -94,27 +82,31 @@ namespace TreaviceAlpha.Controllers.Api
                         ident
                     );
                     
-                    return Content(HttpStatusCode.OK, new ProfileDto() { Email = user.Email});
+                    return Content(HttpStatusCode.OK, new LoginDto() { Email = user.Email});
                 }
             }
             return BadRequest();
         }
 
+        // TODO: Refactor controller database calls into a respository
+        //
+        // POST /api/user/profile-data
         [Route("profile-data")]
         [HttpPost]
-        public IEnumerable<Profile> getUserProfileData(ProfileDto user)
+        public IEnumerable<Profile> GetUserProfileData(LoginDto user)
         {
-            using (var _context = new ProfileDbContext())
+            // TODO: User a better qualified model for returning profile data.
+            using (var context = new ProfileDbContext())
             {
-                var userQuery = from u in _context.Users
+                var userQuery = from u in context.Users
                                 where u.Email == user.Email
                                 select u;
 
-                var result = from p in _context.Profiles
+                var result = from p in context.Profiles
                                    join u in userQuery
                                    on p.UserId equals u.Id
-                                   select new Profile();
-                return result;
+                                   select p;
+                return result.ToList();
             }
         }
 
@@ -135,9 +127,9 @@ namespace TreaviceAlpha.Controllers.Api
 
         private bool IsValid(string email, string password)
         {
-            using (var _context = new ProfileDbContext())
+            using (var context = new ProfileDbContext())
             {
-                IEnumerable<User> userInfo = _context.Users.Where(c => c.Email == email);
+                IEnumerable<User> userInfo = context.Users.Where(c => c.Email == email);
                 
                 foreach(var user in userInfo)
                 {

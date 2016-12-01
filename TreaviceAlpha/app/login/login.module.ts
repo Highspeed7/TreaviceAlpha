@@ -6,6 +6,8 @@ import { LoginComponent } from "./login.component";
 import { LoginFormComponent } from "./login-form/login-form.component";
 import { SideNavModule } from "../nav/sidenav.module";
 
+import { ObjectHelper } from "../services/helpers/objectHelper.service";
+
 @NgModule({
     declarations: [
         LoginComponent,
@@ -16,6 +18,9 @@ import { SideNavModule } from "../nav/sidenav.module";
         CommonModule,
         FormsModule,
         ReactiveFormsModule
+    ],
+    providers: [
+        ObjectHelper
     ]
 })
 

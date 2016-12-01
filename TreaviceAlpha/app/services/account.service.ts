@@ -40,6 +40,14 @@ export class AccountService {
             .toPromise();
     }
 
+    public getProfileData(user: UserData): Observable<Response> {
+        const source: Observable<Response> = this.httpService.post(this.url + "profile-data", user);
+        return source
+            .map((r) => {
+                return r.json();
+            });
+    }
+
     public logout(): Observable<Response> {
         const source: Observable<Response> = this.httpService.get(this.url + "logout");
         return source;

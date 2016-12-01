@@ -220,7 +220,7 @@
     <Compile Include="Controllers\Api\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="dtos\ProfileDto.cs" />
+    <Compile Include="dtos\LoginDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -377,6 +377,7 @@
     <TypeScriptCompile Include="app\search\listings-search.component.ts" />
     <TypeScriptCompile Include="app\polyfills.ts" />
     <TypeScriptCompile Include="app\services\account.service.ts" />
+    <TypeScriptCompile Include="app\services\helpers\objectHelper.service.ts" />
     <TypeScriptCompile Include="app\vendor.ts" />
   </ItemGroup>
   <ItemGroup>

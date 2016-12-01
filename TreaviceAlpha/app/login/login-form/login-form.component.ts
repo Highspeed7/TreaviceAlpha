@@ -3,8 +3,10 @@ import { Router } from "@angular/router";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import { AccountService } from "../../services/account.service";
+import { ObjectHelper } from "../../services/helpers/objectHelper.service";
 
 import { UserDto } from "../../dtos/userDto";
+import { UserData } from "../../models/index";
 
 @Component({
     selector: "login-form",
@@ -15,7 +17,7 @@ export class LoginFormComponent implements OnInit {
 
     private loginForm: FormGroup;
 
-    constructor(private fb: FormBuilder, private accountService: AccountService, private router: Router) { }
+    constructor(private fb: FormBuilder, private accountService: AccountService, private router: Router, private helpers: ObjectHelper) { }
 
     public ngOnInit() {
         // we will initialize our form model here
@@ -46,13 +48,27 @@ export class LoginFormComponent implements OnInit {
         data.password = formData.password;
 
         this.accountService.login(data, token)
-            .then(result => {
-                // TODO: Set email to previouslyLoggedIn Object on localstorage
-                this.accountService.setLastLoggedInUser(result);
+            .then((result: UserData) => {
+                this.setLoggedInUserdata(result);
                 this.router.navigate([""]);
             })
             .catch(() => {
                 alert("Login failed");
+            });
+    }
+
+    public setLoggedInUserdata(user: UserData): void {
+        let profileData: any;
+        // Get the profile data after login
+        this.accountService.getProfileData(user)
+            .subscribe(r => {
+                profileData = r;
+
+                // Map newly obtained data to the user object
+                user.profile = profileData[0];
+
+                // Set the userData to localStorage via account service.
+                this.accountService.setLastLoggedInUser(user);
             });
     }
 

@@ -99,7 +99,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".profile div#contact-card {\n  margin-bottom: 15px;\n}\n.profile div#contact-card #contact-card-left img {\n  width: 100%;\n  padding: 0px 10px 10px 0px;\n}\n.common html {\n  height: 100%;\n}\n.common html body {\n  height: inherit;\n}\n.common body {\n  padding: 0px;\n}\n.common nav {\n  padding-top: 20px;\n}\n.common nav.navbar {\n  border: none;\n}\n.common nav.navbar-default {\n  background-color: inherit;\n}\n.common ul.nav > li.active {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:hover {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:focus {\n  background-color: white;\n}\n@media (min-width: 320px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 540px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 768px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1084px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1400) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n", ""]);
+	exports.push([module.id, ".profile .truncate {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.profile div#contact-card {\n  margin-bottom: 15px;\n}\n.profile div#contact-card #contact-card-left img {\n  width: 100%;\n  padding: 0px 10px 10px 0px;\n}\n.common html {\n  height: 100%;\n}\n.common html body {\n  height: inherit;\n}\n.common body {\n  padding: 0px;\n}\n.common nav {\n  padding-top: 20px;\n}\n.common nav.navbar {\n  border: none;\n}\n.common nav.navbar-default {\n  background-color: inherit;\n}\n.common ul.nav > li.active {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:hover {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:focus {\n  background-color: white;\n}\n@media (min-width: 320px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 540px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 768px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1084px) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1400) {\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n", ""]);
 	
 	// exports
 
@@ -36975,8 +36975,8 @@
 	var account_service_1 = __webpack_require__(/*! ./services/account.service */ 31);
 	// import { ListSearchModule } from "./search/listings-search.module";
 	var landing_module_1 = __webpack_require__(/*! ./landing/landing.module */ 36);
-	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 97);
-	var profile_routing_module_1 = __webpack_require__(/*! ./profile/profile-routing.module */ 98);
+	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 98);
+	var profile_routing_module_1 = __webpack_require__(/*! ./profile/profile-routing.module */ 99);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -37092,6 +37092,13 @@
 	        return source
 	            .map(function (r) { return r.json(); })
 	            .toPromise();
+	    };
+	    AccountService.prototype.getProfileData = function (user) {
+	        var source = this.httpService.post(this.url + "profile-data", user);
+	        return source
+	            .map(function (r) {
+	            return r.json();
+	        });
 	    };
 	    AccountService.prototype.logout = function () {
 	        var source = this.httpService.get(this.url + "logout");
@@ -37310,9 +37317,9 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var home_module_1 = __webpack_require__(/*! ../home/home.module */ 37);
-	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 95);
+	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 96);
 	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 74);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 96);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 97);
 	var LandingModule = (function () {
 	    function LandingModule() {
 	    }
@@ -37356,7 +37363,7 @@
 	var home_routing_module_1 = __webpack_require__(/*! ./home-routing.module */ 78);
 	var register_module_1 = __webpack_require__(/*! ../register/register.module */ 86);
 	var login_module_1 = __webpack_require__(/*! ../login/login.module */ 92);
-	var profile_module_1 = __webpack_require__(/*! ../profile/profile.module */ 94);
+	var profile_module_1 = __webpack_require__(/*! ../profile/profile.module */ 95);
 	var HomeModule = (function () {
 	    function HomeModule() {
 	    }
@@ -49032,6 +49039,7 @@
 	var login_component_1 = __webpack_require__(/*! ./login.component */ 77);
 	var login_form_component_1 = __webpack_require__(/*! ./login-form/login-form.component */ 93);
 	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 72);
+	var objectHelper_service_1 = __webpack_require__(/*! ../services/helpers/objectHelper.service */ 94);
 	var LoginModule = (function () {
 	    function LoginModule() {
 	    }
@@ -49046,6 +49054,9 @@
 	                common_1.CommonModule,
 	                forms_1.FormsModule,
 	                forms_1.ReactiveFormsModule
+	            ],
+	            providers: [
+	                objectHelper_service_1.ObjectHelper
 	            ]
 	        }), 
 	        __metadata('design:paramtypes', [])
@@ -49076,12 +49087,14 @@
 	var router_1 = __webpack_require__(/*! @angular/router */ 40);
 	var forms_1 = __webpack_require__(/*! @angular/forms */ 87);
 	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
+	var objectHelper_service_1 = __webpack_require__(/*! ../../services/helpers/objectHelper.service */ 94);
 	var userDto_1 = __webpack_require__(/*! ../../dtos/userDto */ 90);
 	var LoginFormComponent = (function () {
-	    function LoginFormComponent(fb, accountService, router) {
+	    function LoginFormComponent(fb, accountService, router, helpers) {
 	        this.fb = fb;
 	        this.accountService = accountService;
 	        this.router = router;
+	        this.helpers = helpers;
 	    }
 	    LoginFormComponent.prototype.ngOnInit = function () {
 	        // we will initialize our form model here
@@ -49107,12 +49120,24 @@
 	        data.password = formData.password;
 	        this.accountService.login(data, token)
 	            .then(function (result) {
-	            // TODO: Set email to previouslyLoggedIn Object on localstorage
-	            _this.accountService.setLastLoggedInUser(result);
+	            _this.setLoggedInUserdata(result);
 	            _this.router.navigate([""]);
 	        })
 	            .catch(function () {
 	            alert("Login failed");
+	        });
+	    };
+	    LoginFormComponent.prototype.setLoggedInUserdata = function (user) {
+	        var _this = this;
+	        var profileData;
+	        // Get the profile data after login
+	        this.accountService.getProfileData(user)
+	            .subscribe(function (r) {
+	            profileData = r;
+	            // Map newly obtained data to the user object
+	            user.profile = profileData[0];
+	            // Set the userData to localStorage via account service.
+	            _this.accountService.setLastLoggedInUser(user);
 	        });
 	    };
 	    LoginFormComponent.prototype.getVerifyToken = function () {
@@ -49126,16 +49151,54 @@
 	            selector: "login-form",
 	            templateUrl: "app/login/login-form/login-form.component.html"
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof forms_1.FormBuilder !== 'undefined' && forms_1.FormBuilder) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object, (typeof (_c = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _c) || Object])
+	        __metadata('design:paramtypes', [(typeof (_a = typeof forms_1.FormBuilder !== 'undefined' && forms_1.FormBuilder) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object, (typeof (_c = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _c) || Object, (typeof (_d = typeof objectHelper_service_1.ObjectHelper !== 'undefined' && objectHelper_service_1.ObjectHelper) === 'function' && _d) || Object])
 	    ], LoginFormComponent);
 	    return LoginFormComponent;
-	    var _a, _b, _c;
+	    var _a, _b, _c, _d;
 	}());
 	exports.LoginFormComponent = LoginFormComponent;
 
 
 /***/ },
 /* 94 */
+/*!******************************************************!*\
+  !*** ./app/services/helpers/objectHelper.service.ts ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var ObjectHelper = (function () {
+	    function ObjectHelper() {
+	    }
+	    ObjectHelper.prototype.extend = function (obj1, obj2) {
+	        for (var key in obj2) {
+	            if (obj2.hasOwnProperty(key)) {
+	                obj1[key] = obj2[key];
+	            }
+	        }
+	        return obj1;
+	    };
+	    ObjectHelper = __decorate([
+	        core_1.Injectable(), 
+	        __metadata('design:paramtypes', [])
+	    ], ObjectHelper);
+	    return ObjectHelper;
+	}());
+	exports.ObjectHelper = ObjectHelper;
+
+
+/***/ },
+/* 95 */
 /*!***************************************!*\
   !*** ./app/profile/profile.module.ts ***!
   \***************************************/
@@ -49153,6 +49216,7 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var common_1 = __webpack_require__(/*! @angular/common */ 27);
 	var profile_component_1 = __webpack_require__(/*! ./profile.component */ 80);
 	var contact_card_component_1 = __webpack_require__(/*! ./contact-card/contact-card.component */ 82);
 	var wants_component_1 = __webpack_require__(/*! ./profile-pages/wants.component */ 83);
@@ -49173,7 +49237,8 @@
 	            ],
 	            imports: [
 	                sidenav_module_1.SideNavModule,
-	                router_1.RouterModule
+	                router_1.RouterModule,
+	                common_1.CommonModule
 	            ]
 	        }), 
 	        __metadata('design:paramtypes', [])
@@ -49184,7 +49249,7 @@
 
 
 /***/ },
-/* 95 */
+/* 96 */
 /*!***********************************************!*\
   !*** ./app/landing/landing-routing.module.ts ***!
   \***********************************************/
@@ -49202,7 +49267,7 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var router_1 = __webpack_require__(/*! @angular/router */ 40);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 96);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 97);
 	var LandingRoutingModule = (function () {
 	    function LandingRoutingModule() {
 	    }
@@ -49225,7 +49290,7 @@
 
 
 /***/ },
-/* 96 */
+/* 97 */
 /*!******************************************!*\
   !*** ./app/landing/landing.component.ts ***!
   \******************************************/
@@ -49273,7 +49338,7 @@
 
 
 /***/ },
-/* 97 */
+/* 98 */
 /*!***********************************!*\
   !*** ./app/app-routing.module.ts ***!
   \***********************************/
@@ -49311,7 +49376,7 @@
 
 
 /***/ },
-/* 98 */
+/* 99 */
 /*!***********************************************!*\
   !*** ./app/profile/profile-routing.module.ts ***!
   \***********************************************/

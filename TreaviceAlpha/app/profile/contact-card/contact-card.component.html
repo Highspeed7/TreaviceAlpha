@@ -3,7 +3,37 @@
     <div class="row" id="contact-card">
         <div class="col-xs-6 col-md-3" id="contact-card-left">
             <img src="/Content/images/business-man-avatar-vector-1236211.jpg" alt="profile-avatar"/>
-            <span><strong>Email: </strong>{{user.email}}</span>
+            <div class="container">
+                <div class="row">
+                    <section class="truncate">
+                        <label>Email: </label>
+                        <span title="{{user.email}}">{{user.email}}</span><br/>
+                        <label>Name: </label>
+                        <span *ngIf="user.profile.firstName !== null && user.profile.lastName !== null">
+                            {{user.profile.firstName}} {{user.profile.lastName}}
+                        </span>
+                        <span *ngIf="user.profile.firstName == null">
+                            <em>Not yet provided!</em>
+                        </span><br/>
+                        <label>Address: </label>
+                        <span *ngIf="user.profile.street !== null">
+                            {{user.profile.street}}<br/>
+                            {{user.profile.city}}, {{user.profile.state}} {{user.profile.zipCode}}
+                        </span>
+                        <span *ngIf="user.profile.street == null">
+                            <em>Not yet provided!</em>
+                        </span><br/>
+                        <label>Phone: </label>
+                        <span *ngIf="user.profile.phone !== null">
+                            {{user.profile.phone}}
+                        </span>
+                        <span
+                              *ngIf="user.profile.phone == null">
+                            <em>Not yet provided!</em>
+                        </span>
+                    </section>
+                </div>
+            </div>
         </div>
     </div>
 </div>
