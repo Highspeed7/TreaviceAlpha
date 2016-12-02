@@ -15,14 +15,14 @@
                         <span *ngIf="user.profile.firstName == null">
                             <em>Not yet provided!</em>
                         </span><br/>
-                        <label>Address: </label>
+                        <label>Address: </label><br/>
                         <span *ngIf="user.profile.street !== null">
                             {{user.profile.street}}<br/>
                             {{user.profile.city}}, {{user.profile.state}} {{user.profile.zipCode}}
                         </span>
                         <span *ngIf="user.profile.street == null">
                             <em>Not yet provided!</em>
-                        </span><br/>
+                        </span><br/><br/>
                         <label>Phone: </label>
                         <span *ngIf="user.profile.phone !== null">
                             {{user.profile.phone}}
