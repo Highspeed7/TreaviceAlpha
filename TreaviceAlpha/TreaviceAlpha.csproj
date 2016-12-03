@@ -260,6 +260,7 @@
     <Content Include="app\profile\profile-pages\selling.component.html" />
     <Content Include="app\profile\profile-pages\wants.component.html" />
     <Content Include="app\profile\profile.component.html" />
+    <Content Include="app\profile\progress\progress.component.html" />
     <Content Include="app\register\register-form\register-form.component.html" />
     <Content Include="app\register\register.component.html" />
     <Content Include="app\search\listings-search.component.html" />
@@ -368,6 +369,7 @@
     <TypeScriptCompile Include="app\profile\profile-routing.module.ts" />
     <TypeScriptCompile Include="app\profile\profile.component.ts" />
     <TypeScriptCompile Include="app\profile\profile.module.ts" />
+    <TypeScriptCompile Include="app\profile\progress\progress.component.ts" />
     <TypeScriptCompile Include="app\register\register-form\register-form.component.ts" />
     <TypeScriptCompile Include="app\register\register-form\validators\register-form-validators.ts" />
     <TypeScriptCompile Include="app\register\register-routing.module.ts" />
@@ -379,6 +381,7 @@
     <TypeScriptCompile Include="app\polyfills.ts" />
     <TypeScriptCompile Include="app\services\account.service.ts" />
     <TypeScriptCompile Include="app\services\helpers\objectHelper.service.ts" />
+    <TypeScriptCompile Include="app\services\progress\progress.service.ts" />
     <TypeScriptCompile Include="app\vendor.ts" />
   </ItemGroup>
   <ItemGroup>

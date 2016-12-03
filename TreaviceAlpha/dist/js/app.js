@@ -40,8 +40,9 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /*!*********************!*\
   !*** ./app/main.ts ***!
   \*********************/
@@ -58,8 +59,8 @@
 
 
 /***/ },
-/* 1 */,
-/* 2 */
+
+/***/ 2:
 /*!***************************!*\
   !*** ./Content/site.less ***!
   \***************************/
@@ -88,7 +89,8 @@
 	}
 
 /***/ },
-/* 3 */
+
+/***/ 3:
 /*!**********************************************************!*\
   !*** ./~/css-loader!./~/less-loader!./Content/site.less ***!
   \**********************************************************/
@@ -105,7 +107,8 @@
 
 
 /***/ },
-/* 4 */
+
+/***/ 4:
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -164,7 +167,8 @@
 
 
 /***/ },
-/* 5 */
+
+/***/ 5:
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -419,7 +423,8 @@
 
 
 /***/ },
-/* 6 */
+
+/***/ 6:
 /*!*************************************************************************************!*\
   !*** ./~/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js ***!
   \*************************************************************************************/
@@ -591,7 +596,8 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 7 */
+
+/***/ 7:
 /*!*****************************************************!*\
   !*** ./~/@angular/compiler/bundles/compiler.umd.js ***!
   \*****************************************************/
@@ -18646,7 +18652,8 @@
 
 
 /***/ },
-/* 8 */
+
+/***/ 8:
 /*!*********************************************!*\
   !*** ./~/@angular/core/bundles/core.umd.js ***!
   \*********************************************/
@@ -28303,7 +28310,8 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 9 */
+
+/***/ 9:
 /*!***************************!*\
   !*** ./~/rxjs/Subject.js ***!
   \***************************/
@@ -28471,7 +28479,8 @@
 	//# sourceMappingURL=Subject.js.map
 
 /***/ },
-/* 10 */
+
+/***/ 10:
 /*!******************************!*\
   !*** ./~/rxjs/Observable.js ***!
   \******************************/
@@ -28619,7 +28628,8 @@
 	//# sourceMappingURL=Observable.js.map
 
 /***/ },
-/* 11 */
+
+/***/ 11:
 /*!*****************************!*\
   !*** ./~/rxjs/util/root.js ***!
   \*****************************/
@@ -28643,7 +28653,8 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 12 */
+
+/***/ 12:
 /*!*************************************!*\
   !*** ./~/rxjs/util/toSubscriber.js ***!
   \*************************************/
@@ -28670,7 +28681,8 @@
 	//# sourceMappingURL=toSubscriber.js.map
 
 /***/ },
-/* 13 */
+
+/***/ 13:
 /*!******************************!*\
   !*** ./~/rxjs/Subscriber.js ***!
   \******************************/
@@ -28927,7 +28939,8 @@
 	//# sourceMappingURL=Subscriber.js.map
 
 /***/ },
-/* 14 */
+
+/***/ 14:
 /*!***********************************!*\
   !*** ./~/rxjs/util/isFunction.js ***!
   \***********************************/
@@ -28941,7 +28954,8 @@
 	//# sourceMappingURL=isFunction.js.map
 
 /***/ },
-/* 15 */
+
+/***/ 15:
 /*!********************************!*\
   !*** ./~/rxjs/Subscription.js ***!
   \********************************/
@@ -29102,7 +29116,8 @@
 	//# sourceMappingURL=Subscription.js.map
 
 /***/ },
-/* 16 */
+
+/***/ 16:
 /*!********************************!*\
   !*** ./~/rxjs/util/isArray.js ***!
   \********************************/
@@ -29113,7 +29128,8 @@
 	//# sourceMappingURL=isArray.js.map
 
 /***/ },
-/* 17 */
+
+/***/ 17:
 /*!*********************************!*\
   !*** ./~/rxjs/util/isObject.js ***!
   \*********************************/
@@ -29127,7 +29143,8 @@
 	//# sourceMappingURL=isObject.js.map
 
 /***/ },
-/* 18 */
+
+/***/ 18:
 /*!*********************************!*\
   !*** ./~/rxjs/util/tryCatch.js ***!
   \*********************************/
@@ -29154,7 +29171,8 @@
 	//# sourceMappingURL=tryCatch.js.map
 
 /***/ },
-/* 19 */
+
+/***/ 19:
 /*!************************************!*\
   !*** ./~/rxjs/util/errorObject.js ***!
   \************************************/
@@ -29166,7 +29184,8 @@
 	//# sourceMappingURL=errorObject.js.map
 
 /***/ },
-/* 20 */
+
+/***/ 20:
 /*!********************************************!*\
   !*** ./~/rxjs/util/UnsubscriptionError.js ***!
   \********************************************/
@@ -29199,7 +29218,8 @@
 	//# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ },
-/* 21 */
+
+/***/ 21:
 /*!****************************!*\
   !*** ./~/rxjs/Observer.js ***!
   \****************************/
@@ -29215,7 +29235,8 @@
 	//# sourceMappingURL=Observer.js.map
 
 /***/ },
-/* 22 */
+
+/***/ 22:
 /*!***************************************!*\
   !*** ./~/rxjs/symbol/rxSubscriber.js ***!
   \***************************************/
@@ -29229,7 +29250,8 @@
 	//# sourceMappingURL=rxSubscriber.js.map
 
 /***/ },
-/* 23 */
+
+/***/ 23:
 /*!*************************************!*\
   !*** ./~/rxjs/symbol/observable.js ***!
   \*************************************/
@@ -29259,7 +29281,8 @@
 	//# sourceMappingURL=observable.js.map
 
 /***/ },
-/* 24 */
+
+/***/ 24:
 /*!************************************************!*\
   !*** ./~/rxjs/util/ObjectUnsubscribedError.js ***!
   \************************************************/
@@ -29294,7 +29317,8 @@
 	//# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ },
-/* 25 */
+
+/***/ 25:
 /*!***************************************!*\
   !*** ./~/rxjs/SubjectSubscription.js ***!
   \***************************************/
@@ -29342,7 +29366,8 @@
 	//# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 26 */
+
+/***/ 26:
 /*!*********************************************************************!*\
   !*** ./~/@angular/platform-browser/bundles/platform-browser.umd.js ***!
   \*********************************************************************/
@@ -32057,7 +32082,8 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 27 */
+
+/***/ 27:
 /*!*************************************************!*\
   !*** ./~/@angular/common/bundles/common.umd.js ***!
   \*************************************************/
@@ -35089,7 +35115,8 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 28 */
+
+/***/ 28:
 /*!*********************************************!*\
   !*** ./~/@angular/http/bundles/http.umd.js ***!
   \*********************************************/
@@ -36953,7 +36980,8 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 29 */
+
+/***/ 29:
 /*!***************************!*\
   !*** ./app/app.module.ts ***!
   \***************************/
@@ -36975,8 +37003,8 @@
 	var account_service_1 = __webpack_require__(/*! ./services/account.service */ 31);
 	// import { ListSearchModule } from "./search/listings-search.module";
 	var landing_module_1 = __webpack_require__(/*! ./landing/landing.module */ 36);
-	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 98);
-	var profile_routing_module_1 = __webpack_require__(/*! ./profile/profile-routing.module */ 99);
+	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 99);
+	var profile_routing_module_1 = __webpack_require__(/*! ./profile/profile-routing.module */ 100);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -37004,7 +37032,8 @@
 
 
 /***/ },
-/* 30 */
+
+/***/ 30:
 /*!******************************!*\
   !*** ./app/app.component.ts ***!
   \******************************/
@@ -37038,7 +37067,8 @@
 
 
 /***/ },
-/* 31 */
+
+/***/ 31:
 /*!*****************************************!*\
   !*** ./app/services/account.service.ts ***!
   \*****************************************/
@@ -37142,7 +37172,8 @@
 
 
 /***/ },
-/* 32 */
+
+/***/ 32:
 /*!************************************!*\
   !*** ./~/rxjs/add/operator/map.js ***!
   \************************************/
@@ -37155,7 +37186,8 @@
 	//# sourceMappingURL=map.js.map
 
 /***/ },
-/* 33 */
+
+/***/ 33:
 /*!********************************!*\
   !*** ./~/rxjs/operator/map.js ***!
   \********************************/
@@ -37250,7 +37282,8 @@
 	//# sourceMappingURL=map.js.map
 
 /***/ },
-/* 34 */
+
+/***/ 34:
 /*!******************************************!*\
   !*** ./~/rxjs/add/operator/toPromise.js ***!
   \******************************************/
@@ -37263,7 +37296,8 @@
 	//# sourceMappingURL=toPromise.js.map
 
 /***/ },
-/* 35 */
+
+/***/ 35:
 /*!**************************************!*\
   !*** ./~/rxjs/operator/toPromise.js ***!
   \**************************************/
@@ -37299,7 +37333,8 @@
 	//# sourceMappingURL=toPromise.js.map
 
 /***/ },
-/* 36 */
+
+/***/ 36:
 /*!***************************************!*\
   !*** ./app/landing/landing.module.ts ***!
   \***************************************/
@@ -37317,9 +37352,9 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var home_module_1 = __webpack_require__(/*! ../home/home.module */ 37);
-	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 96);
+	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 97);
 	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 74);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 97);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 98);
 	var LandingModule = (function () {
 	    function LandingModule() {
 	    }
@@ -37340,7 +37375,8 @@
 
 
 /***/ },
-/* 37 */
+
+/***/ 37:
 /*!*********************************!*\
   !*** ./app/home/home.module.ts ***!
   \*********************************/
@@ -37390,7 +37426,8 @@
 
 
 /***/ },
-/* 38 */
+
+/***/ 38:
 /*!************************************!*\
   !*** ./app/home/home.component.ts ***!
   \************************************/
@@ -37422,7 +37459,8 @@
 
 
 /***/ },
-/* 39 */
+
+/***/ 39:
 /*!***************************************************!*\
   !*** ./app/home/home-main/home-main.component.ts ***!
   \***************************************************/
@@ -37467,7 +37505,8 @@
 
 
 /***/ },
-/* 40 */
+
+/***/ 40:
 /*!*************************************************!*\
   !*** ./~/@angular/router/bundles/router.umd.js ***!
   \*************************************************/
@@ -41304,7 +41343,8 @@
 
 
 /***/ },
-/* 41 */
+
+/***/ 41:
 /*!***********************************!*\
   !*** ./~/rxjs/observable/from.js ***!
   \***********************************/
@@ -41316,7 +41356,8 @@
 	//# sourceMappingURL=from.js.map
 
 /***/ },
-/* 42 */
+
+/***/ 42:
 /*!*********************************************!*\
   !*** ./~/rxjs/observable/FromObservable.js ***!
   \*********************************************/
@@ -41440,7 +41481,8 @@
 	//# sourceMappingURL=FromObservable.js.map
 
 /***/ },
-/* 43 */
+
+/***/ 43:
 /*!**********************************!*\
   !*** ./~/rxjs/util/isPromise.js ***!
   \**********************************/
@@ -41454,7 +41496,8 @@
 	//# sourceMappingURL=isPromise.js.map
 
 /***/ },
-/* 44 */
+
+/***/ 44:
 /*!************************************************!*\
   !*** ./~/rxjs/observable/PromiseObservable.js ***!
   \************************************************/
@@ -41583,7 +41626,8 @@
 	//# sourceMappingURL=PromiseObservable.js.map
 
 /***/ },
-/* 45 */
+
+/***/ 45:
 /*!*************************************************!*\
   !*** ./~/rxjs/observable/IteratorObservable.js ***!
   \*************************************************/
@@ -41748,7 +41792,8 @@
 	//# sourceMappingURL=IteratorObservable.js.map
 
 /***/ },
-/* 46 */
+
+/***/ 46:
 /*!***********************************!*\
   !*** ./~/rxjs/symbol/iterator.js ***!
   \***********************************/
@@ -41788,7 +41833,8 @@
 	//# sourceMappingURL=iterator.js.map
 
 /***/ },
-/* 47 */
+
+/***/ 47:
 /*!**********************************************!*\
   !*** ./~/rxjs/observable/ArrayObservable.js ***!
   \**********************************************/
@@ -41918,7 +41964,8 @@
 	//# sourceMappingURL=ArrayObservable.js.map
 
 /***/ },
-/* 48 */
+
+/***/ 48:
 /*!***********************************************!*\
   !*** ./~/rxjs/observable/ScalarObservable.js ***!
   \***********************************************/
@@ -41984,7 +42031,8 @@
 	//# sourceMappingURL=ScalarObservable.js.map
 
 /***/ },
-/* 49 */
+
+/***/ 49:
 /*!**********************************************!*\
   !*** ./~/rxjs/observable/EmptyObservable.js ***!
   \**********************************************/
@@ -42067,7 +42115,8 @@
 	//# sourceMappingURL=EmptyObservable.js.map
 
 /***/ },
-/* 50 */
+
+/***/ 50:
 /*!************************************!*\
   !*** ./~/rxjs/util/isScheduler.js ***!
   \************************************/
@@ -42081,7 +42130,8 @@
 	//# sourceMappingURL=isScheduler.js.map
 
 /***/ },
-/* 51 */
+
+/***/ 51:
 /*!**************************************************!*\
   !*** ./~/rxjs/observable/ArrayLikeObservable.js ***!
   \**************************************************/
@@ -42159,7 +42209,8 @@
 	//# sourceMappingURL=ArrayLikeObservable.js.map
 
 /***/ },
-/* 52 */
+
+/***/ 52:
 /*!**************************************!*\
   !*** ./~/rxjs/operator/observeOn.js ***!
   \**************************************/
@@ -42242,7 +42293,8 @@
 	//# sourceMappingURL=observeOn.js.map
 
 /***/ },
-/* 53 */
+
+/***/ 53:
 /*!********************************!*\
   !*** ./~/rxjs/Notification.js ***!
   \********************************/
@@ -42377,7 +42429,8 @@
 	//# sourceMappingURL=Notification.js.map
 
 /***/ },
-/* 54 */
+
+/***/ 54:
 /*!*********************************!*\
   !*** ./~/rxjs/observable/of.js ***!
   \*********************************/
@@ -42389,7 +42442,8 @@
 	//# sourceMappingURL=of.js.map
 
 /***/ },
-/* 55 */
+
+/***/ 55:
 /*!**************************************!*\
   !*** ./~/rxjs/operator/concatMap.js ***!
   \**************************************/
@@ -42460,7 +42514,8 @@
 	//# sourceMappingURL=concatMap.js.map
 
 /***/ },
-/* 56 */
+
+/***/ 56:
 /*!*************************************!*\
   !*** ./~/rxjs/operator/mergeMap.js ***!
   \*************************************/
@@ -42629,7 +42684,8 @@
 	//# sourceMappingURL=mergeMap.js.map
 
 /***/ },
-/* 57 */
+
+/***/ 57:
 /*!******************************************!*\
   !*** ./~/rxjs/util/subscribeToResult.js ***!
   \******************************************/
@@ -42711,7 +42767,8 @@
 	//# sourceMappingURL=subscribeToResult.js.map
 
 /***/ },
-/* 58 */
+
+/***/ 58:
 /*!***********************************!*\
   !*** ./~/rxjs/InnerSubscriber.js ***!
   \***********************************/
@@ -42755,7 +42812,8 @@
 	//# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ },
-/* 59 */
+
+/***/ 59:
 /*!***********************************!*\
   !*** ./~/rxjs/OuterSubscriber.js ***!
   \***********************************/
@@ -42793,7 +42851,8 @@
 	//# sourceMappingURL=OuterSubscriber.js.map
 
 /***/ },
-/* 60 */
+
+/***/ 60:
 /*!**********************************!*\
   !*** ./~/rxjs/operator/every.js ***!
   \**********************************/
@@ -42869,7 +42928,8 @@
 	//# sourceMappingURL=every.js.map
 
 /***/ },
-/* 61 */
+
+/***/ 61:
 /*!*************************************!*\
   !*** ./~/rxjs/operator/mergeAll.js ***!
   \*************************************/
@@ -42988,7 +43048,8 @@
 	//# sourceMappingURL=mergeAll.js.map
 
 /***/ },
-/* 62 */
+
+/***/ 62:
 /*!***********************************!*\
   !*** ./~/rxjs/operator/reduce.js ***!
   \***********************************/
@@ -43108,7 +43169,8 @@
 	//# sourceMappingURL=reduce.js.map
 
 /***/ },
-/* 63 */
+
+/***/ 63:
 /*!**********************************!*\
   !*** ./~/rxjs/operator/catch.js ***!
   \**********************************/
@@ -43181,7 +43243,8 @@
 	//# sourceMappingURL=catch.js.map
 
 /***/ },
-/* 64 */
+
+/***/ 64:
 /*!**************************************!*\
   !*** ./~/rxjs/operator/concatAll.js ***!
   \**************************************/
@@ -43238,7 +43301,8 @@
 	//# sourceMappingURL=concatAll.js.map
 
 /***/ },
-/* 65 */
+
+/***/ 65:
 /*!**********************************!*\
   !*** ./~/rxjs/operator/first.js ***!
   \**********************************/
@@ -43394,7 +43458,8 @@
 	//# sourceMappingURL=first.js.map
 
 /***/ },
-/* 66 */
+
+/***/ 66:
 /*!***********************************!*\
   !*** ./~/rxjs/util/EmptyError.js ***!
   \***********************************/
@@ -43430,7 +43495,8 @@
 	//# sourceMappingURL=EmptyError.js.map
 
 /***/ },
-/* 67 */
+
+/***/ 67:
 /*!******************************************!*\
   !*** ./~/rxjs/observable/fromPromise.js ***!
   \******************************************/
@@ -43442,7 +43508,8 @@
 	//# sourceMappingURL=fromPromise.js.map
 
 /***/ },
-/* 68 */
+
+/***/ 68:
 /*!*********************************!*\
   !*** ./~/rxjs/operator/last.js ***!
   \*********************************/
@@ -43568,7 +43635,8 @@
 	//# sourceMappingURL=last.js.map
 
 /***/ },
-/* 69 */
+
+/***/ 69:
 /*!***********************************!*\
   !*** ./~/rxjs/BehaviorSubject.js ***!
   \***********************************/
@@ -43625,7 +43693,8 @@
 	//# sourceMappingURL=BehaviorSubject.js.map
 
 /***/ },
-/* 70 */
+
+/***/ 70:
 /*!***********************************!*\
   !*** ./~/rxjs/operator/filter.js ***!
   \***********************************/
@@ -43726,7 +43795,8 @@
 	//# sourceMappingURL=filter.js.map
 
 /***/ },
-/* 71 */
+
+/***/ 71:
 /*!*****************************!*\
   !*** ./app/models/index.ts ***!
   \*****************************/
@@ -43754,7 +43824,8 @@
 
 
 /***/ },
-/* 72 */
+
+/***/ 72:
 /*!***********************************!*\
   !*** ./app/nav/sidenav.module.ts ***!
   \***********************************/
@@ -43798,7 +43869,8 @@
 
 
 /***/ },
-/* 73 */
+
+/***/ 73:
 /*!**************************************!*\
   !*** ./app/nav/sidenav.component.ts ***!
   \**************************************/
@@ -43858,7 +43930,8 @@
 
 
 /***/ },
-/* 74 */
+
+/***/ 74:
 /*!******************************************************!*\
   !*** ./app/search/listings-search-routing.module.ts ***!
   \******************************************************/
@@ -43897,7 +43970,8 @@
 
 
 /***/ },
-/* 75 */
+
+/***/ 75:
 /*!*************************************************!*\
   !*** ./app/search/listings-search.component.ts ***!
   \*************************************************/
@@ -43932,7 +44006,8 @@
 
 
 /***/ },
-/* 76 */
+
+/***/ 76:
 /*!*******************************************!*\
   !*** ./app/login/login-routing.module.ts ***!
   \*******************************************/
@@ -43973,7 +44048,8 @@
 
 
 /***/ },
-/* 77 */
+
+/***/ 77:
 /*!**************************************!*\
   !*** ./app/login/login.component.ts ***!
   \**************************************/
@@ -44005,7 +44081,8 @@
 
 
 /***/ },
-/* 78 */
+
+/***/ 78:
 /*!*****************************************!*\
   !*** ./app/home/home-routing.module.ts ***!
   \*****************************************/
@@ -44087,7 +44164,8 @@
 
 
 /***/ },
-/* 79 */
+
+/***/ 79:
 /*!**********************************************!*\
   !*** ./app/search/listings-search.module.ts ***!
   \**********************************************/
@@ -44132,7 +44210,8 @@
 
 
 /***/ },
-/* 80 */
+
+/***/ 80:
 /*!******************************************!*\
   !*** ./app/profile/profile.component.ts ***!
   \******************************************/
@@ -44149,21 +44228,23 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var progress_service_1 = __webpack_require__(/*! ../services/progress/progress.service */ 653);
 	var ProfileComponent = (function () {
-	    function ProfileComponent(router) {
-	        this.router = router;
+	    function ProfileComponent(progressService) {
+	        var _this = this;
+	        this.progressService = progressService;
+	        this.progressSub = this.progressService.progressPercent$.subscribe(function (progress) {
+	            _this.percentComplete = progress;
+	        });
 	    }
-	    ProfileComponent.prototype.setProfilePage = function (e) {
-	        e.preventDefault();
-	        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
-	        alert("clicked");
+	    ProfileComponent.prototype.ngOnDestroy = function () {
+	        this.progressSub.unsubscribe();
 	    };
 	    ProfileComponent = __decorate([
 	        core_1.Component({
 	            templateUrl: "app/profile/profile.component.html"
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
+	        __metadata('design:paramtypes', [(typeof (_a = typeof progress_service_1.ProgressService !== 'undefined' && progress_service_1.ProgressService) === 'function' && _a) || Object])
 	    ], ProfileComponent);
 	    return ProfileComponent;
 	    var _a;
@@ -44172,7 +44253,8 @@
 
 
 /***/ },
-/* 81 */
+
+/***/ 81:
 /*!********************************************!*\
   !*** ./app/register/register.component.ts ***!
   \********************************************/
@@ -44216,7 +44298,8 @@
 
 
 /***/ },
-/* 82 */
+
+/***/ 82:
 /*!************************************************************!*\
   !*** ./app/profile/contact-card/contact-card.component.ts ***!
   \************************************************************/
@@ -44235,29 +44318,35 @@
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var router_1 = __webpack_require__(/*! @angular/router */ 40);
 	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
+	var progress_service_1 = __webpack_require__(/*! ../../services/progress/progress.service */ 653);
 	var ContactCardComponent = (function () {
-	    function ContactCardComponent(router, accountService) {
+	    function ContactCardComponent(router, accountService, progressService) {
 	        this.router = router;
 	        this.accountService = accountService;
+	        this.progressService = progressService;
 	    }
 	    ContactCardComponent.prototype.ngOnInit = function () {
 	        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
 	        this.user = this.accountService.getLastLoggedInUser();
+	        // Setting this just for test.
+	        // TODO: Wire this up properly.
+	        this.progressService.setProgressPercent("10");
 	    };
 	    ContactCardComponent = __decorate([
 	        core_1.Component({
 	            templateUrl: "app/profile/contact-card/contact-card.component.html"
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object])
+	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object, (typeof (_c = typeof progress_service_1.ProgressService !== 'undefined' && progress_service_1.ProgressService) === 'function' && _c) || Object])
 	    ], ContactCardComponent);
 	    return ContactCardComponent;
-	    var _a, _b;
+	    var _a, _b, _c;
 	}());
 	exports.ContactCardComponent = ContactCardComponent;
 
 
 /***/ },
-/* 83 */
+
+/***/ 83:
 /*!******************************************************!*\
   !*** ./app/profile/profile-pages/wants.component.ts ***!
   \******************************************************/
@@ -44289,7 +44378,8 @@
 
 
 /***/ },
-/* 84 */
+
+/***/ 84:
 /*!*******************************************************!*\
   !*** ./app/profile/profile-pages/can-do.component.ts ***!
   \*******************************************************/
@@ -44321,7 +44411,8 @@
 
 
 /***/ },
-/* 85 */
+
+/***/ 85:
 /*!********************************************************!*\
   !*** ./app/profile/profile-pages/selling.component.ts ***!
   \********************************************************/
@@ -44353,7 +44444,8 @@
 
 
 /***/ },
-/* 86 */
+
+/***/ 86:
 /*!*****************************************!*\
   !*** ./app/register/register.module.ts ***!
   \*****************************************/
@@ -44410,7 +44502,8 @@
 
 
 /***/ },
-/* 87 */
+
+/***/ 87:
 /*!***********************************************!*\
   !*** ./~/@angular/forms/bundles/forms.umd.js ***!
   \***********************************************/
@@ -48856,7 +48949,8 @@
 
 
 /***/ },
-/* 88 */
+
+/***/ 88:
 /*!***************************************************************!*\
   !*** ./app/register/register-form/register-form.component.ts ***!
   \***************************************************************/
@@ -48943,7 +49037,8 @@
 
 
 /***/ },
-/* 89 */
+
+/***/ 89:
 /*!***************************************************************************!*\
   !*** ./app/register/register-form/validators/register-form-validators.ts ***!
   \***************************************************************************/
@@ -48962,7 +49057,8 @@
 
 
 /***/ },
-/* 90 */
+
+/***/ 90:
 /*!*****************************!*\
   !*** ./app/dtos/userDto.ts ***!
   \*****************************/
@@ -48978,7 +49074,8 @@
 
 
 /***/ },
-/* 91 */
+
+/***/ 91:
 /*!*************************************************!*\
   !*** ./app/register/register-routing.module.ts ***!
   \*************************************************/
@@ -49017,7 +49114,8 @@
 
 
 /***/ },
-/* 92 */
+
+/***/ 92:
 /*!***********************************!*\
   !*** ./app/login/login.module.ts ***!
   \***********************************/
@@ -49067,7 +49165,8 @@
 
 
 /***/ },
-/* 93 */
+
+/***/ 93:
 /*!******************************************************!*\
   !*** ./app/login/login-form/login-form.component.ts ***!
   \******************************************************/
@@ -49160,7 +49259,8 @@
 
 
 /***/ },
-/* 94 */
+
+/***/ 94:
 /*!******************************************************!*\
   !*** ./app/services/helpers/objectHelper.service.ts ***!
   \******************************************************/
@@ -49198,7 +49298,8 @@
 
 
 /***/ },
-/* 95 */
+
+/***/ 95:
 /*!***************************************!*\
   !*** ./app/profile/profile.module.ts ***!
   \***************************************/
@@ -49222,6 +49323,8 @@
 	var wants_component_1 = __webpack_require__(/*! ./profile-pages/wants.component */ 83);
 	var selling_component_1 = __webpack_require__(/*! ./profile-pages/selling.component */ 85);
 	var can_do_component_1 = __webpack_require__(/*! ./profile-pages/can-do.component */ 84);
+	var progress_component_1 = __webpack_require__(/*! ./progress/progress.component */ 96);
+	var progress_service_1 = __webpack_require__(/*! ../services/progress/progress.service */ 653);
 	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 72);
 	var ProfileModule = (function () {
 	    function ProfileModule() {
@@ -49233,12 +49336,16 @@
 	                contact_card_component_1.ContactCardComponent,
 	                wants_component_1.WantsComponent,
 	                selling_component_1.SellingComponent,
-	                can_do_component_1.CanDoComponent
+	                can_do_component_1.CanDoComponent,
+	                progress_component_1.ProgressBarComponent
 	            ],
 	            imports: [
 	                sidenav_module_1.SideNavModule,
 	                router_1.RouterModule,
 	                common_1.CommonModule
+	            ],
+	            providers: [
+	                progress_service_1.ProgressService
 	            ]
 	        }), 
 	        __metadata('design:paramtypes', [])
@@ -49249,7 +49356,67 @@
 
 
 /***/ },
-/* 96 */
+
+/***/ 96:
+/*!****************************************************!*\
+  !*** ./app/profile/progress/progress.component.ts ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var progress_service_1 = __webpack_require__(/*! ../../services/progress/progress.service */ 653);
+	var ProgressBarComponent = (function () {
+	    function ProgressBarComponent(element, progressService) {
+	        this.element = element;
+	        this.progressService = progressService;
+	    }
+	    Object.defineProperty(ProgressBarComponent.prototype, "progress", {
+	        get: function () {
+	            return this._progress;
+	        },
+	        set: function (value) {
+	            this._progress = value + "%";
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ProgressBarComponent.prototype.ngOnInit = function () {
+	        var _this = this;
+	        this.progressService.progressPercent$.subscribe(function (percent) {
+	            _this.progress = percent;
+	        });
+	    };
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String), 
+	        __metadata('design:paramtypes', [String])
+	    ], ProgressBarComponent.prototype, "progress", null);
+	    ProgressBarComponent = __decorate([
+	        core_1.Component({
+	            selector: "progress-bar",
+	            templateUrl: "app/profile/progress/progress.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object, (typeof (_b = typeof progress_service_1.ProgressService !== 'undefined' && progress_service_1.ProgressService) === 'function' && _b) || Object])
+	    ], ProgressBarComponent);
+	    return ProgressBarComponent;
+	    var _a, _b;
+	}());
+	exports.ProgressBarComponent = ProgressBarComponent;
+
+
+/***/ },
+
+/***/ 97:
 /*!***********************************************!*\
   !*** ./app/landing/landing-routing.module.ts ***!
   \***********************************************/
@@ -49267,7 +49434,7 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var router_1 = __webpack_require__(/*! @angular/router */ 40);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 97);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 98);
 	var LandingRoutingModule = (function () {
 	    function LandingRoutingModule() {
 	    }
@@ -49290,7 +49457,8 @@
 
 
 /***/ },
-/* 97 */
+
+/***/ 98:
 /*!******************************************!*\
   !*** ./app/landing/landing.component.ts ***!
   \******************************************/
@@ -49338,7 +49506,8 @@
 
 
 /***/ },
-/* 98 */
+
+/***/ 99:
 /*!***********************************!*\
   !*** ./app/app-routing.module.ts ***!
   \***********************************/
@@ -49376,7 +49545,8 @@
 
 
 /***/ },
-/* 99 */
+
+/***/ 100:
 /*!***********************************************!*\
   !*** ./app/profile/profile-routing.module.ts ***!
   \***********************************************/
@@ -49431,6 +49601,44 @@
 	exports.ProfileRoutingModule = ProfileRoutingModule;
 
 
+/***/ },
+
+/***/ 653:
+/*!***************************************************!*\
+  !*** ./app/services/progress/progress.service.ts ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var Subject_1 = __webpack_require__(/*! rxjs/Subject */ 9);
+	var ProgressService = (function () {
+	    function ProgressService() {
+	        this.progressPercentSource = new Subject_1.Subject();
+	        this.progressPercent$ = this.progressPercentSource.asObservable();
+	    }
+	    ProgressService.prototype.setProgressPercent = function (percent) {
+	        this.progressPercentSource.next(percent);
+	    };
+	    ProgressService = __decorate([
+	        core_1.Injectable(), 
+	        __metadata('design:paramtypes', [])
+	    ], ProgressService);
+	    return ProgressService;
+	}());
+	exports.ProgressService = ProgressService;
+
+
 /***/ }
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=app.js.map

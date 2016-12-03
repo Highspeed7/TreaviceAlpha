@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <router-outlet></router-outlet>
+                <progress-bar [progress]="percentComplete"></progress-bar>
                 <ul class="nav nav-tabs">
                     <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'wants'}}">I Want</a></li>
                     <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'can-do'}}">I Can Do</a></li>

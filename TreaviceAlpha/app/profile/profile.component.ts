@@ -1,17 +1,24 @@
-﻿import { Component } from "@angular/core";
+﻿import { Component, OnDestroy } from "@angular/core";
+import { Subscription } from "rxjs/Subscription";
 
-import { Router } from "@angular/router";
+import { ProgressService } from "../services/progress/progress.service";
 
 @Component({
     templateUrl: "app/profile/profile.component.html"
 })
 
-export class ProfileComponent {
-    constructor(private router: Router) { }
+export class ProfileComponent implements OnDestroy {
+    // TODO: Write a progress service so that components can update the progress property
+    public percentComplete: string; 
+    public progressSub: Subscription;
 
-    public setProfilePage(e: Event) {
-        e.preventDefault();
-        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
-        alert("clicked");
+    constructor(private progressService: ProgressService) {
+        this.progressSub = this.progressService.progressPercent$.subscribe((progress: string) => {
+            this.percentComplete = progress;
+        });
+    }
+
+    public ngOnDestroy() {
+        this.progressSub.unsubscribe();
     }
 }
