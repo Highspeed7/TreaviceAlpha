@@ -5,6 +5,7 @@ import { UserData } from "../../models/index";
 
 import { AccountService } from "../../services/account.service";
 import { ProgressService } from "../../services/progress/progress.service";
+import { ObjectHelper } from "../../services/helpers/objectHelper.service";
 
 @Component({
     templateUrl: "app/profile/contact-card/contact-card.component.html"
@@ -13,14 +14,19 @@ import { ProgressService } from "../../services/progress/progress.service";
 export class ContactCardComponent implements OnInit {
     public user: UserData;
 
-    constructor(private router: Router, private accountService: AccountService, private progressService: ProgressService) { }
+    constructor(
+        private router: Router,
+        private accountService: AccountService,
+        private progressService: ProgressService,
+        private objectHelper: ObjectHelper
+    ) { }
 
     public ngOnInit() {
         this.router.navigateByUrl("home/profile/(profile-pages:wants)");
         this.user = this.accountService.getLastLoggedInUser();
 
-        // Setting this just for test.
-        // TODO: Wire this up properly.
-        this.progressService.setProgressPercent("10");
+        const percent = this.progressService.getProfileProgress(this.user);
+
+        this.progressService.setProgressPercent(percent.toString());
     }
 }
