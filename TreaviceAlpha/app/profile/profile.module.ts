@@ -8,6 +8,7 @@ import { WantsComponent } from "./profile-pages/wants.component";
 import { SellingComponent } from "./profile-pages/selling.component";
 import { CanDoComponent } from "./profile-pages/can-do.component";
 import { ProgressBarComponent } from "./progress/progress.component";
+import { CanDoAddComponent } from "./profile-pages/components/can-do-add.component";
 
 import { ProgressService } from "../services/progress/progress.service";
 
@@ -20,6 +21,7 @@ import { SideNavModule } from "../nav/sidenav.module";
         WantsComponent,
         SellingComponent,
         CanDoComponent,
+        CanDoAddComponent,
         ProgressBarComponent
     ],
     imports: [
