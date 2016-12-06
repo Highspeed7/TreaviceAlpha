@@ -6,10 +6,6 @@
             text-overflow: ellipsis;
          }
      div {
-         &#skill-add-form {
-             border-bottom: 1px solid grey;
-             padding: 0px;
-         }
          &#contact-card {
              margin-bottom: 15px;
             #contact-card-left {
@@ -22,6 +18,13 @@
      }
  }
 .common {
+    div {
+        &.body-content {
+            min-height: 100%;
+            margin-top: -29px;
+            padding-top: 29px;
+        }
+    }
     html {
         height: 100%;
         body {

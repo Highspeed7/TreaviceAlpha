@@ -4,4 +4,8 @@
     templateUrl: "app/profile/profile-pages/can-do.component.html"
 })
 
-export class CanDoComponent { }
+export class CanDoComponent {
+    public expandableFields = [
+        { title: "Add a skill" } 
+    ];
+}

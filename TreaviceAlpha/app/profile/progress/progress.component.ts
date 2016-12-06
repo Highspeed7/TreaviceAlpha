@@ -1,13 +1,16 @@
-﻿import { Component, Input, ElementRef, OnInit } from "@angular/core";
-
-import { ProgressService } from "../../services/progress/progress.service";
+﻿import { Component, Input, ElementRef } from "@angular/core";
 
 @Component({
     selector: "progress-bar",
     templateUrl: "app/profile/progress/progress.component.html"
 })
 
-export class ProgressBarComponent implements OnInit {
+export class ProgressBarComponent {
+    public expandableFields = [
+        { title: "Complete your profile" }
+    ]
+    @Input()
+    public profileComplete: boolean;
 
     @Input()
     public set progress(value: string) {
@@ -18,14 +21,6 @@ export class ProgressBarComponent implements OnInit {
     }
     private _progress: string;
 
-    constructor(private element: ElementRef,
-        private progressService: ProgressService
-    ) {
-    }
-
-    public ngOnInit() {
-        this.progressService.progressPercent$.subscribe((percent: string) => {
-            this.progress = percent;
-        });
+    constructor(private element: ElementRef) {
     }
 }

@@ -1,0 +1,16 @@
+﻿<div class="row">
+    <div class="col-md-12" id="expand-field-wrapper">
+        <button (click)="addFieldToggle()">
+            <span [class]="(fieldVisible) ? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus'">
+            </span>
+        </button>
+        <strong>{{title}}</strong>
+        <div class="container" id="expand-field-container">
+            <div class="row"
+                 id="expandableField"
+                 [style.height]="fieldHeight">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

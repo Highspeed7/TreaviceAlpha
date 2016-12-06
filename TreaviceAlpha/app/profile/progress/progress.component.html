@@ -1,11 +1,20 @@
-﻿<div class="progress">
-    <div 
-         class="progress-bar" 
-         role="progressbar" 
-         aria-valuenow="60" 
-         aria-valuemin="0" 
-         aria-valuemax="100" 
-         [style.width]=progress>
-        {{progress}}
+﻿<div class="container">
+    <div class="row">
+        <div class="progress">
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuenow="60"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 [style.width]=progress>
+                {{progress}}
+            </div>
+        </div>
+        <expandable-field
+            *ngIf="!profileComplete"
+            [title]="expandableFields[0].title">
+            <profile-form></profile-form>
+        </expandable-field>
     </div>
-</div>
+</div>    
+    

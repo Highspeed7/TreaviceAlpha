@@ -25,7 +25,7 @@ export class ContactCardComponent implements OnInit {
         this.router.navigateByUrl("home/profile/(profile-pages:wants)");
         this.user = this.accountService.getLastLoggedInUser();
 
-        const percent = this.progressService.getProfileProgress(this.user);
+        const percent = this.progressService.getProfileProgress();
 
         this.progressService.setProgressPercent(percent.toString());
     }

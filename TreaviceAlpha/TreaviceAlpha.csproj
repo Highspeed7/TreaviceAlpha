@@ -256,8 +256,10 @@
     <Content Include="app\login\login.component.html" />
     <Content Include="app\nav\sidenav.component.html" />
     <Content Include="app\profile\contact-card\contact-card.component.html" />
+    <Content Include="app\profile\forms\profile-form.component.html" />
     <Content Include="app\profile\profile-pages\can-do.component.html" />
-    <Content Include="app\profile\profile-pages\components\can-do-add.component.html" />
+    <Content Include="app\profile\profile-pages\components\add-skill-form.component.html" />
+    <Content Include="app\profile\profile-pages\components\expandable-field.component.html" />
     <Content Include="app\profile\profile-pages\selling.component.html" />
     <Content Include="app\profile\profile-pages\wants.component.html" />
     <Content Include="app\profile\profile.component.html" />
@@ -333,6 +335,7 @@
     <Content Include="tslint.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\services\notifications\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -364,8 +367,10 @@
     <TypeScriptCompile Include="app\nav\sidenav.component.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.module.ts" />
     <TypeScriptCompile Include="app\profile\contact-card\contact-card.component.ts" />
+    <TypeScriptCompile Include="app\profile\forms\profile-form.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\can-do.component.ts" />
-    <TypeScriptCompile Include="app\profile\profile-pages\components\can-do-add.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\components\add-skill.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\components\expandable-field.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\selling.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\wants.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-routing.module.ts" />
