@@ -43313,9 +43313,9 @@
 /* 361 */,
 /* 362 */,
 /* 363 */
-/*!**********************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/process/browser.js ***!
-  \**********************************************************/
+/*!******************************!*\
+  !*** ./~/process/browser.js ***!
+  \******************************/
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -55534,13 +55534,13 @@
 	exports.ImmediateDefinition = ImmediateDefinition;
 	exports.Immediate = new ImmediateDefinition(root_1.root);
 	//# sourceMappingURL=Immediate.js.map
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/timers-browserify/main.js */ 601).clearImmediate, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/timers-browserify/main.js */ 601).setImmediate))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/timers-browserify/main.js */ 601).clearImmediate, __webpack_require__(/*! ./~/timers-browserify/main.js */ 601).setImmediate))
 
 /***/ },
 /* 601 */
-/*!*****************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/timers-browserify/main.js ***!
-  \*****************************************************************/
+/*!*************************************!*\
+  !*** ./~/timers-browserify/main.js ***!
+  \*************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(setImmediate, clearImmediate) {var nextTick = __webpack_require__(/*! process/browser.js */ 363).nextTick;
@@ -55619,7 +55619,7 @@
 	exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
 	  delete immediateIds[id];
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/timers-browserify/main.js */ 601).setImmediate, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/timers-browserify/main.js */ 601).clearImmediate))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/timers-browserify/main.js */ 601).setImmediate, __webpack_require__(/*! ./~/timers-browserify/main.js */ 601).clearImmediate))
 
 /***/ },
 /* 602 */
