@@ -1,11 +1,39 @@
 ﻿@import "variables.less";
  .profile {
+     ul {
+         &.nav {
+             &.inner-nav {
+                 margin-top: 15px;
+             }
+         }
+     }
+     span {
+        &.expandable {
+            margin: 10px 5px;
+            cursor: pointer;
+            vertical-align: text-top;
+            font-size: 10px;
+        }
+        &.expand-title {
+            cursor: pointer;
+            font-weight: 400;
+        }
+     }
      .truncate {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-         }
-     div {
+        }
+        div {
+            &#expand-field-wrapper {
+                div {
+                    &.container-fluid {
+                        &:last {
+                            margin: 10px;
+                        }
+                    }
+                }
+            }
          &#contact-card {
              margin-bottom: 15px;
             #contact-card-left {

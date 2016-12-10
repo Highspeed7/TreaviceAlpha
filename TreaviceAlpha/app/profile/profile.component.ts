@@ -12,6 +12,11 @@ export class ProfileComponent implements OnDestroy {
     public progressSub: Subscription;
     public profileComplete: boolean;
 
+    public expandableFields = [
+        { title: "Complete your profile" },
+        { title: "Second link"}
+    ];
+
     constructor(private progressService: ProgressService) {
         this.progressSub = this.progressService.progressPercent$.subscribe((progress: string) => {
             this.percentComplete = progress;

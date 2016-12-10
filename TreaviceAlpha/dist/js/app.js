@@ -40,9 +40,8 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /*!*********************!*\
   !*** ./app/main.ts ***!
   \*********************/
@@ -59,8 +58,8 @@
 
 
 /***/ },
-
-/***/ 2:
+/* 1 */,
+/* 2 */
 /*!***************************!*\
   !*** ./Content/site.less ***!
   \***************************/
@@ -89,8 +88,7 @@
 	}
 
 /***/ },
-
-/***/ 3:
+/* 3 */
 /*!**********************************************************!*\
   !*** ./~/css-loader!./~/less-loader!./Content/site.less ***!
   \**********************************************************/
@@ -101,14 +99,13 @@
 	
 	
 	// module
-	exports.push([module.id, ".profile .truncate {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.profile div#contact-card {\n  margin-bottom: 15px;\n}\n.profile div#contact-card #contact-card-left img {\n  width: 100%;\n  padding: 0px 10px 10px 0px;\n}\n.common div.body-content {\n  min-height: 100%;\n  margin-top: -29px;\n  padding-top: 29px;\n}\n.common html {\n  height: 100%;\n}\n.common html body {\n  height: inherit;\n}\n.common body {\n  padding: 0px;\n}\n.common nav {\n  padding-top: 20px;\n}\n.common nav.navbar {\n  border: none;\n}\n.common nav.navbar-default {\n  background-color: inherit;\n}\n.common ul.nav > li.active {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:hover {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:focus {\n  background-color: white;\n}\n@media (min-width: 320px) {\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 540px) {\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 768px) {\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1084px) {\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1400) {\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n", ""]);
+	exports.push([module.id, ".profile ul.nav.inner-nav {\n  margin-top: 15px;\n}\n.profile span.expandable {\n  margin: 10px 5px;\n  cursor: pointer;\n  vertical-align: text-top;\n  font-size: 10px;\n}\n.profile span.expand-title {\n  cursor: pointer;\n  font-weight: 400;\n}\n.profile .truncate {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.profile div#expand-field-wrapper div.container-fluid:last {\n  margin: 10px;\n}\n.profile div#contact-card {\n  margin-bottom: 15px;\n}\n.profile div#contact-card #contact-card-left img {\n  width: 100%;\n  padding: 0px 10px 10px 0px;\n}\n.common div.body-content {\n  min-height: 100%;\n  margin-top: -29px;\n  padding-top: 29px;\n}\n.common html {\n  height: 100%;\n}\n.common html body {\n  height: inherit;\n}\n.common body {\n  padding: 0px;\n}\n.common nav {\n  padding-top: 20px;\n}\n.common nav.navbar {\n  border: none;\n}\n.common nav.navbar-default {\n  background-color: inherit;\n}\n.common ul.nav > li.active {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:hover {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:focus {\n  background-color: white;\n}\n@media (min-width: 320px) {\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  ul.nav.inner-nav {\n    margin-top: 15px;\n  }\n  span.expandable {\n    margin: 10px 5px;\n    cursor: pointer;\n    vertical-align: text-top;\n    font-size: 10px;\n  }\n  span.expand-title {\n    cursor: pointer;\n    font-weight: 400;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#expand-field-wrapper div.container-fluid:last {\n    margin: 10px;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 540px) {\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  ul.nav.inner-nav {\n    margin-top: 15px;\n  }\n  span.expandable {\n    margin: 10px 5px;\n    cursor: pointer;\n    vertical-align: text-top;\n    font-size: 10px;\n  }\n  span.expand-title {\n    cursor: pointer;\n    font-weight: 400;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#expand-field-wrapper div.container-fluid:last {\n    margin: 10px;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 768px) {\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  ul.nav.inner-nav {\n    margin-top: 15px;\n  }\n  span.expandable {\n    margin: 10px 5px;\n    cursor: pointer;\n    vertical-align: text-top;\n    font-size: 10px;\n  }\n  span.expand-title {\n    cursor: pointer;\n    font-weight: 400;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#expand-field-wrapper div.container-fluid:last {\n    margin: 10px;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1084px) {\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  ul.nav.inner-nav {\n    margin-top: 15px;\n  }\n  span.expandable {\n    margin: 10px 5px;\n    cursor: pointer;\n    vertical-align: text-top;\n    font-size: 10px;\n  }\n  span.expand-title {\n    cursor: pointer;\n    font-weight: 400;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#expand-field-wrapper div.container-fluid:last {\n    margin: 10px;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1400) {\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  ul.nav.inner-nav {\n    margin-top: 15px;\n  }\n  span.expandable {\n    margin: 10px 5px;\n    cursor: pointer;\n    vertical-align: text-top;\n    font-size: 10px;\n  }\n  span.expand-title {\n    cursor: pointer;\n    font-weight: 400;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#expand-field-wrapper div.container-fluid:last {\n    margin: 10px;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n", ""]);
 	
 	// exports
 
 
 /***/ },
-
-/***/ 4:
+/* 4 */
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -167,8 +164,7 @@
 
 
 /***/ },
-
-/***/ 5:
+/* 5 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -423,8 +419,7 @@
 
 
 /***/ },
-
-/***/ 6:
+/* 6 */
 /*!*************************************************************************************!*\
   !*** ./~/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js ***!
   \*************************************************************************************/
@@ -596,8 +591,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 7:
+/* 7 */
 /*!*****************************************************!*\
   !*** ./~/@angular/compiler/bundles/compiler.umd.js ***!
   \*****************************************************/
@@ -18652,8 +18646,7 @@
 
 
 /***/ },
-
-/***/ 8:
+/* 8 */
 /*!*********************************************!*\
   !*** ./~/@angular/core/bundles/core.umd.js ***!
   \*********************************************/
@@ -28310,8 +28303,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 9:
+/* 9 */
 /*!***************************!*\
   !*** ./~/rxjs/Subject.js ***!
   \***************************/
@@ -28479,8 +28471,7 @@
 	//# sourceMappingURL=Subject.js.map
 
 /***/ },
-
-/***/ 10:
+/* 10 */
 /*!******************************!*\
   !*** ./~/rxjs/Observable.js ***!
   \******************************/
@@ -28628,8 +28619,7 @@
 	//# sourceMappingURL=Observable.js.map
 
 /***/ },
-
-/***/ 11:
+/* 11 */
 /*!*****************************!*\
   !*** ./~/rxjs/util/root.js ***!
   \*****************************/
@@ -28653,8 +28643,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 12:
+/* 12 */
 /*!*************************************!*\
   !*** ./~/rxjs/util/toSubscriber.js ***!
   \*************************************/
@@ -28681,8 +28670,7 @@
 	//# sourceMappingURL=toSubscriber.js.map
 
 /***/ },
-
-/***/ 13:
+/* 13 */
 /*!******************************!*\
   !*** ./~/rxjs/Subscriber.js ***!
   \******************************/
@@ -28939,8 +28927,7 @@
 	//# sourceMappingURL=Subscriber.js.map
 
 /***/ },
-
-/***/ 14:
+/* 14 */
 /*!***********************************!*\
   !*** ./~/rxjs/util/isFunction.js ***!
   \***********************************/
@@ -28954,8 +28941,7 @@
 	//# sourceMappingURL=isFunction.js.map
 
 /***/ },
-
-/***/ 15:
+/* 15 */
 /*!********************************!*\
   !*** ./~/rxjs/Subscription.js ***!
   \********************************/
@@ -29116,8 +29102,7 @@
 	//# sourceMappingURL=Subscription.js.map
 
 /***/ },
-
-/***/ 16:
+/* 16 */
 /*!********************************!*\
   !*** ./~/rxjs/util/isArray.js ***!
   \********************************/
@@ -29128,8 +29113,7 @@
 	//# sourceMappingURL=isArray.js.map
 
 /***/ },
-
-/***/ 17:
+/* 17 */
 /*!*********************************!*\
   !*** ./~/rxjs/util/isObject.js ***!
   \*********************************/
@@ -29143,8 +29127,7 @@
 	//# sourceMappingURL=isObject.js.map
 
 /***/ },
-
-/***/ 18:
+/* 18 */
 /*!*********************************!*\
   !*** ./~/rxjs/util/tryCatch.js ***!
   \*********************************/
@@ -29171,8 +29154,7 @@
 	//# sourceMappingURL=tryCatch.js.map
 
 /***/ },
-
-/***/ 19:
+/* 19 */
 /*!************************************!*\
   !*** ./~/rxjs/util/errorObject.js ***!
   \************************************/
@@ -29184,8 +29166,7 @@
 	//# sourceMappingURL=errorObject.js.map
 
 /***/ },
-
-/***/ 20:
+/* 20 */
 /*!********************************************!*\
   !*** ./~/rxjs/util/UnsubscriptionError.js ***!
   \********************************************/
@@ -29218,8 +29199,7 @@
 	//# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ },
-
-/***/ 21:
+/* 21 */
 /*!****************************!*\
   !*** ./~/rxjs/Observer.js ***!
   \****************************/
@@ -29235,8 +29215,7 @@
 	//# sourceMappingURL=Observer.js.map
 
 /***/ },
-
-/***/ 22:
+/* 22 */
 /*!***************************************!*\
   !*** ./~/rxjs/symbol/rxSubscriber.js ***!
   \***************************************/
@@ -29250,8 +29229,7 @@
 	//# sourceMappingURL=rxSubscriber.js.map
 
 /***/ },
-
-/***/ 23:
+/* 23 */
 /*!*************************************!*\
   !*** ./~/rxjs/symbol/observable.js ***!
   \*************************************/
@@ -29281,8 +29259,7 @@
 	//# sourceMappingURL=observable.js.map
 
 /***/ },
-
-/***/ 24:
+/* 24 */
 /*!************************************************!*\
   !*** ./~/rxjs/util/ObjectUnsubscribedError.js ***!
   \************************************************/
@@ -29317,8 +29294,7 @@
 	//# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ },
-
-/***/ 25:
+/* 25 */
 /*!***************************************!*\
   !*** ./~/rxjs/SubjectSubscription.js ***!
   \***************************************/
@@ -29366,8 +29342,7 @@
 	//# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-
-/***/ 26:
+/* 26 */
 /*!*********************************************************************!*\
   !*** ./~/@angular/platform-browser/bundles/platform-browser.umd.js ***!
   \*********************************************************************/
@@ -32082,8 +32057,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 27:
+/* 27 */
 /*!*************************************************!*\
   !*** ./~/@angular/common/bundles/common.umd.js ***!
   \*************************************************/
@@ -35115,8 +35089,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 28:
+/* 28 */
 /*!*********************************************!*\
   !*** ./~/@angular/http/bundles/http.umd.js ***!
   \*********************************************/
@@ -36980,8 +36953,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-
-/***/ 29:
+/* 29 */
 /*!***************************!*\
   !*** ./app/app.module.ts ***!
   \***************************/
@@ -37003,8 +36975,8 @@
 	var account_service_1 = __webpack_require__(/*! ./services/account.service */ 31);
 	// import { ListSearchModule } from "./search/listings-search.module";
 	var landing_module_1 = __webpack_require__(/*! ./landing/landing.module */ 36);
-	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 101);
-	var profile_routing_module_1 = __webpack_require__(/*! ./profile/profile-routing.module */ 102);
+	var app_routing_module_1 = __webpack_require__(/*! ./app-routing.module */ 103);
+	var profile_routing_module_1 = __webpack_require__(/*! ./profile/profile-routing.module */ 104);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -37032,8 +37004,7 @@
 
 
 /***/ },
-
-/***/ 30:
+/* 30 */
 /*!******************************!*\
   !*** ./app/app.component.ts ***!
   \******************************/
@@ -37067,8 +37038,7 @@
 
 
 /***/ },
-
-/***/ 31:
+/* 31 */
 /*!*****************************************!*\
   !*** ./app/services/account.service.ts ***!
   \*****************************************/
@@ -37172,8 +37142,7 @@
 
 
 /***/ },
-
-/***/ 32:
+/* 32 */
 /*!************************************!*\
   !*** ./~/rxjs/add/operator/map.js ***!
   \************************************/
@@ -37186,8 +37155,7 @@
 	//# sourceMappingURL=map.js.map
 
 /***/ },
-
-/***/ 33:
+/* 33 */
 /*!********************************!*\
   !*** ./~/rxjs/operator/map.js ***!
   \********************************/
@@ -37282,8 +37250,7 @@
 	//# sourceMappingURL=map.js.map
 
 /***/ },
-
-/***/ 34:
+/* 34 */
 /*!******************************************!*\
   !*** ./~/rxjs/add/operator/toPromise.js ***!
   \******************************************/
@@ -37296,8 +37263,7 @@
 	//# sourceMappingURL=toPromise.js.map
 
 /***/ },
-
-/***/ 35:
+/* 35 */
 /*!**************************************!*\
   !*** ./~/rxjs/operator/toPromise.js ***!
   \**************************************/
@@ -37333,8 +37299,7 @@
 	//# sourceMappingURL=toPromise.js.map
 
 /***/ },
-
-/***/ 36:
+/* 36 */
 /*!***************************************!*\
   !*** ./app/landing/landing.module.ts ***!
   \***************************************/
@@ -37352,9 +37317,9 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var home_module_1 = __webpack_require__(/*! ../home/home.module */ 37);
-	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 99);
+	var landing_routing_module_1 = __webpack_require__(/*! ./landing-routing.module */ 101);
 	var listings_search_routing_module_1 = __webpack_require__(/*! ../search/listings-search-routing.module */ 74);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 100);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 102);
 	var LandingModule = (function () {
 	    function LandingModule() {
 	    }
@@ -37375,8 +37340,7 @@
 
 
 /***/ },
-
-/***/ 37:
+/* 37 */
 /*!*********************************!*\
   !*** ./app/home/home.module.ts ***!
   \*********************************/
@@ -37426,8 +37390,7 @@
 
 
 /***/ },
-
-/***/ 38:
+/* 38 */
 /*!************************************!*\
   !*** ./app/home/home.component.ts ***!
   \************************************/
@@ -37459,8 +37422,7 @@
 
 
 /***/ },
-
-/***/ 39:
+/* 39 */
 /*!***************************************************!*\
   !*** ./app/home/home-main/home-main.component.ts ***!
   \***************************************************/
@@ -37505,8 +37467,7 @@
 
 
 /***/ },
-
-/***/ 40:
+/* 40 */
 /*!*************************************************!*\
   !*** ./~/@angular/router/bundles/router.umd.js ***!
   \*************************************************/
@@ -41343,8 +41304,7 @@
 
 
 /***/ },
-
-/***/ 41:
+/* 41 */
 /*!***********************************!*\
   !*** ./~/rxjs/observable/from.js ***!
   \***********************************/
@@ -41356,8 +41316,7 @@
 	//# sourceMappingURL=from.js.map
 
 /***/ },
-
-/***/ 42:
+/* 42 */
 /*!*********************************************!*\
   !*** ./~/rxjs/observable/FromObservable.js ***!
   \*********************************************/
@@ -41481,8 +41440,7 @@
 	//# sourceMappingURL=FromObservable.js.map
 
 /***/ },
-
-/***/ 43:
+/* 43 */
 /*!**********************************!*\
   !*** ./~/rxjs/util/isPromise.js ***!
   \**********************************/
@@ -41496,8 +41454,7 @@
 	//# sourceMappingURL=isPromise.js.map
 
 /***/ },
-
-/***/ 44:
+/* 44 */
 /*!************************************************!*\
   !*** ./~/rxjs/observable/PromiseObservable.js ***!
   \************************************************/
@@ -41626,8 +41583,7 @@
 	//# sourceMappingURL=PromiseObservable.js.map
 
 /***/ },
-
-/***/ 45:
+/* 45 */
 /*!*************************************************!*\
   !*** ./~/rxjs/observable/IteratorObservable.js ***!
   \*************************************************/
@@ -41792,8 +41748,7 @@
 	//# sourceMappingURL=IteratorObservable.js.map
 
 /***/ },
-
-/***/ 46:
+/* 46 */
 /*!***********************************!*\
   !*** ./~/rxjs/symbol/iterator.js ***!
   \***********************************/
@@ -41833,8 +41788,7 @@
 	//# sourceMappingURL=iterator.js.map
 
 /***/ },
-
-/***/ 47:
+/* 47 */
 /*!**********************************************!*\
   !*** ./~/rxjs/observable/ArrayObservable.js ***!
   \**********************************************/
@@ -41964,8 +41918,7 @@
 	//# sourceMappingURL=ArrayObservable.js.map
 
 /***/ },
-
-/***/ 48:
+/* 48 */
 /*!***********************************************!*\
   !*** ./~/rxjs/observable/ScalarObservable.js ***!
   \***********************************************/
@@ -42031,8 +41984,7 @@
 	//# sourceMappingURL=ScalarObservable.js.map
 
 /***/ },
-
-/***/ 49:
+/* 49 */
 /*!**********************************************!*\
   !*** ./~/rxjs/observable/EmptyObservable.js ***!
   \**********************************************/
@@ -42115,8 +42067,7 @@
 	//# sourceMappingURL=EmptyObservable.js.map
 
 /***/ },
-
-/***/ 50:
+/* 50 */
 /*!************************************!*\
   !*** ./~/rxjs/util/isScheduler.js ***!
   \************************************/
@@ -42130,8 +42081,7 @@
 	//# sourceMappingURL=isScheduler.js.map
 
 /***/ },
-
-/***/ 51:
+/* 51 */
 /*!**************************************************!*\
   !*** ./~/rxjs/observable/ArrayLikeObservable.js ***!
   \**************************************************/
@@ -42209,8 +42159,7 @@
 	//# sourceMappingURL=ArrayLikeObservable.js.map
 
 /***/ },
-
-/***/ 52:
+/* 52 */
 /*!**************************************!*\
   !*** ./~/rxjs/operator/observeOn.js ***!
   \**************************************/
@@ -42293,8 +42242,7 @@
 	//# sourceMappingURL=observeOn.js.map
 
 /***/ },
-
-/***/ 53:
+/* 53 */
 /*!********************************!*\
   !*** ./~/rxjs/Notification.js ***!
   \********************************/
@@ -42429,8 +42377,7 @@
 	//# sourceMappingURL=Notification.js.map
 
 /***/ },
-
-/***/ 54:
+/* 54 */
 /*!*********************************!*\
   !*** ./~/rxjs/observable/of.js ***!
   \*********************************/
@@ -42442,8 +42389,7 @@
 	//# sourceMappingURL=of.js.map
 
 /***/ },
-
-/***/ 55:
+/* 55 */
 /*!**************************************!*\
   !*** ./~/rxjs/operator/concatMap.js ***!
   \**************************************/
@@ -42514,8 +42460,7 @@
 	//# sourceMappingURL=concatMap.js.map
 
 /***/ },
-
-/***/ 56:
+/* 56 */
 /*!*************************************!*\
   !*** ./~/rxjs/operator/mergeMap.js ***!
   \*************************************/
@@ -42684,8 +42629,7 @@
 	//# sourceMappingURL=mergeMap.js.map
 
 /***/ },
-
-/***/ 57:
+/* 57 */
 /*!******************************************!*\
   !*** ./~/rxjs/util/subscribeToResult.js ***!
   \******************************************/
@@ -42767,8 +42711,7 @@
 	//# sourceMappingURL=subscribeToResult.js.map
 
 /***/ },
-
-/***/ 58:
+/* 58 */
 /*!***********************************!*\
   !*** ./~/rxjs/InnerSubscriber.js ***!
   \***********************************/
@@ -42812,8 +42755,7 @@
 	//# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ },
-
-/***/ 59:
+/* 59 */
 /*!***********************************!*\
   !*** ./~/rxjs/OuterSubscriber.js ***!
   \***********************************/
@@ -42851,8 +42793,7 @@
 	//# sourceMappingURL=OuterSubscriber.js.map
 
 /***/ },
-
-/***/ 60:
+/* 60 */
 /*!**********************************!*\
   !*** ./~/rxjs/operator/every.js ***!
   \**********************************/
@@ -42928,8 +42869,7 @@
 	//# sourceMappingURL=every.js.map
 
 /***/ },
-
-/***/ 61:
+/* 61 */
 /*!*************************************!*\
   !*** ./~/rxjs/operator/mergeAll.js ***!
   \*************************************/
@@ -43048,8 +42988,7 @@
 	//# sourceMappingURL=mergeAll.js.map
 
 /***/ },
-
-/***/ 62:
+/* 62 */
 /*!***********************************!*\
   !*** ./~/rxjs/operator/reduce.js ***!
   \***********************************/
@@ -43169,8 +43108,7 @@
 	//# sourceMappingURL=reduce.js.map
 
 /***/ },
-
-/***/ 63:
+/* 63 */
 /*!**********************************!*\
   !*** ./~/rxjs/operator/catch.js ***!
   \**********************************/
@@ -43243,8 +43181,7 @@
 	//# sourceMappingURL=catch.js.map
 
 /***/ },
-
-/***/ 64:
+/* 64 */
 /*!**************************************!*\
   !*** ./~/rxjs/operator/concatAll.js ***!
   \**************************************/
@@ -43301,8 +43238,7 @@
 	//# sourceMappingURL=concatAll.js.map
 
 /***/ },
-
-/***/ 65:
+/* 65 */
 /*!**********************************!*\
   !*** ./~/rxjs/operator/first.js ***!
   \**********************************/
@@ -43458,8 +43394,7 @@
 	//# sourceMappingURL=first.js.map
 
 /***/ },
-
-/***/ 66:
+/* 66 */
 /*!***********************************!*\
   !*** ./~/rxjs/util/EmptyError.js ***!
   \***********************************/
@@ -43495,8 +43430,7 @@
 	//# sourceMappingURL=EmptyError.js.map
 
 /***/ },
-
-/***/ 67:
+/* 67 */
 /*!******************************************!*\
   !*** ./~/rxjs/observable/fromPromise.js ***!
   \******************************************/
@@ -43508,8 +43442,7 @@
 	//# sourceMappingURL=fromPromise.js.map
 
 /***/ },
-
-/***/ 68:
+/* 68 */
 /*!*********************************!*\
   !*** ./~/rxjs/operator/last.js ***!
   \*********************************/
@@ -43635,8 +43568,7 @@
 	//# sourceMappingURL=last.js.map
 
 /***/ },
-
-/***/ 69:
+/* 69 */
 /*!***********************************!*\
   !*** ./~/rxjs/BehaviorSubject.js ***!
   \***********************************/
@@ -43693,8 +43625,7 @@
 	//# sourceMappingURL=BehaviorSubject.js.map
 
 /***/ },
-
-/***/ 70:
+/* 70 */
 /*!***********************************!*\
   !*** ./~/rxjs/operator/filter.js ***!
   \***********************************/
@@ -43795,8 +43726,7 @@
 	//# sourceMappingURL=filter.js.map
 
 /***/ },
-
-/***/ 71:
+/* 71 */
 /*!*****************************!*\
   !*** ./app/models/index.ts ***!
   \*****************************/
@@ -43824,8 +43754,7 @@
 
 
 /***/ },
-
-/***/ 72:
+/* 72 */
 /*!***********************************!*\
   !*** ./app/nav/sidenav.module.ts ***!
   \***********************************/
@@ -43869,8 +43798,7 @@
 
 
 /***/ },
-
-/***/ 73:
+/* 73 */
 /*!**************************************!*\
   !*** ./app/nav/sidenav.component.ts ***!
   \**************************************/
@@ -43930,8 +43858,7 @@
 
 
 /***/ },
-
-/***/ 74:
+/* 74 */
 /*!******************************************************!*\
   !*** ./app/search/listings-search-routing.module.ts ***!
   \******************************************************/
@@ -43970,8 +43897,7 @@
 
 
 /***/ },
-
-/***/ 75:
+/* 75 */
 /*!*************************************************!*\
   !*** ./app/search/listings-search.component.ts ***!
   \*************************************************/
@@ -44006,8 +43932,7 @@
 
 
 /***/ },
-
-/***/ 76:
+/* 76 */
 /*!*******************************************!*\
   !*** ./app/login/login-routing.module.ts ***!
   \*******************************************/
@@ -44048,8 +43973,7 @@
 
 
 /***/ },
-
-/***/ 77:
+/* 77 */
 /*!**************************************!*\
   !*** ./app/login/login.component.ts ***!
   \**************************************/
@@ -44081,8 +44005,7 @@
 
 
 /***/ },
-
-/***/ 78:
+/* 78 */
 /*!*****************************************!*\
   !*** ./app/home/home-routing.module.ts ***!
   \*****************************************/
@@ -44164,8 +44087,7 @@
 
 
 /***/ },
-
-/***/ 79:
+/* 79 */
 /*!**********************************************!*\
   !*** ./app/search/listings-search.module.ts ***!
   \**********************************************/
@@ -44210,8 +44132,7 @@
 
 
 /***/ },
-
-/***/ 80:
+/* 80 */
 /*!******************************************!*\
   !*** ./app/profile/profile.component.ts ***!
   \******************************************/
@@ -44233,6 +44154,10 @@
 	    function ProfileComponent(progressService) {
 	        var _this = this;
 	        this.progressService = progressService;
+	        this.expandableFields = [
+	            { title: "Complete your profile" },
+	            { title: "Second link" }
+	        ];
 	        this.progressSub = this.progressService.progressPercent$.subscribe(function (progress) {
 	            _this.percentComplete = progress;
 	            _this.profileComplete = (parseInt(_this.percentComplete) === 100);
@@ -44254,8 +44179,7 @@
 
 
 /***/ },
-
-/***/ 81:
+/* 81 */
 /*!***************************************************!*\
   !*** ./app/services/progress/progress.service.ts ***!
   \***************************************************/
@@ -44322,8 +44246,7 @@
 
 
 /***/ },
-
-/***/ 82:
+/* 82 */
 /*!******************************************************!*\
   !*** ./app/services/helpers/objectHelper.service.ts ***!
   \******************************************************/
@@ -44370,8 +44293,7 @@
 
 
 /***/ },
-
-/***/ 83:
+/* 83 */
 /*!********************************************!*\
   !*** ./app/register/register.component.ts ***!
   \********************************************/
@@ -44415,8 +44337,7 @@
 
 
 /***/ },
-
-/***/ 84:
+/* 84 */
 /*!************************************************************!*\
   !*** ./app/profile/contact-card/contact-card.component.ts ***!
   \************************************************************/
@@ -44463,8 +44384,7 @@
 
 
 /***/ },
-
-/***/ 85:
+/* 85 */
 /*!******************************************************!*\
   !*** ./app/profile/profile-pages/wants.component.ts ***!
   \******************************************************/
@@ -44496,8 +44416,7 @@
 
 
 /***/ },
-
-/***/ 86:
+/* 86 */
 /*!*******************************************************!*\
   !*** ./app/profile/profile-pages/can-do.component.ts ***!
   \*******************************************************/
@@ -44532,8 +44451,7 @@
 
 
 /***/ },
-
-/***/ 87:
+/* 87 */
 /*!********************************************************!*\
   !*** ./app/profile/profile-pages/selling.component.ts ***!
   \********************************************************/
@@ -44565,8 +44483,7 @@
 
 
 /***/ },
-
-/***/ 88:
+/* 88 */
 /*!*****************************************!*\
   !*** ./app/register/register.module.ts ***!
   \*****************************************/
@@ -44623,8 +44540,7 @@
 
 
 /***/ },
-
-/***/ 89:
+/* 89 */
 /*!***********************************************!*\
   !*** ./~/@angular/forms/bundles/forms.umd.js ***!
   \***********************************************/
@@ -49070,8 +48986,7 @@
 
 
 /***/ },
-
-/***/ 90:
+/* 90 */
 /*!***************************************************************!*\
   !*** ./app/register/register-form/register-form.component.ts ***!
   \***************************************************************/
@@ -49158,8 +49073,7 @@
 
 
 /***/ },
-
-/***/ 91:
+/* 91 */
 /*!***************************************************************************!*\
   !*** ./app/register/register-form/validators/register-form-validators.ts ***!
   \***************************************************************************/
@@ -49178,8 +49092,7 @@
 
 
 /***/ },
-
-/***/ 92:
+/* 92 */
 /*!*****************************!*\
   !*** ./app/dtos/userDto.ts ***!
   \*****************************/
@@ -49195,8 +49108,7 @@
 
 
 /***/ },
-
-/***/ 93:
+/* 93 */
 /*!*************************************************!*\
   !*** ./app/register/register-routing.module.ts ***!
   \*************************************************/
@@ -49235,8 +49147,7 @@
 
 
 /***/ },
-
-/***/ 94:
+/* 94 */
 /*!***********************************!*\
   !*** ./app/login/login.module.ts ***!
   \***********************************/
@@ -49286,8 +49197,7 @@
 
 
 /***/ },
-
-/***/ 95:
+/* 95 */
 /*!******************************************************!*\
   !*** ./app/login/login-form/login-form.component.ts ***!
   \******************************************************/
@@ -49380,8 +49290,7 @@
 
 
 /***/ },
-
-/***/ 96:
+/* 96 */
 /*!***************************************!*\
   !*** ./app/profile/profile.module.ts ***!
   \***************************************/
@@ -49406,9 +49315,9 @@
 	var selling_component_1 = __webpack_require__(/*! ./profile-pages/selling.component */ 87);
 	var can_do_component_1 = __webpack_require__(/*! ./profile-pages/can-do.component */ 86);
 	var progress_component_1 = __webpack_require__(/*! ./progress/progress.component */ 97);
-	var add_skill_component_1 = __webpack_require__(/*! ./profile-pages/components/add-skill.component */ 656);
-	var expandable_field_component_1 = __webpack_require__(/*! ./profile-pages/components/expandable-field.component */ 655);
-	var profile_form_component_1 = __webpack_require__(/*! ./forms/profile-form.component */ 657);
+	var add_skill_component_1 = __webpack_require__(/*! ./profile-pages/components/add-skill.component */ 98);
+	var expandable_field_component_1 = __webpack_require__(/*! ./profile-pages/components/expandable-field.component */ 99);
+	var profile_form_component_1 = __webpack_require__(/*! ./forms/profile-form.component */ 100);
 	var progress_service_1 = __webpack_require__(/*! ../services/progress/progress.service */ 81);
 	var sidenav_module_1 = __webpack_require__(/*! ../nav/sidenav.module */ 72);
 	var ProfileModule = (function () {
@@ -49444,8 +49353,7 @@
 
 
 /***/ },
-
-/***/ 97:
+/* 97 */
 /*!****************************************************!*\
   !*** ./app/profile/progress/progress.component.ts ***!
   \****************************************************/
@@ -49465,9 +49373,6 @@
 	var ProgressBarComponent = (function () {
 	    function ProgressBarComponent(element) {
 	        this.element = element;
-	        this.expandableFields = [
-	            { title: "Complete your profile" }
-	        ];
 	    }
 	    Object.defineProperty(ProgressBarComponent.prototype, "progress", {
 	        get: function () {
@@ -49502,8 +49407,135 @@
 
 
 /***/ },
+/* 98 */
+/*!*********************************************************************!*\
+  !*** ./app/profile/profile-pages/components/add-skill.component.ts ***!
+  \*********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
 
-/***/ 99:
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var AddSkillComponent = (function () {
+	    function AddSkillComponent() {
+	        this.categories = [
+	            { name: "Cat 1" },
+	            { name: "Cat 2" },
+	            { name: "Cat 3" }
+	        ];
+	    }
+	    AddSkillComponent = __decorate([
+	        core_1.Component({
+	            selector: "add-skill-form",
+	            templateUrl: "app/profile/profile-pages/components/add-skill-form.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], AddSkillComponent);
+	    return AddSkillComponent;
+	}());
+	exports.AddSkillComponent = AddSkillComponent;
+
+
+/***/ },
+/* 99 */
+/*!****************************************************************************!*\
+  !*** ./app/profile/profile-pages/components/expandable-field.component.ts ***!
+  \****************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var progress_service_1 = __webpack_require__(/*! ../../../services/progress/progress.service */ 81);
+	var ExpandableFieldComponent = (function () {
+	    function ExpandableFieldComponent(progressService) {
+	        this.progressService = progressService;
+	        this.fieldHeight = "0px";
+	        this.fieldVisible = false;
+	        this.categories = [
+	            { name: "Cat 1" },
+	            { name: "Cat 2" },
+	            { name: "Cat 3" }
+	        ];
+	        this.profileProgress = progressService.getProfileProgress();
+	    }
+	    ExpandableFieldComponent.prototype.addFieldToggle = function () {
+	        this.fieldVisible = !this.fieldVisible;
+	        this.fieldHeight = this.fieldVisible ? "auto" : "0px";
+	    };
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], ExpandableFieldComponent.prototype, "title", void 0);
+	    ExpandableFieldComponent = __decorate([
+	        core_1.Component({
+	            selector: "expandable-field",
+	            templateUrl: "app/profile/profile-pages/components/expandable-field.component.html",
+	            styles: ["\n        #expandableField {\n            overflow-y: hidden;\n            transition: height 2s ease;\n        }\n    "]
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof progress_service_1.ProgressService !== 'undefined' && progress_service_1.ProgressService) === 'function' && _a) || Object])
+	    ], ExpandableFieldComponent);
+	    return ExpandableFieldComponent;
+	    var _a;
+	}());
+	exports.ExpandableFieldComponent = ExpandableFieldComponent;
+
+
+/***/ },
+/* 100 */
+/*!*****************************************************!*\
+  !*** ./app/profile/forms/profile-form.component.ts ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
+	var ProfileFormComponent = (function () {
+	    function ProfileFormComponent(accountService) {
+	        this.accountService = accountService;
+	        this.user = this.accountService.getLastLoggedInUser();
+	    }
+	    ProfileFormComponent = __decorate([
+	        core_1.Component({
+	            selector: "profile-form",
+	            templateUrl: "app/profile/forms/profile-form.component.html"
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _a) || Object])
+	    ], ProfileFormComponent);
+	    return ProfileFormComponent;
+	    var _a;
+	}());
+	exports.ProfileFormComponent = ProfileFormComponent;
+
+
+/***/ },
+/* 101 */
 /*!***********************************************!*\
   !*** ./app/landing/landing-routing.module.ts ***!
   \***********************************************/
@@ -49521,7 +49553,7 @@
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var router_1 = __webpack_require__(/*! @angular/router */ 40);
-	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 100);
+	var landing_component_1 = __webpack_require__(/*! ./landing.component */ 102);
 	var LandingRoutingModule = (function () {
 	    function LandingRoutingModule() {
 	    }
@@ -49544,8 +49576,7 @@
 
 
 /***/ },
-
-/***/ 100:
+/* 102 */
 /*!******************************************!*\
   !*** ./app/landing/landing.component.ts ***!
   \******************************************/
@@ -49593,8 +49624,7 @@
 
 
 /***/ },
-
-/***/ 101:
+/* 103 */
 /*!***********************************!*\
   !*** ./app/app-routing.module.ts ***!
   \***********************************/
@@ -49632,8 +49662,7 @@
 
 
 /***/ },
-
-/***/ 102:
+/* 104 */
 /*!***********************************************!*\
   !*** ./app/profile/profile-routing.module.ts ***!
   \***********************************************/
@@ -49688,138 +49717,6 @@
 	exports.ProfileRoutingModule = ProfileRoutingModule;
 
 
-/***/ },
-
-/***/ 655:
-/*!****************************************************************************!*\
-  !*** ./app/profile/profile-pages/components/expandable-field.component.ts ***!
-  \****************************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var progress_service_1 = __webpack_require__(/*! ../../../services/progress/progress.service */ 81);
-	var ExpandableFieldComponent = (function () {
-	    function ExpandableFieldComponent(progressService) {
-	        this.progressService = progressService;
-	        this.fieldHeight = "0px";
-	        this.fieldVisible = false;
-	        this.categories = [
-	            { name: "Cat 1" },
-	            { name: "Cat 2" },
-	            { name: "Cat 3" }
-	        ];
-	        this.profileProgress = progressService.getProfileProgress();
-	    }
-	    ExpandableFieldComponent.prototype.addFieldToggle = function () {
-	        this.fieldVisible = !this.fieldVisible;
-	        this.fieldHeight = this.fieldVisible ? "auto" : "0px";
-	    };
-	    __decorate([
-	        core_1.Input(), 
-	        __metadata('design:type', String)
-	    ], ExpandableFieldComponent.prototype, "title", void 0);
-	    ExpandableFieldComponent = __decorate([
-	        core_1.Component({
-	            selector: "expandable-field",
-	            templateUrl: "app/profile/profile-pages/components/expandable-field.component.html",
-	            styles: ["\n        #expandableField {\n            overflow-y: hidden;\n            transition: height 2s ease;\n        }\n    "]
-	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof progress_service_1.ProgressService !== 'undefined' && progress_service_1.ProgressService) === 'function' && _a) || Object])
-	    ], ExpandableFieldComponent);
-	    return ExpandableFieldComponent;
-	    var _a;
-	}());
-	exports.ExpandableFieldComponent = ExpandableFieldComponent;
-
-
-/***/ },
-
-/***/ 656:
-/*!*********************************************************************!*\
-  !*** ./app/profile/profile-pages/components/add-skill.component.ts ***!
-  \*********************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var AddSkillComponent = (function () {
-	    function AddSkillComponent() {
-	        this.categories = [
-	            { name: "Cat 1" },
-	            { name: "Cat 2" },
-	            { name: "Cat 3" }
-	        ];
-	    }
-	    AddSkillComponent = __decorate([
-	        core_1.Component({
-	            selector: "add-skill-form",
-	            templateUrl: "app/profile/profile-pages/components/add-skill-form.component.html"
-	        }), 
-	        __metadata('design:paramtypes', [])
-	    ], AddSkillComponent);
-	    return AddSkillComponent;
-	}());
-	exports.AddSkillComponent = AddSkillComponent;
-
-
-/***/ },
-
-/***/ 657:
-/*!*****************************************************!*\
-  !*** ./app/profile/forms/profile-form.component.ts ***!
-  \*****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
-	var ProfileFormComponent = (function () {
-	    function ProfileFormComponent(accountService) {
-	        this.accountService = accountService;
-	        this.user = this.accountService.getLastLoggedInUser();
-	    }
-	    ProfileFormComponent = __decorate([
-	        core_1.Component({
-	            selector: "profile-form",
-	            templateUrl: "app/profile/forms/profile-form.component.html"
-	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _a) || Object])
-	    ], ProfileFormComponent);
-	    return ProfileFormComponent;
-	    var _a;
-	}());
-	exports.ProfileFormComponent = ProfileFormComponent;
-
-
 /***/ }
-
-/******/ });
+/******/ ]);
 //# sourceMappingURL=app.js.map

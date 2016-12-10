@@ -6,9 +6,6 @@
 })
 
 export class ProgressBarComponent {
-    public expandableFields = [
-        { title: "Complete your profile" }
-    ]
     @Input()
     public profileComplete: boolean;
 
