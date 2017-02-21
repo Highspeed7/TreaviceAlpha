@@ -44224,51 +44224,35 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var http_1 = __webpack_require__(/*! @angular/http */ 28);
 	var Subject_1 = __webpack_require__(/*! rxjs/Subject */ 9);
+	__webpack_require__(/*! rxjs/add/operator/map */ 32);
 	var objectHelper_service_1 = __webpack_require__(/*! ../helpers/objectHelper.service */ 82);
 	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
 	var ProgressService = (function () {
-	    function ProgressService(objectHelper, accountService) {
+	    function ProgressService(objectHelper, accountService, httpService) {
 	        this.objectHelper = objectHelper;
 	        this.accountService = accountService;
+	        this.httpService = httpService;
 	        this.progressPercentSource = new Subject_1.Subject();
 	        this.progressPercent$ = this.progressPercentSource.asObservable();
+	        this.apiRoute = "api/user";
 	    }
 	    ProgressService.prototype.setProgressPercent = function (percent) {
 	        this.progressPercentSource.next(percent);
 	    };
-	    // TODO: Move server-side to prevent malicious use.
-	    ProgressService.prototype.getProfileProgress = function () {
-	        this.user = this.accountService.getLastLoggedInUser();
-	        var keyArr = ["email"];
-	        var keySet = new Set(keyArr);
-	        var numComplete = 0;
-	        for (var key in this.user.profile) {
-	            if (this.user.profile.hasOwnProperty(key)) {
-	                if (keySet.has(key)) {
-	                    continue;
-	                }
-	                else {
-	                    {
-	                        if (this.user.profile[key] !== null) {
-	                            numComplete++;
-	                        }
-	                    }
-	                }
-	            }
-	        }
-	        // Get the size of the key array so we know how many properties to subtract.
-	        var less = keyArr.length;
-	        // Get the size of the user profile object.
-	        var profileSize = this.objectHelper.size(this.user.profile) - (keyArr.length);
-	        return (numComplete * 100) / (profileSize);
+	    ProgressService.prototype.getProfileProgress = function (email) {
+	        var source = this.httpService.get(this.apiRoute + "/progress?email=" + email);
+	        return source
+	            .map(function (r) { return r.json(); })
+	            .toPromise();
 	    };
 	    ProgressService = __decorate([
 	        core_1.Injectable(), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof objectHelper_service_1.ObjectHelper !== 'undefined' && objectHelper_service_1.ObjectHelper) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object])
+	        __metadata('design:paramtypes', [(typeof (_a = typeof objectHelper_service_1.ObjectHelper !== 'undefined' && objectHelper_service_1.ObjectHelper) === 'function' && _a) || Object, (typeof (_b = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _b) || Object, (typeof (_c = typeof http_1.Http !== 'undefined' && http_1.Http) === 'function' && _c) || Object])
 	    ], ProgressService);
 	    return ProgressService;
-	    var _a, _b;
+	    var _a, _b, _c;
 	}());
 	exports.ProgressService = ProgressService;
 
@@ -44394,10 +44378,14 @@
 	        this.objectHelper = objectHelper;
 	    }
 	    ContactCardComponent.prototype.ngOnInit = function () {
+	        var _this = this;
 	        this.router.navigateByUrl("home/profile/(profile-pages:wants)");
 	        this.user = this.accountService.getLastLoggedInUser();
-	        var percent = this.progressService.getProfileProgress();
-	        this.progressService.setProgressPercent(percent.toString());
+	        this.progressService.getProfileProgress(this.user.email)
+	            .then(function (p) {
+	            _this.percent = p;
+	            _this.progressService.setProgressPercent(_this.percent.toString());
+	        });
 	    };
 	    ContactCardComponent = __decorate([
 	        core_1.Component({
@@ -49492,10 +49480,9 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
-	var progress_service_1 = __webpack_require__(/*! ../../../services/progress/progress.service */ 81);
 	var ExpandableFieldComponent = (function () {
-	    function ExpandableFieldComponent(progressService) {
-	        this.progressService = progressService;
+	    function ExpandableFieldComponent() {
+	        this.componentHidden = false;
 	        this.fieldHeight = "0px";
 	        this.fieldVisible = false;
 	        this.categories = [
@@ -49503,7 +49490,6 @@
 	            { name: "Cat 2" },
 	            { name: "Cat 3" }
 	        ];
-	        this.profileProgress = progressService.getProfileProgress();
 	    }
 	    ExpandableFieldComponent.prototype.addFieldToggle = function () {
 	        this.fieldVisible = !this.fieldVisible;
@@ -49513,16 +49499,19 @@
 	        core_1.Input(), 
 	        __metadata('design:type', String)
 	    ], ExpandableFieldComponent.prototype, "title", void 0);
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', Object)
+	    ], ExpandableFieldComponent.prototype, "componentHidden", void 0);
 	    ExpandableFieldComponent = __decorate([
 	        core_1.Component({
 	            selector: "expandable-field",
 	            templateUrl: "app/profile/profile-pages/components/expandable-field.component.html",
 	            styles: ["\n        #expandableField {\n            overflow-y: hidden;\n            transition: height 2s ease;\n        }\n    "]
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof progress_service_1.ProgressService !== 'undefined' && progress_service_1.ProgressService) === 'function' && _a) || Object])
+	        __metadata('design:paramtypes', [])
 	    ], ExpandableFieldComponent);
 	    return ExpandableFieldComponent;
-	    var _a;
 	}());
 	exports.ExpandableFieldComponent = ExpandableFieldComponent;
 

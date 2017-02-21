@@ -1,7 +1,5 @@
 ﻿import { Component, Input } from "@angular/core";
 
-import { ProgressService } from "../../../services/progress/progress.service";
-
 @Component({
     selector: "expandable-field",
     templateUrl: "app/profile/profile-pages/components/expandable-field.component.html",
@@ -16,6 +14,8 @@ import { ProgressService } from "../../../services/progress/progress.service";
 export class ExpandableFieldComponent {
     @Input()
     public title: string;
+    @Input()
+    public componentHidden = false;
     public fieldHeight = "0px";
     public fieldVisible = false;
     public profileProgress: number;
@@ -26,9 +26,7 @@ export class ExpandableFieldComponent {
         { name: "Cat 3" }
     ];
 
-    constructor(private progressService: ProgressService) {
-        this.profileProgress = progressService.getProfileProgress();
-    }
+    constructor() {}
 
     public addFieldToggle() {
 

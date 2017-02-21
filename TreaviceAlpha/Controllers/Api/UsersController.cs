@@ -140,19 +140,53 @@ namespace TreaviceAlpha.Controllers.Api
             }
             return false;
         }
-        
-        //[Route("progress")]
-        //[HttpGet]
-        //public int getProfileProgress(string email)
-        //{
-        //    using (var context = new ProfileDbContext())
-        //    {
-        //        var userInDb = context.Users.Single(u => u.Email == email);
-        //        var profileInDb = context.Profiles.Single(p => p.UserId == userInDb.Id);
-        //    }
 
+        [Route("progress")]
+        [HttpGet]
+        public int GetProfileProgress(string email)
+        {
+            int completedFieldsCount = 0;
 
-        //}
+            using (var context = new ProfileDbContext())
+            {
+                var userInDb = context.Users.Single(u => u.Email == email);
+                var profileInDb = context.Profiles.Single(p => p.UserId == userInDb.Id);
+
+                if (!String.IsNullOrEmpty(profileInDb.FirstName))
+                {
+                    completedFieldsCount++;
+                }
+                if (!String.IsNullOrEmpty(profileInDb.LastName))
+                {
+                    completedFieldsCount++;
+                }
+                if (!String.IsNullOrEmpty(profileInDb.Street))
+                {
+                    completedFieldsCount++;
+                }
+                if (!String.IsNullOrEmpty(profileInDb.City))
+                {
+                    completedFieldsCount++;
+                }
+                if (!String.IsNullOrEmpty(profileInDb.State))
+                {
+                    completedFieldsCount++;
+                }
+                if (!String.IsNullOrEmpty(profileInDb.ZipCode))
+                {
+                    completedFieldsCount++;
+                }
+                if (!String.IsNullOrEmpty(profileInDb.Phone))
+                {
+                    completedFieldsCount++;
+                }
+                if (!String.IsNullOrEmpty(userInDb.Email))
+                {
+                    completedFieldsCount++;
+                }
+            }
+            return ((completedFieldsCount*100)/8);
+        }
 
         [Route("logout")]
         [HttpGet]

@@ -1,5 +1,7 @@
 ﻿import { Injectable } from "@angular/core";
+import { Http } from "@angular/http";
 import { Subject } from "rxjs/Subject";
+import "rxjs/add/operator/map";
 
 import { ObjectHelper } from "../helpers/objectHelper.service";
 import { AccountService } from "../../services/account.service";
@@ -10,38 +12,24 @@ import { UserData } from "../../models/index";
 export class ProgressService {
     public progressPercentSource = new Subject<string>();
     public progressPercent$ = this.progressPercentSource.asObservable();
+
+    private apiRoute = "api/user";
     private user: UserData;
 
-    constructor(private objectHelper: ObjectHelper, private accountService: AccountService) {}
+    constructor(
+        private objectHelper: ObjectHelper,
+        private accountService: AccountService,
+        private httpService: Http
+    ) { }
 
     public setProgressPercent(percent: string) {
         this.progressPercentSource.next(percent);
     }
 
-    // TODO: Move server-side to prevent malicious use.
-    public getProfileProgress() {
-        this.user = this.accountService.getLastLoggedInUser();
-        const keyArr = ["email"];
-        const keySet = new Set(keyArr);
-        let numComplete = 0;
-        for (let key in this.user.profile) {
-            if (this.user.profile.hasOwnProperty(key)) {
-                if (keySet.has(key)) {
-                    continue;
-                } else {
-                    {
-                        if (this.user.profile[key] !== null) {
-                            numComplete++;
-                        }
-                    }
-                }
-            }
-        }
-        // Get the size of the key array so we know how many properties to subtract.
-        const less = keyArr.length;
-        // Get the size of the user profile object.
-        const profileSize = this.objectHelper.size(this.user.profile) - (keyArr.length);
-
-        return (numComplete * 100) / (profileSize);
+    public getProfileProgress(email: string): Promise<number> {
+        const source = this.httpService.get(`${this.apiRoute}/progress?email=${email}`);
+        return source
+            .map(r => r.json())
+            .toPromise();
     }
 }

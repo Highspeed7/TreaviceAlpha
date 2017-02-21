@@ -13,6 +13,7 @@ import { ObjectHelper } from "../../services/helpers/objectHelper.service";
 
 export class ContactCardComponent implements OnInit {
     public user: UserData;
+    private percent: number;
 
     constructor(
         private router: Router,
@@ -25,8 +26,10 @@ export class ContactCardComponent implements OnInit {
         this.router.navigateByUrl("home/profile/(profile-pages:wants)");
         this.user = this.accountService.getLastLoggedInUser();
 
-        const percent = this.progressService.getProfileProgress();
-
-        this.progressService.setProgressPercent(percent.toString());
+        this.progressService.getProfileProgress(this.user.email)
+            .then((p: number) => {
+                this.percent = p;
+                this.progressService.setProgressPercent(this.percent.toString());
+            });
     }
 }
