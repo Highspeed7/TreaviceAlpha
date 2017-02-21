@@ -20,7 +20,7 @@ export class ProfileComponent implements OnDestroy {
     constructor(private progressService: ProgressService) {
         this.progressSub = this.progressService.progressPercent$.subscribe((progress: string) => {
             this.percentComplete = progress;
-            this.profileComplete = (parseInt(this.percentComplete) === 100);
+            this.profileComplete = (parseInt(this.percentComplete, 10) === 100);
         });
     }
 

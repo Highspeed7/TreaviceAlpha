@@ -21,7 +21,7 @@ export class ProgressService {
     // TODO: Move server-side to prevent malicious use.
     public getProfileProgress() {
         this.user = this.accountService.getLastLoggedInUser();
-        const keyArr = ["id", "user", "userId"];
+        const keyArr = ["email"];
         const keySet = new Set(keyArr);
         let numComplete = 0;
         for (let key in this.user.profile) {
@@ -40,8 +40,8 @@ export class ProgressService {
         // Get the size of the key array so we know how many properties to subtract.
         const less = keyArr.length;
         // Get the size of the user profile object.
-        const profileSize = this.objectHelper.size(this.user.profile);
+        const profileSize = this.objectHelper.size(this.user.profile) - (keyArr.length);
 
-        return (numComplete * 100) / (profileSize - less);
+        return (numComplete * 100) / (profileSize);
     }
 }

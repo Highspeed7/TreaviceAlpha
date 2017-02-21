@@ -99,7 +99,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".profile .truncate {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.profile div#contact-card {\n  margin-bottom: 15px;\n}\n.profile div#contact-card #contact-card-left img {\n  width: 100%;\n  padding: 0px 10px 10px 0px;\n}\n.common .top-padd-20 {\n  padding-top: 20px;\n}\n.common .bottom-padd-20 {\n  padding-bottom: 20px;\n}\n.common div.body-content {\n  min-height: 100%;\n  margin-top: -29px;\n  padding-top: 29px;\n}\n.common html {\n  height: 100%;\n}\n.common html body {\n  height: inherit;\n}\n.common body {\n  padding: 0px;\n}\n.common nav {\n  padding-top: 20px;\n}\n.common nav.navbar {\n  border: none;\n}\n.common nav.navbar-default {\n  background-color: inherit;\n}\n.common ul.nav > li.active {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:hover {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:focus {\n  background-color: white;\n}\n@media (min-width: 320px) {\n  .top-padd-20 {\n    padding-top: 20px;\n  }\n  .bottom-padd-20 {\n    padding-bottom: 20px;\n  }\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 540px) {\n  .top-padd-20 {\n    padding-top: 20px;\n  }\n  .bottom-padd-20 {\n    padding-bottom: 20px;\n  }\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 768px) {\n  .top-padd-20 {\n    padding-top: 20px;\n  }\n  .bottom-padd-20 {\n    padding-bottom: 20px;\n  }\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1084px) {\n  .top-padd-20 {\n    padding-top: 20px;\n  }\n  .bottom-padd-20 {\n    padding-bottom: 20px;\n  }\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1400) {\n  .top-padd-20 {\n    padding-top: 20px;\n  }\n  .bottom-padd-20 {\n    padding-bottom: 20px;\n  }\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n", ""]);
+	exports.push([module.id, ".profile ul.nav.inner-nav {\n  margin-top: 15px;\n}\n.profile span.expandable {\n  margin: 10px 5px;\n  cursor: pointer;\n  vertical-align: text-top;\n  font-size: 10px;\n}\n.profile span.expand-title {\n  cursor: pointer;\n  font-weight: 400;\n}\n.profile .truncate {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.profile div#expand-field-wrapper div.container-fluid:last {\n  margin: 10px;\n}\n.profile div#contact-card {\n  margin-bottom: 15px;\n}\n.profile div#contact-card #contact-card-left img {\n  width: 100%;\n  padding: 0px 10px 10px 0px;\n}\n.common .top-padd-20 {\n  padding-top: 20px;\n}\n.common .bottom-padd-20 {\n  padding-bottom: 20px;\n}\n.common div.body-content {\n  min-height: 100%;\n  margin-top: -29px;\n  padding-top: 29px;\n}\n.common html {\n  height: 100%;\n}\n.common html body {\n  height: inherit;\n}\n.common body {\n  padding: 0px;\n}\n.common nav {\n  padding-top: 20px;\n}\n.common nav.navbar {\n  border: none;\n}\n.common nav.navbar-default {\n  background-color: inherit;\n}\n.common ul.nav > li.active {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:hover {\n  background-color: white;\n  font-weight: bold;\n}\n.common ul.nav > li > a:focus {\n  background-color: white;\n}\n@media (min-width: 320px) {\n  .top-padd-20 {\n    padding-top: 20px;\n  }\n  .bottom-padd-20 {\n    padding-bottom: 20px;\n  }\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  ul.nav.inner-nav {\n    margin-top: 15px;\n  }\n  span.expandable {\n    margin: 10px 5px;\n    cursor: pointer;\n    vertical-align: text-top;\n    font-size: 10px;\n  }\n  span.expand-title {\n    cursor: pointer;\n    font-weight: 400;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#expand-field-wrapper div.container-fluid:last {\n    margin: 10px;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 540px) {\n  .top-padd-20 {\n    padding-top: 20px;\n  }\n  .bottom-padd-20 {\n    padding-bottom: 20px;\n  }\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  ul.nav.inner-nav {\n    margin-top: 15px;\n  }\n  span.expandable {\n    margin: 10px 5px;\n    cursor: pointer;\n    vertical-align: text-top;\n    font-size: 10px;\n  }\n  span.expand-title {\n    cursor: pointer;\n    font-weight: 400;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#expand-field-wrapper div.container-fluid:last {\n    margin: 10px;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 768px) {\n  .top-padd-20 {\n    padding-top: 20px;\n  }\n  .bottom-padd-20 {\n    padding-bottom: 20px;\n  }\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  ul.nav.inner-nav {\n    margin-top: 15px;\n  }\n  span.expandable {\n    margin: 10px 5px;\n    cursor: pointer;\n    vertical-align: text-top;\n    font-size: 10px;\n  }\n  span.expand-title {\n    cursor: pointer;\n    font-weight: 400;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#expand-field-wrapper div.container-fluid:last {\n    margin: 10px;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1084px) {\n  .top-padd-20 {\n    padding-top: 20px;\n  }\n  .bottom-padd-20 {\n    padding-bottom: 20px;\n  }\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  ul.nav.inner-nav {\n    margin-top: 15px;\n  }\n  span.expandable {\n    margin: 10px 5px;\n    cursor: pointer;\n    vertical-align: text-top;\n    font-size: 10px;\n  }\n  span.expand-title {\n    cursor: pointer;\n    font-weight: 400;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#expand-field-wrapper div.container-fluid:last {\n    margin: 10px;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n@media (min-width: 1400) {\n  .top-padd-20 {\n    padding-top: 20px;\n  }\n  .bottom-padd-20 {\n    padding-bottom: 20px;\n  }\n  div.body-content {\n    min-height: 100%;\n    margin-top: -29px;\n    padding-top: 29px;\n  }\n  html {\n    height: 100%;\n  }\n  html body {\n    height: inherit;\n  }\n  body {\n    padding: 0px;\n  }\n  nav {\n    padding-top: 20px;\n  }\n  nav.navbar {\n    border: none;\n  }\n  nav.navbar-default {\n    background-color: inherit;\n  }\n  ul.nav > li.active {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:hover {\n    background-color: white;\n    font-weight: bold;\n  }\n  ul.nav > li > a:focus {\n    background-color: white;\n  }\n  ul.nav.inner-nav {\n    margin-top: 15px;\n  }\n  span.expandable {\n    margin: 10px 5px;\n    cursor: pointer;\n    vertical-align: text-top;\n    font-size: 10px;\n  }\n  span.expand-title {\n    cursor: pointer;\n    font-weight: 400;\n  }\n  .truncate {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n  div#expand-field-wrapper div.container-fluid:last {\n    margin: 10px;\n  }\n  div#contact-card {\n    margin-bottom: 15px;\n  }\n  div#contact-card #contact-card-left img {\n    width: 100%;\n    padding: 0px 10px 10px 0px;\n  }\n}\n", ""]);
 	
 	// exports
 
@@ -37062,7 +37062,7 @@
 	    function AccountService(httpService) {
 	        this.httpService = httpService;
 	        this.isloggedIn = false;
-	        this.url = "/api/user/";
+	        this.url = "/api/user";
 	    }
 	    Object.defineProperty(AccountService.prototype, "loggedIn", {
 	        get: function () { return this.isloggedIn; },
@@ -37073,7 +37073,7 @@
 	    AccountService.prototype.registerUser = function (data, token) {
 	        var headers = new http_1.Headers({ "Content-Type": "application/json", "__RequestVerificationToken": token });
 	        var options = new http_1.RequestOptions({ headers: headers });
-	        var source = this.httpService.post(this.url + "register", data, options);
+	        var source = this.httpService.post(this.url + "/register", data, options);
 	        return source
 	            .map(function (r) {
 	            if (r.status === 200) {
@@ -37088,20 +37088,35 @@
 	    AccountService.prototype.login = function (data, token) {
 	        var headers = new http_1.Headers({ "Content-Type": "application/json", "__RequestVerificationToken": token });
 	        var options = new http_1.RequestOptions({ headers: headers });
-	        var source = this.httpService.post(this.url + "login", data, options);
+	        var source = this.httpService.post(this.url + "/login", data, options);
 	        return source
 	            .map(function (r) { return r.json(); })
 	            .toPromise();
 	    };
 	    AccountService.prototype.getProfileData = function (user) {
-	        var source = this.httpService.post(this.url + "profile-data", user);
+	        var source = this.httpService.get(this.url + "/profile/?userEmail=" + user.email);
 	        return source
 	            .map(function (r) {
 	            return r.json();
 	        });
 	    };
+	    AccountService.prototype.updateProfile = function (userData, email) {
+	        var _this = this;
+	        userData.email = email;
+	        var source = this.httpService.put(this.url + "/profile", userData, null);
+	        return source
+	            .map(function (r) {
+	            // Set the new user data
+	            var userDataObj = {
+	                email: userData.email,
+	                profile: userData
+	            };
+	            _this.setLastLoggedInUser(userDataObj);
+	            return r.json();
+	        });
+	    };
 	    AccountService.prototype.logout = function () {
-	        var source = this.httpService.get(this.url + "logout");
+	        var source = this.httpService.get(this.url + "/logout");
 	        return source;
 	    };
 	    AccountService.prototype.init = function () {
@@ -37109,7 +37124,7 @@
 	        return true;
 	    };
 	    AccountService.prototype.isLoggedIn = function () {
-	        var source = this.httpService.get(this.url + "isLoggedIn");
+	        var source = this.httpService.get(this.url + "/isLoggedIn");
 	        return source
 	            .map(function (r) {
 	            if (r.json() === true) {
@@ -37122,6 +37137,7 @@
 	    };
 	    AccountService.prototype.setLastLoggedInUser = function (userData) {
 	        localStorage.setItem("treavice", JSON.stringify(userData));
+	        return true;
 	    };
 	    AccountService.prototype.getLastLoggedInUser = function () {
 	        var userData;
@@ -43745,12 +43761,24 @@
 	    return ApplicationData;
 	}());
 	exports.ApplicationData = ApplicationData;
+	var Profile = (function () {
+	    function Profile() {
+	    }
+	    return Profile;
+	}());
+	exports.Profile = Profile;
 	var UserData = (function () {
 	    function UserData() {
 	    }
 	    return UserData;
 	}());
 	exports.UserData = UserData;
+	var GeoStateModel = (function () {
+	    function GeoStateModel() {
+	    }
+	    return GeoStateModel;
+	}());
+	exports.GeoStateModel = GeoStateModel;
 
 
 /***/ },
@@ -44154,9 +44182,13 @@
 	    function ProfileComponent(progressService) {
 	        var _this = this;
 	        this.progressService = progressService;
+	        this.expandableFields = [
+	            { title: "Complete your profile" },
+	            { title: "Second link" }
+	        ];
 	        this.progressSub = this.progressService.progressPercent$.subscribe(function (progress) {
 	            _this.percentComplete = progress;
-	            _this.profileComplete = (parseInt(_this.percentComplete) === 100);
+	            _this.profileComplete = (parseInt(_this.percentComplete, 10) === 100);
 	        });
 	    }
 	    ProfileComponent.prototype.ngOnDestroy = function () {
@@ -44208,7 +44240,7 @@
 	    // TODO: Move server-side to prevent malicious use.
 	    ProgressService.prototype.getProfileProgress = function () {
 	        this.user = this.accountService.getLastLoggedInUser();
-	        var keyArr = ["id", "user", "userId"];
+	        var keyArr = ["email"];
 	        var keySet = new Set(keyArr);
 	        var numComplete = 0;
 	        for (var key in this.user.profile) {
@@ -44228,8 +44260,8 @@
 	        // Get the size of the key array so we know how many properties to subtract.
 	        var less = keyArr.length;
 	        // Get the size of the user profile object.
-	        var profileSize = this.objectHelper.size(this.user.profile);
-	        return (numComplete * 100) / (profileSize - less);
+	        var profileSize = this.objectHelper.size(this.user.profile) - (keyArr.length);
+	        return (numComplete * 100) / (profileSize);
 	    };
 	    ProgressService = __decorate([
 	        core_1.Injectable(), 
@@ -49305,6 +49337,7 @@
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
 	var router_1 = __webpack_require__(/*! @angular/router */ 40);
 	var common_1 = __webpack_require__(/*! @angular/common */ 27);
+	var forms_1 = __webpack_require__(/*! @angular/forms */ 89);
 	var profile_component_1 = __webpack_require__(/*! ./profile.component */ 80);
 	var contact_card_component_1 = __webpack_require__(/*! ./contact-card/contact-card.component */ 84);
 	var wants_component_1 = __webpack_require__(/*! ./profile-pages/wants.component */ 85);
@@ -49335,7 +49368,8 @@
 	            imports: [
 	                sidenav_module_1.SideNavModule,
 	                router_1.RouterModule,
-	                common_1.CommonModule
+	                common_1.CommonModule,
+	                forms_1.ReactiveFormsModule
 	            ],
 	            providers: [
 	                progress_service_1.ProgressService
@@ -49369,9 +49403,6 @@
 	var ProgressBarComponent = (function () {
 	    function ProgressBarComponent(element) {
 	        this.element = element;
-	        this.expandableFields = [
-	            { title: "Complete your profile" }
-	        ];
 	    }
 	    Object.defineProperty(ProgressBarComponent.prototype, "progress", {
 	        get: function () {
@@ -49514,21 +49545,68 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 8);
+	var router_1 = __webpack_require__(/*! @angular/router */ 40);
+	var forms_1 = __webpack_require__(/*! @angular/forms */ 89);
 	var account_service_1 = __webpack_require__(/*! ../../services/account.service */ 31);
 	var ProfileFormComponent = (function () {
-	    function ProfileFormComponent(accountService) {
+	    function ProfileFormComponent(accountService, fb, router) {
 	        this.accountService = accountService;
+	        this.fb = fb;
+	        this.router = router;
+	        this.states = [
+	            {
+	                name: "Washington",
+	                abbrv: "WA"
+	            },
+	            {
+	                name: "Oregon",
+	                abbrv: "OR"
+	            }
+	        ];
 	        this.user = this.accountService.getLastLoggedInUser();
 	    }
+	    ProfileFormComponent.prototype.ngOnInit = function () {
+	        this.profileForm = this.fb.group(this.initProfileFields());
+	    };
+	    ProfileFormComponent.prototype.saveProfile = function () {
+	        this.accountService.updateProfile(this.profileForm.value, this.user.email)
+	            .subscribe(function (response) {
+	            if (response) {
+	                location.reload();
+	            }
+	        });
+	    };
+	    ProfileFormComponent.prototype.initProfileFields = function () {
+	        return {
+	            firstName: this.initNamesModel("firstName"),
+	            lastName: this.initNamesModel("lastName"),
+	            street: this.initStreetModel(),
+	            city: this.initCityModel(),
+	            state: this.initStateModel()
+	        };
+	    };
+	    ProfileFormComponent.prototype.initNamesModel = function (val) {
+	        return [this.user.profile[val]];
+	    };
+	    ProfileFormComponent.prototype.initStreetModel = function () {
+	        // TODO: Do address lookup
+	        return [this.user.profile.street];
+	    };
+	    ProfileFormComponent.prototype.initCityModel = function () {
+	        return [this.user.profile.city];
+	    };
+	    ProfileFormComponent.prototype.initStateModel = function () {
+	        return [this.user.profile.state];
+	    };
 	    ProfileFormComponent = __decorate([
 	        core_1.Component({
 	            selector: "profile-form",
 	            templateUrl: "app/profile/forms/profile-form.component.html"
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _a) || Object])
+	        __metadata('design:paramtypes', [(typeof (_a = typeof account_service_1.AccountService !== 'undefined' && account_service_1.AccountService) === 'function' && _a) || Object, (typeof (_b = typeof forms_1.FormBuilder !== 'undefined' && forms_1.FormBuilder) === 'function' && _b) || Object, (typeof (_c = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _c) || Object])
 	    ], ProfileFormComponent);
 	    return ProfileFormComponent;
-	    var _a;
+	    var _a, _b, _c;
 	}());
 	exports.ProfileFormComponent = ProfileFormComponent;
 

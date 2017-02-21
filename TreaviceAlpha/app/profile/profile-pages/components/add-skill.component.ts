@@ -10,5 +10,5 @@ export class AddSkillComponent {
         { name: "Cat 1" },
         { name: "Cat 2" },
         { name: "Cat 3" }
-    ]
+    ];
 }

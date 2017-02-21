@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -93,16 +94,16 @@ namespace TreaviceAlpha.Controllers.Api
 
         // TODO: Refactor controller database calls into a respository
         //
-        // POST /api/user/profile-data
-        [Route("profile-data")]
-        [HttpPost]
-        public IEnumerable<Profile> GetUserProfileData(LoginDto user)
+        // GET /api/user/profile
+        [Route("profile")]
+        [HttpGet]
+        public IEnumerable<Profile> GetUserProfileData(string userEmail)
         {
             // TODO: User a better qualified model for returning profile data.
             using (var context = new ProfileDbContext())
             {
                 var userQuery = from u in context.Users
-                                where u.Email == user.Email
+                                where u.Email == userEmail
                                 select u;
 
                 var result = from p in context.Profiles
@@ -112,6 +113,46 @@ namespace TreaviceAlpha.Controllers.Api
                 return result.ToList();
             }
         }
+
+        // POST /api/user/profile
+        [Route("profile")]
+        [HttpPut]
+        public bool UpdateUserProfileData([FromBody]ProfileDto profile)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var context = new ProfileDbContext())
+                {
+                    var userInDb = context.Users.Single(u => u.Email == profile.Email);
+                    var profileInDb = context.Profiles.Single(p => p.UserId == userInDb.Id);
+
+                    profileInDb.FirstName = profile.FirstName;
+                    profileInDb.LastName = profile.LastName;
+                    profileInDb.Street = profile.Street;
+                    profileInDb.City = profile.City;
+                    profileInDb.State = profile.State;
+
+                    if (context.SaveChanges() > 0)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        
+        //[Route("progress")]
+        //[HttpGet]
+        //public int getProfileProgress(string email)
+        //{
+        //    using (var context = new ProfileDbContext())
+        //    {
+        //        var userInDb = context.Users.Single(u => u.Email == email);
+        //        var profileInDb = context.Profiles.Single(p => p.UserId == userInDb.Id);
+        //    }
+
+
+        //}
 
         [Route("logout")]
         [HttpGet]

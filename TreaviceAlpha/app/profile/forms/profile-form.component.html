@@ -1,12 +1,12 @@
-﻿<form>
+﻿<form [formGroup]="profileForm" (submit)="saveProfile()">
     <div class="form-group">
         <label for="fName">First Name: </label>
         <input 
             type="text" 
             id="fName" 
-            name="fName" 
+            name="firstName"
+            formControlName="firstName" 
             class="form-control" 
-            [value]="(user.profile.firstName !== null) ? user.profile.firstName : ''"
         />
     </div>
     <div class="form-group">
@@ -14,9 +14,9 @@
         <input 
             type="text" 
             id="lName" 
-            name="lName" 
+            name="lastName" 
+            formControlName="lastName"
             class="form-control" 
-            [value]="(user.profile.lastName !== null) ? user.profile.lastName : ''" 
         />
     </div>
     <div class="form-group">
@@ -25,11 +25,29 @@
             type="text" 
             id="street" 
             name="street" 
+            formControlName="street"
             class="form-control"
-            [value]="(user.profile.street !== null) ? user.profile.street : ''" />
+        />
     </div>
     <div class="form-group">
         <label for="city">City: </label>
-        <input type="text" id="city" name="city" class="form-control" />
+        <input 
+            type="text" 
+            id="city" 
+            name="city" 
+            class="form-control"
+            formControlName="city" 
+        />
     </div>
+    <div class="form-group">
+        <label for="state">State: </label>
+        <select
+            formControlName="state"
+            id="state"
+            name="state"
+        >
+            <option *ngFor="let state of states" [value]="state.abbrv">{{state.abbrv}}</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid || profileForm.pristine">Save</button>
 </form>
