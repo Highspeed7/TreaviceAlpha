@@ -1,5 +1,10 @@
 ﻿require('es6-promise').polyfill();
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
+    devtool: "clean-source-map",
     // define entry point
     entry: {
         "polyfills": "./app/polyfills.ts",
@@ -8,7 +13,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ["", ".ts", ".js"]
+        extensions: [".ts", ".js"]
     },
 
     // define output point
@@ -19,25 +24,30 @@ module.exports = {
     },
 
     module: {
-        preLoaders: [
+        rules: [
             {
                 test: /\.ts$/,
                 exclude: /(node_modules)/,
-                loader: "tslint"
-            }
-        ],
-
-        loaders: [
+                use: "awesome-typescript-loader"
+            },
             {
-                test: /\.ts$/,
-                exclude: /(node_modules)/,
-                loader: "awesome-typescript-loader"
+                test: /\.css$/,
+                loader:
+                ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader?sourcemap"
+                })
             },
             {
                 test: /\.less$/,
                 exclude: /(node_modules)/,
-                loader: "style!css!less"
+                use: ExtractTextPlugin.extract({ use:
+                ["css-loader", "less-loader"],
+                fallback: "style-loader" })
             }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin("css/[name].css")
+    ]
 };

@@ -49,5 +49,17 @@
             <option *ngFor="let state of states" [value]="state.abbrv">{{state.abbrv}}</option>
         </select>
     </div>
+    <label for="phone-npa">Phone Number: </label>
+    <div class="input-group">
+        <div class="col-xs-2">
+            <input class="form-control" id="phone-npa" type="text" pattern="[0-9]" maxlength="3" />
+        </div>
+        <div class="col-xs-2">
+            <input class="form-control" id="phone-co" type="text" pattern="[0-9]" maxlength="3" />
+        </div>
+        <div class="col-xs-2">
+            <input class="form-control" id="phone-line" type="text" pattern="[0-9]" maxlength="4" />
+        </div>
+    </div>
     <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid || profileForm.pristine">Save</button>
 </form>
