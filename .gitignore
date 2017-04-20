@@ -242,4 +242,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
-/TreaviceAlpha/dist/css
+/TreaviceAlpha/dist/
