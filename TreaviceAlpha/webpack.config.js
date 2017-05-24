@@ -6,37 +6,29 @@ module.exports = {
         "vendor": "./app/vendor.ts",
         "app": "./app/main.ts",
     },
-
-    resolve: {
-        extensions: ["", ".ts", ".js"]
-    },
-
     // define output point
     output: {
         path: "dist",
-        publicPath: "/dist/",
         filename: "js/[name].js"
     },
 
     module: {
-        preLoaders: [
+        rules: [
             {
-                test: /\.ts$/,
-                exclude: /(node_modules)/,
-                loader: "tslint"
-            }
-        ],
-
-        loaders: [
-            {
-                test: /\.ts$/,
-                exclude: /(node_modules)/,
-                loader: "awesome-typescript-loader"
+                use: "tslint-loader",
+                test: /\.ts$/
             },
             {
-                test: /\.less$/,
-                exclude: /(node_modules)/,
-                loader: "style!css!less"
+                use: "awesome-typescript-loader",
+                test: /\.ts$/
+            },
+            {
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "less-loader"
+                ],
+                test: "/\.less$/"
             }
         ]
     }
