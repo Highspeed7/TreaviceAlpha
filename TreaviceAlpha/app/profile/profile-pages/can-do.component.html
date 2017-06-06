@@ -1,6 +1,6 @@
 ﻿<div class="container top-padd-20">
     <div class="row">
-        <expandable-field [title]="expandableFields[0].title">
+        <expandable-field [title]="expandableFields[0].title" *ngIf="profileComplete">
             <add-skill-form></add-skill-form>
         </expandable-field>
     </div>

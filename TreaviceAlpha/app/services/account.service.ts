@@ -87,9 +87,9 @@ export class AccountService {
             });
     }
 
-    public setLastLoggedInUser(userData: UserData) {
+    public setLastLoggedInUser(userData: UserData): Promise<boolean> {
         localStorage.setItem("treavice", JSON.stringify(userData));
-        return true;
+        return Promise.resolve(true);
     }
 
     public getLastLoggedInUser() {

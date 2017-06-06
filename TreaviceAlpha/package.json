@@ -2,8 +2,8 @@
   "name": "angular-quickstart",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack -d --color --config ./webpack.config.js",
-    "build:watch": "webpack --watch -d --color --config ./webpack.config.js",
+    "build": "webpack -d --color --config --display-error-details ./webpack.config",
+    "build:watch": "webpack --watch -d --color --config ./webpack.config",
     "lint": "tslint ./app/**/*.ts -t msbuild"
   },
   "licenses": [

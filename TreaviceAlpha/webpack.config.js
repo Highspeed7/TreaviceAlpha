@@ -1,14 +1,13 @@
-﻿require('es6-promise').polyfill();
-module.exports = {
+﻿module.exports = {
     // define entry point
     entry: {
-        "polyfills": "./app/polyfills.ts",
-        "vendor": "./app/vendor.ts",
-        "app": "./app/main.ts",
+        "polyfills": "./app/polyfills",
+        "vendor": "./app/vendor",
+        "app": "./app/main"
     },
 
     resolve: {
-        extensions: [".ts", ".js"]
+        extensions: ["", ".ts", ".js"]
     },
 
     // define output point

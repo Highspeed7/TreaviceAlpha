@@ -41,6 +41,12 @@ export class ProfileFormComponent implements OnInit {
 
     public saveProfile() {
         let token = this.getVerifyToken();
+        // TODO: remove after phone number validation implemented
+        if (this.profileForm.value.phonePre && this.profileForm.value.phoneArea && this.profileForm.value.phoneSuff) {
+            this.profileForm.value.phone = this.assemblePhoneNumber();
+        } else {
+            this.profileForm.value.phone = "";
+        }
         this.accountService.updateProfile(this.profileForm.value, this.user.email, token)
             .subscribe((response: boolean) => {
                 if (response) {
@@ -49,14 +55,49 @@ export class ProfileFormComponent implements OnInit {
             });
     }
 
+    private assemblePhoneNumber() {
+        return `${this.profileForm.value.phoneArea}${this.profileForm.value.phonePre}${this.profileForm.value.phoneSuff}`;
+    }
+
     private initProfileFields() {
         return {
             firstName: this.initNamesModel("firstName"),
             lastName: this.initNamesModel("lastName"),
             street: this.initStreetModel(),
             city: this.initCityModel(),
-            state: this.initStateModel()
-    };
+            state: this.initStateModel(),
+            zipCode: this.initZipCode(),
+            phoneArea: this.initPhone(0),
+            phonePre: this.initPhone(1),
+            phoneSuff: this.initPhone(2)
+        };
+    }
+
+    private initZipCode() {
+        // TODO: Add zipcode validation
+        return [this.user.profile.zipCode];
+    }
+
+    private initPhone(part: number): Array<string> {
+        // TODO: Add phone number validation
+        let retVal: Array<string> = [];
+        if (this.user.profile.phone && this.user.profile.phone !== null) {
+            switch (part) {
+                case 0:
+                    retVal = [this.user.profile.phone.substr(0, 3)];
+                    break;
+                case 1:
+                    retVal = [this.user.profile.phone.substr(3, 3)];
+                    break;
+                case 2:
+                    retVal = [this.user.profile.phone.substr(6, 4)];
+                    break;
+                default:
+                    // Do nothing
+                }
+        }
+            
+        return retVal;
     }
 
     private initNamesModel(val: string) {

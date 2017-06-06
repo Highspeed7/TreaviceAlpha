@@ -118,7 +118,6 @@ namespace TreaviceAlpha.Controllers.Api
         [Route("profile")]
         [HttpPut]
         [RequireHttps]
-        [AntiForgeryValidate]
         public bool UpdateUserProfileData([FromBody]ProfileDto profile)
         {
             if (ModelState.IsValid)
@@ -133,6 +132,8 @@ namespace TreaviceAlpha.Controllers.Api
                     profileInDb.Street = profile.Street;
                     profileInDb.City = profile.City;
                     profileInDb.State = profile.State;
+                    profileInDb.Phone = profile.Phone;
+                    profileInDb.ZipCode = profile.ZipCode;
 
                     if (context.SaveChanges() > 0)
                     {

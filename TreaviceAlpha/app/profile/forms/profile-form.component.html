@@ -20,6 +20,39 @@
         />
     </div>
     <div class="form-group">
+        <label>Phone... </label>
+        <div class="row">
+            <div class="col-xs-2">
+                <label for="phoneArea">Area: </label>
+                <input
+                    type="text"
+                    id="phoneArea"
+                    name="phoneArea"
+                    formControlName="phoneArea"
+                    class="form-control"
+                    maxlength="3"/>
+            </div>
+            <div class="col-xs-2">
+                <label for="phonePre">Prefix: </label>
+                <input type="text"
+                       id="phonePre"
+                       name="phonePre"
+                       formControlName="phonePre"
+                       class="form-control"
+                       maxlength="3"/>
+            </div>
+            <div class="col-xs-2">
+                <label for="phoneSuff">Suffix: </label>
+                <input type="text"
+                       id="phoneSuff"
+                       name="phoneSuff"
+                       formControlName="phoneSuff"
+                       class="form-control"
+                       maxlength="4"/>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
         <label for="street">Street: </label>
         <input 
             type="text" 
@@ -40,14 +73,32 @@
         />
     </div>
     <div class="form-group">
-        <label for="state">State: </label>
-        <select
-            formControlName="state"
-            id="state"
-            name="state"
-        >
-            <option *ngFor="let state of states" [value]="state.abbrv">{{state.abbrv}}</option>
-        </select>
+        <div class="row">
+            <div class="col-xs-3">
+                <label for="state">State: </label>
+                <select
+                    class="form-control"
+                    formControlName="state"
+                    id="state"
+                    name="state">
+                    <option *ngFor="let state of states" [value]="state.abbrv">{{state.abbrv}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-xs-3">
+                <label for="zipCode">Zip Code: </label>
+                <input
+                    type="text"
+                    class="form-control"
+                    formControlName="zipCode"
+                    id="zipCode"
+                    name="zipCode"
+                />
+            </div>
+        </div>
     </div>
     <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid || profileForm.pristine">Save</button>
 </form>
