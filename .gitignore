@@ -242,3 +242,9 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+**/TreaviceAlpha/app/**/*.js
+**/TreaviceAlpha/app/**/*.js.map
+**/TreaviceAlpha/dist/**/*.js
+**/TreaviceAlpha/dist/**/*.js.map
+**/TreaviceAlpha/dist/*
