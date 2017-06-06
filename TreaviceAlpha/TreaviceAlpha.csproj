@@ -226,6 +226,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\UserProfileContext\201611290757279_Initial.cs" />
     <Compile Include="Migrations\UserProfileContext\201611290757279_Initial.Designer.cs">
       <DependentUpon>201611290757279_Initial.cs</DependentUpon>

@@ -8,7 +8,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ["", ".ts", ".js"]
+        extensions: [".ts", ".js"]
     },
 
     // define output point
@@ -19,13 +19,13 @@ module.exports = {
     },
 
     module: {
-        preLoaders: [
-            {
-                test: /\.ts$/,
-                exclude: /(node_modules)/,
-                loader: "tslint"
-            }
-        ],
+        // preLoaders: [
+        //    {
+        //        test: /\.ts$/,
+        //        exclude: /(node_modules)/,
+        //        loader: "tslint"
+        //    }
+        // ],
 
         loaders: [
             {
@@ -36,7 +36,7 @@ module.exports = {
             {
                 test: /\.less$/,
                 exclude: /(node_modules)/,
-                loader: "style!css!less"
+                loader: "style-loader!css-loader!less-loader"
             }
         ]
     }

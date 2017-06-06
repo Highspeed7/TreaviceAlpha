@@ -117,6 +117,8 @@ namespace TreaviceAlpha.Controllers.Api
         // POST /api/user/profile
         [Route("profile")]
         [HttpPut]
+        [RequireHttps]
+        [AntiForgeryValidate]
         public bool UpdateUserProfileData([FromBody]ProfileDto profile)
         {
             if (ModelState.IsValid)

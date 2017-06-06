@@ -48,9 +48,11 @@ export class AccountService {
             });
     }
 
-    public updateProfile(userData: any, email: string): Observable<boolean> {
+    public updateProfile(userData: any, email: string, token): Observable<boolean> {
         userData.email = email;
-        const source: Observable<Response> = this.httpService.put(`${this.url}/profile`, userData, null);
+        let headers = new Headers({ "Content-Type": "application/json", "__RequestVerificationToken": token });
+        let options = new RequestOptions({ headers: headers });
+        const source: Observable<Response> = this.httpService.put(`${this.url}/profile`, userData, options);
         return source
             .map((r: Response) => {
                 // Set the new user data

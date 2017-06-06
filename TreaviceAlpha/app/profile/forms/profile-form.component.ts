@@ -40,7 +40,8 @@ export class ProfileFormComponent implements OnInit {
     }
 
     public saveProfile() {
-        this.accountService.updateProfile(this.profileForm.value, this.user.email)
+        let token = this.getVerifyToken();
+        this.accountService.updateProfile(this.profileForm.value, this.user.email, token)
             .subscribe((response: boolean) => {
                 if (response) {
                     location.reload();
@@ -73,5 +74,14 @@ export class ProfileFormComponent implements OnInit {
 
     private initStateModel() {
         return [this.user.profile.state];
+    }
+
+    private getVerifyToken(): string {
+
+        // Get the verify token
+        const tokenElem = <HTMLElement>document.querySelectorAll("div[ncg-request-verification-token]")[0];
+        const tokenVal = tokenElem.getAttribute("ncg-request-verification-token");
+
+        return tokenVal;
     }
 }
