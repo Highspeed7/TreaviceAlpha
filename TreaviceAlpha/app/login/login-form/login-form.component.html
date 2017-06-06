@@ -1,0 +1,26 @@
+﻿<form [formGroup]="loginForm" (ngSubmit)="login($event, loginForm.value, loginForm.valid)">
+    <div class="form-group">
+        <label for="email">Email: </label>
+        <input type="email"
+               id="email"
+               formControlName="email"
+               class="form-control"
+               required>
+        <div *ngIf="loginForm.controls.email.errors && loginForm.controls.email.touched">
+            <div class="alert alert-danger" *ngIf="loginForm.controls.email.errors.required">This field is required.</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password: </label>
+        <input formControlName="password"
+                class="form-control"
+                type="password"
+                id="password"
+                required>
+        <div *ngIf="loginForm.controls.password.errors && loginForm.controls.password.touched">
+            <div class="alert alert-danger" *ngIf="loginForm.controls.password.errors.pattern">Passwords should be at least 8 characters long, with 1 special character (!@#, etc...), and at least 1 number</div>
+            <div class="alert alert-danger" *ngIf="loginForm.controls.password.errors.required">This field required.</div>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">Submit</button>
+</form>

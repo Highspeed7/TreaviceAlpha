@@ -1,0 +1,53 @@
+﻿<form [formGroup]="profileForm" (submit)="saveProfile()">
+    <div class="form-group">
+        <label for="fName">First Name: </label>
+        <input 
+            type="text" 
+            id="fName" 
+            name="firstName"
+            formControlName="firstName" 
+            class="form-control" 
+        />
+    </div>
+    <div class="form-group">
+        <label for="lName">Last Name: </label>
+        <input 
+            type="text" 
+            id="lName" 
+            name="lastName" 
+            formControlName="lastName"
+            class="form-control" 
+        />
+    </div>
+    <div class="form-group">
+        <label for="street">Street: </label>
+        <input 
+            type="text" 
+            id="street" 
+            name="street" 
+            formControlName="street"
+            class="form-control"
+        />
+    </div>
+    <div class="form-group">
+        <label for="city">City: </label>
+        <input 
+            type="text" 
+            id="city" 
+            name="city" 
+            class="form-control"
+            formControlName="city" 
+        />
+    </div>
+    <div class="form-group">
+        <label for="state">State: </label>
+        <select
+            formControlName="state"
+            id="state"
+            name="state"
+        >
+            <option *ngFor="let state of states" [value]="state.abbrv">{{state.abbrv}}</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid || profileForm.pristine">Save</button>
+</form>

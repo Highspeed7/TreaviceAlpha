@@ -14,6 +14,5 @@ namespace TreaviceAlpha.Models
         public string Name { get; set; }
         public byte CategoryId { get; set; }
         public int PointValue { get; set; }
-        public List<User> Users { get; set; }
     }
 }

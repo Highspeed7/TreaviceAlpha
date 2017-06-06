@@ -15,8 +15,15 @@ namespace TreaviceAlpha
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "view/{controller}/{action}/{id}",
+                defaults: new { id = UrlParameter.Optional }
+            );
+
+            // Home Index page have ng-app
+            routes.MapRoute(
+                name: "test",
+                url: "{*.}",
+                defaults: new { controller = "Home", action = "Index" }
             );
         }
     }

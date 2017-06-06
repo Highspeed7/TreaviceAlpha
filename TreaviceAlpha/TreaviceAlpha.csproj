@@ -19,7 +19,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44304</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -215,43 +215,62 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\Api\AccountController.cs" />
+    <Compile Include="Auth\AuthFirst.cs" />
+    <Compile Include="Auth\RequireHttpsAttribute.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="dtos\LoginDto.cs" />
+    <Compile Include="dtos\ProfileDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IdentityMigrations\201611122350265_Initial.cs" />
-    <Compile Include="IdentityMigrations\201611122350265_Initial.Designer.cs">
-      <DependentUpon>201611122350265_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\UserProfileContext\201611290757279_Initial.cs" />
+    <Compile Include="Migrations\UserProfileContext\201611290757279_Initial.Designer.cs">
+      <DependentUpon>201611290757279_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="IdentityMigrations\Configuration.cs" />
+    <Compile Include="Migrations\UserProfileContext\201611290801332_UserIdRequiredInProfileTable.cs" />
+    <Compile Include="Migrations\UserProfileContext\201611290801332_UserIdRequiredInProfileTable.Designer.cs">
+      <DependentUpon>201611290801332_UserIdRequiredInProfileTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserProfileContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Profile.cs" />
+    <Compile Include="Models\ProfileDbContext.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserDbContext.cs" />
+    <Compile Include="Models\Want.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AntiForgeryService.cs" />
     <Compile Include="Services\HashService.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="UsersMigrations\201611122350399_Initial.cs" />
-    <Compile Include="UsersMigrations\201611122350399_Initial.Designer.cs">
-      <DependentUpon>201611122350399_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UsersMigrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\home\home-main\home-main.component.html" />
     <Content Include="app\home\home.component.html" />
     <Content Include="app\landing\landing.component.html" />
+    <Content Include="app\login\login-form\login-form.component.html" />
+    <Content Include="app\login\login.component.html" />
     <Content Include="app\nav\sidenav.component.html" />
+    <Content Include="app\profile\contact-card\contact-card.component.html" />
+    <Content Include="app\profile\forms\profile-form.component.html" />
+    <Content Include="app\profile\profile-pages\can-do.component.html" />
+    <Content Include="app\profile\profile-pages\components\add-skill-form.component.html" />
+    <Content Include="app\profile\profile-pages\components\expandable-field.component.html" />
+    <Content Include="app\profile\profile-pages\selling.component.html" />
+    <Content Include="app\profile\profile-pages\wants.component.html" />
+    <Content Include="app\profile\profile.component.html" />
+    <Content Include="app\profile\progress\progress.component.html" />
     <Content Include="app\register\register-form\register-form.component.html" />
     <Content Include="app\register\register.component.html" />
     <Content Include="app\search\listings-search.component.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\business-man-avatar-vector-1236211.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -317,6 +336,7 @@
     <Content Include="tslint.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\services\notifications\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -331,16 +351,33 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app-routing.module.ts" />
+    <TypeScriptCompile Include="app\dtos\userDto.ts" />
+    <TypeScriptCompile Include="app\home\home-main\home-main.component.ts" />
     <TypeScriptCompile Include="app\home\home.component.ts" />
     <TypeScriptCompile Include="app\home\home.module.ts" />
     <TypeScriptCompile Include="app\home\home-routing.module.ts" />
     <TypeScriptCompile Include="app\landing\landing-routing.module.ts" />
     <TypeScriptCompile Include="app\landing\landing.component.ts" />
     <TypeScriptCompile Include="app\landing\landing.module.ts" />
+    <TypeScriptCompile Include="app\login\login-form\login-form.component.ts" />
+    <TypeScriptCompile Include="app\login\login-routing.module.ts" />
+    <TypeScriptCompile Include="app\login\login.component.ts" />
+    <TypeScriptCompile Include="app\login\login.module.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\models\index.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.component.ts" />
     <TypeScriptCompile Include="app\nav\sidenav.module.ts" />
+    <TypeScriptCompile Include="app\profile\contact-card\contact-card.component.ts" />
+    <TypeScriptCompile Include="app\profile\forms\profile-form.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\can-do.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\components\add-skill.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\components\expandable-field.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\selling.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\wants.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-routing.module.ts" />
+    <TypeScriptCompile Include="app\profile\profile.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile.module.ts" />
+    <TypeScriptCompile Include="app\profile\progress\progress.component.ts" />
     <TypeScriptCompile Include="app\register\register-form\register-form.component.ts" />
     <TypeScriptCompile Include="app\register\register-form\validators\register-form-validators.ts" />
     <TypeScriptCompile Include="app\register\register-routing.module.ts" />
@@ -351,17 +388,19 @@
     <TypeScriptCompile Include="app\search\listings-search.component.ts" />
     <TypeScriptCompile Include="app\polyfills.ts" />
     <TypeScriptCompile Include="app\services\account.service.ts" />
+    <TypeScriptCompile Include="app\services\helpers\objectHelper.service.ts" />
+    <TypeScriptCompile Include="app\services\progress\progress.service.ts" />
     <TypeScriptCompile Include="app\vendor.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="IdentityMigrations\201611122350265_Initial.resx">
-      <DependentUpon>201611122350265_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201611290757279_Initial.resx">
+      <DependentUpon>201611290757279_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersMigrations\201611122350399_Initial.resx">
-      <DependentUpon>201611122350399_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201611290801332_UserIdRequiredInProfileTable.resx">
+      <DependentUpon>201611290801332_UserIdRequiredInProfileTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -383,7 +422,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2493</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2493/</IISUrl>
+          <IISUrl>https://localhost:44304/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

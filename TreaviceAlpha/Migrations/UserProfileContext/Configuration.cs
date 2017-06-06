@@ -1,19 +1,19 @@
-namespace TreaviceAlpha.IdentityMigrations
+namespace TreaviceAlpha.Migrations.UserProfileContext
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class ApplicationDbConfig : DbMigrationsConfiguration<TreaviceAlpha.Models.ApplicationDbContext>
+    internal sealed class UserProfilesConfig : DbMigrationsConfiguration<TreaviceAlpha.Models.ProfileDbContext>
     {
-        public ApplicationDbConfig()
+        public UserProfilesConfig()
         {
             AutomaticMigrationsEnabled = false;
-            MigrationsDirectory = @"IdentityMigrations";
+            MigrationsDirectory = @"Migrations\UserProfileContext";
         }
 
-        protected override void Seed(TreaviceAlpha.Models.ApplicationDbContext context)
+        protected override void Seed(TreaviceAlpha.Models.ProfileDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
