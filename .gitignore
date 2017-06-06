@@ -243,6 +243,7 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 
+# Treavice compiled files and generated files.
 **/TreaviceAlpha/app/**/*.js
 **/TreaviceAlpha/app/**/*.js.map
 **/TreaviceAlpha/dist/**/*.js
