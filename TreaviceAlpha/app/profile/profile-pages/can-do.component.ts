@@ -1,11 +1,11 @@
-﻿import { Component, OnInit, OnChanges } from "@angular/core";
+﻿import { Component, OnInit } from "@angular/core";
 import { ProgressService } from "../../services/progress/progress.service";
 
 @Component({
     templateUrl: "app/profile/profile-pages/can-do.component.html"
 })
 
-export class CanDoComponent implements OnInit, OnChanges {
+export class CanDoComponent implements OnInit {
 
     public profileComplete: boolean = false;
 
@@ -20,9 +20,5 @@ export class CanDoComponent implements OnInit, OnChanges {
         .subscribe((percent: string) => {
             this.profileComplete = (parseInt(percent, 10) === 100);
         });
-    }
-
-    public ngOnChanges(changes: Object): void {
-        console.log(changes);
     }
 }
