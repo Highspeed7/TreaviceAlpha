@@ -16,15 +16,12 @@
                             title="Edit Profile">
                             <profile-form></profile-form>
                         </expandable-field>
-                        <expandable-field [title]="expandableFields[1].title">
-                            hi
-                        </expandable-field>
                     </div>
                 </div>
                 <ul class="nav nav-tabs inner-nav">
-                    <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'wants'}}">I Want</a></li>
-                    <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'can-do'}}">I Can Do</a></li>
-                    <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'selling'}}">I'm Selling</a></li>
+                    <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'wants'}}">Searching For</a></li>
+                    <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'can-do'}}">Services Offered</a></li>
+                    <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'selling'}}">My Trove</a></li>
                 </ul>
                 <router-outlet name="profile-pages"></router-outlet>
             </div>
