@@ -1,0 +1,22 @@
+﻿<form [formGroup]="treasureForm">
+    <div class="form-group">
+        <label for="troveTitle">Title of your new Trove: </label>
+        <input 
+            type="text"
+            class="form-control"
+            id="troveTitle"
+            name="troveTitle"
+            formControlName="troveTitle"
+        />
+    </div>
+    <h3 class="text-center">OR</h3>
+    <div class="form-group">
+        <label for="existTroveTitle">Select from an existing Trove: </label>
+        <select
+            id="existTroveTitle"
+            class="form-control"
+        >
+            <option *ngFor="let trove of troves" value="trove.name">{{trove.name}}</option>
+        </select>
+    </div>
+</form>
