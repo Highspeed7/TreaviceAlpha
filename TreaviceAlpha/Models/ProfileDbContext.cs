@@ -11,6 +11,8 @@ namespace TreaviceAlpha.Models
     {
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Category> Category { get; set; }
+
         public ProfileDbContext()
             : base("name=DefaultConnection")
         {

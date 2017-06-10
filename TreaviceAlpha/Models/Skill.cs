@@ -11,8 +11,19 @@ namespace TreaviceAlpha.Models
     {
         [Required]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public byte CategoryId { get; set; }
-        public int PointValue { get; set; }
+        [Required]
+        public string Title { get; set; }
+        [Required]
+        public string Desc { get; set; }
+        [Required]
+        public int Value { get; set; }
+        [Required]
+        public bool Negotiable { get; set; }
+
+        [Required]
+        public int ProfileId { get; set; }
+        public Profile Profile { get; set; }
+
+        public Category Category { get; set; }
     }
 }
