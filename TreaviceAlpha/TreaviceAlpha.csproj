@@ -223,6 +223,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="dtos\LoginDto.cs" />
     <Compile Include="dtos\ProfileDto.cs" />
+    <Compile Include="dtos\ServiceDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -250,15 +251,48 @@
     <Compile Include="Migrations\UserProfileContext\201706101415347_RemovingRedundantCategoryId.Designer.cs">
       <DependentUpon>201706101415347_RemovingRedundantCategoryId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\UserProfileContext\201706121952399_DeleteSkillAndItemTable.cs" />
+    <Compile Include="Migrations\UserProfileContext\201706121952399_DeleteSkillAndItemTable.Designer.cs">
+      <DependentUpon>201706121952399_DeleteSkillAndItemTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserProfileContext\201706122013020_AddTroveTreasureAndTreasureTypeTables.cs" />
+    <Compile Include="Migrations\UserProfileContext\201706122013020_AddTroveTreasureAndTreasureTypeTables.Designer.cs">
+      <DependentUpon>201706122013020_AddTroveTreasureAndTreasureTypeTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserProfileContext\201706122017410_AddRequiredToCertainTroveProperties.cs" />
+    <Compile Include="Migrations\UserProfileContext\201706122017410_AddRequiredToCertainTroveProperties.Designer.cs">
+      <DependentUpon>201706122017410_AddRequiredToCertainTroveProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserProfileContext\201706122021036_AddedTroveAndTreasureDbSets.cs" />
+    <Compile Include="Migrations\UserProfileContext\201706122021036_AddedTroveAndTreasureDbSets.Designer.cs">
+      <DependentUpon>201706122021036_AddedTroveAndTreasureDbSets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserProfileContext\201706122023063_TroveTreasureLinkingTable.cs" />
+    <Compile Include="Migrations\UserProfileContext\201706122023063_TroveTreasureLinkingTable.Designer.cs">
+      <DependentUpon>201706122023063_TroveTreasureLinkingTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserProfileContext\201706122052025_AddTroveTreasureResourceTable.cs" />
+    <Compile Include="Migrations\UserProfileContext\201706122052025_AddTroveTreasureResourceTable.Designer.cs">
+      <DependentUpon>201706122052025_AddTroveTreasureResourceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserProfileContext\201706122118358_AddProfileAwarenessToTroveRemoveFromTreasure.cs" />
+    <Compile Include="Migrations\UserProfileContext\201706122118358_AddProfileAwarenessToTroveRemoveFromTreasure.Designer.cs">
+      <DependentUpon>201706122118358_AddProfileAwarenessToTroveRemoveFromTreasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\UserProfileContext\201706122123083_RemovingUnwantedForeignKeyColumn.cs" />
+    <Compile Include="Migrations\UserProfileContext\201706122123083_RemovingUnwantedForeignKeyColumn.Designer.cs">
+      <DependentUpon>201706122123083_RemovingUnwantedForeignKeyColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\UserProfileContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\ProfileDbContext.cs" />
-    <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\Treasure.cs" />
+    <Compile Include="Models\TresureType.cs" />
+    <Compile Include="Models\Trove.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Want.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -432,6 +466,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\UserProfileContext\201706101415347_RemovingRedundantCategoryId.resx">
       <DependentUpon>201706101415347_RemovingRedundantCategoryId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201706121952399_DeleteSkillAndItemTable.resx">
+      <DependentUpon>201706121952399_DeleteSkillAndItemTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201706122013020_AddTroveTreasureAndTreasureTypeTables.resx">
+      <DependentUpon>201706122013020_AddTroveTreasureAndTreasureTypeTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201706122017410_AddRequiredToCertainTroveProperties.resx">
+      <DependentUpon>201706122017410_AddRequiredToCertainTroveProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201706122021036_AddedTroveAndTreasureDbSets.resx">
+      <DependentUpon>201706122021036_AddedTroveAndTreasureDbSets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201706122023063_TroveTreasureLinkingTable.resx">
+      <DependentUpon>201706122023063_TroveTreasureLinkingTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201706122052025_AddTroveTreasureResourceTable.resx">
+      <DependentUpon>201706122052025_AddTroveTreasureResourceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201706122118358_AddProfileAwarenessToTroveRemoveFromTreasure.resx">
+      <DependentUpon>201706122118358_AddProfileAwarenessToTroveRemoveFromTreasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\UserProfileContext\201706122123083_RemovingUnwantedForeignKeyColumn.resx">
+      <DependentUpon>201706122123083_RemovingUnwantedForeignKeyColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

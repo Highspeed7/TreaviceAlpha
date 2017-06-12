@@ -148,6 +148,26 @@ namespace TreaviceAlpha.Controllers.Api
             return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "The server received a bad request during login");
         }
 
+        // POST /api/user/profile/services
+        //[System.Web.Http.Route("profile/services")]
+        //[System.Web.Http.HttpPut]
+        //[Auth.RequireHttps]
+        //[AuthFirst]
+        //public HttpResponseMessage SaveOrUpdateServices([FromBody]ServiceDto service)
+        //{
+        //    var userEmail = HttpContext.Current.User.Identity.Name;
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        using (var context = new ProfileDbContext())
+        //        {
+        //            var userInDb = context.Users.Single(u => u.Email == userEmail);
+        //            var profileInDb = context.Profiles.Single(p => p.UserId == userInDb.Id);
+
+        //        }
+        //    }
+        //}
+
         [System.Web.Http.Route("progress")]
         [System.Web.Http.HttpGet]
         public int GetProfileProgress(string email)

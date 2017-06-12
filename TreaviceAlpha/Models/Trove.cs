@@ -1,29 +1,26 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace TreaviceAlpha.Models
 {
-    public class Skill
+    public class Trove
     {
-        [Required]
         public int Id { get; set; }
         [Required]
         public string Title { get; set; }
-        [Required]
         public string Desc { get; set; }
         [Required]
         public int Value { get; set; }
-        [Required]
-        public bool Negotiable { get; set; }
 
-        [Required]
+        [ForeignKey("Profile")]
         public int ProfileId { get; set; }
         public Profile Profile { get; set; }
 
-        public Category Category { get; set; }
+        [Required]
+        public virtual ICollection<Treasure> Treasures { get; set; }
     }
 }
