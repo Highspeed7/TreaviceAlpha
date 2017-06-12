@@ -22,7 +22,8 @@ export class AddSkillComponent implements OnInit {
             title: this.initSkillTitle(),
             desc: this.initSkillDesc(),
             isNeg: ["no"],
-            category: ["", Validators.required]
+            category: ["", Validators.required],
+            ptValue: [0]
         });
     }
 

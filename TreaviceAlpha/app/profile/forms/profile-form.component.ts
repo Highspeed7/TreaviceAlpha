@@ -1,5 +1,6 @@
 ﻿import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router"
+import { Response } from "@angular/http";
+import { Router } from "@angular/router";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 import { AccountService } from "../../services/account.service";
@@ -48,9 +49,19 @@ export class ProfileFormComponent implements OnInit {
             this.profileForm.value.phone = "";
         }
         this.accountService.updateProfile(this.profileForm.value, this.user.email, token)
-            .subscribe((response: boolean) => {
-                if (response) {
+            .subscribe((response: Response) => {
+                if (response.status === 200) {
+                    var userDataObj = {
+                        email: this.profileForm.value.email,
+                        profile: this.profileForm.value
+                    }
+                    this.accountService.setLastLoggedInUser(userDataObj);
                     location.reload();
+                }
+            }, (err: any) => {
+                // Hand off to error handler
+                if (err.status === 401) {
+                    alert("You must first login");
                 }
             });
     }

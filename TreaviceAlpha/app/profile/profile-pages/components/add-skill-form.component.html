@@ -58,6 +58,17 @@
             <option *ngFor="let c of categories" value="c.name">{{c.name}}</option>
         </select>
     </div>
+    <div class="form-group">
+        <label for="ptValue">Point Value: </label>
+        <input
+            id="ptValue"
+            class="form-control"
+            name="ptValue"
+            formControlName="ptValue"
+            type="number" 
+            step="1" 
+            min="0" />
+    </div>
     <div class="btn-group">
         <button class="btn btn-primary" type="submit">Submit</button>
     </div>

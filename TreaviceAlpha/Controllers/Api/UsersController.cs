@@ -14,18 +14,19 @@ using Microsoft.Owin.Security;
 using System.Web;
 using TreaviceAlpha.dtos;
 using System.Data.Entity.Migrations;
+using System.Web.Mvc;
 using TreaviceAlpha.Auth;
 
 namespace TreaviceAlpha.Controllers.Api
 {
-    [RoutePrefix("api/user")]
+    [System.Web.Http.RoutePrefix("api/user")]
     public class UsersController : ApiController
     {
         //
         // POST /api/user/register
-        [Route("register")]
-        [HttpPost]
-        [RequireHttps]
+        [System.Web.Http.Route("register")]
+        [System.Web.Http.HttpPost]
+        [Auth.RequireHttps]
         [AntiForgeryValidate]
         public async Task<IHttpActionResult> CreateUser(User user)
         {
@@ -64,9 +65,9 @@ namespace TreaviceAlpha.Controllers.Api
 
         //
         // POST /api/user/register
-        [Route("login")]
-        [HttpPost]
-        [RequireHttps]
+        [System.Web.Http.Route("login")]
+        [System.Web.Http.HttpPost]
+        [Auth.RequireHttps]
         [AntiForgeryValidate]
         public IHttpActionResult Login(User user)
         {
@@ -95,8 +96,8 @@ namespace TreaviceAlpha.Controllers.Api
         // TODO: Refactor controller database calls into a respository
         //
         // GET /api/user/profile
-        [Route("profile")]
-        [HttpGet]
+        [System.Web.Http.Route("profile")]
+        [System.Web.Http.HttpGet]
         public IEnumerable<Profile> GetUserProfileData(string userEmail)
         {
             // TODO: User a better qualified model for returning profile data.
@@ -115,11 +116,14 @@ namespace TreaviceAlpha.Controllers.Api
         }
 
         // POST /api/user/profile
-        [Route("profile")]
-        [HttpPut]
-        [RequireHttps]
-        public bool UpdateUserProfileData([FromBody]ProfileDto profile)
+        [System.Web.Http.Route("profile")]
+        [System.Web.Http.HttpPut]
+        [Auth.RequireHttps]
+        [AuthFirst]
+        public HttpResponseMessage UpdateUserProfileData([FromBody]ProfileDto profile)
         {
+            var Request = new HttpRequestMessage();
+
             if (ModelState.IsValid)
             {
                 using (var context = new ProfileDbContext())
@@ -137,15 +141,15 @@ namespace TreaviceAlpha.Controllers.Api
 
                     if (context.SaveChanges() > 0)
                     {
-                        return true;
+                        return Request.CreateResponse(HttpStatusCode.OK);
                     }
                 }
             }
-            return false;
+            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "The server received a bad request during login");
         }
 
-        [Route("progress")]
-        [HttpGet]
+        [System.Web.Http.Route("progress")]
+        [System.Web.Http.HttpGet]
         public int GetProfileProgress(string email)
         {
             int completedFieldsCount = 0;
@@ -191,16 +195,16 @@ namespace TreaviceAlpha.Controllers.Api
             return ((completedFieldsCount*100)/8);
         }
 
-        [Route("logout")]
-        [HttpGet]
+        [System.Web.Http.Route("logout")]
+        [System.Web.Http.HttpGet]
         public void Logout()
         {
             HttpContext.Current.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie,
                                                                     DefaultAuthenticationTypes.ExternalCookie);
         }
 
-        [Route("isLoggedIn")]
-        [HttpGet]
+        [System.Web.Http.Route("isLoggedIn")]
+        [System.Web.Http.HttpGet]
         public bool IsLoggedIn()
         {
             return HttpContext.Current.Request.IsAuthenticated;
