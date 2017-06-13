@@ -22,25 +22,26 @@ namespace TreaviceAlpha.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Title = c.String(nullable: false, maxLength: 150),
+                        Title = c.String(),
                         Value = c.Int(nullable: false),
                         ImgKey = c.String(),
                         CatId = c.Int(nullable: false),
                         TypeId = c.Byte(nullable: false),
+                        Category_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Categories", t => t.Category_Id)
                 .ForeignKey("dbo.TresureTypes", t => t.TypeId, cascadeDelete: true)
-                .ForeignKey("dbo.Categories", t => t.CatId, cascadeDelete: true)
-                .Index(t => t.CatId)
-                .Index(t => t.TypeId);
+                .Index(t => t.TypeId)
+                .Index(t => t.Category_Id);
             
             CreateTable(
                 "dbo.Troves",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Title = c.String(nullable: false, maxLength: 150),
-                        Desc = c.String(maxLength: 1000),
+                        Title = c.String(),
+                        Desc = c.String(),
                         Value = c.Int(nullable: false),
                         ProfileId = c.Int(nullable: false),
                     })
@@ -52,7 +53,7 @@ namespace TreaviceAlpha.Migrations
                 "dbo.Profiles",
                 c => new
                     {
-                        Id = c.Int(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         FirstName = c.String(),
                         LastName = c.String(),
                         Street = c.String(),
@@ -63,8 +64,8 @@ namespace TreaviceAlpha.Migrations
                         UserId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Users", t => t.Id)
-                .Index(t => t.Id);
+                .ForeignKey("dbo.Users", t => t.UserId, cascadeDelete: true)
+                .Index(t => t.UserId);
             
             CreateTable(
                 "dbo.Users",
@@ -97,37 +98,37 @@ namespace TreaviceAlpha.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.TroveXTreasure",
+                "dbo.TroveTreasures",
                 c => new
                     {
-                        TroveId = c.Int(nullable: false),
-                        TreasureId = c.Int(nullable: false),
+                        Trove_Id = c.Int(nullable: false),
+                        Treasure_Id = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => new { t.TroveId, t.TreasureId })
-                .ForeignKey("dbo.Troves", t => t.TroveId, cascadeDelete: true)
-                .ForeignKey("dbo.Treasures", t => t.TreasureId, cascadeDelete: true)
-                .Index(t => t.TroveId)
-                .Index(t => t.TreasureId);
+                .PrimaryKey(t => new { t.Trove_Id, t.Treasure_Id })
+                .ForeignKey("dbo.Troves", t => t.Trove_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Treasures", t => t.Treasure_Id, cascadeDelete: true)
+                .Index(t => t.Trove_Id)
+                .Index(t => t.Treasure_Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Treasures", "CatId", "dbo.Categories");
             DropForeignKey("dbo.Treasures", "TypeId", "dbo.TresureTypes");
-            DropForeignKey("dbo.TroveXTreasure", "TreasureId", "dbo.Treasures");
-            DropForeignKey("dbo.TroveXTreasure", "TroveId", "dbo.Troves");
+            DropForeignKey("dbo.TroveTreasures", "Treasure_Id", "dbo.Treasures");
+            DropForeignKey("dbo.TroveTreasures", "Trove_Id", "dbo.Troves");
             DropForeignKey("dbo.Wants", "Profile_Id", "dbo.Profiles");
-            DropForeignKey("dbo.Profiles", "Id", "dbo.Users");
+            DropForeignKey("dbo.Profiles", "UserId", "dbo.Users");
             DropForeignKey("dbo.Troves", "ProfileId", "dbo.Profiles");
-            DropIndex("dbo.TroveXTreasure", new[] { "TreasureId" });
-            DropIndex("dbo.TroveXTreasure", new[] { "TroveId" });
+            DropForeignKey("dbo.Treasures", "Category_Id", "dbo.Categories");
+            DropIndex("dbo.TroveTreasures", new[] { "Treasure_Id" });
+            DropIndex("dbo.TroveTreasures", new[] { "Trove_Id" });
             DropIndex("dbo.Wants", new[] { "Profile_Id" });
-            DropIndex("dbo.Profiles", new[] { "Id" });
+            DropIndex("dbo.Profiles", new[] { "UserId" });
             DropIndex("dbo.Troves", new[] { "ProfileId" });
+            DropIndex("dbo.Treasures", new[] { "Category_Id" });
             DropIndex("dbo.Treasures", new[] { "TypeId" });
-            DropIndex("dbo.Treasures", new[] { "CatId" });
-            DropTable("dbo.TroveXTreasure");
+            DropTable("dbo.TroveTreasures");
             DropTable("dbo.TresureTypes");
             DropTable("dbo.Wants");
             DropTable("dbo.Users");

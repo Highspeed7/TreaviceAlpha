@@ -9,6 +9,7 @@ namespace TreaviceAlpha.Models
 {
     public class Profile
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         
         public string FirstName { get; set; }
