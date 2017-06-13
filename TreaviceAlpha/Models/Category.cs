@@ -14,5 +14,7 @@ namespace TreaviceAlpha.Models
         public string Title { get; set; }
         [Required]
         public int UseCount { get; set; }
+
+        public ICollection<Treasure> Treasures { get; set; }
     }
 }

@@ -12,12 +12,11 @@ namespace TreaviceAlpha.Models
         public string Title { get; set; }
         public int Value { get; set; }
         public string ImgKey { get; set; }
-        public byte CatId { get; set; }
+        public int CatId { get; set; }
         public Category Category { get; set; }
         public byte TypeId { get; set; }
         public TresureType Type { get; set; }
 
-        [Required]
         public virtual ICollection<Trove> Troves { get; set; }
     }
 }

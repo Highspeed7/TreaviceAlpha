@@ -1,16 +1,15 @@
-namespace TreaviceAlpha.Migrations.UserProfileContext
+namespace TreaviceAlpha.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class UserProfilesConfig : DbMigrationsConfiguration<TreaviceAlpha.Models.ProfileDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<TreaviceAlpha.Models.ProfileDbContext>
     {
-        public UserProfilesConfig()
+        public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            MigrationsDirectory = @"Migrations\UserProfileContext";
         }
 
         protected override void Seed(TreaviceAlpha.Models.ProfileDbContext context)

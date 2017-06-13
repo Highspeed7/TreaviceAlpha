@@ -31,7 +31,6 @@ namespace TreaviceAlpha.Controllers.Api
         public async Task<IHttpActionResult> CreateUser(User user)
         {
             Profile profile = new Profile();
-
             if (ModelState.IsValid)
             {
                 user.Password = HashService.HashPass(user.Password);
@@ -50,7 +49,7 @@ namespace TreaviceAlpha.Controllers.Api
 
                             return Ok();
                             
-                        }catch (Exception)
+                        }catch (Exception e)
                         {
                             dbContextTransaction.Rollback();
                             var responseMessage = new HttpResponseMessage(HttpStatusCode.Conflict);

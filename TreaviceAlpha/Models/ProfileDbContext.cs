@@ -22,6 +22,7 @@ namespace TreaviceAlpha.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            // Trove to Treasure
             modelBuilder.Entity<Trove>()
                 .HasMany<Treasure>(tv => tv.Treasures)
                 .WithMany(tr => tr.Troves)
@@ -31,6 +32,48 @@ namespace TreaviceAlpha.Models
                     cs.MapRightKey("TreasureId");
                     cs.ToTable("TroveXTreasure");
                 });
+
+            // User
+            modelBuilder.Entity<User>()
+                .HasKey(u => u.Id);
+
+            // Trove
+            modelBuilder.Entity<Trove>()
+                .HasKey(tv => tv.Id);
+            modelBuilder.Entity<Trove>()
+                .Property(tv => tv.Title)
+                .HasMaxLength(150)
+                .IsRequired();
+            modelBuilder.Entity<Trove>()
+                .Property(tv => tv.Desc)
+                .HasMaxLength(1000);
+            modelBuilder.Entity<Trove>()
+                .Property(tv => tv.Value)
+                .IsRequired();
+
+            // Treasure
+            modelBuilder.Entity<Treasure>()
+                .HasKey(t => t.Id);
+            modelBuilder.Entity<Treasure>()
+                .Property(t => t.Title)
+                .IsRequired()
+                .HasMaxLength(150);
+            modelBuilder.Entity<Treasure>()
+                .Property(t => t.Value)
+                .IsRequired();
+
+            // Profile
+            modelBuilder.Entity<Profile>()
+                .HasMany(p => p.Troves)
+                .WithRequired(tv => tv.Profile)
+                .HasForeignKey(tv => tv.ProfileId);
+
+            // Category
+            modelBuilder
+                .Entity<Category>()
+                .HasMany(c => c.Treasures)
+                .WithRequired(t => t.Category)
+                .HasForeignKey(t => t.CatId);
         }
     }
 }
