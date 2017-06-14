@@ -224,12 +224,25 @@
     <Compile Include="dtos\LoginDto.cs" />
     <Compile Include="dtos\ProfileDto.cs" />
     <Compile Include="dtos\ServiceDto.cs" />
+    <Compile Include="EntityConfigurations\TreasureConfiguration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201706130717229_InitialMigration.cs" />
     <Compile Include="Migrations\201706130717229_InitialMigration.Designer.cs">
       <DependentUpon>201706130717229_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706131659399_InitialMigration1.cs" />
+    <Compile Include="Migrations\201706131659399_InitialMigration1.Designer.cs">
+      <DependentUpon>201706131659399_InitialMigration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706131705403_AddCatIdAsForeignKeyInTreasuresTable.cs" />
+    <Compile Include="Migrations\201706131705403_AddCatIdAsForeignKeyInTreasuresTable.Designer.cs">
+      <DependentUpon>201706131705403_AddCatIdAsForeignKeyInTreasuresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706131742425_AddDateCreatedToTreasureTable.cs" />
+    <Compile Include="Migrations\201706131742425_AddDateCreatedToTreasureTable.Designer.cs">
+      <DependentUpon>201706131742425_AddDateCreatedToTreasureTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -299,14 +312,18 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -399,6 +416,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706130717229_InitialMigration.resx">
       <DependentUpon>201706130717229_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706131659399_InitialMigration1.resx">
+      <DependentUpon>201706131659399_InitialMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706131705403_AddCatIdAsForeignKeyInTreasuresTable.resx">
+      <DependentUpon>201706131705403_AddCatIdAsForeignKeyInTreasuresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706131742425_AddDateCreatedToTreasureTable.resx">
+      <DependentUpon>201706131742425_AddDateCreatedToTreasureTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

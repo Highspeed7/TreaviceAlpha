@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace TreaviceAlpha.Models
 {
@@ -17,6 +14,13 @@ namespace TreaviceAlpha.Models
         public byte TypeId { get; set; }
         public TresureType Type { get; set; }
 
+        public DateTime DateCreated { get; set; }
+
         public virtual ICollection<Trove> Troves { get; set; }
+
+        public Treasure()
+        {
+            DateCreated = DateTime.Now;
+        }
     }
 }

@@ -36,6 +36,11 @@ namespace TreaviceAlpha.Controllers.Api
                 user.Password = HashService.HashPass(user.Password);
                 using (var context = new ProfileDbContext())
                 {
+                    // Check that the user does not already exist.
+                    if (context.Users.Any(u => u.Email == user.Email))
+                    {
+                        return Content(HttpStatusCode.BadRequest, "User already exists");
+                    }
                     using (var dbContextTransaction = context.Database.BeginTransaction())
                     {
                         try

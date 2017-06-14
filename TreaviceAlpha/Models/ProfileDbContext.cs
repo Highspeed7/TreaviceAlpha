@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Web;
+using TreaviceAlpha.EntityConfigurations;
 
 namespace TreaviceAlpha.Models
 {
@@ -19,5 +20,10 @@ namespace TreaviceAlpha.Models
         public DbSet<Category> Category { get; set; }
         public DbSet<Trove> Troves { get; set; }
         public DbSet<Treasure> Treasures { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new TreasureConfiguration());
+        }
     }
 }

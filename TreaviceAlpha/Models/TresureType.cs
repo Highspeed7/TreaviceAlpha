@@ -9,5 +9,7 @@ namespace TreaviceAlpha.Models
     {
         public byte Id { get; set; }
         public string Name { get; set; }
+
+        public ICollection<Treasure> Treasures { get; set; }
     }
 }
