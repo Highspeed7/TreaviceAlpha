@@ -1,4 +1,5 @@
 ﻿import { Component, OnInit } from "@angular/core";
+import { Response } from "@angular/http";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import { RegisterFormValidators } from "./validators/register-form-validators";
@@ -64,8 +65,8 @@ export class RegisterFormComponent implements OnInit {
                     alert("Save successful");
                 }
             })
-            .catch((err) => {
-                alert("Save failed");
+            .catch((err: Response) => {
+                alert("The server says: " + err.text());
             });
         return false;
     }
