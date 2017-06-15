@@ -9,7 +9,6 @@ namespace TreaviceAlpha.Models
 {
     public class Profile
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         
         public string FirstName { get; set; }
@@ -20,7 +19,6 @@ namespace TreaviceAlpha.Models
         public string ZipCode { get; set; }
         public string Phone { get; set; }
 
-        public int UserId { get; set; }
         public User User { get; set; }
 
         public ICollection<Want> Wants { get; set; }

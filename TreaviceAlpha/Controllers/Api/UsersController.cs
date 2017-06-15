@@ -30,7 +30,7 @@ namespace TreaviceAlpha.Controllers.Api
         [AntiForgeryValidate]
         public async Task<IHttpActionResult> CreateUser(User user)
         {
-            Profile profile = new Profile();
+            user.Profile = new Profile();
             if (ModelState.IsValid)
             {
                 user.Password = HashService.HashPass(user.Password);
@@ -47,11 +47,7 @@ namespace TreaviceAlpha.Controllers.Api
                         {
                             context.Users.Add(user);
                             await context.SaveChangesAsync();
-                            profile.UserId = user.Id;
-                            context.Profiles.Add(profile);
-                            await context.SaveChangesAsync();
                             dbContextTransaction.Commit();
-
                             return Ok();
                             
                         }catch (Exception e)
@@ -113,7 +109,7 @@ namespace TreaviceAlpha.Controllers.Api
 
                 var result = from p in context.Profiles
                                    join u in userQuery
-                                   on p.UserId equals u.Id
+                                   on p.Id equals u.Id
                                    select p;
                 return result.ToList();
             }
@@ -133,7 +129,7 @@ namespace TreaviceAlpha.Controllers.Api
                 using (var context = new ProfileDbContext())
                 {
                     var userInDb = context.Users.Single(u => u.Email == profile.Email);
-                    var profileInDb = context.Profiles.Single(p => p.UserId == userInDb.Id);
+                    var profileInDb = context.Profiles.SingleOrDefault(p => p.Id == userInDb.Id);
 
                     profileInDb.FirstName = profile.FirstName;
                     profileInDb.LastName = profile.LastName;
@@ -181,7 +177,7 @@ namespace TreaviceAlpha.Controllers.Api
             using (var context = new ProfileDbContext())
             {
                 var userInDb = context.Users.Single(u => u.Email == email);
-                var profileInDb = context.Profiles.Single(p => p.UserId == userInDb.Id);
+                var profileInDb = context.Profiles.SingleOrDefault(p => p.Id == userInDb.Id);
 
                 if (!String.IsNullOrEmpty(profileInDb.FirstName))
                 {

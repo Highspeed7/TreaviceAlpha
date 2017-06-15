@@ -21,6 +21,7 @@ namespace TreaviceAlpha.Models
         public Treasure()
         {
             DateCreated = DateTime.Now;
+            Troves.Add(new Trove());
         }
     }
 }

@@ -24,6 +24,9 @@ namespace TreaviceAlpha.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new TreasureConfiguration());
+            modelBuilder.Entity<Profile>()
+                .HasRequired(p => p.User)
+                .WithRequiredDependent(u => u.Profile);
         }
     }
 }

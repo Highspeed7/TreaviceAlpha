@@ -228,21 +228,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706130717229_InitialMigration.cs" />
-    <Compile Include="Migrations\201706130717229_InitialMigration.Designer.cs">
-      <DependentUpon>201706130717229_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201706142303139_InitialMigration.cs" />
+    <Compile Include="Migrations\201706142303139_InitialMigration.Designer.cs">
+      <DependentUpon>201706142303139_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706131659399_InitialMigration1.cs" />
-    <Compile Include="Migrations\201706131659399_InitialMigration1.Designer.cs">
-      <DependentUpon>201706131659399_InitialMigration1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706131705403_AddCatIdAsForeignKeyInTreasuresTable.cs" />
-    <Compile Include="Migrations\201706131705403_AddCatIdAsForeignKeyInTreasuresTable.Designer.cs">
-      <DependentUpon>201706131705403_AddCatIdAsForeignKeyInTreasuresTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706131742425_AddDateCreatedToTreasureTable.cs" />
-    <Compile Include="Migrations\201706131742425_AddDateCreatedToTreasureTable.Designer.cs">
-      <DependentUpon>201706131742425_AddDateCreatedToTreasureTable.cs</DependentUpon>
+    <Compile Include="Migrations\201706142310090_RemovingUserIdFromProfileTable.cs" />
+    <Compile Include="Migrations\201706142310090_RemovingUserIdFromProfileTable.Designer.cs">
+      <DependentUpon>201706142310090_RemovingUserIdFromProfileTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -414,17 +406,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706130717229_InitialMigration.resx">
-      <DependentUpon>201706130717229_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706142303139_InitialMigration.resx">
+      <DependentUpon>201706142303139_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706131659399_InitialMigration1.resx">
-      <DependentUpon>201706131659399_InitialMigration1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706131705403_AddCatIdAsForeignKeyInTreasuresTable.resx">
-      <DependentUpon>201706131705403_AddCatIdAsForeignKeyInTreasuresTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706131742425_AddDateCreatedToTreasureTable.resx">
-      <DependentUpon>201706131742425_AddDateCreatedToTreasureTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706142310090_RemovingUserIdFromProfileTable.resx">
+      <DependentUpon>201706142310090_RemovingUserIdFromProfileTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

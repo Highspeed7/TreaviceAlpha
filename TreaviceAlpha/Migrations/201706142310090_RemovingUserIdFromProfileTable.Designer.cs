@@ -7,13 +7,13 @@ namespace TreaviceAlpha.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialMigration1 : IMigrationMetadata
+    public sealed partial class RemovingUserIdFromProfileTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(RemovingUserIdFromProfileTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706131659399_InitialMigration1"; }
+            get { return "201706142310090_RemovingUserIdFromProfileTable"; }
         }
         
         string IMigrationMetadata.Source
