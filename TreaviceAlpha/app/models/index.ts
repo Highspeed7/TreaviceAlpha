@@ -23,6 +23,12 @@ export class UserData {
     public profile: Profile;
 }
 
+export class AssetCategory
+{
+    public id: number;
+    public title: string;
+}
+
 export class Treasure {
     public title: string;
     public desc: string;
