@@ -165,10 +165,10 @@ namespace TreaviceAlpha.Controllers.Api
         }
 
         // GET /api/user/profiles/assets/categories
-        [System.Web.Http.Route("profile/assets/categories")]
+        [System.Web.Http.Route("profile/assets/troves")]
         [System.Web.Http.HttpGet]
         [AuthFirst]
-        public async Task<IEnumerable<Trove>>  GetAssetTroves()
+        public async Task<IEnumerable<Trove>> GetAssetTroves()
         {
             var userEmail = HttpContext.Current.User.Identity.Name;
             List<Trove> troves;

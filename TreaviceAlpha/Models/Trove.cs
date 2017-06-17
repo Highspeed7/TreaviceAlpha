@@ -17,6 +17,6 @@ namespace TreaviceAlpha.Models
         public int ProfileId { get; set; }
         public Profile Profile { get; set; }
 
-        public virtual ICollection<Treasure> Treasures { get; set; }
+        public ICollection<Treasure> Treasures { get; set; }
     }
 }

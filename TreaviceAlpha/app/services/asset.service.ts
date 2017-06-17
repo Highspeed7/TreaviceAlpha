@@ -2,7 +2,7 @@
 import { Http, Response} from "@angular/http";
 import { Observable } from "rxjs/Observable";
 
-import { Treasure, AssetCategory } from "../models/index";
+import { Treasure, AssetCategory, AssetTrove } from "../models/index";
 
 @Injectable()
 export class AssetService {
@@ -18,6 +18,12 @@ export class AssetService {
 
     public getCategories(): Observable<AssetCategory[]> {
         const source = this.http.get(`${this.apiRoute}/categories`);
+        return source
+            .map(r => r.json());
+    }
+
+    public getTroves(): Observable<AssetTrove[]> {
+        const source = this.http.get(`${this.apiRoute}/troves`);
         return source
             .map(r => r.json());
     }

@@ -16,7 +16,7 @@
             id="existTroveTitle"
             class="form-control"
         >
-            <option *ngFor="let trove of troves" value="trove.name">{{trove.name}}</option>
+            <option *ngFor="let trove of troves" [value]="trove.id">{{trove.title}}</option>
         </select>
     </div>
 </form>

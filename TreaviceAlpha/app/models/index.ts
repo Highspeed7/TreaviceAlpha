@@ -29,6 +29,14 @@ export class AssetCategory
     public title: string;
 }
 
+export class AssetTrove {
+    public id: number;
+    public title: string;
+    public desc: string;
+    public value: number;
+    public profileId: number;
+}
+
 export class Treasure {
     public title: string;
     public desc: string;
