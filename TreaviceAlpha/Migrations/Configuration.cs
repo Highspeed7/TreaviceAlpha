@@ -1,3 +1,5 @@
+using TreaviceAlpha.Models;
+
 namespace TreaviceAlpha.Migrations
 {
     using System;
@@ -19,13 +21,12 @@ namespace TreaviceAlpha.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Category.AddOrUpdate(
+              c => c.Title,
+              new Category { Title = "Landscaping" },
+              new Category { Title = "Carpentry" },
+              new Category { Title = "Photography" }
+            );
         }
     }
 }
