@@ -178,7 +178,7 @@ namespace TreaviceAlpha.Controllers.Api
                 // user id is same as their profile so use it.
                 var userInDb = await context.Users.SingleAsync(u => u.Email == userEmail);
 
-                troves = context.Troves.Where(tr => tr.ProfileId == userInDb.Id).ToList();
+                troves = await context.Troves.Where(tr => tr.ProfileId == userInDb.Id).ToListAsync();
             }
 
             return troves;
