@@ -32,7 +32,7 @@ export class AssetCategory
 export class Treasure {
     public title: string;
     public desc: string;
-    public category: string;
+    public catId: number;
     public ptValue: number;
 }
 

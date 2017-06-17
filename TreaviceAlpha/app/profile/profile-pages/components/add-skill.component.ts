@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { AssetService } from "../../../services/asset.service";
-import { AssetCategory } from "../../../models/index";
+import { AssetCategory, Treasure } from "../../../models/index";
 
 @Component({
     selector: "add-skill-form",
@@ -20,18 +20,26 @@ export class AddSkillComponent implements OnInit {
         this.assetService.getCategories()
             .subscribe((cats: AssetCategory[]) => {
                 this.categories = cats;
+                this.skillForm.controls["category"].setValue(cats[0].id);
             });
 
         this.skillForm = this.fb.group({
             title: this.initSkillTitle(),
             desc: this.initSkillDesc(),
-            category: [this.categories[0].id, Validators.required],
+            category: ["", Validators.required],
             ptValue: [0]
         });
     }
 
     public onSubmit() {
-        this.assetService.addNewService(this.skillForm.value)
+        var treasure: Treasure = {
+            title: this.skillForm.value.title,
+            desc: this.skillForm.value.desc,
+            catId: parseInt(this.skillForm.value.category, 10),
+            ptValue: this.skillForm.value.ptValue
+        }
+
+        this.assetService.addNewService(treasure)
             .subscribe(r => {
                 if (r.status === 200) {
                     alert("Service saved successfully");

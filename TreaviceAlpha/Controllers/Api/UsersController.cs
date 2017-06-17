@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -163,8 +164,28 @@ namespace TreaviceAlpha.Controllers.Api
             return categories;
         }
 
-        // POST /api/user/profile/services
-        [System.Web.Http.Route("profile/services")]
+        // GET /api/user/profiles/assets/categories
+        [System.Web.Http.Route("profile/assets/categories")]
+        [System.Web.Http.HttpGet]
+        [AuthFirst]
+        public async Task<IEnumerable<Trove>>  GetAssetTroves()
+        {
+            var userEmail = HttpContext.Current.User.Identity.Name;
+            List<Trove> troves;
+
+            using (var context = new ProfileDbContext())
+            {
+                // user id is same as their profile so use it.
+                var userInDb = await context.Users.SingleAsync(u => u.Email == userEmail);
+
+                troves = context.Troves.Where(tr => tr.ProfileId == userInDb.Id).ToList();
+            }
+
+            return troves;
+        }
+
+        // POST /api/user/profile/assets/services
+        [System.Web.Http.Route("profile/assets/services")]
         [System.Web.Http.HttpPost]
         [Auth.RequireHttps]
         [AuthFirst]
@@ -189,10 +210,10 @@ namespace TreaviceAlpha.Controllers.Api
                     // For every service create a default trove for it.
                     treasure.Troves.Add(new Trove()
                     {
-                        Title = service.Title + "Trove",
+                        Title = service.Title + " Trove",
                         ProfileId = userInDb.Profile.Id,
                         Value = service.PtValue,
-                        Desc = service.Desc + "Trove.",
+                        Desc = service.Desc + " Trove.",
                     });
 
                     context.Treasures.Add(treasure);
