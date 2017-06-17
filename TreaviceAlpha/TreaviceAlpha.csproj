@@ -236,6 +236,14 @@
     <Compile Include="Migrations\201706142310090_RemovingUserIdFromProfileTable.Designer.cs">
       <DependentUpon>201706142310090_RemovingUserIdFromProfileTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706170339202_TreasureTypeToEnumList.cs" />
+    <Compile Include="Migrations\201706170339202_TreasureTypeToEnumList.Designer.cs">
+      <DependentUpon>201706170339202_TreasureTypeToEnumList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706170347467_RemoveTypeIdFromTreasure.cs" />
+    <Compile Include="Migrations\201706170347467_RemoveTypeIdFromTreasure.Designer.cs">
+      <DependentUpon>201706170347467_RemoveTypeIdFromTreasure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -244,7 +252,7 @@
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\ProfileDbContext.cs" />
     <Compile Include="Models\Treasure.cs" />
-    <Compile Include="Models\TresureType.cs" />
+    <Compile Include="Models\TreasureType.cs" />
     <Compile Include="Models\Trove.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Want.cs" />
@@ -398,6 +406,7 @@
     <TypeScriptCompile Include="app\search\listings-search.component.ts" />
     <TypeScriptCompile Include="app\polyfills.ts" />
     <TypeScriptCompile Include="app\services\account.service.ts" />
+    <TypeScriptCompile Include="app\services\asset.service.ts" />
     <TypeScriptCompile Include="app\services\helpers\objectHelper.service.ts" />
     <TypeScriptCompile Include="app\services\progress\progress.service.ts" />
     <TypeScriptCompile Include="app\vendor.ts" />
@@ -411,6 +420,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706142310090_RemovingUserIdFromProfileTable.resx">
       <DependentUpon>201706142310090_RemovingUserIdFromProfileTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706170339202_TreasureTypeToEnumList.resx">
+      <DependentUpon>201706170339202_TreasureTypeToEnumList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706170347467_RemoveTypeIdFromTreasure.resx">
+      <DependentUpon>201706170347467_RemoveTypeIdFromTreasure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

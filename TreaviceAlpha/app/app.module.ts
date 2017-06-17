@@ -4,6 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
 
 import { AccountService } from "./services/account.service";
+import { AssetService } from "./services/asset.service";
 
 // import { ListSearchModule } from "./search/listings-search.module";
 import { LandingModule } from "./landing/landing.module";
@@ -22,7 +23,8 @@ import { ProfileRoutingModule } from "./profile/profile-routing.module";
         AppComponent
     ],
     providers: [
-        AccountService
+        AccountService,
+        AssetService
     ],
     bootstrap: [AppComponent]
 })

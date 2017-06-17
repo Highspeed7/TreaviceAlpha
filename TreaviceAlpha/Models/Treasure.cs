@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace TreaviceAlpha.Models
 {
@@ -11,17 +12,16 @@ namespace TreaviceAlpha.Models
         public string ImgKey { get; set; }
         public int CatId { get; set; }
         public Category Category { get; set; }
-        public byte TypeId { get; set; }
-        public TresureType Type { get; set; }
+        public TreasureType Type { get; set; }
 
         public DateTime DateCreated { get; set; }
 
-        public virtual ICollection<Trove> Troves { get; set; }
+        public ICollection<Trove> Troves { get; set; }
 
         public Treasure()
         {
             DateCreated = DateTime.Now;
-            Troves.Add(new Trove());
+            Troves = new Collection<Trove>();
         }
     }
 }

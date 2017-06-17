@@ -149,24 +149,54 @@ namespace TreaviceAlpha.Controllers.Api
         }
 
         // POST /api/user/profile/services
-        //[System.Web.Http.Route("profile/services")]
-        //[System.Web.Http.HttpPut]
-        //[Auth.RequireHttps]
-        //[AuthFirst]
-        //public HttpResponseMessage SaveOrUpdateServices([FromBody]ServiceDto service)
-        //{
-        //    var userEmail = HttpContext.Current.User.Identity.Name;
+        [System.Web.Http.Route("profile/services")]
+        [System.Web.Http.HttpPost]
+        [Auth.RequireHttps]
+        [AuthFirst]
+        public IHttpActionResult AddService([FromBody]ServiceDto service)
+        {
+            var userEmail = HttpContext.Current.User.Identity.Name;
 
-        //    if (ModelState.IsValid)
-        //    {
-        //        using (var context = new ProfileDbContext())
-        //        {
-        //            var userInDb = context.Users.Single(u => u.Email == userEmail);
-        //            var profileInDb = context.Profiles.Single(p => p.UserId == userInDb.Id);
+            if (ModelState.IsValid)
+            {
+                using (var context = new ProfileDbContext())
+                {
+                    var userInDb = context.Users.Include("Profile").Single(u => u.Email == userEmail);
 
-        //        }
-        //    }
-        //}
+                    var treasure = new Treasure()
+                    {
+                        Title = service.Title,
+                        Value = service.PtValue,
+                        Type = TreasureType.SERVICE
+                    };
+
+                    // Add the category to the categories table.
+                    // TODO: Update category use_count if the category already exists
+                    treasure.Category = new Category()
+                    {
+                        Title = service.Category,
+                        UseCount = 1
+                    };
+
+                    // For every service create a default trove for it.
+                    treasure.Troves.Add(new Trove()
+                    {
+                        Title = service.Title + "Trove",
+                        ProfileId = userInDb.Profile.Id,
+                        Value = service.PtValue,
+                        Desc = service.Desc + "Trove.",
+                    });
+
+                    context.Treasures.Add(treasure);
+                    if(context.SaveChanges() > 1)
+                    {
+                        return Ok();
+                    }
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
 
         [System.Web.Http.Route("progress")]
         [System.Web.Http.HttpGet]

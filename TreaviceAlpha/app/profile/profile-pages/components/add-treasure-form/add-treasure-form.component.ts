@@ -25,4 +25,8 @@ export class AddTreasureFormComponent implements OnInit {
             existTroveTitle: [""]
         });
     }
+
+    public onSubmit() {
+
+    }
 }

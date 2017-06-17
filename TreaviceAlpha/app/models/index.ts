@@ -23,6 +23,13 @@ export class UserData {
     public profile: Profile;
 }
 
+export class Treasure {
+    public title: string;
+    public desc: string;
+    public category: string;
+    public ptValue: number;
+}
+
 export class GeoStateModel {
     public name: string;
     public abbrv: string;

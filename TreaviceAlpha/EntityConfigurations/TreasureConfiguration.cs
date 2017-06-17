@@ -12,11 +12,6 @@ namespace TreaviceAlpha.EntityConfigurations
     {
         public TreasureConfiguration()
         {
-                HasRequired(t => t.Type)
-                .WithMany(ty => ty.Treasures)
-                .HasForeignKey(t => t.TypeId)
-                .WillCascadeOnDelete(false);
-            
                 HasRequired(t => t.Category)
                 .WithMany(c => c.Treasures)
                 .HasForeignKey(t => t.CatId);

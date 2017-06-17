@@ -1,4 +1,4 @@
-﻿<form [formGroup]="skillForm">
+﻿<form [formGroup]="skillForm" (ngSubmit)="onSubmit($event)">
     <div class="form-group">
         <label for="title">Title: </label>
         <input
@@ -22,30 +22,6 @@
             placeholder="Description"
             required
         ></textarea>
-    </div>
-    <label>Negotiable: </label>
-    <div class="radio">
-        <label>
-            <input 
-                type="radio"
-                name="isNeg"
-                value="yes"
-                formControlName="isNeg"
-            />
-            <span>Yes</span>
-        </label>
-    </div>
-    <div class="radio">
-        <label>
-            <input 
-                type="radio"
-                name="isNeg"
-                value="no"
-                formControlName="isNeg"
-                checked
-            />
-            <span>No</span>
-        </label>
     </div>
     <div class="form-group">
         <label for="category">Category: </label>
