@@ -11,7 +11,7 @@ namespace TreaviceAlpha.dtos
         public string Title { get; set; }
         public string Desc { get; set; }
         public bool IsNeg { get; set; }
-        public string Category { get; set; }
+        public int CatId { get; set; }
         public int PtValue { get; set; }
     }
 }
