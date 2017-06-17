@@ -31,7 +31,7 @@
             id="category"
             name="category">
             
-            <option *ngFor="let c of categories" value="c.name">{{c.name}}</option>
+            <option *ngFor="let c of categories" [value]="c.name">{{c.name}}</option>
         </select>
     </div>
     <div class="form-group">

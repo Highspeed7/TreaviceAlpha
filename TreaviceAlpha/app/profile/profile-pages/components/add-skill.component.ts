@@ -1,6 +1,7 @@
 ﻿import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { AssetService } from "../../../services/asset.service";
+import { AssetCategory } from "../../../models/index";
 
 @Component({
     selector: "add-skill-form",
@@ -12,13 +13,15 @@ export class AddSkillComponent implements OnInit {
 
     constructor(private fb: FormBuilder, private assetService: AssetService){}
 
-    public categories = [
-        { name: "Cat 1" },
-        { name: "Cat 2" },
-        { name: "Cat 3" }
-    ];
+    public categories = [];
 
     public ngOnInit() {
+        // Get categories
+        this.assetService.getCategories()
+            .subscribe((cats: AssetCategory[]) => {
+                this.categories = cats;
+            });
+
         this.skillForm = this.fb.group({
             title: this.initSkillTitle(),
             desc: this.initSkillDesc(),

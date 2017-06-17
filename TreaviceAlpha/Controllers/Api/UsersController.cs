@@ -148,6 +148,21 @@ namespace TreaviceAlpha.Controllers.Api
             return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "The server received a bad request during login");
         }
 
+        // GET /api/user/profiles/assets/categories
+        [System.Web.Http.Route("profile/assets/categories")]
+        [System.Web.Http.HttpGet]
+        public IEnumerable<Category> GetAssetCategories()
+        {
+            List<Category> categories;
+
+            using (var context = new ProfileDbContext())
+            {
+                categories = context.Category.ToList();
+            }
+
+            return categories;
+        }
+
         // POST /api/user/profile/services
         [System.Web.Http.Route("profile/services")]
         [System.Web.Http.HttpPost]

@@ -244,6 +244,10 @@
     <Compile Include="Migrations\201706170347467_RemoveTypeIdFromTreasure.Designer.cs">
       <DependentUpon>201706170347467_RemoveTypeIdFromTreasure.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706171409460_RemoveUseCountFromCategories.cs" />
+    <Compile Include="Migrations\201706171409460_RemoveUseCountFromCategories.Designer.cs">
+      <DependentUpon>201706171409460_RemoveUseCountFromCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -426,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706170347467_RemoveTypeIdFromTreasure.resx">
       <DependentUpon>201706170347467_RemoveTypeIdFromTreasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171409460_RemoveUseCountFromCategories.resx">
+      <DependentUpon>201706171409460_RemoveUseCountFromCategories.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
