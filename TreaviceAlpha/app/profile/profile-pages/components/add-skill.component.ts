@@ -25,7 +25,7 @@ export class AddSkillComponent implements OnInit {
         this.skillForm = this.fb.group({
             title: this.initSkillTitle(),
             desc: this.initSkillDesc(),
-            category: ["", Validators.required],
+            category: [this.categories[0].id, Validators.required],
             ptValue: [0]
         });
     }

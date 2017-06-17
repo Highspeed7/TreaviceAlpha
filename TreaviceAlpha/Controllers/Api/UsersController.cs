@@ -182,14 +182,8 @@ namespace TreaviceAlpha.Controllers.Api
                     {
                         Title = service.Title,
                         Value = service.PtValue,
-                        Type = TreasureType.SERVICE
-                    };
-
-                    // Add the category to the categories table.
-                    // TODO: Update category use_count if the category already exists
-                    treasure.Category = new Category()
-                    {
-                        Title = service.Category,
+                        Type = TreasureType.SERVICE,
+                        CatId = service.CatId
                     };
 
                     // For every service create a default trove for it.
