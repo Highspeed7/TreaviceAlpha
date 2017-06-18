@@ -16,6 +16,7 @@ import { ProfileFormComponent } from "./forms/profile-form.component";
 import { ProgressService } from "../services/progress/progress.service";
 
 import { SideNavModule } from "../nav/sidenav.module";
+import { SharedComponentsModule } from "../shared/shared-components.module";
 import { AddTreasureFormComponent } from "./profile-pages/components/add-treasure-form/add-treasure-form.component";
 
 @NgModule({
@@ -35,7 +36,8 @@ import { AddTreasureFormComponent } from "./profile-pages/components/add-treasur
         SideNavModule,
         RouterModule,
         CommonModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        SharedComponentsModule
     ],
     providers: [
         ProgressService
