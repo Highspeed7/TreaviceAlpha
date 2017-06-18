@@ -2,6 +2,7 @@
 
 @Component({
     selector: "item",
+    template: "<div class='col-md-3'><ng-content></ng-content></div>"
 })
 
-export class ItemComponent { }
+export class ItemComponent {}
