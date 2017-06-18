@@ -13,6 +13,8 @@ namespace TreaviceAlpha.Models
         [Required]
         public string Title { get; set; }
 
+        public bool isSystemCat { get; set; } = false;
+
         public ICollection<Treasure> Treasures { get; set; }
     }
 }

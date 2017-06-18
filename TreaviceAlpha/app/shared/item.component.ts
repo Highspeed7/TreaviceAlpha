@@ -2,7 +2,7 @@
 
 @Component({
     selector: "item",
-    template: "<div class='col-md-3'><ng-content></ng-content></div>"
+    templateUrl: "app/shared/item.component.html"
 })
 
 export class ItemComponent {}

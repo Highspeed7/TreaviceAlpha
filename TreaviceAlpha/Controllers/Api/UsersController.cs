@@ -46,7 +46,27 @@ namespace TreaviceAlpha.Controllers.Api
                     {
                         try
                         {
-                            context.Users.Add(user);
+                            var userInDb = context.Users.Add(user);
+                            await context.SaveChangesAsync();
+                            var category = await context.Category.SingleOrDefaultAsync(cat => cat.Title == "Points");
+
+                            var treasure = new Treasure()
+                            {
+                                Title = "Points",
+                                Value = 0,
+                                Type = TreasureType.POINTS,
+                                CatId = category.Id,
+                            };
+
+                            treasure.Troves.Add(new Trove()
+                            {
+                                Title = "Points",
+                                Desc = "Accumulated points",
+                                Value = treasure.Value,
+                                ProfileId = userInDb.Profile.Id,
+                                IsSystem = true
+                            });
+                            context.Treasures.Add(treasure);
                             await context.SaveChangesAsync();
                             dbContextTransaction.Commit();
                             return Ok();
@@ -158,17 +178,17 @@ namespace TreaviceAlpha.Controllers.Api
 
             using (var context = new ProfileDbContext())
             {
-                categories = context.Category.ToList();
+                categories = context.Category.Where(cat => !cat.isSystemCat).ToList();
             }
 
             return categories;
         }
 
         // GET /api/user/profiles/assets/categories
-        [System.Web.Http.Route("profile/assets/troves")]
+        [System.Web.Http.Route("profile/assets/system/troves")]
         [System.Web.Http.HttpGet]
         [AuthFirst]
-        public async Task<IEnumerable<Trove>> GetAssetTroves()
+        public async Task<IEnumerable<Trove>> GetSystemAssetTroves()
         {
             var userEmail = HttpContext.Current.User.Identity.Name;
             List<Trove> troves;
@@ -178,7 +198,31 @@ namespace TreaviceAlpha.Controllers.Api
                 // user id is same as their profile so use it.
                 var userInDb = await context.Users.SingleAsync(u => u.Email == userEmail);
 
-                troves = await context.Troves.Where(tr => tr.ProfileId == userInDb.Id).ToListAsync();
+                troves = await context.Troves
+                    .Where(t => t.ProfileId == userInDb.Id && !t.IsSystem)
+                    .ToListAsync();
+            }
+
+            return troves;
+        }
+
+        // GET /api/user/profiles/assets/categories
+        [System.Web.Http.Route("profile/assets/troves")]
+        [System.Web.Http.HttpGet]
+        [AuthFirst]
+        public async Task<IEnumerable<Trove>> GetUserAssetTroves()
+        {
+            var userEmail = HttpContext.Current.User.Identity.Name;
+            List<Trove> troves;
+
+            using (var context = new ProfileDbContext())
+            {
+                // user id is same as their profile so use it.
+                var userInDb = await context.Users.SingleAsync(u => u.Email == userEmail);
+
+                troves = await context.Troves
+                    .Where(t => t.ProfileId == userInDb.Id)
+                    .ToListAsync();
             }
 
             return troves;
@@ -213,7 +257,7 @@ namespace TreaviceAlpha.Controllers.Api
                         Title = service.Title + " Trove",
                         ProfileId = userInDb.Profile.Id,
                         Value = service.PtValue,
-                        Desc = service.Desc + " Trove.",
+                        Desc = service.Desc,
                     });
 
                     context.Treasures.Add(treasure);

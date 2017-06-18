@@ -35,6 +35,7 @@ export class AssetTrove {
     public desc: string;
     public value: number;
     public profileId: number;
+    public isSystem: boolean;
 }
 
 export class Treasure {

@@ -49,47 +49,65 @@
     .top-padd-20 {
         padding-top: 20px;
     }
+
     .bottom-padd-20 {
         padding-bottom: 20px;
     }
+
     div {
+        &.item-container {
+            div {
+                &.panel {
+                    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05)
+                }
+            }
+        }
+
         &.body-content {
             min-height: 100%;
             margin-top: -29px;
             padding-top: 29px;
         }
     }
+
     html {
         height: 100%;
+
         body {
             height: inherit;
         }
     }
+
     body {
         padding: 0px;
     }
+
     nav {
-            padding-top: 20px;
+        padding-top: 20px;
+
         &.navbar {
             border: none;
         }
+
         &.navbar-default {
-            background-color:inherit;
+            background-color: inherit;
         }
-        
     }
+
     ul {
         &.nav {
-            &>li {
+            & > li {
                 &.active {
                     background-color: @none;
                     font-weight: bold;
                 }
-                &>a {
+
+                & > a {
                     &:hover {
                         background-color: @none;
                         font-weight: bold;
                     }
+
                     &:focus {
                         background-color: @none;
                     }
@@ -97,7 +115,7 @@
             }
         }
     }
- }   
+}   
 
 // Xtra-Small
 @media(min-width: 320px) {

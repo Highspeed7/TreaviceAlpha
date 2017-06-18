@@ -25,7 +25,8 @@ namespace TreaviceAlpha.Migrations
               c => c.Title,
               new Category { Title = "Landscaping" },
               new Category { Title = "Carpentry" },
-              new Category { Title = "Photography" }
+              new Category { Title = "Photography" },
+              new Category { Title = "Points", isSystemCat = true }
             );
         }
     }
