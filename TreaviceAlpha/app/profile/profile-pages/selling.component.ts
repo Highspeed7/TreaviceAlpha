@@ -8,7 +8,7 @@ import { TroveViewComponent } from "./components/trove-view.component";
 })
 
 export class SellingComponent implements OnInit {
-    @ViewChild("trove-view")
+    @ViewChild("troveView")
     public troveModal: TroveViewComponent;
 
     public troves: AssetTrove[];

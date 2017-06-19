@@ -18,6 +18,7 @@ import { ProgressService } from "../services/progress/progress.service";
 import { SideNavModule } from "../nav/sidenav.module";
 import { SharedComponentsModule } from "../shared/shared-components.module";
 import { AddTreasureFormComponent } from "./profile-pages/components/add-treasure-form/add-treasure-form.component";
+import { TroveViewComponent } from "./profile-pages/components/trove-view.component";
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { AddTreasureFormComponent } from "./profile-pages/components/add-treasur
         ProgressBarComponent,
         ExpandableFieldComponent,
         ProfileFormComponent,
-        AddTreasureFormComponent
+        AddTreasureFormComponent,
+        TroveViewComponent
     ],
     imports: [
         SideNavModule,
