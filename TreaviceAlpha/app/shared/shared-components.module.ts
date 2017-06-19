@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 
 import { ItemContainerComponent } from "./item-container.component";
 import { ItemComponent } from "./item.component";
+import { ModalComponent } from "./modals/modal.component";
 
 @NgModule({
     imports: [
@@ -10,11 +11,13 @@ import { ItemComponent } from "./item.component";
     ],
     declarations: [
         ItemContainerComponent,
-        ItemComponent
+        ItemComponent,
+        ModalComponent
     ],
     exports: [
         ItemContainerComponent,
-        ItemComponent
+        ItemComponent,
+        ModalComponent
     ]
 })
 

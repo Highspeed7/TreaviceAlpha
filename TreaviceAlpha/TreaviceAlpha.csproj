@@ -286,6 +286,7 @@
     <Content Include="app\profile\profile-pages\components\add-skill-form.component.html" />
     <Content Include="app\profile\profile-pages\components\add-treasure-form\add-treasure-form.component.html" />
     <Content Include="app\profile\profile-pages\components\expandable-field.component.html" />
+    <Content Include="app\profile\profile-pages\components\trove-view.component.html" />
     <Content Include="app\shared\item-container.component.html" />
     <Content Include="app\profile\profile-pages\selling.component.html" />
     <Content Include="app\profile\profile-pages\wants.component.html" />
@@ -295,6 +296,7 @@
     <Content Include="app\register\register.component.html" />
     <Content Include="app\search\listings-search.component.html" />
     <Content Include="app\shared\item.component.html" />
+    <Content Include="app\shared\modals\modal.component.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\business-man-avatar-vector-1236211.jpg" />
@@ -404,6 +406,7 @@
     <TypeScriptCompile Include="app\profile\profile-pages\components\add-skill.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\add-treasure-form\add-treasure-form.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\expandable-field.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\components\trove-view.component.ts" />
     <TypeScriptCompile Include="app\shared\item-container.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\selling.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\wants.component.ts" />
@@ -425,6 +428,7 @@
     <TypeScriptCompile Include="app\services\helpers\objectHelper.service.ts" />
     <TypeScriptCompile Include="app\services\progress\progress.service.ts" />
     <TypeScriptCompile Include="app\shared\item.component.ts" />
+    <TypeScriptCompile Include="app\shared\modals\modal.component.ts" />
     <TypeScriptCompile Include="app\shared\shared-components.module.ts" />
     <TypeScriptCompile Include="app\vendor.ts" />
   </ItemGroup>

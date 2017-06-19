@@ -1,4 +1,4 @@
-﻿<div class="col-md-3 col-md-offset-1 item">
+﻿<div class="col-md-3 col-md-offset-1 item" (click)="onItemClick(item)">
     <div class="row">
         <div class="col-xs-4 image">
             <img src="" />
@@ -6,10 +6,10 @@
         <div class="col-xs-8">
             <div class="row">
                 <div class="col-xs-12">
-                    <h5>{{title}}</h5>
+                    <h5>{{item.title}}</h5>
                 </div>
                 <div class="col-xs-12 text-right">
-                    <span class="glyphicon glyphicon-plus"><strong>{{points}}</strong></span>
+                    <span class="glyphicon glyphicon-plus"><strong>{{item.value}}</strong></span>
                 </div>
             </div>
         </div>

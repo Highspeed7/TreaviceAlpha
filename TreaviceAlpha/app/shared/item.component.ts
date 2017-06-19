@@ -1,4 +1,5 @@
-﻿import { Component, Input } from "@angular/core";
+﻿import { Component, Input, EventEmitter } from "@angular/core";
+import { AssetTrove } from "../models/index";
 
 @Component({
     selector: "item",
@@ -20,8 +21,11 @@
 
 export class ItemComponent {
     @Input()
-    public title: string;
+    public item: AssetTrove;
 
-    @Input()
-    public points: number;
+    public itemClicked = new EventEmitter<AssetTrove>();
+
+    public onItemClick(item: AssetTrove) {
+        this.itemClicked.emit(item);
+    }
 }

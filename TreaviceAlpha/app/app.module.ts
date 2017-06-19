@@ -1,5 +1,6 @@
 ﻿import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { ModalModule } from "ngx-bootstrap";
 
 import { AppComponent } from "./app.component";
 
@@ -17,7 +18,8 @@ import { ProfileRoutingModule } from "./profile/profile-routing.module";
         BrowserModule,
         AppRoutingModule,
         ProfileRoutingModule,
-        LandingModule
+        LandingModule,
+        ModalModule
     ],
     declarations: [
         AppComponent
