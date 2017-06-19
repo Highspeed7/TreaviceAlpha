@@ -4,21 +4,8 @@
     These points can also be divided up amongst troves to "sweetin' the pot" of any given collection.
     For more information on how treasure troves work, <a href="#">click here</a></p>
 <item-container>
-    <item *ngFor="let trove of troves">
-        <div class="row">
-            <div class="col-xs-6">
-                <h4>{{trove.title}}</h4>
-            </div>
-            <div class="col-xs-6 text-right">
-                <span class="glypicon glyphicon-plus"></span>
-                <span><strong> {{trove.value}}</strong></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                {{trove.desc}}
-            </div>
-        </div>
+    <item *ngFor="let trove of troves" [title]="trove.title" [points]="trove.value">
+        {{trove.desc}}
     </item>
 </item-container>
 <expandable-field title="Add a treasure">
