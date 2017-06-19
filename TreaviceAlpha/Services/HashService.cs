@@ -18,7 +18,7 @@ namespace TreaviceAlpha.Services
             return BCryptHelper.HashPassword(value + HashService.HARD_SALT, salt);
         }
 
-        public bool UnhashPass(string dbPass, string userEnteredPass)
+        public static bool UnhashPass(string dbPass, string userEnteredPass)
         {
             return BCryptHelper.CheckPassword(userEnteredPass + HashService.HARD_SALT, dbPass);
         }

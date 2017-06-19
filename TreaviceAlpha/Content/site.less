@@ -1,61 +1,113 @@
 ﻿@import "variables.less";
- 
-.common {
-    ng-component {
-        height: inherit
-    }
-    h1 {
-        color: @blue;
-    }
-    html {
-        height: 100%;
-        body {
-            height: 100%;
-            margin: 0px;
+ .profile {
+     ul {
+         &.nav {
+             &.inner-nav {
+                 margin-top: 15px;
+             }
+         }
+     }
+     span {
+        &.expandable {
+            margin: 10px 5px;
+            cursor: pointer;
+            vertical-align: text-top;
+            font-size: 10px;
+        }
+        &.expand-title {
+            cursor: pointer;
+            font-weight: 400;
+        }
+     }
+     .truncate {
+            white-space: nowrap;
             overflow: hidden;
-
-            div {
-                &.container-fluid {
-                    height: inherit;
-                    div {
-                        &.content {
-                            height: inherit;
+            text-overflow: ellipsis;
+        }
+        div {
+            &#expand-field-wrapper {
+                div {
+                    &.container-fluid {
+                        &:last {
+                            margin: 10px;
                         }
                     }
                 }
             }
+         &#contact-card {
+             margin-bottom: 15px;
+            #contact-card-left {
+                 img {
+                     width: 100%;
+                     padding: 0px 10px 10px 0px;
+                 }
+             }
+        }
+     }
+ }
+.common {
+    .top-padd-20 {
+        padding-top: 20px;
+    }
+
+    .bottom-padd-20 {
+        padding-bottom: 20px;
+    }
+
+    div {
+        &.item-container {
+            div {
+                &.panel {
+                    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05)
+                }
+            }
+        }
+
+        &.body-content {
+            min-height: 100%;
+            margin-top: -29px;
+            padding-top: 29px;
         }
     }
+
+    html {
+        height: 100%;
+
+        body {
+            height: inherit;
+        }
+    }
+
     body {
         padding: 0px;
     }
+
     nav {
-        &#side-nav {
-            border-right: 1px solid #e5e5e5;
-            height: inherit;
-            margin-top: -20px;
-            padding-top: 20px;
-        }
+        padding-top: 20px;
+
         &.navbar {
             border: none;
         }
+
         &.navbar-default {
-            background-color:inherit;
+            background-color: inherit;
         }
-        
     }
+
     ul {
         &.nav {
-            &>li {
+            & > li {
                 &.active {
                     background-color: @none;
                     font-weight: bold;
                 }
-                &>a {
+
+                & > a {
                     &:hover {
                         background-color: @none;
                         font-weight: bold;
                     }
+
                     &:focus {
                         background-color: @none;
                     }
@@ -63,12 +115,30 @@
             }
         }
     }
- }   
+}   
 
+// Xtra-Small
+@media(min-width: 320px) {
+    .common;
+    .profile;
+}
+//Small
+@media (min-width: 540px) {
+    .common;
+    .profile;
+}
+// Medium
 @media (min-width: 768px) {
     .common;
+    .profile
 }
-
-@media (min-width: 992px) {
+// Large
+@media (min-width: 1084px) {
     .common;
+    .profile;
+}
+// Xtra-Large
+@media(min-width: 1400) {
+    .common;
+    .profile;
 }

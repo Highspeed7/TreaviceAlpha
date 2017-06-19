@@ -1,0 +1,51 @@
+﻿<form [formGroup]="skillForm" (ngSubmit)="onSubmit($event)">
+    <div class="form-group">
+        <label for="title">Title: </label>
+        <input
+            type="text"
+            id="title"
+            name="title"
+            formControlName="title"
+            class="form-control"
+            placeholder="Enter the skill or service title"
+            required
+        />
+    </div>
+    <div class="form-group">
+        <label for="desc">Description: </label>
+        <textarea
+            type="text"
+            id="desc"
+            name="desc"
+            formControlName="desc"
+            class="form-control"
+            placeholder="Description"
+            required
+        ></textarea>
+    </div>
+    <div class="form-group">
+        <label for="category">Category: </label>
+        <select
+            class="form-control"
+            formControlName="category"
+            id="category"
+            name="category">
+            
+            <option *ngFor="let c of categories" [value]="c?.id">{{c.title}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="ptValue">Point Value: </label>
+        <input
+            id="ptValue"
+            class="form-control"
+            name="ptValue"
+            formControlName="ptValue"
+            type="number" 
+            step="1" 
+            min="0" />
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>

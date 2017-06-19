@@ -1,0 +1,21 @@
+﻿<div [class]="{'col-md-12':'true', 'hidden':componentHidden}" id="expand-field-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <span (click)="addFieldToggle()" *ngIf="!fieldVisible">
+                <span class="expandable">+ </span>
+                <span class="expand-title">{{title}}</span>
+            </span>
+            <span (click)="addFieldToggle()" *ngIf="fieldVisible">
+                <span class="expandable">- </span>
+                <span class="expand-title">{{title}}</span>
+            </span>
+        </div>
+    </div>
+    <div class="container" id="expand-field-container">
+        <div class="row"
+                id="expandableField"
+                [style.height]="fieldHeight">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

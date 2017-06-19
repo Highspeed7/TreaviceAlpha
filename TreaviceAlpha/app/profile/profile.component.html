@@ -1,0 +1,30 @@
+﻿<div class="col-md-10">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <router-outlet></router-outlet>
+                <progress-bar [progress]="percentComplete" [profileComplete]="profileComplete"></progress-bar>
+                <div class="container-fluid">
+                    <div class="row">
+                        <expandable-field 
+                            *ngIf="!profileComplete"
+                            [title]="expandableFields[0].title">
+                            <profile-form></profile-form>
+                        </expandable-field>
+                        <expandable-field
+                            *ngIf="profileComplete"
+                            title="Edit Profile">
+                            <profile-form></profile-form>
+                        </expandable-field>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs inner-nav">
+                    <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'wants'}}">Searching For</a></li>
+                    <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'can-do'}}">Services Offered</a></li>
+                    <li role="presentation" routerLinkActive="active"><a [routerLink]="{outlets: {'profile-pages':'selling'}}">My Trove</a></li>
+                </ul>
+                <router-outlet name="profile-pages"></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

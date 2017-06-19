@@ -1,4 +1,5 @@
 ﻿import { Component, OnInit } from "@angular/core";
+import { Response } from "@angular/http";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 import { RegisterFormValidators } from "./validators/register-form-validators";
@@ -59,11 +60,13 @@ export class RegisterFormComponent implements OnInit {
         data.password = formData.passwords.password;
 
         this.accountService.registerUser(data, token)
-            .then(() => {
-                alert("Save successful");
+            .then((res) => {
+                if (res.status === 200) {
+                    alert("Save successful");
+                }
             })
-            .catch(() => {
-                alert("Save failed");
+            .catch((err: Response) => {
+                alert("The server says: " + err.text());
             });
         return false;
     }
