@@ -1,4 +1,5 @@
 ﻿require('es6-promise').polyfill();
+var path = require("path");
 module.exports = {
     // define entry point
     entry: {
@@ -8,7 +9,7 @@ module.exports = {
     },
     // define output point
     output: {
-        path: "dist",
+        path: path.resolve(__dirname, "dist"),
         filename: "js/[name].js"
     },
 
