@@ -15,6 +15,7 @@ import { ProfileRoutingModule } from "./profile/profile-routing.module";
 
 @NgModule({
     imports: [
+        ModalModule.forRoot(),
         BrowserModule,
         AppRoutingModule,
         ProfileRoutingModule,

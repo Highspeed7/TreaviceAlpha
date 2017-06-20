@@ -4,7 +4,12 @@ import { AssetService } from "../../services/asset.service";
 import { TroveViewComponent } from "./components/trove-view.component";
 
 @Component({
-    templateUrl: "app/profile/profile-pages/selling.component.html"
+    templateUrl: "app/profile/profile-pages/selling.component.html",
+    styles: [`
+        .modal-dialog {
+            left: 0px;
+        }
+    `]
 })
 
 export class SellingComponent implements OnInit {

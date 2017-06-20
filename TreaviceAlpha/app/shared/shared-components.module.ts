@@ -4,15 +4,17 @@ import { CommonModule } from "@angular/common";
 import { ItemContainerComponent } from "./item-container.component";
 import { ItemComponent } from "./item.component";
 import { ModalComponent } from "./modals/modal.component";
+import { ModalModule } from "ngx-bootstrap";
 
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        ModalModule
     ],
     declarations: [
         ItemContainerComponent,
         ItemComponent,
-        ModalComponent
+        ModalComponent,
     ],
     exports: [
         ItemContainerComponent,
