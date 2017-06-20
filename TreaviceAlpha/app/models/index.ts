@@ -36,13 +36,21 @@ export class AssetTrove {
     public value: number;
     public profileId: number;
     public isSystem: boolean;
+    public treasures: Treasure[];
+}
+
+export enum TreasureType {
+    Service,
+    Item,
+    Points
 }
 
 export class Treasure {
     public title: string;
     public desc: string;
     public catId: number;
-    public ptValue: number;
+    public value: number;
+    public type?: TreasureType;
 }
 
 export class GeoStateModel {

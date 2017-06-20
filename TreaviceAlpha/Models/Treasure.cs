@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Newtonsoft.Json;
 
 namespace TreaviceAlpha.Models
 {
@@ -16,6 +17,7 @@ namespace TreaviceAlpha.Models
 
         public DateTime DateCreated { get; set; }
 
+        [JsonIgnore]
         public ICollection<Trove> Troves { get; set; }
 
         public Treasure()

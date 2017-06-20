@@ -7,6 +7,6 @@
     <item *ngFor="let trove of troves" [item]="trove" (itemClicked)="onItemClicked($event)"></item>
 </item-container>
 <expandable-field title="Add a treasure">
-    <add-treasure-form [troves]="troves"></add-treasure-form>
+    <add-treasure-form></add-treasure-form>
 </expandable-field>
 <trove-view #troveView></trove-view>

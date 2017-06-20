@@ -1,4 +1,35 @@
 ﻿<tr-modal #trModal>
     <h4 class="modal-title pull-left" header>{{trove?.title}}</h4>
-    <div body>{{trove?.desc}}</div>
+    <div class="row" body>
+        <div class="col-xs-12">
+            <p>{{trove?.desc}}</p>
+        </div>
+    </div>
+    <div class="row" body>
+        <div class="col-xs-12" *ngIf="services.length > 0">
+            <h4>Services in this trove: </h4>
+            <ul>
+                <li *ngFor="let service of services">{{service.title}}</li>
+            </ul>
+        </div>
+        <div class="col-xs-12" *ngIf="items.length > 0">
+            <h4>Items in this trove: </h4>
+            <ul>
+                <li *ngFor="let item of items">{{item.title}}</li>
+            </ul>
+        </div>
+    </div>
+    <hr body />
+    <div class="row" body>
+        <div class="col-xs-12" *ngIf="!hasService">
+            <expandable-field title="Add a service to this trove">
+                <add-skill-form></add-skill-form>
+            </expandable-field>
+        </div>
+        <div class="col-xs-12">
+            <expandable-field title="Add a treasure to this trove">
+                <add-treasure-form [newTrove]="false"></add-treasure-form>
+            </expandable-field>
+        </div>
+    </div>
 </tr-modal>

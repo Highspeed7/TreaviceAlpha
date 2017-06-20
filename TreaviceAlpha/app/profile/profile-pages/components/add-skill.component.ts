@@ -36,7 +36,7 @@ export class AddSkillComponent implements OnInit {
             title: this.skillForm.value.title,
             desc: this.skillForm.value.desc,
             catId: parseInt(this.skillForm.value.category, 10),
-            ptValue: this.skillForm.value.ptValue
+            value: this.skillForm.value.ptValue
         }
 
         this.assetService.addNewService(treasure)

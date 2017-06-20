@@ -10,29 +10,43 @@ import { AssetService } from "../../../../services/asset.service";
 
 export class AddTreasureFormComponent implements OnInit {
     @Input()
-    public troves: AssetTrove[];
+    public newTrove: boolean = true;
 
     public treasureForm: FormGroup;
+    public troveForm: FormGroup;
 
-    constructor(private fb: FormBuilder, private assetService: AssetService ) { }
-
-    public ngOnInit() {
-        this.treasureForm = this.fb.group({
-            troveTitle: [""],
-            existTroveTitle: [""]
-        });
+    constructor(private fb: FormBuilder, private assetService: AssetService) {
+        this.buildFormGroup();
     }
 
-    public ngOnChanges(value: SimpleChange) {
-        if (value.hasOwnProperty("troves")) {
-            let newVal: any = value;
-            if (newVal.troves.currentValue) {
-                this.troves = this.troves.filter(t => !t.isSystem);
-            }
-        }
+    public ngOnInit() {
+        
+    }
+
+    public getFormType() {
+        return (this.newTrove) ? this.troveForm : this.treasureForm;
     }
 
     public onSubmit() {
 
+    }
+
+    private ngOnChanges(value: SimpleChange) {
+        if (value.hasOwnProperty("newTrove")) {
+            this.buildFormGroup();
+        }
+    }
+
+    private buildFormGroup() {
+        if (!this.newTrove) {
+            this.treasureForm = this.fb.group({
+                treasureTitle: ["New Treasure", Validators.required]
+            });
+        } else {
+            this.troveForm = this.fb.group({
+                troveTitle: ["New Trove"],
+                treasureTitle: ["", Validators.required]
+            });
+        }
     }
 }
