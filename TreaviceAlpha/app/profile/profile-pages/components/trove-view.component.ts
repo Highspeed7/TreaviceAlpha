@@ -1,5 +1,6 @@
 ﻿import { Component, ViewChild } from "@angular/core";
 import { ModalComponent } from "../../../shared/modals/modal.component";
+import { AssetTrove } from "../../../models/index";
 
 @Component({
     selector: "trove-view",
@@ -9,7 +10,10 @@ export class TroveViewComponent {
     @ViewChild("trModal")
     public bsModal: ModalComponent;
 
-    public show() {
+    public trove: AssetTrove;
+
+    public show(trove: AssetTrove) {
+        this.trove = trove;
         this.bsModal.show();
     }
 }

@@ -28,6 +28,6 @@ export class SellingComponent implements OnInit {
     }
 
     public onItemClicked(item: AssetTrove) {
-        this.troveModal.show();
+        this.troveModal.show(item);
     }
 }

@@ -2,13 +2,13 @@
     <div [ngClass]="classes">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title pull-left">Large modal</h4>
+                <ng-content select="[header]"></ng-content>
                 <button type="button" class="close pull-right" (click)="modal.hide()" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                <ng-content select="[body]"></ng-content>
             </div>
         </div>
     </div>
