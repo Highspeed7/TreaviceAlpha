@@ -6,13 +6,11 @@ using TreaviceAlpha.Models;
 
 namespace TreaviceAlpha.dtos
 {
-    public class ServiceDto
+    public class TroveDto
     {
         public string Title { get; set; }
         public string Desc { get; set; }
-        public bool IsNeg { get; set; }
-        public int CatId { get; set; }
-        public int PtValue { get; set; }
-        public int TroveId { get; set; }
+        public int Value { get; set; }
+        public ICollection<ServiceDto> Treasures { get; set; }
     }
 }

@@ -16,6 +16,30 @@ export class AssetService {
             .map(r => r);
     }
 
+    public addNewServiceToTrove() {
+        
+    }
+
+    public addExistingServiceToTrove() {
+        
+    }
+
+    public addNewTreasure(trove: AssetTrove): Observable<Response> {
+        const source = this.http.post(`${this.apiRoute}/treasures`, trove);
+        return source
+            .map(r => r);
+    }
+
+    public addNewTreasureToTrove(item: Treasure) {
+        const source = this.http.put(`${this.apiRoute}/troves`, item);
+        return source
+            .map(r => r);
+    }
+
+    public addExistingTreasureToTrove() {
+        
+    }
+
     public getCategories(): Observable<AssetCategory[]> {
         const source = this.http.get(`${this.apiRoute}/categories`);
         return source

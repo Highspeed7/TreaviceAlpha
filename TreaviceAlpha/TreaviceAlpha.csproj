@@ -224,6 +224,7 @@
     <Compile Include="dtos\LoginDto.cs" />
     <Compile Include="dtos\ProfileDto.cs" />
     <Compile Include="dtos\ServiceDto.cs" />
+    <Compile Include="dtos\TroveDto.cs" />
     <Compile Include="EntityConfigurations\TreasureConfiguration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

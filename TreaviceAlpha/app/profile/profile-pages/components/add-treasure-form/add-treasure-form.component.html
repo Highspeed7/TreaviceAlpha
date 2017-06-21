@@ -1,37 +1,3 @@
-﻿<form [formGroup]="getFormType()">
-    <div class="row">
-        <div *ngIf="newTrove; then newTroveForm; else newTreasureForm"></div>
-    </div>
-    <ng-template #newTroveForm>
-        <div class="col-xs-11">
-            <div class="form-group">
-                <label for="troveTitle">Title of your new Trove: </label>
-                <input type="text"
-                       class="form-control"
-                       id="troveTitle"
-                       name="troveTitle"
-                       formControlName="troveTitle"/>
-            </div>
-            <div class="form-group">
-                <label for="troveTitle">Title of your new Treasure: </label>
-                <input type="text"
-                       class="form-control"
-                       id="treasureTitle"
-                       name="troveTitle"
-                       formControlName="treasureTitle"/>
-            </div>
-        </div>
-    </ng-template>
-    <ng-template #newTreasureForm>
-        <div class="col-xs-11">
-            <div class="form-group">
-                <label for="troveTitle">Title of your new Treasure: </label>
-                <input type="text"
-                       class="form-control"
-                       id="treasureTitle"
-                       name="treasureTitle"
-                       formControlName="treasureTitle"/>
-            </div>
-        </div>
-    </ng-template>
+﻿<form [formGroup]="troveForm" (ngSubmit)="onSubmit()">
+    
 </form>

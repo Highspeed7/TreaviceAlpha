@@ -15,7 +15,6 @@ using Microsoft.Owin.Security;
 using System.Web;
 using TreaviceAlpha.dtos;
 using System.Data.Entity.Migrations;
-using System.Web.Mvc;
 using TreaviceAlpha.Auth;
 
 namespace TreaviceAlpha.Controllers.Api
@@ -86,8 +85,8 @@ namespace TreaviceAlpha.Controllers.Api
 
         //
         // POST /api/user/register
-        [System.Web.Http.Route("login")]
-        [System.Web.Http.HttpPost]
+        [Route("login")]
+        [HttpPost]
         [Auth.RequireHttps]
         [AntiForgeryValidate]
         public IHttpActionResult Login(User user)
@@ -117,8 +116,8 @@ namespace TreaviceAlpha.Controllers.Api
         // TODO: Refactor controller database calls into a respository
         //
         // GET /api/user/profile
-        [System.Web.Http.Route("profile")]
-        [System.Web.Http.HttpGet]
+        [Route("profile")]
+        [HttpGet]
         public IEnumerable<Profile> GetUserProfileData(string userEmail)
         {
             // TODO: User a better qualified model for returning profile data.
@@ -136,9 +135,9 @@ namespace TreaviceAlpha.Controllers.Api
             }
         }
 
-        // POST /api/user/profile
-        [System.Web.Http.Route("profile")]
-        [System.Web.Http.HttpPut]
+        // PUT /api/user/profile
+        [Route("profile")]
+        [HttpPut]
         [Auth.RequireHttps]
         [AuthFirst]
         public HttpResponseMessage UpdateUserProfileData([FromBody]ProfileDto profile)
@@ -170,8 +169,8 @@ namespace TreaviceAlpha.Controllers.Api
         }
 
         // GET /api/user/profiles/assets/categories
-        [System.Web.Http.Route("profile/assets/categories")]
-        [System.Web.Http.HttpGet]
+        [Route("profile/assets/categories")]
+        [HttpGet]
         public IEnumerable<Category> GetAssetCategories()
         {
             List<Category> categories;
@@ -185,8 +184,8 @@ namespace TreaviceAlpha.Controllers.Api
         }
 
         // GET /api/user/profiles/assets/categories
-        [System.Web.Http.Route("profile/assets/system/troves")]
-        [System.Web.Http.HttpGet]
+        [Route("profile/assets/system/troves")]
+        [HttpGet]
         [AuthFirst]
         public async Task<IEnumerable<Trove>> GetSystemAssetTroves()
         {
@@ -207,8 +206,8 @@ namespace TreaviceAlpha.Controllers.Api
         }
 
         // GET /api/user/profiles/assets/categories
-        [System.Web.Http.Route("profile/assets/troves")]
-        [System.Web.Http.HttpGet]
+        [Route("profile/assets/troves")]
+        [HttpGet]
         [AuthFirst]
         public async Task<IEnumerable<Trove>> GetUserAssetTroves()
         {
@@ -228,10 +227,85 @@ namespace TreaviceAlpha.Controllers.Api
             return troves;
         }
 
+        // PUT /api/user/profile/asset/troves
+        [Route("profile/assets/troves")]
+        [HttpPut]
+        [RequireHttps]
+        [AuthFirst]
+        public IHttpActionResult AddTreasureToExistingTrove([FromBody] ServiceDto treasure)
+        {
+            var userEmail = HttpContext.Current.User.Identity.Name;
+
+            if (ModelState.IsValid)
+            {
+                using (var context = new ProfileDbContext())
+                {
+                    var trove = context.Troves.Single(t => t.Id == treasure.TroveId);
+
+                    trove.Treasures.Add(new Treasure()
+                    {
+                        Title = treasure.Title,
+                        CatId = treasure.CatId,
+                        Value = treasure.PtValue,
+                        Type = TreasureType.ITEM,
+                    });
+
+                    if (context.SaveChanges() > 1)
+                    {
+                        return Ok();
+                    }
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
+        // POST /api/user/profile/assets/treasures
+        [Route("profile/assets/treasures")]
+        [HttpPost]
+        [RequireHttps]
+        [AuthFirst]
+        public IHttpActionResult AddTreasure([FromBody]TroveDto trove)
+        {
+            var userEmail = HttpContext.Current.User.Identity.Name;
+
+            if (ModelState.IsValid)
+            {
+                using (var context = new ProfileDbContext())
+                {
+                    var userInDb = context.Users.Include("Profile").Single(u => u.Email == userEmail);
+
+                    var newTrove = new Trove()
+                    {
+                        Title = trove.Title,
+                        Desc = trove.Desc,
+                        ProfileId = userInDb.Id,
+                        Value = trove.Value
+                    };
+
+                    newTrove.Treasures.Add(new Treasure()
+                    {
+                        Title = trove.Treasures.First().Title,
+                        Value = trove.Treasures.First().PtValue,
+                        Type = TreasureType.ITEM,
+                        CatId = trove.Treasures.First().CatId
+                    });
+
+                    context.Troves.Add(newTrove);
+                    if (context.SaveChanges() > 1)
+                    {
+                        return Ok();
+                    }
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+
         // POST /api/user/profile/assets/services
-        [System.Web.Http.Route("profile/assets/services")]
-        [System.Web.Http.HttpPost]
-        [Auth.RequireHttps]
+        [Route("profile/assets/services")]
+        [HttpPost]
+        [RequireHttps]
         [AuthFirst]
         public IHttpActionResult AddService([FromBody]ServiceDto service)
         {
@@ -318,16 +392,16 @@ namespace TreaviceAlpha.Controllers.Api
             return ((completedFieldsCount*100)/8);
         }
 
-        [System.Web.Http.Route("logout")]
-        [System.Web.Http.HttpGet]
+        [Route("logout")]
+        [HttpGet]
         public void Logout()
         {
             HttpContext.Current.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie,
                                                                     DefaultAuthenticationTypes.ExternalCookie);
         }
 
-        [System.Web.Http.Route("isLoggedIn")]
-        [System.Web.Http.HttpGet]
+        [Route("isLoggedIn")]
+        [HttpGet]
         public bool IsLoggedIn()
         {
             return HttpContext.Current.Request.IsAuthenticated;

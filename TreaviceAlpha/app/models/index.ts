@@ -37,6 +37,10 @@ export class AssetTrove {
     public profileId: number;
     public isSystem: boolean;
     public treasures: Treasure[];
+
+    constructor() {
+        this.treasures = [];
+    }
 }
 
 export enum TreasureType {
@@ -49,8 +53,9 @@ export class Treasure {
     public title: string;
     public desc: string;
     public catId: number;
-    public value: number;
+    public ptValue: number;
     public type?: TreasureType;
+    public troveId?: number;
 }
 
 export class GeoStateModel {

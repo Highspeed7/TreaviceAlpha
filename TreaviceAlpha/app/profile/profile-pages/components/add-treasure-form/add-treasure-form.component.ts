@@ -1,6 +1,7 @@
-﻿import { Component, OnInit, Input, OnChanges, SimpleChange } from "@angular/core";
+﻿import { Component, OnInit, Input } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { AssetTrove } from "../../../../models/index";
+import { Response } from "@angular/http";
+import { AssetTrove, AssetCategory, Treasure } from "../../../../models/index";
 import { AssetService } from "../../../../services/asset.service";
 
 @Component({
@@ -10,43 +11,57 @@ import { AssetService } from "../../../../services/asset.service";
 
 export class AddTreasureFormComponent implements OnInit {
     @Input()
-    public newTrove: boolean = true;
+    public trove: AssetTrove;
 
     public treasureForm: FormGroup;
     public troveForm: FormGroup;
 
+    public categories = [];
+
     constructor(private fb: FormBuilder, private assetService: AssetService) {
-        this.buildFormGroup();
+        this.buildForms();
     }
 
     public ngOnInit() {
-        
-    }
-
-    public getFormType() {
-        return (this.newTrove) ? this.troveForm : this.treasureForm;
+        this.assetService.getCategories()
+            .subscribe((cats: AssetCategory[]) => {
+                this.categories = cats;
+                this.treasureForm.controls["treasureCategory"].setValue(cats[0].id);
+                this.troveForm.controls["treasureCategory"].setValue(cats[0].id);
+            });
     }
 
     public onSubmit() {
+        if (this.troveForm.valid) {
+            let newTrove: AssetTrove = new AssetTrove();
+            newTrove.title = this.troveForm.value.troveTitle;
+            newTrove.desc = this.troveForm.value.troveDesc;
+            newTrove.value = this.troveForm.value.treasureValue;
+            newTrove.treasures.push({
+                title: this.troveForm.value.treasureTitle,
+                desc: this.troveForm.value.treasureDesc,
+                ptValue: this.troveForm.value.treasureValue,
+                catId: this.troveForm.value.treasureCategory
+            });
 
-    }
-
-    private ngOnChanges(value: SimpleChange) {
-        if (value.hasOwnProperty("newTrove")) {
-            this.buildFormGroup();
+            // Call api to add new trove and treasure.
+            this.assetService.addNewTreasure(newTrove)
+                .subscribe(res => {
+                    if (res.status === 200) {
+                        alert("Treasure saved successfully");
+                    }
+                }, e => { alert("Treasure save failed with: " + e) });
         }
     }
 
-    private buildFormGroup() {
-        if (!this.newTrove) {
-            this.treasureForm = this.fb.group({
-                treasureTitle: ["New Treasure", Validators.required]
-            });
-        } else {
-            this.troveForm = this.fb.group({
-                troveTitle: ["New Trove"],
-                treasureTitle: ["", Validators.required]
-            });
-        }
+    private buildForms() {
+        this.troveForm = this.fb.group({
+            troveTitle: ["New Trove"],
+            troveDesc: [""],
+            treasureTitle: ["New Item", Validators.required],
+            treasureDesc: [""],
+            treasureValue: [0],
+            treasureCategory: ["", Validators.required]
+        });
     }
 }
