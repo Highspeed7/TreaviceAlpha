@@ -235,22 +235,30 @@ namespace TreaviceAlpha.Controllers.Api
         [AuthFirst]
         public IHttpActionResult UpdateTrove(int id, [FromBody] Trove trove)
         {
-            int troveValue = 0;
-
             if (ModelState.IsValid)
             {
                 using (var context = new ProfileDbContext())
                 {
-                    var troveInDb = context.Troves.Find(id);
+                    var troveInDb = context.Troves.Include("Treasures").Single(tr => tr.Id == id);
+                    Treasure newTreasure = null;
+
+                    foreach (var treasure in trove.Treasures)
+                    {
+                        newTreasure = troveInDb.Treasures.Any(tr => tr.Id != treasure.Id) ? treasure : null;
+                    }
+
+                    if (newTreasure == null)
+                    {
+                        return BadRequest();
+                    }
+
+                    int troveValue = troveInDb.Value;
 
                     troveInDb.Title = trove.Title;
                     troveInDb.Desc = trove.Desc;
-                    troveInDb.Treasures = trove.Treasures;
+                    troveInDb.Treasures.Add(newTreasure);
 
-                    foreach (Treasure treasure in trove.Treasures)
-                    {
-                        troveValue += treasure.Value;
-                    }
+                    troveValue += newTreasure.Value;
 
                     troveInDb.Value = troveValue;
 

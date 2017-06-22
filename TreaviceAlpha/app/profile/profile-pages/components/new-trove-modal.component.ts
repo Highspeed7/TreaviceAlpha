@@ -1,4 +1,4 @@
-﻿import { Component, ViewChild } from "@angular/core";
+﻿import { Component, ViewChild, EventEmitter, Output } from "@angular/core";
 import { ModalComponent } from "../../../shared/modals/modal.component";
 import { AssetTrove } from "../../../models/index";
 
@@ -11,7 +11,14 @@ export class NewTroveModalComponent {
     @ViewChild("trModal")
     public bsModal: ModalComponent;
 
+    @Output()
+    public onItemAdded = new EventEmitter<void>();
+
     public show() {
         this.bsModal.show();
+    }
+
+    public emitItemAdded() {
+        this.onItemAdded.emit();
     }
 }

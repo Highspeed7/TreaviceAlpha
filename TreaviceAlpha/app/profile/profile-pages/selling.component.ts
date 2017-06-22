@@ -40,4 +40,11 @@ export class SellingComponent implements OnInit {
     public newItemClicked() {
         this.newTroveModal.show();
     }
+
+    public itemAdded() {
+        this.assetService.getTroves()
+            .subscribe((r: AssetTrove[]) => {
+                this.troves = r;
+            });
+    }
 }

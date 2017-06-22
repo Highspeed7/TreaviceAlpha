@@ -1,7 +1,7 @@
-﻿import { Component, OnInit, Input } from "@angular/core";
+﻿import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Response } from "@angular/http";
-import { AssetTrove, AssetCategory, Treasure, TreasureType} from "../../../../models/index";
+import { AssetTrove, AssetCategory, Treasure, TreasureType } from "../../../../models/index";
 import { AssetService } from "../../../../services/asset.service";
 
 @Component({
@@ -12,6 +12,9 @@ import { AssetService } from "../../../../services/asset.service";
 export class AddTreasureFormComponent implements OnInit {
     @Input()
     public trove: AssetTrove;
+
+    @Output()
+    public onItemAdded = new EventEmitter<void>();
 
     public treasureForm: FormGroup;
 
@@ -38,7 +41,6 @@ export class AddTreasureFormComponent implements OnInit {
             catId: this.treasureForm.value.treasureCategory,
             type: TreasureType.Item
         }
-
         // We will update based on whether or not there is a trove available.
         if (this.trove) {
             this.trove.treasures.push(treasure);
@@ -46,6 +48,7 @@ export class AddTreasureFormComponent implements OnInit {
                 .subscribe(res => {
                     if (res.status === 200) {
                         alert("Treasure saved successfully");
+                        this.onItemAdded.emit();
                     }
                 }, e => { alert("Adding treasure to trove failed with: " + e) });
         } else {
@@ -54,6 +57,7 @@ export class AddTreasureFormComponent implements OnInit {
                 .subscribe(res => {
                     if (res.status === 200) {
                         alert("Treasure saved successfully");
+                        this.onItemAdded.emit();
                     }
                 }, e => { alert("Treasure save failed with: " + e) });
         }

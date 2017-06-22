@@ -1,4 +1,4 @@
-﻿import { Component, ViewChild } from "@angular/core";
+﻿import { Component, ViewChild, Output, EventEmitter } from "@angular/core";
 import { ModalComponent } from "../../../shared/modals/modal.component";
 import { AssetTrove } from "../../../models/index";
 import { Treasure, TreasureType } from "../../../models/index";
@@ -10,6 +10,9 @@ import { Treasure, TreasureType } from "../../../models/index";
 export class TroveViewComponent {
     @ViewChild("trModal")
     public bsModal: ModalComponent;
+
+    @Output()
+    public onItemAdded = new EventEmitter<void>();
 
     public trove: AssetTrove;
     public hasService: boolean = false;
@@ -28,6 +31,11 @@ export class TroveViewComponent {
         return (this.trove.treasures.filter((tr: Treasure) => {
             return tr.type === TreasureType.Service;
         }).length > 0);
+    }
+
+    public emitItemAdded() {
+        this.extractAssets(this.trove);
+        this.onItemAdded.emit();
     }
 
     private extractAssets(tr: AssetTrove) {
