@@ -21,12 +21,15 @@ import { AssetTrove } from "../models/index";
 
 export class ItemComponent {
     @Input()
-    public item: AssetTrove;
+    public item: any;
+
+    @Input()
+    public hasValue: boolean = false;
 
     @Output()
-    public itemClicked = new EventEmitter<AssetTrove>();
+    public itemClicked = new EventEmitter<any>();
 
-    public onItemClick(item: AssetTrove) {
+    public onItemClick(item: any) {
         this.itemClicked.emit(item);
     }
 }

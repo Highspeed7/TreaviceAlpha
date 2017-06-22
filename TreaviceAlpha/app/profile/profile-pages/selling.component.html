@@ -4,9 +4,8 @@
     These points can also be divided up amongst troves to "sweetin' the pot" of any given collection.
     For more information on how treasure troves work, <a href="#">click here</a></p>
 <item-container>
-    <item *ngFor="let trove of troves" [item]="trove" (itemClicked)="onItemClicked($event)"></item>
+    <item *ngFor="let trove of troves" [item]="trove" [hasValue]="true" (itemClicked)="onItemClicked($event)"></item>
+    <item [item]="{'title': 'Add New'}" (itemClicked)="newItemClicked($event)"></item>
 </item-container>
-<expandable-field title="Add a treasure">
-    <add-treasure-form></add-treasure-form>
-</expandable-field>
 <trove-view #troveView></trove-view>
+<new-trove #newTroveModal></new-trove>

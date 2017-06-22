@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit, Input } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Response } from "@angular/http";
-import { AssetTrove, AssetCategory, Treasure } from "../../../../models/index";
+import { AssetTrove, AssetCategory, Treasure, TreasureType} from "../../../../models/index";
 import { AssetService } from "../../../../services/asset.service";
 
 @Component({
@@ -14,7 +14,6 @@ export class AddTreasureFormComponent implements OnInit {
     public trove: AssetTrove;
 
     public treasureForm: FormGroup;
-    public troveForm: FormGroup;
 
     public categories = [];
 
@@ -27,37 +26,42 @@ export class AddTreasureFormComponent implements OnInit {
             .subscribe((cats: AssetCategory[]) => {
                 this.categories = cats;
                 this.treasureForm.controls["treasureCategory"].setValue(cats[0].id);
-                this.troveForm.controls["treasureCategory"].setValue(cats[0].id);
             });
     }
 
     public onSubmit() {
-        if (this.troveForm.valid) {
-            let newTrove: AssetTrove = new AssetTrove();
-            newTrove.title = this.troveForm.value.troveTitle;
-            newTrove.desc = this.troveForm.value.troveDesc;
-            newTrove.value = this.troveForm.value.treasureValue;
-            newTrove.treasures.push({
-                title: this.troveForm.value.treasureTitle,
-                desc: this.troveForm.value.treasureDesc,
-                ptValue: this.troveForm.value.treasureValue,
-                catId: this.troveForm.value.treasureCategory
-            });
+        let treasure: Treasure = {
+            title: this.treasureForm.value.treasureTitle,
+            desc: this.treasureForm.value.treasureDesc,
+            ptValue: this.treasureForm.value.treasureValue,
+            value: this.treasureForm.value.treasureValue,
+            catId: this.treasureForm.value.treasureCategory,
+            type: TreasureType.Item
+        }
 
+        // We will update based on whether or not there is a trove available.
+        if (this.trove) {
+            this.trove.treasures.push(treasure);
+            this.assetService.updateTrove(this.trove)
+                .subscribe(res => {
+                    if (res.status === 200) {
+                        alert("Treasure saved successfully");
+                    }
+                }, e => { alert("Adding treasure to trove failed with: " + e) });
+        } else {
             // Call api to add new trove and treasure.
-            this.assetService.addNewTreasure(newTrove)
+            this.assetService.addNewTreasure(treasure)
                 .subscribe(res => {
                     if (res.status === 200) {
                         alert("Treasure saved successfully");
                     }
                 }, e => { alert("Treasure save failed with: " + e) });
         }
+            
     }
 
     private buildForms() {
-        this.troveForm = this.fb.group({
-            troveTitle: ["New Trove"],
-            troveDesc: [""],
+        this.treasureForm = this.fb.group({
             treasureTitle: ["New Item", Validators.required],
             treasureDesc: [""],
             treasureValue: [0],

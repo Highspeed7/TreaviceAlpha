@@ -223,6 +223,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="dtos\LoginDto.cs" />
     <Compile Include="dtos\ProfileDto.cs" />
+    <Compile Include="dtos\TreasureDto.cs" />
     <Compile Include="dtos\ServiceDto.cs" />
     <Compile Include="dtos\TroveDto.cs" />
     <Compile Include="EntityConfigurations\TreasureConfiguration.cs" />
@@ -287,6 +288,7 @@
     <Content Include="app\profile\profile-pages\components\add-skill-form.component.html" />
     <Content Include="app\profile\profile-pages\components\add-treasure-form\add-treasure-form.component.html" />
     <Content Include="app\profile\profile-pages\components\expandable-field.component.html" />
+    <Content Include="app\profile\profile-pages\components\new-trove-modal.component.html" />
     <Content Include="app\profile\profile-pages\components\trove-view.component.html" />
     <Content Include="app\shared\item-container.component.html" />
     <Content Include="app\profile\profile-pages\selling.component.html" />
@@ -407,6 +409,7 @@
     <TypeScriptCompile Include="app\profile\profile-pages\components\add-skill.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\add-treasure-form\add-treasure-form.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\expandable-field.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\components\new-trove-modal.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\trove-view.component.ts" />
     <TypeScriptCompile Include="app\shared\item-container.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\selling.component.ts" />

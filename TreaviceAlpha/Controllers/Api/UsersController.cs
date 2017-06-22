@@ -227,28 +227,32 @@ namespace TreaviceAlpha.Controllers.Api
             return troves;
         }
 
-        // PUT /api/user/profile/asset/troves
-        [Route("profile/assets/troves")]
+        // TODO: Prevent duplicate treasures from being stored.
+        // PUT /api/user/profile/asset/troves/{id}
+        [Route("profile/assets/troves/{id}")]
         [HttpPut]
         [RequireHttps]
         [AuthFirst]
-        public IHttpActionResult AddTreasureToExistingTrove([FromBody] ServiceDto treasure)
+        public IHttpActionResult UpdateTrove(int id, [FromBody] Trove trove)
         {
-            var userEmail = HttpContext.Current.User.Identity.Name;
+            int troveValue = 0;
 
             if (ModelState.IsValid)
             {
                 using (var context = new ProfileDbContext())
                 {
-                    var trove = context.Troves.Single(t => t.Id == treasure.TroveId);
+                    var troveInDb = context.Troves.Find(id);
 
-                    trove.Treasures.Add(new Treasure()
+                    troveInDb.Title = trove.Title;
+                    troveInDb.Desc = trove.Desc;
+                    troveInDb.Treasures = trove.Treasures;
+
+                    foreach (Treasure treasure in trove.Treasures)
                     {
-                        Title = treasure.Title,
-                        CatId = treasure.CatId,
-                        Value = treasure.PtValue,
-                        Type = TreasureType.ITEM,
-                    });
+                        troveValue += treasure.Value;
+                    }
+
+                    troveInDb.Value = troveValue;
 
                     if (context.SaveChanges() > 1)
                     {
@@ -265,7 +269,7 @@ namespace TreaviceAlpha.Controllers.Api
         [HttpPost]
         [RequireHttps]
         [AuthFirst]
-        public IHttpActionResult AddTreasure([FromBody]TroveDto trove)
+        public IHttpActionResult AddTreasure([FromBody] TreasureDto treasure)
         {
             var userEmail = HttpContext.Current.User.Identity.Name;
 
@@ -273,25 +277,26 @@ namespace TreaviceAlpha.Controllers.Api
             {
                 using (var context = new ProfileDbContext())
                 {
-                    var userInDb = context.Users.Include("Profile").Single(u => u.Email == userEmail);
+                    var userInDb = context.Users.Single(u => u.Email == userEmail);
 
-                    var newTrove = new Trove()
+                    var newTreasure = new Treasure()
                     {
-                        Title = trove.Title,
-                        Desc = trove.Desc,
-                        ProfileId = userInDb.Id,
-                        Value = trove.Value
+                        Title = treasure.Title,
+                        Value = treasure.PtValue,
+                        Type = TreasureType.ITEM,
+                        CatId = treasure.CatId
                     };
 
-                    newTrove.Treasures.Add(new Treasure()
+                    // For every service create a default trove for it.
+                    newTreasure.Troves.Add(new Trove()
                     {
-                        Title = trove.Treasures.First().Title,
-                        Value = trove.Treasures.First().PtValue,
-                        Type = TreasureType.ITEM,
-                        CatId = trove.Treasures.First().CatId
+                        Title = treasure.Title + " Trove",
+                        ProfileId = userInDb.Id,
+                        Value = treasure.PtValue,
+                        Desc = treasure.Desc,
                     });
 
-                    context.Troves.Add(newTrove);
+                    context.Treasures.Add(newTreasure);
                     if (context.SaveChanges() > 1)
                     {
                         return Ok();
@@ -315,7 +320,7 @@ namespace TreaviceAlpha.Controllers.Api
             {
                 using (var context = new ProfileDbContext())
                 {
-                    var userInDb = context.Users.Include("Profile").Single(u => u.Email == userEmail);
+                    var userInDb = context.Users.Single(u => u.Email == userEmail);
 
                     var treasure = new Treasure()
                     {
@@ -329,7 +334,7 @@ namespace TreaviceAlpha.Controllers.Api
                     treasure.Troves.Add(new Trove()
                     {
                         Title = service.Title + " Trove",
-                        ProfileId = userInDb.Profile.Id,
+                        ProfileId = userInDb.Id,
                         Value = service.PtValue,
                         Desc = service.Desc,
                     });

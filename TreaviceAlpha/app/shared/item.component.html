@@ -9,7 +9,7 @@
                     <h5>{{item.title}}</h5>
                 </div>
                 <div class="col-xs-12 text-right">
-                    <span class="glyphicon glyphicon-plus"><strong>{{item.value}}</strong></span>
+                    <span class="glyphicon glyphicon-plus" *ngIf="hasValue"><strong>{{item.value}}</strong></span>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@
 import { AssetTrove } from "../../models/index";
 import { AssetService } from "../../services/asset.service";
 import { TroveViewComponent } from "./components/trove-view.component";
+import { NewTroveModalComponent } from "./components/new-trove-modal.component";
 
 @Component({
     templateUrl: "app/profile/profile-pages/selling.component.html",
@@ -15,6 +16,9 @@ import { TroveViewComponent } from "./components/trove-view.component";
 export class SellingComponent implements OnInit {
     @ViewChild("troveView")
     public troveModal: TroveViewComponent;
+
+    @ViewChild("newTroveModal")
+    public newTroveModal: NewTroveModalComponent;
 
     public troves: AssetTrove[];
 
@@ -31,5 +35,9 @@ export class SellingComponent implements OnInit {
         if (!item.isSystem) {
             this.troveModal.show(item);
         }
+    }
+
+    public newItemClicked() {
+        this.newTroveModal.show();
     }
 }

@@ -19,6 +19,7 @@ import { SideNavModule } from "../nav/sidenav.module";
 import { SharedComponentsModule } from "../shared/shared-components.module";
 import { AddTreasureFormComponent } from "./profile-pages/components/add-treasure-form/add-treasure-form.component";
 import { TroveViewComponent } from "./profile-pages/components/trove-view.component";
+import { NewTroveModalComponent } from "./profile-pages/components/new-trove-modal.component";
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import { TroveViewComponent } from "./profile-pages/components/trove-view.compon
         ExpandableFieldComponent,
         ProfileFormComponent,
         AddTreasureFormComponent,
-        TroveViewComponent
+        TroveViewComponent,
+        NewTroveModalComponent
     ],
     imports: [
         SideNavModule,

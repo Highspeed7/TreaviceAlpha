@@ -54,6 +54,7 @@ export class Treasure {
     public desc: string;
     public catId: number;
     public ptValue: number;
+    public value?: number;
     public type?: TreasureType;
     public troveId?: number;
 }

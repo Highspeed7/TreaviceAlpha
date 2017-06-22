@@ -1,6 +1,8 @@
 ﻿import { Injectable } from "@angular/core";
 import { Http, Response} from "@angular/http";
 import { Observable } from "rxjs/Observable";
+import "rxjs/operator/map";
+import "rxjs/operator/share";
 
 import { Treasure, AssetCategory, AssetTrove } from "../models/index";
 
@@ -24,14 +26,14 @@ export class AssetService {
         
     }
 
-    public addNewTreasure(trove: AssetTrove): Observable<Response> {
-        const source = this.http.post(`${this.apiRoute}/treasures`, trove);
+    public addNewTreasure(treasure: Treasure): Observable<Response> {
+        const source = this.http.post(`${this.apiRoute}/treasures`, treasure);
         return source
             .map(r => r);
     }
 
-    public addNewTreasureToTrove(item: Treasure) {
-        const source = this.http.put(`${this.apiRoute}/troves`, item);
+    public updateTrove(trove: AssetTrove) {
+        const source = this.http.put(`${this.apiRoute}/troves/${trove.id}`, trove);
         return source
             .map(r => r);
     }
