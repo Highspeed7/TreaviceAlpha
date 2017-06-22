@@ -17,4 +17,8 @@ export class ModalComponent {
     public show() {
         this.modal.show();
     }
+
+    public hide() {
+        this.modal.hide();
+    }
 }

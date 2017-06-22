@@ -7,5 +7,5 @@
     <item *ngFor="let trove of troves" [item]="trove" [hasValue]="true" (itemClicked)="onItemClicked($event)"></item>
     <item [item]="{'title': 'Add New'}" (itemClicked)="newItemClicked($event)"></item>
 </item-container>
-<trove-view #troveView (onItemAdded)="itemAdded()"></trove-view>
-<new-trove #newTroveModal (onItemAdded)="itemAdded()"></new-trove>
+<trove-view #troveView (onItemAdded)="troveUpdated()"></trove-view>
+<new-trove #newTroveModal (onItemAdded)="newItemAdded()"></new-trove>

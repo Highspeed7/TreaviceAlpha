@@ -18,6 +18,10 @@ export class NewTroveModalComponent {
         this.bsModal.show();
     }
 
+    public hide() {
+        this.bsModal.hide();
+    }
+
     public emitItemAdded() {
         this.onItemAdded.emit();
     }
