@@ -1,4 +1,6 @@
-﻿{
+// Skiplibcheck enabled until rxjs generics bug fixed
+{
+  "compileOnSave": true,
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
@@ -8,6 +10,10 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "lib": [ "es2015", "dom" ]
-  }
+    "skipLibCheck": true,
+    "lib": [ "es2015", "es2015.iterable", "dom" ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
