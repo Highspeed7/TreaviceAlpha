@@ -223,25 +223,51 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="dtos\LoginDto.cs" />
     <Compile Include="dtos\ProfileDto.cs" />
+    <Compile Include="dtos\TreasureDto.cs" />
+    <Compile Include="dtos\ServiceDto.cs" />
+    <Compile Include="dtos\TroveDto.cs" />
+    <Compile Include="EntityConfigurations\TreasureConfiguration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\UserProfileContext\201611290757279_Initial.cs" />
-    <Compile Include="Migrations\UserProfileContext\201611290757279_Initial.Designer.cs">
-      <DependentUpon>201611290757279_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201706142303139_InitialMigration.cs" />
+    <Compile Include="Migrations\201706142303139_InitialMigration.Designer.cs">
+      <DependentUpon>201706142303139_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\UserProfileContext\201611290801332_UserIdRequiredInProfileTable.cs" />
-    <Compile Include="Migrations\UserProfileContext\201611290801332_UserIdRequiredInProfileTable.Designer.cs">
-      <DependentUpon>201611290801332_UserIdRequiredInProfileTable.cs</DependentUpon>
+    <Compile Include="Migrations\201706142310090_RemovingUserIdFromProfileTable.cs" />
+    <Compile Include="Migrations\201706142310090_RemovingUserIdFromProfileTable.Designer.cs">
+      <DependentUpon>201706142310090_RemovingUserIdFromProfileTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\UserProfileContext\Configuration.cs" />
+    <Compile Include="Migrations\201706170339202_TreasureTypeToEnumList.cs" />
+    <Compile Include="Migrations\201706170339202_TreasureTypeToEnumList.Designer.cs">
+      <DependentUpon>201706170339202_TreasureTypeToEnumList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706170347467_RemoveTypeIdFromTreasure.cs" />
+    <Compile Include="Migrations\201706170347467_RemoveTypeIdFromTreasure.Designer.cs">
+      <DependentUpon>201706170347467_RemoveTypeIdFromTreasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706171409460_RemoveUseCountFromCategories.cs" />
+    <Compile Include="Migrations\201706171409460_RemoveUseCountFromCategories.Designer.cs">
+      <DependentUpon>201706171409460_RemoveUseCountFromCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706181631568_addedSysCatFlagToCategoriesTable.cs" />
+    <Compile Include="Migrations\201706181631568_addedSysCatFlagToCategoriesTable.Designer.cs">
+      <DependentUpon>201706181631568_addedSysCatFlagToCategoriesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706181719125_AddSystemFlagToTroves.cs" />
+    <Compile Include="Migrations\201706181719125_AddSystemFlagToTroves.Designer.cs">
+      <DependentUpon>201706181719125_AddSystemFlagToTroves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\ProfileDbContext.cs" />
-    <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\Treasure.cs" />
+    <Compile Include="Models\TreasureType.cs" />
+    <Compile Include="Models\Trove.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Want.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -260,7 +286,11 @@
     <Content Include="app\profile\forms\profile-form.component.html" />
     <Content Include="app\profile\profile-pages\can-do.component.html" />
     <Content Include="app\profile\profile-pages\components\add-skill-form.component.html" />
+    <Content Include="app\profile\profile-pages\components\add-treasure-form\add-treasure-form.component.html" />
     <Content Include="app\profile\profile-pages\components\expandable-field.component.html" />
+    <Content Include="app\profile\profile-pages\components\new-trove-modal.component.html" />
+    <Content Include="app\profile\profile-pages\components\trove-view.component.html" />
+    <Content Include="app\shared\item-container.component.html" />
     <Content Include="app\profile\profile-pages\selling.component.html" />
     <Content Include="app\profile\profile-pages\wants.component.html" />
     <Content Include="app\profile\profile.component.html" />
@@ -268,6 +298,8 @@
     <Content Include="app\register\register-form\register-form.component.html" />
     <Content Include="app\register\register.component.html" />
     <Content Include="app\search\listings-search.component.html" />
+    <Content Include="app\shared\item.component.html" />
+    <Content Include="app\shared\modals\modal.component.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\business-man-avatar-vector-1236211.jpg" />
@@ -299,14 +331,18 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -371,7 +407,11 @@
     <TypeScriptCompile Include="app\profile\forms\profile-form.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\can-do.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\add-skill.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\components\add-treasure-form\add-treasure-form.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\expandable-field.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\components\new-trove-modal.component.ts" />
+    <TypeScriptCompile Include="app\profile\profile-pages\components\trove-view.component.ts" />
+    <TypeScriptCompile Include="app\shared\item-container.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\selling.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\wants.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-routing.module.ts" />
@@ -388,19 +428,38 @@
     <TypeScriptCompile Include="app\search\listings-search.component.ts" />
     <TypeScriptCompile Include="app\polyfills.ts" />
     <TypeScriptCompile Include="app\services\account.service.ts" />
+    <TypeScriptCompile Include="app\services\asset.service.ts" />
     <TypeScriptCompile Include="app\services\helpers\objectHelper.service.ts" />
     <TypeScriptCompile Include="app\services\progress\progress.service.ts" />
+    <TypeScriptCompile Include="app\shared\item.component.ts" />
+    <TypeScriptCompile Include="app\shared\modals\modal.component.ts" />
+    <TypeScriptCompile Include="app\shared\shared-components.module.ts" />
     <TypeScriptCompile Include="app\vendor.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\UserProfileContext\201611290757279_Initial.resx">
-      <DependentUpon>201611290757279_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706142303139_InitialMigration.resx">
+      <DependentUpon>201706142303139_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\UserProfileContext\201611290801332_UserIdRequiredInProfileTable.resx">
-      <DependentUpon>201611290801332_UserIdRequiredInProfileTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706142310090_RemovingUserIdFromProfileTable.resx">
+      <DependentUpon>201706142310090_RemovingUserIdFromProfileTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706170339202_TreasureTypeToEnumList.resx">
+      <DependentUpon>201706170339202_TreasureTypeToEnumList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706170347467_RemoveTypeIdFromTreasure.resx">
+      <DependentUpon>201706170347467_RemoveTypeIdFromTreasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171409460_RemoveUseCountFromCategories.resx">
+      <DependentUpon>201706171409460_RemoveUseCountFromCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706181631568_addedSysCatFlagToCategoriesTable.resx">
+      <DependentUpon>201706181631568_addedSysCatFlagToCategoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706181719125_AddSystemFlagToTroves.resx">
+      <DependentUpon>201706181719125_AddSystemFlagToTroves.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

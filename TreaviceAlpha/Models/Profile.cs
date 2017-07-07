@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -8,7 +9,6 @@ namespace TreaviceAlpha.Models
 {
     public class Profile
     {
-        [Required]
         public int Id { get; set; }
         
         public string FirstName { get; set; }
@@ -19,12 +19,9 @@ namespace TreaviceAlpha.Models
         public string ZipCode { get; set; }
         public string Phone { get; set; }
 
-        [Required]
-        public int UserId { get; set; }
         public User User { get; set; }
 
-        public List<Item> Selling { get; set; }
-        public List<Want> Wants { get; set; }
-        public List<Skill> Skills { get; set; }
+        public ICollection<Want> Wants { get; set; }
+        public ICollection<Trove> Troves { get; set; }
     }
 }

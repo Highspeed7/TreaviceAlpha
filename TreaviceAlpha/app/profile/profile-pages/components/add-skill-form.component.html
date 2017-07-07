@@ -1,20 +1,51 @@
-﻿<!--<form>
+﻿<form [formGroup]="skillForm" (ngSubmit)="onSubmit($event)">
     <div class="form-group">
-        <label for="skillName">Name of your skill: </label>
-        <input type="text" name="skillName" id="skillName" class="form-control" />
+        <label for="title">Title: </label>
+        <input
+            type="text"
+            id="title"
+            name="title"
+            formControlName="title"
+            class="form-control"
+            placeholder="Enter the skill or service title"
+            required
+        />
     </div>
     <div class="form-group">
-        <label for="skillDesc">Describe your skill: </label>
-        <textarea name="skillDesc" id="skillDesc" class="form-control"></textarea>
+        <label for="desc">Description: </label>
+        <textarea
+            type="text"
+            id="desc"
+            name="desc"
+            formControlName="desc"
+            class="form-control"
+            placeholder="Description"
+            required
+        ></textarea>
     </div>
     <div class="form-group">
-        <label for="skillCat">What category would you say your skill falls under? </label>
-        <select class="form-control" name="skillCat" id="skillCat">
-            <option *ngFor="let cat of categories">{{cat.name}}</option>
+        <label for="category">Category: </label>
+        <select
+            class="form-control"
+            formControlName="category"
+            id="category"
+            name="category">
+            
+            <option *ngFor="let c of categories" [value]="c?.id">{{c.title}}</option>
         </select>
     </div>
     <div class="form-group">
-        <label for="skillPointCost">Assign a point value to your skill</label>
-        <input type="number" class="form-control" id="skillPointCost" name="skillPointCost" step="1" />
+        <label for="ptValue">Point Value: </label>
+        <input
+            id="ptValue"
+            class="form-control"
+            name="ptValue"
+            formControlName="ptValue"
+            type="number" 
+            step="1" 
+            min="0" />
     </div>
-</form>-->
+    <div class="btn-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>

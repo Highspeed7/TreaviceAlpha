@@ -1,6 +1,6 @@
 ﻿import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
-import { Subject } from "rxjs/Subject";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import "rxjs/add/operator/map";
 
 import { ObjectHelper } from "../helpers/objectHelper.service";
@@ -10,7 +10,7 @@ import { UserData } from "../../models/index";
 
 @Injectable()
 export class ProgressService {
-    public progressPercentSource = new Subject<string>();
+    public progressPercentSource = new BehaviorSubject<string>(null);
     public progressPercent$ = this.progressPercentSource.asObservable();
 
     private apiRoute = "api/user";

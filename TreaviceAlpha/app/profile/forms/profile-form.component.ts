@@ -1,5 +1,6 @@
 ﻿import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router"
+import { Response } from "@angular/http";
+import { Router } from "@angular/router";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 import { AccountService } from "../../services/account.service";
@@ -40,12 +41,33 @@ export class ProfileFormComponent implements OnInit {
     }
 
     public saveProfile() {
-        this.accountService.updateProfile(this.profileForm.value, this.user.email)
-            .subscribe((response: boolean) => {
-                if (response) {
+        let token = this.getVerifyToken();
+        // TODO: remove after phone number validation implemented
+        if (this.profileForm.value.phonePre && this.profileForm.value.phoneArea && this.profileForm.value.phoneSuff) {
+            this.profileForm.value.phone = this.assemblePhoneNumber();
+        } else {
+            this.profileForm.value.phone = "";
+        }
+        this.accountService.updateProfile(this.profileForm.value, this.user.email, token)
+            .subscribe((response: Response) => {
+                if (response.status === 200) {
+                    var userDataObj = {
+                        email: this.profileForm.value.email,
+                        profile: this.profileForm.value
+                    }
+                    this.accountService.setLastLoggedInUser(userDataObj);
                     location.reload();
                 }
+            }, (err: any) => {
+                // Hand off to error handler
+                if (err.status === 401) {
+                    alert("You must first login");
+                }
             });
+    }
+
+    private assemblePhoneNumber() {
+        return `${this.profileForm.value.phoneArea}${this.profileForm.value.phonePre}${this.profileForm.value.phoneSuff}`;
     }
 
     private initProfileFields() {
@@ -54,8 +76,39 @@ export class ProfileFormComponent implements OnInit {
             lastName: this.initNamesModel("lastName"),
             street: this.initStreetModel(),
             city: this.initCityModel(),
-            state: this.initStateModel()
-    };
+            state: this.initStateModel(),
+            zipCode: this.initZipCode(),
+            phoneArea: this.initPhone(0),
+            phonePre: this.initPhone(1),
+            phoneSuff: this.initPhone(2)
+        };
+    }
+
+    private initZipCode() {
+        // TODO: Add zipcode validation
+        return [this.user.profile.zipCode];
+    }
+
+    private initPhone(part: number): Array<string> {
+        // TODO: Add phone number validation
+        let retVal: Array<string> = [];
+        if (this.user.profile.phone && this.user.profile.phone !== null) {
+            switch (part) {
+                case 0:
+                    retVal = [this.user.profile.phone.substr(0, 3)];
+                    break;
+                case 1:
+                    retVal = [this.user.profile.phone.substr(3, 3)];
+                    break;
+                case 2:
+                    retVal = [this.user.profile.phone.substr(6, 4)];
+                    break;
+                default:
+                    // Do nothing
+                }
+        }
+            
+        return retVal;
     }
 
     private initNamesModel(val: string) {
@@ -73,5 +126,14 @@ export class ProfileFormComponent implements OnInit {
 
     private initStateModel() {
         return [this.user.profile.state];
+    }
+
+    private getVerifyToken(): string {
+
+        // Get the verify token
+        const tokenElem = <HTMLElement>document.querySelectorAll("div[ncg-request-verification-token]")[0];
+        const tokenVal = tokenElem.getAttribute("ncg-request-verification-token");
+
+        return tokenVal;
     }
 }

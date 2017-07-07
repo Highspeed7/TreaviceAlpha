@@ -48,18 +48,14 @@ export class AccountService {
             });
     }
 
-    public updateProfile(userData: any, email: string): Observable<boolean> {
+    public updateProfile(userData: any, email: string, token): Observable<Response> {
         userData.email = email;
-        const source: Observable<Response> = this.httpService.put(`${this.url}/profile`, userData, null);
+        let headers = new Headers({ "Content-Type": "application/json", "__RequestVerificationToken": token });
+        let options = new RequestOptions({ headers: headers });
+        const source: Observable<Response> = this.httpService.put(`${this.url}/profile`, userData, options);
         return source
             .map((r: Response) => {
-                // Set the new user data
-                var userDataObj = {
-                    email: userData.email,
-                    profile: userData
-                }
-                this.setLastLoggedInUser(userDataObj);
-                return r.json();
+                return r;
             });
     }
 
@@ -85,9 +81,9 @@ export class AccountService {
             });
     }
 
-    public setLastLoggedInUser(userData: UserData) {
+    public setLastLoggedInUser(userData: UserData): Promise<boolean> {
         localStorage.setItem("treavice", JSON.stringify(userData));
-        return true;
+        return Promise.resolve(true);
     }
 
     public getLastLoggedInUser() {

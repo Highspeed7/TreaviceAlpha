@@ -50,7 +50,6 @@ export class LoginFormComponent implements OnInit {
         this.accountService.login(data, token)
             .then((result: UserData) => {
                 this.setLoggedInUserdata(result);
-                this.router.navigate([""]);
             })
             .catch(() => {
                 alert("Login failed");
@@ -68,7 +67,13 @@ export class LoginFormComponent implements OnInit {
                 user.profile = profileData[0];
 
                 // Set the userData to localStorage via account service.
-                this.accountService.setLastLoggedInUser(user);
+                this.accountService.setLastLoggedInUser(user)
+                    .then((result: boolean) =>
+                    {
+                        if (result) {
+                            this.router.navigate([""]);
+                        }
+                    });
             });
     }
 
