@@ -1,4 +1,5 @@
 ﻿import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 import { ListSearchComponent } from "./listings-search.component";
 
@@ -12,7 +13,8 @@ import { ListSearchRoutingModule } from "./listings-search-routing.module";
     ],
     imports: [
         ListSearchRoutingModule,
-        SideNavModule
+        SideNavModule,
+        CommonModule
     ],
     exports: [
         ListSearchComponent,

@@ -1,9 +1,18 @@
 ﻿<div class="col-md-10">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12">
-                <h1>Search Listings</h1>
-            </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Search Listings</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table>
+                <thead>
+                    <tr *ngFor="let listing of listings">
+                        <td>{{listing.title}}</td>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
 </div>

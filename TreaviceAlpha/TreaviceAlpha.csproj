@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.TypeScript.MSBuild.2.2.2\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.2.2.2\build\Microsoft.TypeScript.MSBuild.props')" />
   <!--<Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />-->
@@ -411,6 +411,7 @@
     <TypeScriptCompile Include="app\profile\profile-pages\components\expandable-field.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\new-trove-modal.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\trove-view.component.ts" />
+    <TypeScriptCompile Include="app\services\windowRef.service.ts" />
     <TypeScriptCompile Include="app\shared\item-container.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\selling.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\wants.component.ts" />

@@ -13,6 +13,8 @@ import { LandingModule } from "./landing/landing.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { ProfileRoutingModule } from "./profile/profile-routing.module";
 
+import { WindowRef } from "./services/windowRef.service";
+
 @NgModule({
     imports: [
         ModalModule.forRoot(),
@@ -27,7 +29,8 @@ import { ProfileRoutingModule } from "./profile/profile-routing.module";
     ],
     providers: [
         AccountService,
-        AssetService
+        AssetService,
+        WindowRef
     ],
     bootstrap: [AppComponent]
 })
