@@ -258,6 +258,14 @@
     <Compile Include="Migrations\201706181719125_AddSystemFlagToTroves.Designer.cs">
       <DependentUpon>201706181719125_AddSystemFlagToTroves.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708162205435_AddLocationToProfileTable.cs" />
+    <Compile Include="Migrations\201708162205435_AddLocationToProfileTable.Designer.cs">
+      <DependentUpon>201708162205435_AddLocationToProfileTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708162211246_AddedLocationLatLocationLongToTableRemovedLocation.cs" />
+    <Compile Include="Migrations\201708162211246_AddedLocationLatLocationLongToTableRemovedLocation.Designer.cs">
+      <DependentUpon>201708162211246_AddedLocationLatLocationLongToTableRemovedLocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -461,6 +469,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706181719125_AddSystemFlagToTroves.resx">
       <DependentUpon>201706181719125_AddSystemFlagToTroves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708162205435_AddLocationToProfileTable.resx">
+      <DependentUpon>201708162205435_AddLocationToProfileTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708162211246_AddedLocationLatLocationLongToTableRemovedLocation.resx">
+      <DependentUpon>201708162211246_AddedLocationLatLocationLongToTableRemovedLocation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
