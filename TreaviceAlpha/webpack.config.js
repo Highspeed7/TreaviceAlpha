@@ -1,4 +1,5 @@
-﻿require('es6-promise').polyfill();
+﻿const helpers = require("./helpers");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     // define entry point
     entry: {
@@ -8,28 +9,33 @@ module.exports = {
     },
     // define output point
     output: {
-        path: "dist",
-        filename: "js/[name].js"
+        path: helpers.root("TreaviceAlpha/dist"),
+        filename: "js/[name].js",
+        sourceMapFilename: "[file].map"
     },
 
     module: {
         rules: [
-            {
-                use: "tslint-loader",
-                test: /\.ts$/
-            },
+            //{
+            //    use: "tslint-loader",
+            //    test: /\.ts$/
+            //},
             {
                 use: "awesome-typescript-loader",
                 test: /\.ts$/
             },
             {
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "less-loader"
-                ],
-                test: "/\.less$/"
+                test: /\.less$/,
+                exclude: helpers.root("app"),
+                loader: ExtractTextPlugin.extract({
+                    fallback: ["style-loader"],
+                    use: ["css-loader", "less-loader"]
+                })
             }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin("styles/styles.css")
+    ]
+
 };

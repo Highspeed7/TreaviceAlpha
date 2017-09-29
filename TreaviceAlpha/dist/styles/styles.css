@@ -1,0 +1,418 @@
+.profile ul.nav.inner-nav {
+  margin-top: 15px;
+}
+.profile span.expandable {
+  margin: 10px 5px;
+  cursor: pointer;
+  vertical-align: text-top;
+  font-size: 10px;
+}
+.profile span.expand-title {
+  cursor: pointer;
+  font-weight: 400;
+}
+.profile .truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profile div#expand-field-wrapper div.container-fluid:last {
+  margin: 10px;
+}
+.profile div#contact-card {
+  margin-bottom: 15px;
+}
+.profile div#contact-card #contact-card-left img {
+  width: 100%;
+  padding: 0px 10px 10px 0px;
+}
+.common .top-padd-20 {
+  padding-top: 20px;
+}
+.common .bottom-padd-20 {
+  padding-bottom: 20px;
+}
+.common div.body-content {
+  min-height: 100%;
+  margin-top: -29px;
+  padding-top: 29px;
+}
+.common html {
+  height: 100%;
+}
+.common html body {
+  height: inherit;
+}
+.common body {
+  padding: 0px;
+}
+.common nav {
+  padding-top: 20px;
+}
+.common nav.navbar {
+  border: none;
+}
+.common nav.navbar-default {
+  background-color: inherit;
+}
+.common ul.nav > li.active {
+  background-color: white;
+  font-weight: bold;
+}
+.common ul.nav > li > a:hover {
+  background-color: white;
+  font-weight: bold;
+}
+.common ul.nav > li > a:focus {
+  background-color: white;
+}
+@media (min-width: 320px) {
+  .top-padd-20 {
+    padding-top: 20px;
+  }
+  .bottom-padd-20 {
+    padding-bottom: 20px;
+  }
+  div.body-content {
+    min-height: 100%;
+    margin-top: -29px;
+    padding-top: 29px;
+  }
+  html {
+    height: 100%;
+  }
+  html body {
+    height: inherit;
+  }
+  body {
+    padding: 0px;
+  }
+  nav {
+    padding-top: 20px;
+  }
+  nav.navbar {
+    border: none;
+  }
+  nav.navbar-default {
+    background-color: inherit;
+  }
+  ul.nav > li.active {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:hover {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:focus {
+    background-color: white;
+  }
+  ul.nav.inner-nav {
+    margin-top: 15px;
+  }
+  span.expandable {
+    margin: 10px 5px;
+    cursor: pointer;
+    vertical-align: text-top;
+    font-size: 10px;
+  }
+  span.expand-title {
+    cursor: pointer;
+    font-weight: 400;
+  }
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div#expand-field-wrapper div.container-fluid:last {
+    margin: 10px;
+  }
+  div#contact-card {
+    margin-bottom: 15px;
+  }
+  div#contact-card #contact-card-left img {
+    width: 100%;
+    padding: 0px 10px 10px 0px;
+  }
+}
+@media (min-width: 540px) {
+  .top-padd-20 {
+    padding-top: 20px;
+  }
+  .bottom-padd-20 {
+    padding-bottom: 20px;
+  }
+  div.body-content {
+    min-height: 100%;
+    margin-top: -29px;
+    padding-top: 29px;
+  }
+  html {
+    height: 100%;
+  }
+  html body {
+    height: inherit;
+  }
+  body {
+    padding: 0px;
+  }
+  nav {
+    padding-top: 20px;
+  }
+  nav.navbar {
+    border: none;
+  }
+  nav.navbar-default {
+    background-color: inherit;
+  }
+  ul.nav > li.active {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:hover {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:focus {
+    background-color: white;
+  }
+  ul.nav.inner-nav {
+    margin-top: 15px;
+  }
+  span.expandable {
+    margin: 10px 5px;
+    cursor: pointer;
+    vertical-align: text-top;
+    font-size: 10px;
+  }
+  span.expand-title {
+    cursor: pointer;
+    font-weight: 400;
+  }
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div#expand-field-wrapper div.container-fluid:last {
+    margin: 10px;
+  }
+  div#contact-card {
+    margin-bottom: 15px;
+  }
+  div#contact-card #contact-card-left img {
+    width: 100%;
+    padding: 0px 10px 10px 0px;
+  }
+}
+@media (min-width: 768px) {
+  .top-padd-20 {
+    padding-top: 20px;
+  }
+  .bottom-padd-20 {
+    padding-bottom: 20px;
+  }
+  div.body-content {
+    min-height: 100%;
+    margin-top: -29px;
+    padding-top: 29px;
+  }
+  html {
+    height: 100%;
+  }
+  html body {
+    height: inherit;
+  }
+  body {
+    padding: 0px;
+  }
+  nav {
+    padding-top: 20px;
+  }
+  nav.navbar {
+    border: none;
+  }
+  nav.navbar-default {
+    background-color: inherit;
+  }
+  ul.nav > li.active {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:hover {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:focus {
+    background-color: white;
+  }
+  ul.nav.inner-nav {
+    margin-top: 15px;
+  }
+  span.expandable {
+    margin: 10px 5px;
+    cursor: pointer;
+    vertical-align: text-top;
+    font-size: 10px;
+  }
+  span.expand-title {
+    cursor: pointer;
+    font-weight: 400;
+  }
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div#expand-field-wrapper div.container-fluid:last {
+    margin: 10px;
+  }
+  div#contact-card {
+    margin-bottom: 15px;
+  }
+  div#contact-card #contact-card-left img {
+    width: 100%;
+    padding: 0px 10px 10px 0px;
+  }
+}
+@media (min-width: 1084px) {
+  .top-padd-20 {
+    padding-top: 20px;
+  }
+  .bottom-padd-20 {
+    padding-bottom: 20px;
+  }
+  div.body-content {
+    min-height: 100%;
+    margin-top: -29px;
+    padding-top: 29px;
+  }
+  html {
+    height: 100%;
+  }
+  html body {
+    height: inherit;
+  }
+  body {
+    padding: 0px;
+  }
+  nav {
+    padding-top: 20px;
+  }
+  nav.navbar {
+    border: none;
+  }
+  nav.navbar-default {
+    background-color: inherit;
+  }
+  ul.nav > li.active {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:hover {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:focus {
+    background-color: white;
+  }
+  ul.nav.inner-nav {
+    margin-top: 15px;
+  }
+  span.expandable {
+    margin: 10px 5px;
+    cursor: pointer;
+    vertical-align: text-top;
+    font-size: 10px;
+  }
+  span.expand-title {
+    cursor: pointer;
+    font-weight: 400;
+  }
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div#expand-field-wrapper div.container-fluid:last {
+    margin: 10px;
+  }
+  div#contact-card {
+    margin-bottom: 15px;
+  }
+  div#contact-card #contact-card-left img {
+    width: 100%;
+    padding: 0px 10px 10px 0px;
+  }
+}
+@media (min-width: 1400) {
+  .top-padd-20 {
+    padding-top: 20px;
+  }
+  .bottom-padd-20 {
+    padding-bottom: 20px;
+  }
+  div.body-content {
+    min-height: 100%;
+    margin-top: -29px;
+    padding-top: 29px;
+  }
+  html {
+    height: 100%;
+  }
+  html body {
+    height: inherit;
+  }
+  body {
+    padding: 0px;
+  }
+  nav {
+    padding-top: 20px;
+  }
+  nav.navbar {
+    border: none;
+  }
+  nav.navbar-default {
+    background-color: inherit;
+  }
+  ul.nav > li.active {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:hover {
+    background-color: white;
+    font-weight: bold;
+  }
+  ul.nav > li > a:focus {
+    background-color: white;
+  }
+  ul.nav.inner-nav {
+    margin-top: 15px;
+  }
+  span.expandable {
+    margin: 10px 5px;
+    cursor: pointer;
+    vertical-align: text-top;
+    font-size: 10px;
+  }
+  span.expand-title {
+    cursor: pointer;
+    font-weight: 400;
+  }
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div#expand-field-wrapper div.container-fluid:last {
+    margin: 10px;
+  }
+  div#contact-card {
+    margin-bottom: 15px;
+  }
+  div#contact-card #contact-card-left img {
+    width: 100%;
+    padding: 0px 10px 10px 0px;
+  }
+}
