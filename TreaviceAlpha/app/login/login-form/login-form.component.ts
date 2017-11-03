@@ -7,6 +7,7 @@ import { ObjectHelper } from "../../services/helpers/objectHelper.service";
 
 import { UserDto } from "../../dtos/userDto";
 import { UserData } from "../../models/index";
+import { WindowRef } from "../../services/windowRef.service";
 
 @Component({
     selector: "login-form",
@@ -16,8 +17,17 @@ import { UserData } from "../../models/index";
 export class LoginFormComponent implements OnInit {
 
     private loginForm: FormGroup;
+    private window: any;
 
-    constructor(private fb: FormBuilder, private accountService: AccountService, private router: Router, private helpers: ObjectHelper) { }
+    constructor(
+        private fb: FormBuilder,
+        private accountService: AccountService,
+        private router: Router,
+        private helpers: ObjectHelper,
+        private winRef: WindowRef
+    ) {
+        this.window = this.winRef.nativeWindow;
+    }
 
     public ngOnInit() {
         // we will initialize our form model here
@@ -43,6 +53,7 @@ export class LoginFormComponent implements OnInit {
         const token = this.getVerifyToken();
 
         let data = new UserDto();
+        let coords: any;
 
         data.email = formData.email;
         data.password = formData.password;
@@ -50,6 +61,7 @@ export class LoginFormComponent implements OnInit {
         this.accountService.login(data, token)
             .then((result: UserData) => {
                 this.setLoggedInUserdata(result);
+                this.setProfileCoordinates(coords);
             })
             .catch(() => {
                 alert("Login failed");
@@ -84,5 +96,17 @@ export class LoginFormComponent implements OnInit {
         const tokenVal = tokenElem.getAttribute("ncg-request-verification-token");
 
         return tokenVal;
+    }
+
+    private setProfileCoordinates(coords: any) {
+        if (window.navigator.geolocation) {
+            window.navigator.geolocation.getCurrentPosition(this.outputPosition);
+        } else {
+            alert("Unable to locate user");
+        }
+    }
+
+    private outputPosition(position: any) {
+        console.log(position);
     }
 }
