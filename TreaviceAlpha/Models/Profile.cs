@@ -22,6 +22,8 @@ namespace TreaviceAlpha.Models
         public User User { get; set; }
         public double LocationLat { get; set; }
         public double LocationLong { get; set; }
+        public double? LoginLat { get; set; }
+        public double? LoginLong { get; set; }
         public ICollection<Want> Wants { get; set; }
         public ICollection<Trove> Troves { get; set; }
     }

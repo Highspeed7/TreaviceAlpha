@@ -16,6 +16,7 @@ using System.Web;
 using TreaviceAlpha.dtos;
 using System.Data.Entity.Migrations;
 using TreaviceAlpha.Auth;
+using TreaviceAlpha.Utilities;
 
 namespace TreaviceAlpha.Controllers.Api
 {
@@ -30,6 +31,7 @@ namespace TreaviceAlpha.Controllers.Api
         [AntiForgeryValidate]
         public async Task<IHttpActionResult> CreateUser(User user)
         {
+            // Attach a profile to the user.
             user.Profile = new Profile();
             if (ModelState.IsValid)
             {
@@ -89,7 +91,7 @@ namespace TreaviceAlpha.Controllers.Api
         [HttpPost]
         [Auth.RequireHttps]
         [AntiForgeryValidate]
-        public IHttpActionResult Login(User user)
+        public IHttpActionResult Login(UserLoginDto user)
         {
             if (ModelState.IsValid)
             {
@@ -106,7 +108,20 @@ namespace TreaviceAlpha.Controllers.Api
                         new AuthenticationProperties { IsPersistent = false },
                         ident
                     );
-                    
+                    using(var context = new ProfileDbContext())
+                    {
+                        User dbUser = context.Users.Include("Profile").Where(usr => usr.Email == user.Email).SingleOrDefault();
+                        var longitude = user.LoginLong;
+                        var latitude = user.LoginLat;
+
+                        LocationUtils.DegreeToRadians(ref longitude, ref latitude);
+
+                        dbUser.Profile.LoginLat = latitude;
+                        dbUser.Profile.LoginLong = longitude;
+
+                        context.Users.AddOrUpdate(dbUser);
+                        context.SaveChanges();
+                    }
                     return Content(HttpStatusCode.OK, new LoginDto() { Email = user.Email});
                 }
             }

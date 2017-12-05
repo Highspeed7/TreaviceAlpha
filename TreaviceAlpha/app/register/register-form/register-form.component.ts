@@ -17,6 +17,7 @@ import { UserDto } from "../../dtos/userDto";
 export class RegisterFormComponent implements OnInit {
 
     private signupForm: FormGroup;
+    private coords: any;
 
     constructor(private fb: FormBuilder, private accountService: AccountService) {}
 
@@ -59,6 +60,9 @@ export class RegisterFormComponent implements OnInit {
         data.email = formData.email;
         data.password = formData.passwords.password;
 
+        // Get user's address coordinates.
+        this.setProfileCoordinates();
+
         this.accountService.registerUser(data, token)
             .then((res) => {
                 if (res.status === 200) {
@@ -78,5 +82,18 @@ export class RegisterFormComponent implements OnInit {
         const tokenVal = tokenElem.getAttribute("ncg-request-verification-token");
 
         return tokenVal;
+    }
+
+    private setProfileCoordinates() {
+        if (window.navigator.geolocation) {
+            window.navigator.geolocation.getCurrentPosition(this.outputPosition);
+        } else {
+            // Default to user's home location
+            alert("Unable to locate user");
+        }
+    }
+
+    private outputPosition(position: any) {
+        this.coords = position;
     }
 }

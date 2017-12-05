@@ -243,6 +243,7 @@
     <Compile Include="dtos\TreasureDto.cs" />
     <Compile Include="dtos\ServiceDto.cs" />
     <Compile Include="dtos\TroveDto.cs" />
+    <Compile Include="dtos\UserLoginDto.cs" />
     <Compile Include="EntityConfigurations\TreasureConfiguration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -283,6 +284,10 @@
     <Compile Include="Migrations\201708162211246_AddedLocationLatLocationLongToTableRemovedLocation.Designer.cs">
       <DependentUpon>201708162211246_AddedLocationLatLocationLongToTableRemovedLocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712050642125_AddLoginLatAndLongToProfileTable.cs" />
+    <Compile Include="Migrations\201712050642125_AddLoginLatAndLongToProfileTable.Designer.cs">
+      <DependentUpon>201712050642125_AddLoginLatAndLongToProfileTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -299,6 +304,7 @@
     <Compile Include="Services\AntiForgeryService.cs" />
     <Compile Include="Services\HashService.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utilities\LocationUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\home\home-main\home-main.component.html" />
@@ -506,6 +512,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708162211246_AddedLocationLatLocationLongToTableRemovedLocation.resx">
       <DependentUpon>201708162211246_AddedLocationLatLocationLongToTableRemovedLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712050642125_AddLoginLatAndLongToProfileTable.resx">
+      <DependentUpon>201712050642125_AddLoginLatAndLongToProfileTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -9,6 +9,8 @@ import { UserDto } from "../../dtos/userDto";
 import { UserData } from "../../models/index";
 import { WindowRef } from "../../services/windowRef.service";
 
+import { Observable, Subject, Subscription } from "rxjs";
+
 @Component({
     selector: "login-form",
     templateUrl: "app/login/login-form/login-form.component.html"
@@ -18,6 +20,8 @@ export class LoginFormComponent implements OnInit {
 
     private loginForm: FormGroup;
     private window: any;
+    public _coords = new Subject<any>();
+    public coords$ = this._coords.asObservable();
 
     constructor(
         private fb: FormBuilder,
@@ -53,19 +57,24 @@ export class LoginFormComponent implements OnInit {
         const token = this.getVerifyToken();
 
         let data = new UserDto();
-        let coords: any;
 
         data.email = formData.email;
         data.password = formData.password;
 
-        this.accountService.login(data, token)
-            .then((result: UserData) => {
-                this.setLoggedInUserdata(result);
-                this.setProfileCoordinates(coords);
-            })
-            .catch(() => {
-                alert("Login failed");
-            });
+        this.setProfileCoordinates();
+
+        this.coords$.subscribe((coords: any) => {
+            data.loginLat = coords.coords.latitude;
+            data.loginLong = coords.coords.longitude;
+
+            this.accountService.login(data, token)
+                .then((result: UserData) => {
+                    this.setLoggedInUserdata(result);
+                })
+                .catch(() => {
+                    alert("Login failed");
+                });
+        });
     }
 
     public setLoggedInUserdata(user: UserData): void {
@@ -98,15 +107,16 @@ export class LoginFormComponent implements OnInit {
         return tokenVal;
     }
 
-    private setProfileCoordinates(coords: any) {
+    private setProfileCoordinates() {
         if (window.navigator.geolocation) {
             window.navigator.geolocation.getCurrentPosition(this.outputPosition);
         } else {
+            // Default to user's home location
             alert("Unable to locate user");
         }
     }
 
-    private outputPosition(position: any) {
-        console.log(position);
+    public outputPosition = (position: any) => {
+        this._coords.next(position);
     }
 }
