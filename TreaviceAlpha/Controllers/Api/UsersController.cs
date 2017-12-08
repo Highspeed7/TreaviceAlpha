@@ -173,6 +173,8 @@ namespace TreaviceAlpha.Controllers.Api
                     profileInDb.State = profile.State;
                     profileInDb.Phone = profile.Phone;
                     profileInDb.ZipCode = profile.ZipCode;
+                    
+                    // if(profile)
 
                     if (context.SaveChanges() > 0)
                     {
@@ -417,6 +419,7 @@ namespace TreaviceAlpha.Controllers.Api
                     completedFieldsCount++;
                 }
             }
+
             return ((completedFieldsCount*100)/8);
         }
 
