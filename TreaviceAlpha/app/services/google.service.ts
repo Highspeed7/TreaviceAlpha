@@ -10,8 +10,10 @@ export class GoogleService {
 
     constructor(private _http: Http){}
 
-    public getAddressCoordinates(address: string): Observable<Response> {
+    public getAddressCoordinates(address: string): Promise<any> {
         return this._http.get(`${this.googleApi}?address=${address}&key=${this.apiKey}`)
-                .map((r) => r.json());
+            .toPromise()
+            .then((response) => Promise.resolve(response.json()))
+            .catch((error) => Promise.resolve(error.json()));
     }
 }

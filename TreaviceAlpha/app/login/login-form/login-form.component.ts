@@ -109,7 +109,7 @@ export class LoginFormComponent implements OnInit {
 
     private setProfileCoordinates() {
         if (window.navigator.geolocation) {
-            window.navigator.geolocation.getCurrentPosition(this.outputPosition);
+            window.navigator.geolocation.getCurrentPosition(this.outputPosition, (err) => { console.warn(err.message); });
         } else {
             // Default to user's home location
             alert("Unable to locate user");
@@ -117,6 +117,9 @@ export class LoginFormComponent implements OnInit {
     }
 
     public outputPosition = (position: any) => {
+        alert("hello");
         this._coords.next(position);
     }
+
+    public 
 }

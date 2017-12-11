@@ -48,7 +48,11 @@ export class AccountService {
             });
     }
 
-    public updateProfile(userData: any, email: string, token): Observable<Response> {
+    public updateProfile(userData: any, email: string, token, location: any = null): Observable<Response> {
+        if (location !== null) {
+            userData.locationLat = location[0].geometry.location.lat;
+            userData.locationLong = location[0].geometry.location.lng;
+        }
         userData.email = email;
         let headers = new Headers({ "Content-Type": "application/json", "__RequestVerificationToken": token });
         let options = new RequestOptions({ headers: headers });

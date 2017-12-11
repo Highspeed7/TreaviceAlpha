@@ -174,7 +174,11 @@ namespace TreaviceAlpha.Controllers.Api
                     profileInDb.Phone = profile.Phone;
                     profileInDb.ZipCode = profile.ZipCode;
                     
-                    // if(profile)
+                    if(profile.LocationLat != null && profile.LocationLong != null)
+                    {
+                        profileInDb.LocationLat = profile.LocationLat;
+                        profileInDb.LocationLong = profile.LocationLong;
+                    }
 
                     if (context.SaveChanges() > 0)
                     {

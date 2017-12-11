@@ -14,6 +14,7 @@ import { ExpandableFieldComponent } from "./profile-pages/components/expandable-
 import { ProfileFormComponent } from "./forms/profile-form.component";
 
 import { ProgressService } from "../services/progress/progress.service";
+import { GoogleService } from "../services/google.service";
 
 import { SideNavModule } from "../nav/sidenav.module";
 import { SharedComponentsModule } from "../shared/shared-components.module";
@@ -44,7 +45,8 @@ import { NewTroveModalComponent } from "./profile-pages/components/new-trove-mod
         SharedComponentsModule
     ],
     providers: [
-        ProgressService
+        ProgressService,
+        GoogleService
     ]
 })
 

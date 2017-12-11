@@ -288,6 +288,10 @@
     <Compile Include="Migrations\201712050642125_AddLoginLatAndLongToProfileTable.Designer.cs">
       <DependentUpon>201712050642125_AddLoginLatAndLongToProfileTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712111952005_AllowLocationNullsInProfileDb.cs" />
+    <Compile Include="Migrations\201712111952005_AllowLocationNullsInProfileDb.Designer.cs">
+      <DependentUpon>201712111952005_AllowLocationNullsInProfileDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -456,6 +460,7 @@
     <TypeScriptCompile Include="app\profile\profile-pages\components\expandable-field.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\new-trove-modal.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\components\trove-view.component.ts" />
+    <TypeScriptCompile Include="app\services\google.service.ts" />
     <TypeScriptCompile Include="app\services\windowRef.service.ts" />
     <TypeScriptCompile Include="app\shared\item-container.component.ts" />
     <TypeScriptCompile Include="app\profile\profile-pages\selling.component.ts" />
@@ -515,6 +520,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712050642125_AddLoginLatAndLongToProfileTable.resx">
       <DependentUpon>201712050642125_AddLoginLatAndLongToProfileTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712111952005_AllowLocationNullsInProfileDb.resx">
+      <DependentUpon>201712111952005_AllowLocationNullsInProfileDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

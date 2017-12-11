@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 import { AccountService } from "../../services/account.service";
+import { GoogleService } from "../../services/google.service";
 
 import { UserData, GeoStateModel } from "../../models/index";
 
@@ -30,6 +31,7 @@ export class ProfileFormComponent implements OnInit {
 
     constructor(
         private accountService: AccountService,
+        private google: GoogleService,
         private fb: FormBuilder,
         private router: Router
     ) {
@@ -42,28 +44,61 @@ export class ProfileFormComponent implements OnInit {
 
     public saveProfile() {
         let token = this.getVerifyToken();
+        let locationObj = null;
         // TODO: remove after phone number validation implemented
         if (this.profileForm.value.phonePre && this.profileForm.value.phoneArea && this.profileForm.value.phoneSuff) {
             this.profileForm.value.phone = this.assemblePhoneNumber();
         } else {
             this.profileForm.value.phone = "";
         }
-        this.accountService.updateProfile(this.profileForm.value, this.user.email, token)
-            .subscribe((response: Response) => {
-                if (response.status === 200) {
-                    var userDataObj = {
-                        email: this.profileForm.value.email,
-                        profile: this.profileForm.value
+
+        // Validate address if entered.
+        if (this.profileForm.value.street && this.profileForm.value.city && this.profileForm.value.state && this.profileForm.value.zipCode) {
+            let address = `${this.profileForm.get("street").value} ${this.profileForm.get("city").value} ${this.profileForm.get("state").value} ${this.profileForm.get("zipCode").value}`;
+            this.google.getAddressCoordinates(address)
+                .then((r) => {
+                    locationObj = r
+                    if (locationObj.results) {
+                        this.accountService.updateProfile(this.profileForm.value, this.user.email, token, locationObj.results)
+                            .subscribe((response: Response) => {
+                                if (response.status === 200) {
+                                    var userDataObj = {
+                                        email: this.profileForm.value.email,
+                                        profile: this.profileForm.value
+                                    }
+                                    this.accountService.setLastLoggedInUser(userDataObj);
+                                    location.reload();
+                                }
+                            }, (err: any) => {
+                                // Hand off to error handler
+                                if (err.status === 401) {
+                                    alert("You must first login");
+                                }
+                            });
+                    } else {
+                        this.accountService.updateProfile(this.profileForm.value, this.user.email, token)
+                            .subscribe((response: Response) => {
+                                if (response.status === 200) {
+                                    var userDataObj = {
+                                        email: this.profileForm.value.email,
+                                        profile: this.profileForm.value
+                                    }
+                                    this.accountService.setLastLoggedInUser(userDataObj);
+                                    location.reload();
+                                }
+                            }, (err: any) => {
+                                // Hand off to error handler
+                                if (err.status === 401) {
+                                    alert("You must first login");
+                                }
+                            });
                     }
-                    this.accountService.setLastLoggedInUser(userDataObj);
-                    location.reload();
-                }
-            }, (err: any) => {
-                // Hand off to error handler
-                if (err.status === 401) {
-                    alert("You must first login");
-                }
-            });
+                    
+                })
+                .catch((error) => console.log(error));
+        }
+
+        
     }
 
     private assemblePhoneNumber() {
